@@ -18,6 +18,16 @@ config/icon="res://icon.svg"
 
 project/assembly_name="peliprojekti"
 
+[file_customization]
+
+folder_colors={
+"res://Art/": "purple",
+"res://Audio/": "pink",
+"res://Code/": "blue",
+"res://Fonts/": "teal",
+"res://Scenes/": "green"
+}
+
 [rendering]
 
 renderer/rendering_method="mobile"
