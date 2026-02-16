@@ -16,7 +16,22 @@ public partial class PlayerCharacter : CharacterBody2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		_inputDirection = Input.GetVector(InputConfig.InputUp, InputConfig.InputDown, InputConfig.InputLeft, InputConfig.InputRight);
+		_inputDirection = Input.GetVector(InputConfig.InputLeft, InputConfig.InputRight, InputConfig.InputUp, InputConfig.InputDown);
 	}
+
+
+    public override void _PhysicsProcess(double delta)
+    {
+		// multiply direction with speed
+		// if input direction is 0, we stop
+		// PROBABLY NEEDS TO BE CHANGED LATER FOR AUTO SCROLLING
+        Vector2 velocity = _inputDirection * _speed;
+
+		// add to character
+		Velocity = velocity;
+
+		MoveAndSlide();
+
+    }
 
 }
