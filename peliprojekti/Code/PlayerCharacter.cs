@@ -7,7 +7,20 @@ public partial class PlayerCharacter : CharacterBody2D
 	[Export] public float _speed = 300.0f;
 	private Vector2 _inputDirection = Vector2.Zero;
 
+	private bool _isTouching = false;
 
+    public override void _Input(InputEvent @event)
+    {
+        if (@event is InputEventScreenTouch touch)
+        {
+            // update _isTouching to betrue when you touch the screen and false when not touching
+			_isTouching = touch.Pressed;
+        }
+		else if (@event is InputEventScreenDrag drag)
+        {
+
+        }
+    }
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
