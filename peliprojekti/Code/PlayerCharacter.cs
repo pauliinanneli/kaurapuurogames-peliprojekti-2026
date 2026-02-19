@@ -57,6 +57,33 @@ public partial class PlayerCharacter : CharacterBody2D
 
 		MoveAndSlide();
 
+		ClampArea();
+
+    }
+
+	/// <summary>
+    /// Method for limiting area where character can be moved on screen
+    /// </summary>
+	private void ClampArea()
+    {
+		// get current screen size
+		Vector2 screenSize = GetViewportRect().Size;
+
+		// padding so doesnt touch the edge
+		float padding = 50.0f;
+
+		// where to crop the area on the right, area can use 40% of screen
+		float max = screenSize.X * 0.4f;
+
+		Vector2 position = GlobalPosition;
+
+		// clamp between left side and "wall" on the right
+		position.X = Mathf.Clamp(position.X, padding, max);
+
+		// full size vertically
+		position.Y = Mathf.Clamp(position.Y, padding, screenSize.Y - padding);
+
+		GlobalPosition = position;
     }
 
 }
