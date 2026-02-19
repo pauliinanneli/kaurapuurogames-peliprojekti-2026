@@ -9,16 +9,28 @@ public partial class PlayerCharacter : CharacterBody2D
 
 	private bool _isTouching = false;
 
+	private Vector2 _lastTouchPos;
+
     public override void _Input(InputEvent @event)
     {
         if (@event is InputEventScreenTouch touch)
         {
             // update _isTouching to betrue when you touch the screen and false when not touching
 			_isTouching = touch.Pressed;
-        }
-		else if (@event is InputEventScreenDrag drag)
-        {
 
+			// when first touched, last position is the starting point
+			if (touch.Pressed) _lastTouchPos = touch.Position;
+        }
+		else if (@event is InputEventScreenDrag drag && _isTouching)
+        {
+			//how far did finger move since last frame
+			Vector2 dragDelta = drag.Position - _lastTouchPos;
+
+			// move star by the amount that the finger moved
+			GlobalPosition += dragDelta;
+
+			// update last position
+			_lastTouchPos = drag.Position;
         }
     }
 	// Called when the node enters the scene tree for the first time.
