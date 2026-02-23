@@ -4,5 +4,9 @@
 
 [node name="Level1" type="Node2D" unique_id=2140551516]
 
-[node name="CharacterBody2D" parent="." unique_id=1958617562 instance=ExtResource("1_2llne")]
+[node name="LevelMover" type="Node2D" parent="." unique_id=1510128614]
+
+[node name="CharacterBody2D" parent="LevelMover" unique_id=1958617562 instance=ExtResource("1_2llne")]
 position = Vector2(98, 292)
+
+[node name="Camera2D" type="Camera2D" parent="LevelMover" unique_id=1724306574]
