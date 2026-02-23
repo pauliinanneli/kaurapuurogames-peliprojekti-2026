@@ -4,7 +4,9 @@ using System;
 public partial class PlayerCharacter : CharacterBody2D
 {
 
-	[Export] public float _speed = 300.0f;
+	[Export] private float _speed = 300.0f;
+
+	[Export] private float _friction = 0.2f;
 	private Vector2 _inputDirection = Vector2.Zero;
 
 	private bool _isTouching = false;
@@ -18,19 +20,21 @@ public partial class PlayerCharacter : CharacterBody2D
             // update _isTouching to betrue when you touch the screen and false when not touching
 			_isTouching = touch.Pressed;
 
-			// when first touched, last position is the starting point
-			if (touch.Pressed) _lastTouchPos = touch.Position;
+			// stop movement direction when touch stops
+			if (!touch.Pressed)
+            {
+                _inputDirection = Vector2.Zero;
+            }
         }
 		else if (@event is InputEventScreenDrag drag && _isTouching)
         {
-			//how far did finger move since last frame
-			Vector2 dragDelta = drag.Position - _lastTouchPos;
-
-			// move star by the amount that the finger moved
-			GlobalPosition += dragDelta;
-
-			// update last position
-			_lastTouchPos = drag.Position;
+			// drag.relative is the distance moved since last frame
+			//length > 0 so it wont work when not dragged
+			if (drag.Relative.Length() > 0)
+            {
+				// normalized makes character move at constant speed
+                _inputDirection = drag.Relative.Normalized();
+            }
         }
     }
 	// Called when the node enters the scene tree for the first time.
@@ -50,10 +54,10 @@ public partial class PlayerCharacter : CharacterBody2D
 		// multiply direction with speed
 		// if input direction is 0, we stop
 		// PROBABLY NEEDS TO BE CHANGED LATER FOR AUTO SCROLLING
-        Vector2 velocity = _inputDirection * _speed;
+        Vector2 targetVelocity = _inputDirection * _speed;
 
 		// add to character
-		Velocity = velocity;
+		Velocity = Velocity.Lerp(targetVelocity, _friction);
 
 		MoveAndSlide();
 
