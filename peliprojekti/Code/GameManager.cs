@@ -31,21 +31,22 @@ public partial class GameManager : Node
     #endregion
 
     #region Game Data
-    private int _health = 0;
+    private float _health = 0;
 
-    public int Health
+    public float Health
     {
         get {return _health;}
         set
         {
             //to do: mieti onko järkevä maksimiarvo
-            _health = Mathf.Clamp(value, 0, 10);
+            _health = Mathf.Clamp(value, 0, 1);
+            GD.Print($"Health atm: {_health}");
             //to do: päivitä pisteet käyttöliittymälle
         }
     }
     #endregion
 
-    public bool AddHealth(int amount)
+    public bool AddHealth(float amount)
     {
         if (amount < 0)
         {
@@ -56,7 +57,7 @@ public partial class GameManager : Node
         return true;
     }
 
-    public bool SubstractHealth(int amount)
+    public bool SubstractHealth(float amount)
     {
         if (amount < 0)
         {

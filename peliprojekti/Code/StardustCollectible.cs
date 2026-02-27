@@ -8,7 +8,7 @@ public partial class StardustCollectible : Collectible
     protected override void Collect(PlayerCharacter playerCharacter)
     {
 		// to do: lisää glow ("pisteet") järjestelmään joka pitää siitä kirjaa
-		GD.Print($"Glow amount: {_glowAmount}");
-
+		GD.Print($"Collected glow amount: {_glowAmount}");
+    GameManager.Instance.AddHealth(_glowAmount);
     }
 }
