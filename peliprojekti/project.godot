@@ -19,6 +19,10 @@ run/main_scene="uid://dk7d0f8t6fuml"
 config/features=PackedStringArray("4.6", "C#", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*uid://ds5id0x4jd0c4"
+
 [dotnet]
 
 project/assembly_name="peliprojekti"
