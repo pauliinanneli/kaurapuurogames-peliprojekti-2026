@@ -79,7 +79,7 @@ public partial class PlayerCharacter : CharacterBody2D
 		// where to crop the area on the right, area can use 40% of screen
 		float max = screenSize.X * 0.25f;
 
-		Vector2 position = GlobalPosition;
+		Vector2 position = Position;
 
 		// clamp between left side and "wall" on the right
 		position.X = Mathf.Clamp(position.X, padding, max);
@@ -87,7 +87,7 @@ public partial class PlayerCharacter : CharacterBody2D
 		// full size vertically
 		position.Y = Mathf.Clamp(position.Y, padding, screenSize.Y - padding);
 
-		GlobalPosition = position;
+		Position = position;
     }
 
 }

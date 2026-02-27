@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dk0vq0mvfcapk"]
+
+[ext_resource type="Texture2D" uid="uid://clh4p027m8so7" path="res://icon.svg" id="1_qgxrv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57jof"]
+radius = 65.00769
+
+[node name="StardustCollectible" type="Area2D" unique_id=512965182]
+
+[node name="placeholder for art" type="Sprite2D" parent="." unique_id=78585798]
+texture = ExtResource("1_qgxrv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1560220292]
+shape = SubResource("CircleShape2D_57jof")

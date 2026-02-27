@@ -7,6 +7,17 @@
 radius = 64.0
 height = 128.0
 
+[sub_resource type="Gradient" id="Gradient_q12u6"]
+offsets = PackedFloat32Array(0, 0.99462366, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5gnj7"]
+gradient = SubResource("Gradient_q12u6")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1958617562]
 script = ExtResource("1_5gnj7")
 
@@ -15,3 +26,8 @@ texture = ExtResource("1_v7sut")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2103013758]
 shape = SubResource("CapsuleShape2D_v7sut")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=746788266]
+texture = SubResource("GradientTexture2D_5gnj7")
+
+[node name="Glow" type="Sprite2D" parent="." unique_id=827581912]
