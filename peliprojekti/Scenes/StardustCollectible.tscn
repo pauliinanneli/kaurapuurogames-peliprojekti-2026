@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://dk0vq0mvfcapk"]
 
+[ext_resource type="Script" uid="uid://b323v7uw4d8ln" path="res://Scenes/StardustCollectible.cs" id="1_57jof"]
 [ext_resource type="Texture2D" uid="uid://clh4p027m8so7" path="res://icon.svg" id="1_qgxrv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_57jof"]
 radius = 65.00769
 
 [node name="StardustCollectible" type="Area2D" unique_id=512965182]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_57jof")
 
 [node name="placeholder for art" type="Sprite2D" parent="." unique_id=78585798]
 texture = ExtResource("1_qgxrv")
