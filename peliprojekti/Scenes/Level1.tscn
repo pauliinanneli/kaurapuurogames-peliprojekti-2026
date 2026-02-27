@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c1yxxdf2xeya3" path="res://Scenes/PlayerCharacter.tscn" id="1_2llne"]
 [ext_resource type="Script" uid="uid://jctyp3d4ov6s" path="res://Code/LevelMover.cs" id="1_q12u6"]
+[ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="3_joc8x"]
 
 [node name="Level1" type="Node2D" unique_id=2140551516]
 
@@ -10,10 +11,20 @@ script = ExtResource("1_q12u6")
 
 [node name="CharacterBody2D" parent="LevelMover" unique_id=1958617562 instance=ExtResource("1_2llne")]
 position = Vector2(98, 292)
-_speed = 500.0
+_speed = 400.0
 _friction = 0.1
 
 [node name="Camera2D" type="Camera2D" parent="LevelMover" unique_id=1724306574]
 anchor_mode = 0
 
 [node name="Background" type="Parallax2D" parent="." unique_id=1917256133]
+
+[node name="Stardust" type="Node2D" parent="." unique_id=1415968608]
+
+[node name="StardustCollectible" parent="Stardust" unique_id=512965182 instance=ExtResource("3_joc8x")]
+position = Vector2(638, 402)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible2" parent="Stardust" unique_id=1802206280 instance=ExtResource("3_joc8x")]
+position = Vector2(1095, 240.00003)
+scale = Vector2(0.82, 0.82)

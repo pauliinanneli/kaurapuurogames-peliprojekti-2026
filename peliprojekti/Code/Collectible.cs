@@ -34,6 +34,9 @@ public partial class Collectible : Area2D
         {
             //törmäys tapahtui pelaajan kanssa, reagoi
             _isCollected = true;
+            Collect(playerCharacter);
+
+            QueueFree();
         }
     }
 

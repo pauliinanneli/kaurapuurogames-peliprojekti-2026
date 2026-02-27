@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dk0vq0mvfcapk"]
 
-[ext_resource type="Script" uid="uid://b323v7uw4d8ln" path="res://Scenes/StardustCollectible.cs" id="1_57jof"]
+[ext_resource type="Script" uid="uid://b323v7uw4d8ln" path="res://Code/StardustCollectible.cs" id="1_57jof"]
 [ext_resource type="Texture2D" uid="uid://clh4p027m8so7" path="res://icon.svg" id="1_qgxrv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_57jof"]
