@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dk0vq0mvfcapk"]
 
 [ext_resource type="Script" uid="uid://b323v7uw4d8ln" path="res://Code/StardustCollectible.cs" id="1_57jof"]
-[ext_resource type="Texture2D" uid="uid://clh4p027m8so7" path="res://icon.svg" id="1_qgxrv"]
+[ext_resource type="Texture2D" uid="uid://cprlw8rj6xcm5" path="res://Art/Starenergy.png" id="2_57jof"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_57jof"]
 radius = 65.00769
@@ -12,7 +12,8 @@ collision_mask = 2
 script = ExtResource("1_57jof")
 
 [node name="placeholder for art" type="Sprite2D" parent="." unique_id=78585798]
-texture = ExtResource("1_qgxrv")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_57jof")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1560220292]
 shape = SubResource("CircleShape2D_57jof")
