@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://nx7nhhkts8hs"]
+
+[ext_resource type="Script" uid="uid://jctyp3d4ov6s" path="res://Code/LevelMover.cs" id="1_r2q7f"]
+[ext_resource type="PackedScene" uid="uid://c1yxxdf2xeya3" path="res://Scenes/PlayerCharacter.tscn" id="2_flrky"]
+
+[node name="LevelMover" type="Node2D" unique_id=1321373785]
+script = ExtResource("1_r2q7f")
+
+[node name="CharacterBody2D" parent="." unique_id=1958617562 instance=ExtResource("2_flrky")]
+position = Vector2(98, 292)
+_speed = 400.0
+_friction = 0.1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1852005941]
+anchor_mode = 0
