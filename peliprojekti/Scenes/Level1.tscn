@@ -22,6 +22,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 2048, 2048)
 
 [node name="BackgroundStars" type="Parallax2D" parent="." unique_id=433458029]
+scale = Vector2(1, 1.57)
 scroll_scale = Vector2(0.1, 0.1)
 repeat_size = Vector2(1246.02, 0)
 repeat_times = 40
@@ -34,6 +35,13 @@ texture = ExtResource("2_slnnj")
 region_enabled = true
 region_rect = Rect2(0, 0, 1023, 297)
 
+[node name="Sprite2D2" type="Sprite2D" parent="BackgroundStars" unique_id=226133395]
+position = Vector2(96.68, 299.19)
+scale = Vector2(1.23, 1.23)
+texture = ExtResource("2_slnnj")
+region_enabled = true
+region_rect = Rect2(0, 1023, 1023, 429)
+
 [node name="BackgroundStars2" type="Parallax2D" parent="." unique_id=860169413]
 scroll_scale = Vector2(0.15, 0.15)
 repeat_size = Vector2(1391.68, 0)
@@ -43,6 +51,13 @@ repeat_times = 40
 texture_repeat = 2
 position = Vector2(599.92, 274.47)
 scale = Vector2(1.37, 1.37)
+texture = ExtResource("2_slnnj")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D2" type="Sprite2D" parent="BackgroundStars2" unique_id=2007023863]
+position = Vector2(0, 708.95)
+scale = Vector2(1.4, 1.4)
 texture = ExtResource("2_slnnj")
 region_enabled = true
 region_rect = Rect2(0, 660, 1023, 363)
