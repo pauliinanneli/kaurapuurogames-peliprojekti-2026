@@ -62,6 +62,14 @@ texture = ExtResource("2_slnnj")
 region_enabled = true
 region_rect = Rect2(0, 660, 1023, 363)
 
+[node name="Sprite2D3" type="Sprite2D" parent="BackgroundStars2" unique_id=1178175020]
+position = Vector2(245.92, 373.9)
+rotation = 3.1415927
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_slnnj")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
 [node name="LevelMover" parent="." unique_id=1321373785 instance=ExtResource("3_slnnj")]
 
 [node name="DeadZone" type="Area2D" parent="LevelMover" unique_id=1766470528]
@@ -73,33 +81,33 @@ script = ExtResource("4_slnnj")
 position = Vector2(-229, 327)
 shape = SubResource("RectangleShape2D_t3or0")
 
-[node name="Stardust" type="Node2D" parent="." unique_id=1415968608]
+[node name="StardustCollectibles" type="Node2D" parent="." unique_id=1415968608]
 position = Vector2(115, 13)
 
-[node name="StardustCollectible" parent="Stardust" unique_id=512965182 instance=ExtResource("3_joc8x")]
+[node name="StardustCollectible" parent="StardustCollectibles" unique_id=512965182 instance=ExtResource("3_joc8x")]
 position = Vector2(638, 402)
 scale = Vector2(0.82, 0.82)
 
-[node name="StardustCollectible2" parent="Stardust" unique_id=1802206280 instance=ExtResource("3_joc8x")]
+[node name="StardustCollectible2" parent="StardustCollectibles" unique_id=1802206280 instance=ExtResource("3_joc8x")]
 position = Vector2(1095, 240.00003)
 scale = Vector2(0.82, 0.82)
 
-[node name="StardustCollectible3" parent="Stardust" unique_id=1980197097 instance=ExtResource("3_joc8x")]
+[node name="StardustCollectible3" parent="StardustCollectibles" unique_id=1980197097 instance=ExtResource("3_joc8x")]
 position = Vector2(1291, 502.99997)
 scale = Vector2(0.82, 0.82)
 
-[node name="StardustCollectible4" parent="Stardust" unique_id=1271448631 instance=ExtResource("3_joc8x")]
+[node name="StardustCollectible4" parent="StardustCollectibles" unique_id=1271448631 instance=ExtResource("3_joc8x")]
 position = Vector2(1523, 128)
 scale = Vector2(0.82, 0.82)
 
-[node name="StardustCollectible5" parent="Stardust" unique_id=1643760790 instance=ExtResource("3_joc8x")]
+[node name="StardustCollectible5" parent="StardustCollectibles" unique_id=1643760790 instance=ExtResource("3_joc8x")]
 position = Vector2(1656, 358.99997)
 scale = Vector2(0.82, 0.82)
 
-[node name="StardustCollectible6" parent="Stardust" unique_id=294770064 instance=ExtResource("3_joc8x")]
+[node name="StardustCollectible6" parent="StardustCollectibles" unique_id=294770064 instance=ExtResource("3_joc8x")]
 position = Vector2(2113, 197)
 scale = Vector2(0.82, 0.82)
 
-[node name="StardustCollectible7" parent="Stardust" unique_id=1910953785 instance=ExtResource("3_joc8x")]
+[node name="StardustCollectible7" parent="StardustCollectibles" unique_id=1910953785 instance=ExtResource("3_joc8x")]
 position = Vector2(2309, 459.99994)
 scale = Vector2(0.82, 0.82)

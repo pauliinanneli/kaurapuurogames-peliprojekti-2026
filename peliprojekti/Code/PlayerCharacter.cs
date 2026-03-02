@@ -77,7 +77,7 @@ public partial class PlayerCharacter : CharacterBody2D
 		float padding = 50.0f;
 
 		// where to crop the area on the right, area can use 40% of screen
-		float max = screenSize.X * 0.25f;
+		float max = screenSize.X * 0.35f;
 
 		Vector2 position = Position;
 
