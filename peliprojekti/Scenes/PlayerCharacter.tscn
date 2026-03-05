@@ -3,9 +3,8 @@
 [ext_resource type="Script" uid="uid://be8fiy8ua71oj" path="res://Code/PlayerCharacter.cs" id="1_5gnj7"]
 [ext_resource type="Texture2D" uid="uid://dwclnl60cwvh1" path="res://Art/hohdot2.png" id="2_5gnj7"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7sut"]
-radius = 64.0
-height = 128.0
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5gnj7"]
+blend_mode = 1
 
 [sub_resource type="Gradient" id="Gradient_q12u6"]
 offsets = PackedFloat32Array(0, 0.99462366, 1)
@@ -17,6 +16,11 @@ width = 128
 height = 128
 fill = 1
 fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.3272727)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7sut"]
+radius = 64.0
+height = 128.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1958617562]
 collision_layer = 2
@@ -24,7 +28,8 @@ collision_mask = 13
 script = ExtResource("1_5gnj7")
 
 [node name="Glow" type="Sprite2D" parent="." unique_id=827581912]
-scale = Vector2(0.17, 0.17)
+material = SubResource("CanvasItemMaterial_5gnj7")
+scale = Vector2(0.13, 0.13)
 texture = ExtResource("2_5gnj7")
 region_enabled = true
 region_rect = Rect2(1610, 1254, 1505, 1188)
@@ -35,9 +40,10 @@ texture = ExtResource("2_5gnj7")
 region_enabled = true
 region_rect = Rect2(420, 363, 1015, 759)
 
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=746788266]
+position = Vector2(5.722046e-06, -8.821487e-06)
+scale = Vector2(4.171875, 2.7187498)
+texture = SubResource("GradientTexture2D_5gnj7")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2103013758]
 shape = SubResource("CapsuleShape2D_v7sut")
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=746788266]
-visible = false
-texture = SubResource("GradientTexture2D_5gnj7")

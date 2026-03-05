@@ -15,14 +15,14 @@ public partial class Meteor : Area2D
 		}
 	}
 
-	private void OnBodyEntered(Node body)
+	/* private void OnBodyEntered(Node body)
 	{
 		if (body.Name == "Player")
-	
+
 	}
 
 	public override void _Ready()
 	{
 		BodyEntered += OnBodyEntered;
-	}
+	} */
 }

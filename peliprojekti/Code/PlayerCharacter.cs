@@ -7,6 +7,8 @@ public partial class PlayerCharacter : CharacterBody2D
 	[Export] private float _speed = 300.0f;
 
 	[Export] private float _friction = 0.2f;
+	private PointLight2D _starLight;
+	private Sprite2D _glowSprite;
 	private Vector2 _inputDirection = Vector2.Zero;
 
 	private bool _isTouching = false;
@@ -39,13 +41,17 @@ public partial class PlayerCharacter : CharacterBody2D
     }
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
-	{
-	}
+    {
+        _starLight = GetNode<PointLight2D>("PointLight2D");
+		_glowSprite = GetNode<Sprite2D>("Glow");
+    }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		_inputDirection = Input.GetVector(InputConfig.InputLeft, InputConfig.InputRight, InputConfig.InputUp, InputConfig.InputDown);
+
+		UpdateGlowVisuals();
 	}
 
 
@@ -88,6 +94,24 @@ public partial class PlayerCharacter : CharacterBody2D
 		position.Y = Mathf.Clamp(position.Y, padding, screenSize.Y - padding);
 
 		Position = position;
+    }
+
+	private void UpdateGlowVisuals()
+    {
+		float currentGlow = GameManager.Instance.Health; // get current health from gamemanager
+
+        if (_starLight != null)
+        {
+            _starLight.Energy = currentGlow * 1.5f; // update light brightness, evaluate if it is a good value for this
+			_starLight.TextureScale = Mathf.Lerp(0.3f, 0.7f, currentGlow); // update glow scale so that it shrinks when you lose energy etc
+        }
+
+		if (_glowSprite != null)
+        {
+            _glowSprite.SelfModulate = new Color(1, 1, 1, currentGlow); // changing alpha to fade it out
+			_glowSprite.Scale = new Vector2(currentGlow, currentGlow);
+
+        }
     }
 
 }

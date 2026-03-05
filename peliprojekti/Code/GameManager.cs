@@ -21,6 +21,7 @@ public partial class GameManager : Node
         if (Instance == null)
         {
             Instance = this;
+            _health = 0.6f;
         }
         else if (Instance != this)
         {
@@ -31,7 +32,8 @@ public partial class GameManager : Node
     #endregion
 
     #region Game Data
-    private float _health = 0;
+    private float _health;
+    [Export] private float _drainHealth = 0.1f; // loses 10% glow per second, evaluate if thats a smart value or not
 
     public float Health
     {
@@ -41,10 +43,22 @@ public partial class GameManager : Node
             //to do: mieti onko järkevä maksimiarvo
             _health = Mathf.Clamp(value, 0, 1);
             GD.Print($"Health atm: {_health}");
-            //to do: päivitä pisteet käyttöliittymälle
+
+            if (_health <= 0)
+            {
+                GetTree().ReloadCurrentScene(); // reloads level when not enough health. need to also add some kind of message for losing
+            }
         }
     }
     #endregion
+
+    /// <summary>
+    /// runs every frame and handles the health (light) draining
+    /// </summary>
+    public override void _Process(double delta)
+    {
+        Health -= _drainHealth * (float)delta;
+    }
 
     public bool AddHealth(float amount)
     {
