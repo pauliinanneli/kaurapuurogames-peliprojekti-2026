@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cscgc1lutrftb"
-path="res://.godot/imported/FuturaCyrillicMedium.ttf-67a0256d24eccfce7818e46a732e031b.fontdata"
+uid="uid://cfldhaakrbwei"
+path="res://.godot/imported/SpaceGrotesk-Bold.ttf-0fc84ebcf32642de0916df6cc1633633.fontdata"
 
 [deps]
 
-source_file="res://Fonts/futura-pt/FuturaCyrillicMedium.ttf"
-dest_files=["res://.godot/imported/FuturaCyrillicMedium.ttf-67a0256d24eccfce7818e46a732e031b.fontdata"]
+source_file="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf"
+dest_files=["res://.godot/imported/SpaceGrotesk-Bold.ttf-0fc84ebcf32642de0916df6cc1633633.fontdata"]
 
 [params]
 

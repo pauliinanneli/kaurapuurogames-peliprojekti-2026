@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cbgoo6snfpdvj"
-path="res://.godot/imported/FuturaCyrillicDemi.ttf-fc5f5d72c23f59d40dfe818d2b0d613d.fontdata"
+uid="uid://xhkncvhtodg5"
+path="res://.godot/imported/SpaceGrotesk-Regular.ttf-d78b737022f9f99a80b900e3a18e0b49.fontdata"
 
 [deps]
 
-source_file="res://Fonts/futura-pt/FuturaCyrillicDemi.ttf"
-dest_files=["res://.godot/imported/FuturaCyrillicDemi.ttf-fc5f5d72c23f59d40dfe818d2b0d613d.fontdata"]
+source_file="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf"
+dest_files=["res://.godot/imported/SpaceGrotesk-Regular.ttf-d78b737022f9f99a80b900e3a18e0b49.fontdata"]
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dnul20qkgko1d"
-path="res://.godot/imported/FuturaCyrillicBold.ttf-b58375e71b978205ae4c10545bdbc767.fontdata"
+uid="uid://cas5xx5hkpyrs"
+path="res://.godot/imported/SpaceGrotesk-VariableFont_wght.ttf-e02cbd73aaf7fc72f81edfb23e06b6be.fontdata"
 
 [deps]
 
-source_file="res://Fonts/futura-pt/FuturaCyrillicBold.ttf"
-dest_files=["res://.godot/imported/FuturaCyrillicBold.ttf-b58375e71b978205ae4c10545bdbc767.fontdata"]
+source_file="res://Fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/SpaceGrotesk-VariableFont_wght.ttf-e02cbd73aaf7fc72f81edfb23e06b6be.fontdata"]
 
 [params]
 

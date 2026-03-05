@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://p8nt25r53oia"
-path="res://.godot/imported/FuturaCyrillicLight.ttf-bdbed62cbce3f2100f8686a054ac0041.fontdata"
+uid="uid://crw800eor0fx1"
+path="res://.godot/imported/SpaceGrotesk-SemiBold.ttf-6b4956c14113e4adc39b9e22e2c8a19d.fontdata"
 
 [deps]
 
-source_file="res://Fonts/futura-pt/FuturaCyrillicLight.ttf"
-dest_files=["res://.godot/imported/FuturaCyrillicLight.ttf-bdbed62cbce3f2100f8686a054ac0041.fontdata"]
+source_file="res://Fonts/Space_Grotesk/static/SpaceGrotesk-SemiBold.ttf"
+dest_files=["res://.godot/imported/SpaceGrotesk-SemiBold.ttf-6b4956c14113e4adc39b9e22e2c8a19d.fontdata"]
 
 [params]
 
