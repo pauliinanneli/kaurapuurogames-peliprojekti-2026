@@ -27,22 +27,24 @@ collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_5gnj7")
 
-[node name="Glow" type="Sprite2D" parent="." unique_id=827581912]
+[node name="Glow" type="Sprite2D" parent="." unique_id=519461340]
 material = SubResource("CanvasItemMaterial_5gnj7")
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("2_5gnj7")
 region_enabled = true
 region_rect = Rect2(1610, 1254, 1505, 1188)
 
-[node name="placeholder for star" type="Sprite2D" parent="." unique_id=57797804]
-scale = Vector2(0.16, 0.16)
+[node name="Star" type="Sprite2D" parent="." unique_id=704000034]
+modulate = Color(1, 1, 1, 0.9529412)
+scale = Vector2(0.14, 0.14)
 texture = ExtResource("2_5gnj7")
 region_enabled = true
 region_rect = Rect2(420, 363, 1015, 759)
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=746788266]
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2042126508]
 position = Vector2(5.722046e-06, -8.821487e-06)
 scale = Vector2(4.171875, 2.7187498)
+color = Color(1, 0.8352941, 0.5019608, 1)
 texture = SubResource("GradientTexture2D_5gnj7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2103013758]

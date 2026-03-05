@@ -66,8 +66,19 @@ public partial class PlayerCharacter : CharacterBody2D
 		Velocity = Velocity.Lerp(targetVelocity, _friction);
 
 		MoveAndSlide();
-
+		// to make it move on limited area of the screen:
 		ClampArea();
+
+		//to make it rotate to the direction the player is dragging:
+		if (_inputDirection.Length() > 0)
+        {
+            float targetAngle = _inputDirection.Angle();
+
+			var playerStar = GetNode<Sprite2D>("Star");
+			float smoothRotation = (float) Mathf.LerpAngle(playerStar.Rotation, targetAngle, 0.04f);
+			playerStar.Rotation = smoothRotation;
+			_glowSprite.Rotation = smoothRotation;
+        }
 
     }
 
