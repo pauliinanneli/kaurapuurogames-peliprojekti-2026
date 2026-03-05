@@ -4,6 +4,7 @@ using System;
 public partial class StardustCollectible : Collectible
 {
 	[Export] private float _glowAmount = 0.2f;
+  [Export] private float _lostGlow = 0.1f; // evaluate if sensible
 
     protected override void Collect(PlayerCharacter playerCharacter)
     {
@@ -14,9 +15,9 @@ public partial class StardustCollectible : Collectible
 
     public void Miss()
     {
-        GD.Print($"Missed stardust, health lost {_glowAmount}");
+        GD.Print($"Missed stardust, health lost {_lostGlow}");
         // TO DO: evaluate if it's a smart amount of health to lose when missing
-        GameManager.Instance.SubstractHealth(_glowAmount);
+        GameManager.Instance.SubstractHealth(_lostGlow);
         QueueFree();
     }
 }

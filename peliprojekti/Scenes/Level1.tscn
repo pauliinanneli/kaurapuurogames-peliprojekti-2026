@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Scenes/DeadZone.cs" id="4_slnnj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3or0"]
-size = Vector2(459, 675)
+size = Vector2(386.5, 675)
 
 [node name="Level1" type="Node2D" unique_id=2140551516]
 
@@ -80,7 +80,7 @@ collision_mask = 8
 script = ExtResource("4_slnnj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelMover/DeadZone" unique_id=176261799]
-position = Vector2(-229, 327)
+position = Vector2(-265.25, 327)
 shape = SubResource("RectangleShape2D_t3or0")
 
 [node name="StardustCollectibles" type="Node2D" parent="." unique_id=1415968608]
