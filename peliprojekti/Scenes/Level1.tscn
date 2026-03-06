@@ -1,8 +1,115 @@
 [gd_scene format=3 uid="uid://dk7d0f8t6fuml"]
 
-[ext_resource type="PackedScene" uid="uid://c1yxxdf2xeya3" path="res://Scenes/PlayerCharacter.tscn" id="1_2llne"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_slnnj"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="3_jghel"]
+[ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="3_joc8x"]
+[ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_slnnj"]
+[ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Scenes/DeadZone.cs" id="4_slnnj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3or0"]
+size = Vector2(386.5, 675)
 
 [node name="Level1" type="Node2D" unique_id=2140551516]
 
-[node name="CharacterBody2D" parent="." unique_id=1958617562 instance=ExtResource("1_2llne")]
-position = Vector2(98, 292)
+[node name="Backgrounds" type="Node2D" parent="." unique_id=1544963235]
+
+[node name="Background" type="Parallax2D" parent="Backgrounds" unique_id=1917256133]
+scroll_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Background" unique_id=971174430]
+position = Vector2(577.00006, 340)
+scale = Vector2(0.58984387, 0.36)
+texture = ExtResource("3_jghel")
+region_enabled = true
+region_rect = Rect2(0, 0, 2048, 2048)
+
+[node name="BackgroundStars" type="Parallax2D" parent="Backgrounds" unique_id=433458029]
+scale = Vector2(1, 1.57)
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1246.02, 0)
+repeat_times = 40
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=1876120673]
+texture_repeat = 2
+position = Vector2(554.85, 128.84)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_slnnj")
+region_enabled = true
+region_rect = Rect2(0, 0, 1023, 297)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=226133395]
+position = Vector2(96.68, 299.19)
+scale = Vector2(1.23, 1.23)
+texture = ExtResource("2_slnnj")
+region_enabled = true
+region_rect = Rect2(0, 1023, 1023, 429)
+
+[node name="BackgroundStars2" type="Parallax2D" parent="Backgrounds" unique_id=860169413]
+scroll_scale = Vector2(0.15, 0.15)
+repeat_size = Vector2(1391.68, 0)
+repeat_times = 40
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1358726508]
+texture_repeat = 2
+position = Vector2(599.92, 274.47)
+scale = Vector2(1.37, 1.37)
+texture = ExtResource("2_slnnj")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=2007023863]
+position = Vector2(0, 708.95)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_slnnj")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1178175020]
+position = Vector2(245.92, 373.9)
+rotation = 3.1415927
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_slnnj")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="LevelMover" parent="." unique_id=1321373785 instance=ExtResource("3_slnnj")]
+
+[node name="DeadZone" type="Area2D" parent="LevelMover" unique_id=1766470528]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("4_slnnj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelMover/DeadZone" unique_id=176261799]
+position = Vector2(-265.25, 327)
+shape = SubResource("RectangleShape2D_t3or0")
+
+[node name="StardustCollectibles" type="Node2D" parent="." unique_id=1415968608]
+position = Vector2(115, 13)
+
+[node name="StardustCollectible" parent="StardustCollectibles" unique_id=512965182 instance=ExtResource("3_joc8x")]
+position = Vector2(638, 402)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible2" parent="StardustCollectibles" unique_id=1802206280 instance=ExtResource("3_joc8x")]
+position = Vector2(1095, 240.00003)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible3" parent="StardustCollectibles" unique_id=1980197097 instance=ExtResource("3_joc8x")]
+position = Vector2(1444, 477.99997)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible4" parent="StardustCollectibles" unique_id=1271448631 instance=ExtResource("3_joc8x")]
+position = Vector2(1523, 128)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible5" parent="StardustCollectibles" unique_id=1643760790 instance=ExtResource("3_joc8x")]
+position = Vector2(1955, 285)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible6" parent="StardustCollectibles" unique_id=294770064 instance=ExtResource("3_joc8x")]
+position = Vector2(2324, 112)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible7" parent="StardustCollectibles" unique_id=1910953785 instance=ExtResource("3_joc8x")]
+position = Vector2(2505, 351)
+scale = Vector2(0.82, 0.82)

@@ -15,9 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="peliprojekti"
-run/main_scene="uid://c1yxxdf2xeya3"
+run/main_scene="uid://dk7d0f8t6fuml"
 config/features=PackedStringArray("4.6", "C#", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://ds5id0x4jd0c4"
 
 [dotnet]
 
@@ -72,6 +76,13 @@ MoveLeft={
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_physics/layer_1="World"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Obstacle"
+2d_physics/layer_4="Collectible"
 
 [rendering]
 

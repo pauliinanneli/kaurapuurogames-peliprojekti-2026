@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c7bisqd2s2fim"]
+
+[node name="Meteor" type="Node2D" unique_id=489751699]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=85146092]
