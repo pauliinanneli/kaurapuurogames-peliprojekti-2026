@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ddh1ccrjx4eko"]
 
 [ext_resource type="Texture2D" uid="uid://dogth884vt41k" path="res://Art/LaneDivider.png" id="1_81433"]
+[ext_resource type="Script" uid="uid://dyetpnay0rqmh" path="res://Scenes/Gate.cs" id="2_tbrrn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81433"]
 size = Vector2(312, 204)
@@ -20,18 +21,30 @@ scale = Vector2(1.2421875, 0.34375)
 texture = ExtResource("1_81433")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1708017844]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_tbrrn")
+Role = "Etsijä"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1050382183]
 position = Vector2(217, 101.87)
 shape = SubResource("RectangleShape2D_81433")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=270783135]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_tbrrn")
+Role = "Etenijä"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=370951867]
 position = Vector2(217, 322.76)
 shape = SubResource("RectangleShape2D_81433")
 
 [node name="Area2D3" type="Area2D" parent="." unique_id=1061081826]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_tbrrn")
+Role = "Edistäjä"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1972162096]
 position = Vector2(217, 543.72)

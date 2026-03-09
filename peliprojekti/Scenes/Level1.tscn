@@ -115,5 +115,9 @@ scale = Vector2(0.82, 0.82)
 position = Vector2(2505, 351)
 scale = Vector2(0.82, 0.82)
 
+[node name="StardustCollectible8" parent="StardustCollectibles" unique_id=1165762050 instance=ExtResource("3_joc8x")]
+position = Vector2(2233, 464)
+scale = Vector2(0.82, 0.82)
+
 [node name="LanePicker" parent="." unique_id=785505358 instance=ExtResource("6_t3or0")]
 position = Vector2(3088.75, 0)

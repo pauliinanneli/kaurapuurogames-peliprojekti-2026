@@ -42,7 +42,7 @@ public partial class GameManager : Node
         {
             //to do: mieti onko järkevä maksimiarvo
             _health = Mathf.Clamp(value, 0, 1);
-            GD.Print($"Health atm: {_health}");
+            // GD.Print($"Health atm: {_health}");
 
             if (_health <= 0)
             {
