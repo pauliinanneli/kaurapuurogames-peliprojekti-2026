@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://c7bisqd2s2fim"]
 
+[ext_resource type="Texture2D" uid="uid://crrewfm5k1qmf" path="res://Art/Meteoriittipallo.png" id="1_5wds4"]
+
 [node name="Meteor" type="Node2D" unique_id=489751699]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=85146092]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_5wds4")

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_slnnj"]
 [ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="4_slnnj"]
 [ext_resource type="PackedScene" uid="uid://ddh1ccrjx4eko" path="res://Scenes/LanePicker.tscn" id="6_t3or0"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="7_ysn8j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3or0"]
 size = Vector2(386.5, 675)
@@ -31,6 +32,7 @@ repeat_size = Vector2(1246.02, 0)
 repeat_times = 40
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=1876120673]
+modulate = Color(1, 1, 1, 0.5921569)
 texture_repeat = 2
 position = Vector2(554.85, 128.84)
 scale = Vector2(1.25, 1.25)
@@ -39,6 +41,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 1023, 297)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=226133395]
+modulate = Color(1, 1, 1, 0.5803922)
 position = Vector2(96.68, 299.19)
 scale = Vector2(1.23, 1.23)
 texture = ExtResource("2_slnnj")
@@ -51,6 +54,7 @@ repeat_size = Vector2(1391.68, 0)
 repeat_times = 40
 
 [node name="Sprite2D" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1358726508]
+modulate = Color(1, 1, 1, 0.5764706)
 texture_repeat = 2
 position = Vector2(599.92, 274.47)
 scale = Vector2(1.37, 1.37)
@@ -59,6 +63,7 @@ region_enabled = true
 region_rect = Rect2(0, 660, 1023, 363)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=2007023863]
+modulate = Color(1, 1, 1, 0.6156863)
 position = Vector2(0, 708.95)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("2_slnnj")
@@ -66,6 +71,7 @@ region_enabled = true
 region_rect = Rect2(0, 660, 1023, 363)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1178175020]
+modulate = Color(1, 1, 1, 0.5882353)
 position = Vector2(245.92, 373.9)
 rotation = 3.1415927
 scale = Vector2(1.4, 1.4)
@@ -96,11 +102,11 @@ position = Vector2(1095, 240.00003)
 scale = Vector2(0.82, 0.82)
 
 [node name="StardustCollectible3" parent="StardustCollectibles" unique_id=1980197097 instance=ExtResource("3_joc8x")]
-position = Vector2(1444, 477.99997)
+position = Vector2(1350.0001, 438.00003)
 scale = Vector2(0.82, 0.82)
 
 [node name="StardustCollectible4" parent="StardustCollectibles" unique_id=1271448631 instance=ExtResource("3_joc8x")]
-position = Vector2(1523, 128)
+position = Vector2(1641, 117)
 scale = Vector2(0.82, 0.82)
 
 [node name="StardustCollectible5" parent="StardustCollectibles" unique_id=1643760790 instance=ExtResource("3_joc8x")]
@@ -108,11 +114,11 @@ position = Vector2(1955, 285)
 scale = Vector2(0.82, 0.82)
 
 [node name="StardustCollectible6" parent="StardustCollectibles" unique_id=294770064 instance=ExtResource("3_joc8x")]
-position = Vector2(2324, 112)
+position = Vector2(2525, 159)
 scale = Vector2(0.82, 0.82)
 
 [node name="StardustCollectible7" parent="StardustCollectibles" unique_id=1910953785 instance=ExtResource("3_joc8x")]
-position = Vector2(2505, 351)
+position = Vector2(2744, 404)
 scale = Vector2(0.82, 0.82)
 
 [node name="StardustCollectible8" parent="StardustCollectibles" unique_id=1165762050 instance=ExtResource("3_joc8x")]
@@ -120,4 +126,28 @@ position = Vector2(2233, 464)
 scale = Vector2(0.82, 0.82)
 
 [node name="LanePicker" parent="." unique_id=785505358 instance=ExtResource("6_t3or0")]
-position = Vector2(3088.75, 0)
+position = Vector2(3905.93, 0)
+
+[node name="Questions" type="Node2D" parent="." unique_id=895517738]
+
+[node name="Question1" type="Label" parent="Questions" unique_id=1071616507]
+offset_left = 3062.0
+offset_top = 316.0
+offset_right = 3565.0
+offset_bottom = 386.0
+theme_override_fonts/font = ExtResource("7_ysn8j")
+theme_override_font_sizes/font_size = 29
+text = "Missä koet olevasi urallasi juuri nyt?"
+
+[node name="Answers" type="Node2D" parent="." unique_id=1753623851]
+
+[node name="Question1" type="Node2D" parent="Answers" unique_id=1759062312]
+
+[node name="Label" type="Label" parent="Answers/Question1" unique_id=605184644]
+offset_left = 3829.0
+offset_top = 91.0
+offset_right = 4213.0
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("7_ysn8j")
+theme_override_font_sizes/font_size = 25
+text = "Paljon ideoita mielessä"
