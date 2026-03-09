@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// GameManager huolehtii pelisessioon liittyvästä datasta.
@@ -33,6 +34,7 @@ public partial class GameManager : Node
 
     #region Game Data
     private float _health;
+    private List<string> _personalityChoices = new List<string>(); // list that will store which Muusa role answers correspond with
     [Export] private float _drainHealth = 0.1f; // loses 10% glow per second, evaluate if thats a smart value or not
 
     public float Health
@@ -80,5 +82,11 @@ public partial class GameManager : Node
 
         Health -= amount;
         return true;
+    }
+
+    public void SaveChoice(string Role)
+    {
+        _personalityChoices.Add(Role);
+        GD.Print("Current answers: " + string.Join(", ", _personalityChoices));
     }
 }
