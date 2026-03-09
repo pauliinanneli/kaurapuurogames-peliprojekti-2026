@@ -4,7 +4,7 @@ using System;
 public partial class StardustCollectible : Collectible
 {
 	[Export] private float _glowAmount = 0.2f;
-  [Export] private float _lostGlow = 0.1f; // evaluate if sensible
+  [Export] private float _lostGlow = 0.05f; // evaluate if sensible
 
     protected override void Collect(PlayerCharacter playerCharacter)
     {

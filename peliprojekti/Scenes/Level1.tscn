@@ -131,10 +131,10 @@ position = Vector2(3905.93, 0)
 [node name="Questions" type="Node2D" parent="." unique_id=895517738]
 
 [node name="Question1" type="Label" parent="Questions" unique_id=1071616507]
-offset_left = 3062.0
-offset_top = 316.0
-offset_right = 3565.0
-offset_bottom = 386.0
+offset_left = 3122.0
+offset_top = 307.0
+offset_right = 3625.0
+offset_bottom = 377.0
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
 text = "Missä koet olevasi urallasi juuri nyt?"
@@ -142,8 +142,9 @@ text = "Missä koet olevasi urallasi juuri nyt?"
 [node name="Answers" type="Node2D" parent="." unique_id=1753623851]
 
 [node name="Question1" type="Node2D" parent="Answers" unique_id=1759062312]
+position = Vector2(63.77, 0)
 
-[node name="Label" type="Label" parent="Answers/Question1" unique_id=605184644]
+[node name="Edistäjä" type="Label" parent="Answers/Question1" unique_id=605184644]
 offset_left = 3829.0
 offset_top = 91.0
 offset_right = 4213.0
@@ -151,3 +152,21 @@ offset_bottom = 165.0
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
 text = "Paljon ideoita mielessä"
+
+[node name="Etenijä" type="Label" parent="Answers/Question1" unique_id=1495938434]
+offset_left = 3829.0
+offset_top = 310.41
+offset_right = 4213.0
+offset_bottom = 384.4099
+theme_override_fonts/font = ExtResource("7_ysn8j")
+theme_override_font_sizes/font_size = 25
+text = "Suunta melko selkeä"
+
+[node name="Etsijä" type="Label" parent="Answers/Question1" unique_id=1703189168]
+offset_left = 3829.0
+offset_top = 529.69
+offset_right = 4213.0
+offset_bottom = 603.69
+theme_override_fonts/font = ExtResource("7_ysn8j")
+theme_override_font_sizes/font_size = 25
+text = "Pohdin mitä haluan"

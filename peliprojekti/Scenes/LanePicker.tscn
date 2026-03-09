@@ -3,21 +3,43 @@
 [ext_resource type="Texture2D" uid="uid://dogth884vt41k" path="res://Art/LaneDivider.png" id="1_81433"]
 [ext_resource type="Script" uid="uid://dyetpnay0rqmh" path="res://Scenes/Gate.cs" id="2_tbrrn"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbrrn"]
+size = Vector2(300.27676, 32.00007)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjvlm"]
+size = Vector2(297.8617, 31.999908)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81433"]
 size = Vector2(312, 204)
 
 [node name="Node2D" type="Node2D" unique_id=785505358]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736582568]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1782564142]
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1736582568]
 modulate = Color(1, 1, 1, 0.5882353)
-position = Vector2(163.96, 212.45)
-scale = Vector2(1.2421875, 0.34375)
+position = Vector2(188.98001, 212.45)
+scale = Vector2(1.4376563, 0.34375)
 texture = ExtResource("1_81433")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=719625678]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=564936726]
+position = Vector2(190.50002, 212.5)
+scale = Vector2(1.2421874, 0.34375)
+shape = SubResource("RectangleShape2D_tbrrn")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=671679547]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1125762490]
+position = Vector2(190.00003, 433.49994)
+scale = Vector2(1.2421874, 0.34375)
+shape = SubResource("RectangleShape2D_mjvlm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D2" unique_id=719625678]
 modulate = Color(1, 1, 1, 0.5882353)
-position = Vector2(163.96, 433.26)
-scale = Vector2(1.2421875, 0.34375)
+position = Vector2(188.98001, 433.26)
+scale = Vector2(1.4376563, 0.34375)
 texture = ExtResource("1_81433")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1708017844]
