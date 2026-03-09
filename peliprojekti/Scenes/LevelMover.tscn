@@ -19,15 +19,15 @@ anchor_mode = 0
 [node name="UI" type="Node2D" parent="." unique_id=1249232356]
 
 [node name="Sprite2D" type="Sprite2D" parent="UI" unique_id=263631045]
-position = Vector2(1017.5, 63)
-scale = Vector2(1.1633663, 1)
+position = Vector2(1005, 77.5)
+scale = Vector2(1.2871288, 1.2843137)
 texture = ExtResource("3_jenyd")
 
 [node name="Etsijä" type="Label" parent="UI" unique_id=1735507292]
-offset_left = 921.0
-offset_top = 22.0
-offset_right = 969.0
-offset_bottom = 45.0
+offset_left = 907.0
+offset_top = 31.89
+offset_right = 965.0
+offset_bottom = 55.89
 theme_override_fonts/font = ExtResource("3_flrky")
 theme_override_font_sizes/font_size = 18
 text = "ETSIJÄ"
@@ -35,10 +35,10 @@ vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Edistäjä" type="Label" parent="UI" unique_id=563421684]
-offset_left = 921.0
-offset_top = 51.32
-offset_right = 991.0
-offset_bottom = 74.32
+offset_left = 907.0
+offset_top = 67.32
+offset_right = 987.0
+offset_bottom = 91.32
 theme_override_fonts/font = ExtResource("3_flrky")
 theme_override_font_sizes/font_size = 18
 text = "EDISTÄJÄ"
@@ -46,10 +46,10 @@ vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Etenijä" type="Label" parent="UI" unique_id=244665474]
-offset_left = 921.0
-offset_top = 80.42
-offset_right = 991.0
-offset_bottom = 103.42001
+offset_left = 907.0
+offset_top = 101.64
+offset_right = 977.0
+offset_bottom = 125.64
 theme_override_fonts/font = ExtResource("3_flrky")
 theme_override_font_sizes/font_size = 18
 text = "ETENIJÄ"

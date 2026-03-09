@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="3_jghel"]
 [ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="3_joc8x"]
 [ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_slnnj"]
-[ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Scenes/DeadZone.cs" id="4_slnnj"]
+[ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="4_slnnj"]
+[ext_resource type="PackedScene" uid="uid://ddh1ccrjx4eko" path="res://Scenes/LanePicker.tscn" id="6_t3or0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3or0"]
 size = Vector2(386.5, 675)
@@ -113,3 +114,6 @@ scale = Vector2(0.82, 0.82)
 [node name="StardustCollectible7" parent="StardustCollectibles" unique_id=1910953785 instance=ExtResource("3_joc8x")]
 position = Vector2(2505, 351)
 scale = Vector2(0.82, 0.82)
+
+[node name="LanePicker" parent="." unique_id=785505358 instance=ExtResource("6_t3or0")]
+position = Vector2(3088.75, 0)

@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ddh1ccrjx4eko"]
+
+[ext_resource type="Texture2D" uid="uid://dogth884vt41k" path="res://Art/LaneDivider.png" id="1_81433"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81433"]
+size = Vector2(312, 204)
+
+[node name="Node2D" type="Node2D" unique_id=785505358]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1736582568]
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(163.96, 212.45)
+scale = Vector2(1.2421875, 0.34375)
+texture = ExtResource("1_81433")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=719625678]
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(163.96, 433.26)
+scale = Vector2(1.2421875, 0.34375)
+texture = ExtResource("1_81433")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1708017844]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1050382183]
+position = Vector2(217, 101.87)
+shape = SubResource("RectangleShape2D_81433")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=270783135]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=370951867]
+position = Vector2(217, 322.76)
+shape = SubResource("RectangleShape2D_81433")
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=1061081826]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3" unique_id=1972162096]
+position = Vector2(217, 543.72)
+shape = SubResource("RectangleShape2D_81433")
