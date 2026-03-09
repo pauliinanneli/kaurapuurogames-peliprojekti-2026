@@ -6,10 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_slnnj"]
 [ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="4_slnnj"]
 [ext_resource type="PackedScene" uid="uid://ddh1ccrjx4eko" path="res://Scenes/LanePicker.tscn" id="6_t3or0"]
+[ext_resource type="Script" uid="uid://dyetpnay0rqmh" path="res://Scenes/Gate.cs" id="7_6ll4n"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="7_ysn8j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3or0"]
 size = Vector2(386.5, 675)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kylad"]
+size = Vector2(312, 204)
 
 [node name="Level1" type="Node2D" unique_id=2140551516]
 
@@ -125,8 +129,65 @@ scale = Vector2(0.82, 0.82)
 position = Vector2(2233, 464)
 scale = Vector2(0.82, 0.82)
 
-[node name="LanePicker" parent="." unique_id=785505358 instance=ExtResource("6_t3or0")]
-position = Vector2(3905.93, 0)
+[node name="StardustCollectible9" parent="StardustCollectibles" unique_id=1187525951 instance=ExtResource("3_joc8x")]
+position = Vector2(4308, 537)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible10" parent="StardustCollectibles" unique_id=987091168 instance=ExtResource("3_joc8x")]
+position = Vector2(4308.45, 314.72)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible11" parent="StardustCollectibles" unique_id=556087747 instance=ExtResource("3_joc8x")]
+position = Vector2(4308.45, 95.68)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible12" parent="StardustCollectibles" unique_id=1510347797 instance=ExtResource("3_joc8x")]
+position = Vector2(4623, 210)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible13" parent="StardustCollectibles" unique_id=2053158818 instance=ExtResource("3_joc8x")]
+position = Vector2(4839, 430)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible14" parent="StardustCollectibles" unique_id=1392818003 instance=ExtResource("3_joc8x")]
+position = Vector2(5161, 163)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible15" parent="StardustCollectibles" unique_id=535084890 instance=ExtResource("3_joc8x")]
+position = Vector2(5362, 505)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible16" parent="StardustCollectibles" unique_id=917900912 instance=ExtResource("3_joc8x")]
+position = Vector2(5598, 139)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible17" parent="StardustCollectibles" unique_id=1548002137 instance=ExtResource("3_joc8x")]
+position = Vector2(5742, 367)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible18" parent="StardustCollectibles" unique_id=1798348824 instance=ExtResource("3_joc8x")]
+position = Vector2(5958, 231)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible19" parent="StardustCollectibles" unique_id=1635785650 instance=ExtResource("3_joc8x")]
+position = Vector2(6084, 582)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible20" parent="StardustCollectibles" unique_id=1265676225 instance=ExtResource("3_joc8x")]
+position = Vector2(6441, 308)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible21" parent="StardustCollectibles" unique_id=361717327 instance=ExtResource("3_joc8x")]
+position = Vector2(6867.0005, 439)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible22" parent="StardustCollectibles" unique_id=942031726 instance=ExtResource("3_joc8x")]
+position = Vector2(7416, 227)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible23" parent="StardustCollectibles" unique_id=1897022770 instance=ExtResource("3_joc8x")]
+position = Vector2(3298, 391)
+scale = Vector2(0.82, 0.82)
 
 [node name="Questions" type="Node2D" parent="." unique_id=895517738]
 
@@ -138,6 +199,15 @@ offset_bottom = 377.0
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
 text = "Missä koet olevasi urallasi juuri nyt?"
+
+[node name="Question2" type="Label" parent="Questions" unique_id=705043069]
+offset_left = 7000.0
+offset_top = 307.0
+offset_right = 7503.0
+offset_bottom = 377.0
+theme_override_fonts/font = ExtResource("7_ysn8j")
+theme_override_font_sizes/font_size = 29
+text = "Miten reagoit uuteen ideaan tai mahdollisuuteen?"
 
 [node name="Answers" type="Node2D" parent="." unique_id=1753623851]
 
@@ -170,3 +240,104 @@ offset_bottom = 603.69
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
 text = "Pohdin mitä haluan"
+
+[node name="Question2" type="Node2D" parent="Answers" unique_id=912234752]
+
+[node name="Etenijä" type="Label" parent="Answers/Question2" unique_id=1732289538]
+offset_left = 7879.16
+offset_top = 91.0
+offset_right = 8263.162
+offset_bottom = 165.0
+theme_override_fonts/font = ExtResource("7_ysn8j")
+theme_override_font_sizes/font_size = 25
+text = "Mietin miten se sopii tavoitteisiin"
+
+[node name="Etsijä" type="Label" parent="Answers/Question2" unique_id=231265029]
+offset_left = 7879.16
+offset_top = 310.41
+offset_right = 8263.162
+offset_bottom = 384.4099
+theme_override_fonts/font = ExtResource("7_ysn8j")
+theme_override_font_sizes/font_size = 25
+text = "Jään pohtimaan sitä"
+
+[node name="Edistäjä" type="Label" parent="Answers/Question2" unique_id=1955279924]
+offset_left = 7879.16
+offset_top = 529.69
+offset_right = 8263.162
+offset_bottom = 603.69
+theme_override_fonts/font = ExtResource("7_ysn8j")
+theme_override_font_sizes/font_size = 25
+text = "Innostun nopeasti"
+
+[node name="Lanepickers" type="Node2D" parent="." unique_id=1151266243]
+
+[node name="Question1" type="Node2D" parent="Lanepickers" unique_id=1393487006]
+
+[node name="LanePicker" parent="Lanepickers/Question1" unique_id=785505358 instance=ExtResource("6_t3or0")]
+position = Vector2(3905.93, 0)
+
+[node name="Edistäjä" type="Area2D" parent="Lanepickers/Question1/LanePicker" unique_id=504523542]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("7_6ll4n")
+Role = "Edistäjä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question1/LanePicker/Edistäjä" unique_id=2003175339]
+position = Vector2(217, 101.87)
+shape = SubResource("RectangleShape2D_kylad")
+
+[node name="Etenijä" type="Area2D" parent="Lanepickers/Question1/LanePicker" unique_id=220183264]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("7_6ll4n")
+Role = "Etenijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question1/LanePicker/Etenijä" unique_id=1400114512]
+position = Vector2(217, 322.76)
+shape = SubResource("RectangleShape2D_kylad")
+
+[node name="Etsijä" type="Area2D" parent="Lanepickers/Question1/LanePicker" unique_id=1551221475]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("7_6ll4n")
+Role = "Etsijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question1/LanePicker/Etsijä" unique_id=2062906226]
+position = Vector2(217, 543.72)
+shape = SubResource("RectangleShape2D_kylad")
+
+[node name="Question2" type="Node2D" parent="Lanepickers" unique_id=658014836]
+
+[node name="LanePicker" parent="Lanepickers/Question2" unique_id=2074034633 instance=ExtResource("6_t3or0")]
+position = Vector2(7900, 0)
+
+[node name="Etenijä" type="Area2D" parent="Lanepickers/Question2/LanePicker" unique_id=1950968338]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("7_6ll4n")
+Role = "Etenijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question2/LanePicker/Etenijä" unique_id=1833452862]
+position = Vector2(217, 101.87)
+shape = SubResource("RectangleShape2D_kylad")
+
+[node name="Etsijä" type="Area2D" parent="Lanepickers/Question2/LanePicker" unique_id=994723241]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("7_6ll4n")
+Role = "Etsijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question2/LanePicker/Etsijä" unique_id=2015426731]
+position = Vector2(217, 322.76)
+shape = SubResource("RectangleShape2D_kylad")
+
+[node name="Edistäjä" type="Area2D" parent="Lanepickers/Question2/LanePicker" unique_id=1735670199]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("7_6ll4n")
+Role = "Edistäjä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question2/LanePicker/Edistäjä" unique_id=327527988]
+position = Vector2(217, 543.72)
+shape = SubResource("RectangleShape2D_kylad")
