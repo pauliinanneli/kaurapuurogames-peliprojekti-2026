@@ -28,6 +28,7 @@ collision_mask = 13
 script = ExtResource("1_5gnj7")
 
 [node name="Glow" type="Sprite2D" parent="." unique_id=519461340]
+modulate = Color(1, 1, 1, 0.627451)
 material = SubResource("CanvasItemMaterial_5gnj7")
 scale = Vector2(0.13, 0.13)
 texture = ExtResource("2_5gnj7")
