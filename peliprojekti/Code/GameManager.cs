@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 
 /// <summary>
 /// GameManager huolehtii pelisessioon liittyvästä datasta.
@@ -42,6 +43,7 @@ public partial class GameManager : Node
     [Export] public Color _etenijäColor = Color.FromHtml("#FF7EB9");
     [Export] public Color _edistäjäColor = Color.FromHtml("#D4FF91");
 
+#region health
     public float Health
     {
         get {return _health;}
@@ -87,11 +89,24 @@ public partial class GameManager : Node
         Health -= amount;
         return true;
     }
+    #endregion
 
-    public void SaveChoice(string Role)
+#region personalityscore
+
+    public List<string> GetChoices()
+    {
+        return _personalityChoices;
+    }
+        public void SaveChoice(string Role)
     {
         _personalityChoices.Add(Role);
         GD.Print("Current answers: " + string.Join(", ", _personalityChoices));
+
+
+        if (HUD.Instance != null)
+        {
+            HUD.Instance.RefreshDots();
+        }
     }
 
     public Color PersonalityColor()
@@ -139,4 +154,5 @@ public partial class GameManager : Node
             return _defaultColor;
         }
     }
+    #endregion
 }

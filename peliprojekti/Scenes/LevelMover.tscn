@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://jctyp3d4ov6s" path="res://Code/LevelMover.cs" id="1_r2q7f"]
 [ext_resource type="PackedScene" uid="uid://c1yxxdf2xeya3" path="res://Scenes/PlayerCharacter.tscn" id="2_flrky"]
-[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="3_flrky"]
-[ext_resource type="Texture2D" uid="uid://ymcy63y7nhc2" path="res://Art/ui-bg-forlevel.png" id="3_jenyd"]
 
 [node name="LevelMover" type="Node2D" unique_id=1321373785]
 script = ExtResource("1_r2q7f")
@@ -15,43 +13,3 @@ _friction = 0.1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1852005941]
 anchor_mode = 0
-
-[node name="UI" type="Node2D" parent="." unique_id=1249232356]
-
-[node name="Sprite2D" type="Sprite2D" parent="UI" unique_id=263631045]
-position = Vector2(1005, 77.5)
-scale = Vector2(1.2871288, 1.2843137)
-texture = ExtResource("3_jenyd")
-
-[node name="Etsijä" type="Label" parent="UI" unique_id=1735507292]
-offset_left = 907.0
-offset_top = 31.89
-offset_right = 965.0
-offset_bottom = 55.89
-theme_override_fonts/font = ExtResource("3_flrky")
-theme_override_font_sizes/font_size = 18
-text = "ETSIJÄ"
-vertical_alignment = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Edistäjä" type="Label" parent="UI" unique_id=563421684]
-offset_left = 907.0
-offset_top = 67.32
-offset_right = 987.0
-offset_bottom = 91.32
-theme_override_fonts/font = ExtResource("3_flrky")
-theme_override_font_sizes/font_size = 18
-text = "EDISTÄJÄ"
-vertical_alignment = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Etenijä" type="Label" parent="UI" unique_id=244665474]
-offset_left = 907.0
-offset_top = 101.64
-offset_right = 977.0
-offset_bottom = 125.64
-theme_override_fonts/font = ExtResource("3_flrky")
-theme_override_font_sizes/font_size = 18
-text = "ETENIJÄ"
-vertical_alignment = 2
-metadata/_edit_use_anchors_ = true
