@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cuscp5aotr6hs"]
+
+[ext_resource type="Script" uid="uid://cir2u7yr6exoe" path="res://Scenes/StartMenu.cs" id="1_dl0pg"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_dvnd1"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="2_xtte2"]
+
+[node name="StartMenu" type="Control" unique_id=1614769704]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dl0pg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1731972823]
+position = Vector2(576.00006, 329.5)
+scale = Vector2(0.5852217, 0.33870965)
+texture = ExtResource("1_dvnd1")
+region_enabled = true
+region_rect = Rect2(0, 0, 2030, 2046)
+
+[node name="StartButton" type="Button" parent="." unique_id=440388182]
+layout_mode = 0
+offset_left = 526.03
+offset_top = 318.27
+offset_right = 637.03
+offset_bottom = 372.27
+theme_override_fonts/font = ExtResource("2_xtte2")
+theme_override_font_sizes/font_size = 35
+text = "START"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
