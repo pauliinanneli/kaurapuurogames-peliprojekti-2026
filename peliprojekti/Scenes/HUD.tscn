@@ -4,10 +4,12 @@
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="1_sd512"]
 [ext_resource type="PackedScene" uid="uid://bhngvysqmhugb" path="res://Scenes/Dot.tscn" id="2_psnte"]
 
-[node name="HUD" type="CanvasLayer" unique_id=989878847 node_paths=PackedStringArray("_container")]
+[node name="HUD" type="CanvasLayer" unique_id=989878847 node_paths=PackedStringArray("_etsijäContainer", "_edistäjäContainer", "_etenijäContainer")]
 script = ExtResource("1_jo1ms")
 _dot = ExtResource("2_psnte")
-_container = NodePath("Control/EtsijäContainer/DotContainer")
+"_etsijäContainer" = NodePath("Control/EtsijäContainer/EtsijäDotContainer")
+"_edistäjäContainer" = NodePath("Control/EdistäjäContainer/EdistäjäDotContainer")
+"_etenijäContainer" = NodePath("Control/EtenijäContainer/EtenijäDotContainer")
 
 [node name="Control" type="Control" parent="." unique_id=381228363]
 layout_mode = 3
@@ -34,7 +36,7 @@ text = "ETSIJÄ"
 vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="DotContainer" type="HBoxContainer" parent="Control/EtsijäContainer" unique_id=1145178914]
+[node name="EtsijäDotContainer" type="HBoxContainer" parent="Control/EtsijäContainer" unique_id=1145178914]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 
@@ -53,7 +55,7 @@ text = "EDISTÄJÄ"
 vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="DotContainer" type="HBoxContainer" parent="Control/EdistäjäContainer" unique_id=196191950]
+[node name="EdistäjäDotContainer" type="HBoxContainer" parent="Control/EdistäjäContainer" unique_id=196191950]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 
@@ -72,6 +74,6 @@ text = "ETENIJÄ"
 vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="DotContainer" type="HBoxContainer" parent="Control/EtenijäContainer" unique_id=948077601]
+[node name="EtenijäDotContainer" type="HBoxContainer" parent="Control/EtenijäContainer" unique_id=948077601]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2

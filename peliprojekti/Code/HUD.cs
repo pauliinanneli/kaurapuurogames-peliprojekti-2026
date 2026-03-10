@@ -10,7 +10,9 @@ public partial class HUD : CanvasLayer
     }
 	[Export] public PackedScene _dot;
 
-	[Export] private HBoxContainer _container;
+	[Export] private HBoxContainer _etsijäContainer;
+    [Export] private HBoxContainer _edistäjäContainer;
+    [Export] private HBoxContainer _etenijäContainer;
 
     public override void _Ready()
     {
@@ -19,20 +21,31 @@ public partial class HUD : CanvasLayer
 
 	public void RefreshDots()
     {
-        GD.Print("HUD: REFRESH METHOD TRIGGERED!");
-        if (_container == null)
+        if (_edistäjäContainer != null)
         {
-            return;
+            foreach (Node child in _edistäjäContainer.GetChildren())
+            {
+                child.QueueFree();
+            }
+        }
+        if (_etenijäContainer != null)
+        {
+            foreach (Node child in _etenijäContainer.GetChildren())
+            {
+                child.QueueFree();
+            }
+        }
+        if (_etsijäContainer != null)
+        {
+            foreach (Node child in _etsijäContainer.GetChildren())
+            {
+                child.QueueFree();
+            }
         }
 
-        foreach (Node child in _container.GetChildren())
-        {
-            child.QueueFree();
-        }
 
 		var choices = GameManager.Instance.GetChoices();
 
-        GD.Print($"Creating {choices.Count} dots");
 
 		foreach (string roleName in choices)
         {
@@ -40,17 +53,19 @@ public partial class HUD : CanvasLayer
 
 			if (roleName == "Edistäjä") {
 				dot.Color = GameManager.Instance._edistäjäColor;
+                _edistäjäContainer.AddChild(dot);
 			}
 			else if (roleName == "Etenijä")
 			{
                 dot.Color = GameManager.Instance._etenijäColor;
+                _etenijäContainer.AddChild(dot);
             }
 			else if (roleName == "Etsijä")
             {
                 dot.Color = GameManager.Instance._etsijäColor;
+                _etsijäContainer.AddChild(dot);
             }
 
-			_container.AddChild(dot);
         }
     }
 }
