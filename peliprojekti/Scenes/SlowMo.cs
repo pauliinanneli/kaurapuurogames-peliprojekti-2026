@@ -26,7 +26,7 @@ public partial class SlowMo : Area2D
         if (body is PlayerCharacter)
         {
             // speed back to normal over 0,5 seconds
-            GameManager.Instance.ChangeGameSpeed(1.0f, 0.5f);
+            GameManager.Instance.ChangeGameSpeed(1.0f, 0.3f);
         }
     }
 }

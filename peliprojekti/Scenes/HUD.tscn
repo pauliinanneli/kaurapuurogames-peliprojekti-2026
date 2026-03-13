@@ -7,11 +7,11 @@
 [node name="HUD" type="CanvasLayer" unique_id=989878847 node_paths=PackedStringArray("_etsijäContainer", "_edistäjäContainer", "_etenijäContainer")]
 script = ExtResource("1_jo1ms")
 _dot = ExtResource("2_psnte")
-"_etsijäContainer" = NodePath("Control/EtsijäContainer/EtsijäDotContainer")
-"_edistäjäContainer" = NodePath("Control/EdistäjäContainer/EdistäjäDotContainer")
-"_etenijäContainer" = NodePath("Control/EtenijäContainer/EtenijäDotContainer")
+"_etsijäContainer" = NodePath("Score/EtsijäContainer/EtsijäDotContainer")
+"_edistäjäContainer" = NodePath("Score/EdistäjäContainer/EdistäjäDotContainer")
+"_etenijäContainer" = NodePath("Score/EtenijäContainer/EtenijäDotContainer")
 
-[node name="Control" type="Control" parent="." unique_id=381228363]
+[node name="Score" type="Control" parent="." unique_id=381228363]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,14 +21,14 @@ offset_right = 35.660034
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="EtsijäContainer" type="VBoxContainer" parent="Control" unique_id=1238901580]
+[node name="EtsijäContainer" type="VBoxContainer" parent="Score" unique_id=1238901580]
 layout_mode = 0
 offset_left = 841.02
 offset_top = 34.96
 offset_right = 1115.3401
 offset_bottom = 82.96
 
-[node name="Etsijä" type="Label" parent="Control/EtsijäContainer" unique_id=2065188138]
+[node name="Etsijä" type="Label" parent="Score/EtsijäContainer" unique_id=2065188138]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_sd512")
 theme_override_font_sizes/font_size = 18
@@ -36,18 +36,18 @@ text = "ETSIJÄ"
 vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="EtsijäDotContainer" type="HBoxContainer" parent="Control/EtsijäContainer" unique_id=1145178914]
+[node name="EtsijäDotContainer" type="HBoxContainer" parent="Score/EtsijäContainer" unique_id=1145178914]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 
-[node name="EdistäjäContainer" type="VBoxContainer" parent="Control" unique_id=1205706299]
+[node name="EdistäjäContainer" type="VBoxContainer" parent="Score" unique_id=1205706299]
 layout_mode = 0
 offset_left = 841.02
 offset_top = 91.62
 offset_right = 1117.3401
 offset_bottom = 139.62001
 
-[node name="Edistäjä" type="Label" parent="Control/EdistäjäContainer" unique_id=1375727640]
+[node name="Edistäjä" type="Label" parent="Score/EdistäjäContainer" unique_id=1375727640]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_sd512")
 theme_override_font_sizes/font_size = 18
@@ -55,18 +55,18 @@ text = "EDISTÄJÄ"
 vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="EdistäjäDotContainer" type="HBoxContainer" parent="Control/EdistäjäContainer" unique_id=196191950]
+[node name="EdistäjäDotContainer" type="HBoxContainer" parent="Score/EdistäjäContainer" unique_id=196191950]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 
-[node name="EtenijäContainer" type="VBoxContainer" parent="Control" unique_id=511178900]
+[node name="EtenijäContainer" type="VBoxContainer" parent="Score" unique_id=511178900]
 layout_mode = 0
 offset_left = 841.02
 offset_top = 154.02
 offset_right = 1117.3401
 offset_bottom = 202.02007
 
-[node name="Etenijä" type="Label" parent="Control/EtenijäContainer" unique_id=397631061]
+[node name="Etenijä" type="Label" parent="Score/EtenijäContainer" unique_id=397631061]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_sd512")
 theme_override_font_sizes/font_size = 18
@@ -74,6 +74,30 @@ text = "ETENIJÄ"
 vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="EtenijäDotContainer" type="HBoxContainer" parent="Control/EtenijäContainer" unique_id=948077601]
+[node name="EtenijäDotContainer" type="HBoxContainer" parent="Score/EtenijäContainer" unique_id=948077601]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
+
+[node name="Pause" type="Control" parent="." unique_id=45878486]
+modulate = Color(1, 1, 1, 0.58431375)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1015.00006
+offset_top = 537.00006
+offset_right = 1055.0
+offset_bottom = 577.00006
+scale = Vector2(0.8, 0.8)
+
+[node name="ColorRect" type="ColorRect" parent="Pause" unique_id=329207276]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 14.0
+offset_right = 47.0
+offset_bottom = 82.0
+
+[node name="ColorRect2" type="ColorRect" parent="Pause" unique_id=674166007]
+layout_mode = 0
+offset_left = 64.69
+offset_top = 14.0
+offset_right = 89.69001
+offset_bottom = 82.0

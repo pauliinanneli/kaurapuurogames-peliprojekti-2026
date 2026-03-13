@@ -12,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dl0pg")
+metadata/_edit_vertical_guides_ = [585.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1731972823]
 position = Vector2(576.00006, 329.5)
@@ -22,13 +23,23 @@ region_rect = Rect2(0, 0, 2030, 2046)
 
 [node name="StartButton" type="Button" parent="." unique_id=440388182]
 layout_mode = 0
-offset_left = 515.07
+offset_left = 529.51
 offset_top = 318.27
-offset_right = 626.07
+offset_right = 640.51
 offset_bottom = 372.27
 theme_override_fonts/font = ExtResource("2_xtte2")
 theme_override_font_sizes/font_size = 35
 text = "START"
+
+[node name="LevelsButton" type="Button" parent="." unique_id=393806509]
+layout_mode = 0
+offset_left = 521.09
+offset_top = 393.0
+offset_right = 649.09
+offset_bottom = 447.0
+theme_override_fonts/font = ExtResource("2_xtte2")
+theme_override_font_sizes/font_size = 35
+text = "LEVELS"
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
