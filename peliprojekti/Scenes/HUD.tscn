@@ -77,27 +77,3 @@ metadata/_edit_use_anchors_ = true
 [node name="EtenijäDotContainer" type="HBoxContainer" parent="Score/EtenijäContainer" unique_id=948077601]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
-
-[node name="Pause" type="Control" parent="." unique_id=45878486]
-modulate = Color(1, 1, 1, 0.58431375)
-layout_mode = 3
-anchors_preset = 0
-offset_left = 1015.00006
-offset_top = 537.00006
-offset_right = 1055.0
-offset_bottom = 577.00006
-scale = Vector2(0.8, 0.8)
-
-[node name="ColorRect" type="ColorRect" parent="Pause" unique_id=329207276]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 14.0
-offset_right = 47.0
-offset_bottom = 82.0
-
-[node name="ColorRect2" type="ColorRect" parent="Pause" unique_id=674166007]
-layout_mode = 0
-offset_left = 64.69
-offset_top = 14.0
-offset_right = 89.69001
-offset_bottom = 82.0

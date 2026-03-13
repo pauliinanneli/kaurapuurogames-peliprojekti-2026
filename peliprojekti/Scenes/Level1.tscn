@@ -1,20 +1,16 @@
 [gd_scene format=3 uid="uid://dk7d0f8t6fuml"]
 
-[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://art/Stardust.png" id="2_slnnj"]
-[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://art/Taustat.png" id="3_jghel"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_slnnj"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="3_jghel"]
 [ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="3_joc8x"]
 [ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_slnnj"]
 [ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="4_slnnj"]
-
-
-[ext_resource type="Texture2D" uid="uid://bw2ya6xtclrfx" path="res://art/blackhole.png" id="6_bdlbp"]
-
 [ext_resource type="PackedScene" uid="uid://ddh1ccrjx4eko" path="res://Scenes/LanePicker.tscn" id="6_t3or0"]
 [ext_resource type="Script" uid="uid://dyetpnay0rqmh" path="res://Code/Gate.cs" id="7_6ll4n"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="7_ysn8j"]
 [ext_resource type="Script" uid="uid://k30hveqr7w2q" path="res://Scenes/SlowMo.cs" id="9_bdlbp"]
 [ext_resource type="PackedScene" uid="uid://cx8iaunu8h0n" path="res://Scenes/HUD.tscn" id="9_kylad"]
-[ext_resource type="Script" uid="uid://cnn3twtwcujdj" path="res://Code/PauseUI.cs" id="11_2h8qs"]
+[ext_resource type="PackedScene" uid="uid://cmpbuj530sgae" path="res://Scenes/PauseUI.tscn" id="11_2h8qs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3or0"]
 size = Vector2(386.5, 675)
@@ -787,62 +783,4 @@ shape = SubResource("RectangleShape2D_2h8qs")
 
 [node name="HUD" parent="." unique_id=989878847 instance=ExtResource("9_kylad")]
 
-[node name="PauseUI" type="CanvasLayer" parent="." unique_id=1472096381]
-script = ExtResource("11_2h8qs")
-
-[node name="PauseMenu" type="Control" parent="PauseUI" unique_id=1599395191]
-process_mode = 3
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="PauseUI/PauseMenu" unique_id=200911817]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.6666667)
-
-[node name="ContinueButton" type="Button" parent="PauseUI/PauseMenu" unique_id=478333406]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -45.5
-offset_top = -15.5
-offset_right = 45.5
-offset_bottom = 15.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "CONTINUE"
-
-[node name="Label" type="Label" parent="PauseUI/PauseMenu" unique_id=2085257417]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -31.0
-offset_right = 31.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 60
-text = "PAUSED"
-
-[node name="PauseButton" type="Button" parent="PauseUI" unique_id=1422736230]
-custom_minimum_size = Vector2(80, 0)
-offset_right = 80.0
-offset_bottom = 31.0
-theme_override_font_sizes/font_size = 30
-text = "||"
-
-[connection signal="pressed" from="PauseUI/PauseMenu/ContinueButton" to="PauseUI" method="OnContinuePressed"]
-[connection signal="pressed" from="PauseUI/PauseButton" to="PauseUI" method="OnPausePressed"]
+[node name="PauseUI" parent="." unique_id=1141652004 instance=ExtResource("11_2h8qs")]
