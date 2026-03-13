@@ -33,7 +33,7 @@ public partial class GameManager : Node
     }
     #endregion
 
-
+#region health
     private float _health;
     private List<string> _personalityChoices = new List<string>(); // list that will store which Muusa role answers correspond with
     [Export] private float _drainHealth = 0.1f; // loses 10% glow per second, evaluate if thats a smart value or not
@@ -42,8 +42,6 @@ public partial class GameManager : Node
     [Export] public Color _etsijäColor = Color.FromHtml("#00E5FF");
     [Export] public Color _etenijäColor = Color.FromHtml("#FF7EB9");
     [Export] public Color _edistäjäColor = Color.FromHtml("#D4FF91");
-
-#region health
     public float Health
     {
         get {return _health;}
@@ -155,4 +153,18 @@ public partial class GameManager : Node
         }
     }
     #endregion
+
+#region gamespeed
+
+/// <summary>
+/// changes speed of the game. used during questions and answers
+/// </summary>
+/// <param name="targetSpeed">the speed we want to reach</param>
+/// <param name="duration">the time that it will take to do the transition to targetSpeed</param>
+public void ChangeGameSpeed(float targetSpeed, float duration)
+    {
+        Tween tween = GetTree().CreateTween();
+        tween.TweenProperty(Engine.GetSingleton("Engine"), "time_scale", targetSpeed, duration).SetTrans(Tween.TransitionType.Cubic).SetEase(Tween.EaseType.Out);
+    }
+#endregion
 }
