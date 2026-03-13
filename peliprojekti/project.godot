@@ -19,7 +19,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="peliprojekti"
-run/main_scene="uid://cuscp5aotr6hs"
+run/main_scene="uid://dk7d0f8t6fuml"
 config/features=PackedStringArray("4.6", "C#", "Mobile")
 config/icon="res://icon.svg"
 

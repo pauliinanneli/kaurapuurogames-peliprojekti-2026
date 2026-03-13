@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://dogth884vt41k" path="res://Art/LaneDivider.png" id="1_81433"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbrrn"]
-size = Vector2(300.27676, 32.00007)
+size = Vector2(300.27676, 26.181786)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mjvlm"]
-size = Vector2(297.8617, 31.999908)
+size = Vector2(297.8617, 26.181873)
 
 [node name="Node2D" type="Node2D" unique_id=785505358]
 
@@ -20,7 +20,7 @@ scale = Vector2(1.4376563, 0.34375)
 texture = ExtResource("1_81433")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=564936726]
-position = Vector2(190.50002, 212.5)
+position = Vector2(190.50002, 212.50002)
 scale = Vector2(1.2421874, 0.34375)
 shape = SubResource("RectangleShape2D_tbrrn")
 
@@ -28,7 +28,7 @@ shape = SubResource("RectangleShape2D_tbrrn")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1125762490]
-position = Vector2(190.00003, 433.49994)
+position = Vector2(190.00003, 433.5)
 scale = Vector2(1.2421874, 0.34375)
 shape = SubResource("RectangleShape2D_mjvlm")
 
