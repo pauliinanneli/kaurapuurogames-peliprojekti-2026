@@ -1,3 +1,121 @@
 [gd_scene format=3 uid="uid://cos4aghpkqpq5"]
 
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_foggk"]
+[ext_resource type="Texture2D" uid="uid://d10rc5xoj2e17" path="res://Art/ConnectingStar.png" id="2_qnmmg"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="3_xuaeq"]
+
+[sub_resource type="Gradient" id="Gradient_xuaeq"]
+offsets = PackedFloat32Array(0, 0.6505376)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j8oic"]
+gradient = SubResource("Gradient_xuaeq")
+fill = 1
+fill_from = Vector2(0.47863248, 0.47863248)
+
 [node name="ConnectingStars" type="Node2D" unique_id=1890405732]
+metadata/_edit_vertical_guides_ = [585.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=158353212]
+position = Vector2(576.00006, 329.5)
+scale = Vector2(0.5852217, 0.33870965)
+texture = ExtResource("1_foggk")
+region_enabled = true
+region_rect = Rect2(0, 0, 2030, 2046)
+
+[node name="Otava" type="Node2D" parent="." unique_id=669780749]
+position = Vector2(185.37, 6.64)
+scale = Vector2(0.73, 0.73)
+
+[node name="ConnectingStar" type="Sprite2D" parent="Otava" unique_id=487174269]
+position = Vector2(647, 373)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar" unique_id=929779636]
+scale = Vector2(1.92, 1.92)
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.79
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 7.15
+
+[node name="ConnectingStar2" type="Sprite2D" parent="Otava" unique_id=127454353]
+position = Vector2(-66.02739, 127.8904)
+scale = Vector2(0.357, 0.329)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar2" unique_id=1890201816]
+scale = Vector2(1.92, 1.92)
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.79
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 7.15
+
+[node name="ConnectingStar3" type="Sprite2D" parent="Otava" unique_id=1108749560]
+position = Vector2(258.6301, 103.23289)
+scale = Vector2(0.357, 0.329)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar3" unique_id=786480797]
+scale = Vector2(1.92, 1.92)
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.79
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 7.15
+
+[node name="ConnectingStar4" type="Sprite2D" parent="Otava" unique_id=734240214]
+position = Vector2(412.05478, 277.2055)
+scale = Vector2(0.357, 0.329)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar4" unique_id=200303689]
+scale = Vector2(1.92, 1.92)
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.79
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 7.15
+
+[node name="ConnectingStar5" type="Sprite2D" parent="Otava" unique_id=475986621]
+position = Vector2(1001, 431)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar5" unique_id=1029814245]
+scale = Vector2(1.92, 1.92)
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.79
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 7.15
+
+[node name="ConnectingStar6" type="Sprite2D" parent="Otava" unique_id=893637124]
+position = Vector2(513.4246, 615.56165)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar6" unique_id=1066624760]
+scale = Vector2(1.92, 1.92)
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.79
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 7.15
+
+[node name="ConnectingStar7" type="Sprite2D" parent="Otava" unique_id=1987086251]
+position = Vector2(892.8768, 705.9725)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar7" unique_id=1506937469]
+scale = Vector2(1.92, 1.92)
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.79
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 7.15
+
+[node name="ConnectStarsText" type="Label" parent="." unique_id=1303538926]
+offset_left = 476.0
+offset_top = 558.0
+offset_right = 695.0
+offset_bottom = 628.0
+theme_override_fonts/font = ExtResource("3_xuaeq")
+theme_override_font_sizes/font_size = 29
+text = "Yhdistä tähdet"

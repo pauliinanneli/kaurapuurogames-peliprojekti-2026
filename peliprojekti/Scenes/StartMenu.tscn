@@ -23,20 +23,20 @@ region_rect = Rect2(0, 0, 2030, 2046)
 
 [node name="StartButton" type="Button" parent="." unique_id=440388182]
 layout_mode = 0
-offset_left = 529.51
-offset_top = 318.27
-offset_right = 640.51
-offset_bottom = 372.27
+offset_left = 509.0
+offset_top = 318.0
+offset_right = 661.0
+offset_bottom = 372.0
 theme_override_fonts/font = ExtResource("2_xtte2")
 theme_override_font_sizes/font_size = 35
 text = "START"
 
 [node name="LevelsButton" type="Button" parent="." unique_id=393806509]
 layout_mode = 0
-offset_left = 521.09
-offset_top = 393.0
-offset_right = 649.09
-offset_bottom = 447.0
+offset_left = 509.0
+offset_top = 381.0
+offset_right = 661.0
+offset_bottom = 435.0
 theme_override_fonts/font = ExtResource("2_xtte2")
 theme_override_font_sizes/font_size = 35
 text = "LEVELS"
