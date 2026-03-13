@@ -18,7 +18,7 @@ size = Vector2(386.5, 675)
 size = Vector2(312, 204)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2h8qs"]
-size = Vector2(91.09944, 91.937164)
+size = Vector2(90.99473, 91.937164)
 
 [node name="Level1" type="Node2D" unique_id=2140551516]
 
@@ -522,6 +522,15 @@ theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
 text = "Miten reagoit uuteen ideaan tai mahdollisuuteen?"
 
+[node name="SlowMo" type="Area2D" parent="Lanepickers/Question2" unique_id=890423875]
+collision_mask = 2
+script = ExtResource("9_bdlbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question2/SlowMo" unique_id=103261871]
+position = Vector2(7331.48, 376)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_2h8qs")
+
 [node name="Question3" type="Node2D" parent="Lanepickers" unique_id=435961737]
 position = Vector2(2400, 0)
 
@@ -595,6 +604,15 @@ offset_bottom = 377.0
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
 text = "Millainen tuki auttaisi sinua eniten?"
+
+[node name="SlowMo" type="Area2D" parent="Lanepickers/Question3" unique_id=1186003185]
+collision_mask = 2
+script = ExtResource("9_bdlbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question3/SlowMo" unique_id=773239329]
+position = Vector2(7331.48, 376)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_2h8qs")
 
 [node name="Question4" type="Node2D" parent="Lanepickers" unique_id=535454763]
 position = Vector2(5800, 0)
@@ -670,6 +688,15 @@ theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
 text = "Mitä teet jos seuraava askel ei ole selvä?"
 
+[node name="SlowMo" type="Area2D" parent="Lanepickers/Question4" unique_id=1716340767]
+collision_mask = 2
+script = ExtResource("9_bdlbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question4/SlowMo" unique_id=1568128508]
+position = Vector2(7331.48, 376)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_2h8qs")
+
 [node name="Question5" type="Node2D" parent="Lanepickers" unique_id=1490077421]
 position = Vector2(8900, 0)
 
@@ -743,5 +770,14 @@ offset_bottom = 377.0
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
 text = "Mikä tuntuu nyt tärkeimmältä työelämässä?"
+
+[node name="SlowMo" type="Area2D" parent="Lanepickers/Question5" unique_id=1336451812]
+collision_mask = 2
+script = ExtResource("9_bdlbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question5/SlowMo" unique_id=1483753662]
+position = Vector2(7331.48, 376)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_2h8qs")
 
 [node name="HUD" parent="." unique_id=989878847 instance=ExtResource("9_kylad")]
