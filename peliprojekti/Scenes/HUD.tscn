@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cx8iaunu8h0n"]
+
+[ext_resource type="Script" uid="uid://c4gei3jdkqjea" path="res://Code/HUD.cs" id="1_jo1ms"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="1_sd512"]
+[ext_resource type="PackedScene" uid="uid://bhngvysqmhugb" path="res://Scenes/Dot.tscn" id="2_psnte"]
+
+[node name="HUD" type="CanvasLayer" unique_id=989878847 node_paths=PackedStringArray("_etsijäContainer", "_edistäjäContainer", "_etenijäContainer")]
+script = ExtResource("1_jo1ms")
+_dot = ExtResource("2_psnte")
+"_etsijäContainer" = NodePath("Control/EtsijäContainer/EtsijäDotContainer")
+"_edistäjäContainer" = NodePath("Control/EdistäjäContainer/EdistäjäDotContainer")
+"_etenijäContainer" = NodePath("Control/EtenijäContainer/EtenijäDotContainer")
+
+[node name="Control" type="Control" parent="." unique_id=381228363]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.66
+offset_right = 35.660034
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EtsijäContainer" type="VBoxContainer" parent="Control" unique_id=1238901580]
+layout_mode = 0
+offset_left = 841.02
+offset_top = 34.96
+offset_right = 1115.3401
+offset_bottom = 82.96
+
+[node name="Etsijä" type="Label" parent="Control/EtsijäContainer" unique_id=2065188138]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_sd512")
+theme_override_font_sizes/font_size = 18
+text = "ETSIJÄ"
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="EtsijäDotContainer" type="HBoxContainer" parent="Control/EtsijäContainer" unique_id=1145178914]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+
+[node name="EdistäjäContainer" type="VBoxContainer" parent="Control" unique_id=1205706299]
+layout_mode = 0
+offset_left = 841.02
+offset_top = 91.62
+offset_right = 1117.3401
+offset_bottom = 139.62001
+
+[node name="Edistäjä" type="Label" parent="Control/EdistäjäContainer" unique_id=1375727640]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_sd512")
+theme_override_font_sizes/font_size = 18
+text = "EDISTÄJÄ"
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="EdistäjäDotContainer" type="HBoxContainer" parent="Control/EdistäjäContainer" unique_id=196191950]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+
+[node name="EtenijäContainer" type="VBoxContainer" parent="Control" unique_id=511178900]
+layout_mode = 0
+offset_left = 841.02
+offset_top = 154.02
+offset_right = 1117.3401
+offset_bottom = 202.02007
+
+[node name="Etenijä" type="Label" parent="Control/EtenijäContainer" unique_id=397631061]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_sd512")
+theme_override_font_sizes/font_size = 18
+text = "ETENIJÄ"
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="EtenijäDotContainer" type="HBoxContainer" parent="Control/EtenijäContainer" unique_id=948077601]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2

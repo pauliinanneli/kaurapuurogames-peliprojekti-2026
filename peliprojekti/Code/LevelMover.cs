@@ -5,7 +5,7 @@ public partial class LevelMover : Node2D
 {
 
 	// the normal speed of game without slow motion etc
-	[Export] private float _normalSpeed = 200.0f;
+	[Export] private float _normalSpeed = 250.0f;
 	private float _currentSpeed;
 
 	// Called when the node enters the scene tree for the first time.

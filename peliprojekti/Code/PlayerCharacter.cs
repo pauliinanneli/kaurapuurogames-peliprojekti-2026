@@ -110,19 +110,21 @@ public partial class PlayerCharacter : CharacterBody2D
 	private void UpdateGlowVisuals()
     {
 		float currentGlow = GameManager.Instance.Health; // get current health from gamemanager
+		Color targetColor = GameManager.Instance.PersonalityColor(); // color that corresponds to role with most answers
+		Color lerpedColor = _glowSprite.SelfModulate.Lerp(targetColor, 0.05f);
 
         if (_starLight != null)
         {
-            _starLight.Energy = currentGlow * 1.1f; // update light brightness, evaluate if it is a good value for this
-			_starLight.TextureScale = Mathf.Lerp(0.2f, 0.4f, currentGlow); // update glow scale so that it shrinks when you lose energy etc
+			_starLight.Color = lerpedColor;
+            _starLight.Energy = currentGlow * 1.05f; // update light brightness, evaluate if it is a good value for this
+			_starLight.TextureScale = Mathf.Lerp(0.1f, 0.3f, currentGlow); // update glow scale so that it shrinks when you lose energy etc
         }
 
 		if (_glowSprite != null)
         {
-            _glowSprite.SelfModulate = new Color(1, 1, 1, currentGlow); // changing alpha to fade it out
-			_glowSprite.Scale = new Vector2(currentGlow, currentGlow);
+            _glowSprite.SelfModulate = new Color(lerpedColor.R, lerpedColor.G, lerpedColor.B, currentGlow); // changing alpha to fade it out
 
-			float glowScale = Mathf.Lerp(0.2f, 0.4f, currentGlow);
+			float glowScale = Mathf.Lerp(0.1f, 0.3f, currentGlow);
 			_glowSprite.Scale = new Vector2(glowScale, glowScale);
 
         }
