@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddh1ccrjx4eko" path="res://Scenes/LanePicker.tscn" id="6_t3or0"]
 [ext_resource type="Script" uid="uid://dyetpnay0rqmh" path="res://Code/Gate.cs" id="7_6ll4n"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="7_ysn8j"]
-[ext_resource type="Script" uid="uid://k30hveqr7w2q" path="res://Scenes/SlowMo.cs" id="9_bdlbp"]
+[ext_resource type="Script" uid="uid://k30hveqr7w2q" path="res://SlowMo.cs" id="9_bdlbp"]
 [ext_resource type="PackedScene" uid="uid://cx8iaunu8h0n" path="res://Scenes/HUD.tscn" id="9_kylad"]
 [ext_resource type="PackedScene" uid="uid://cmpbuj530sgae" path="res://Scenes/PauseUI.tscn" id="11_2h8qs"]
 

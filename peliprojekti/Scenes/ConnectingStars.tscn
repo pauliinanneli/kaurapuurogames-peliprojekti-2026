@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://cos4aghpkqpq5"]
 
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_foggk"]
+[ext_resource type="Script" uid="uid://btnqstlx2j8jt" path="res://Code/ConnectStar.cs" id="2_j8oic"]
 [ext_resource type="Texture2D" uid="uid://d10rc5xoj2e17" path="res://Art/ConnectingStar.png" id="2_qnmmg"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="3_xuaeq"]
 
 [sub_resource type="Gradient" id="Gradient_xuaeq"]
-offsets = PackedFloat32Array(0, 0.6505376)
+offsets = PackedFloat32Array(0, 0.61290324)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_j8oic"]
@@ -13,103 +14,191 @@ gradient = SubResource("Gradient_xuaeq")
 fill = 1
 fill_from = Vector2(0.47863248, 0.47863248)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xuaeq"]
+radius = 38.554916
+
 [node name="ConnectingStars" type="Node2D" unique_id=1890405732]
 metadata/_edit_vertical_guides_ = [585.0]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=158353212]
+[node name="Background" type="Node2D" parent="." unique_id=1609287081]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=158353212]
 position = Vector2(576.00006, 329.5)
 scale = Vector2(0.5852217, 0.33870965)
 texture = ExtResource("1_foggk")
 region_enabled = true
 region_rect = Rect2(0, 0, 2030, 2046)
 
-[node name="Otava" type="Node2D" parent="." unique_id=669780749]
+[node name="Constellation" type="Node2D" parent="." unique_id=669780749]
 position = Vector2(185.37, 6.64)
 scale = Vector2(0.73, 0.73)
 
-[node name="ConnectingStar" type="Sprite2D" parent="Otava" unique_id=487174269]
+[node name="Star0" type="Area2D" parent="Constellation" unique_id=982098321 node_paths=PackedStringArray("_light")]
+script = ExtResource("2_j8oic")
+_light = NodePath("PointLight2D")
+
+[node name="ConnectingStar2" type="Sprite2D" parent="Constellation/Star0" unique_id=127454353]
+position = Vector2(-66.02742, 127.89038)
+scale = Vector2(0.357, 0.329)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Constellation/Star0" unique_id=1890201816]
+position = Vector2(-66.02742, 127.89038)
+scale = Vector2(0.68544, 0.63167995)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Constellation/Star0" unique_id=1865575618]
+position = Vector2(-67.89, 130.52)
+scale = Vector2(1.74, 1.74)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Star1" type="Area2D" parent="Constellation" unique_id=1415172591 node_paths=PackedStringArray("_light")]
+script = ExtResource("2_j8oic")
+_starIndex = 1
+_light = NodePath("PointLight2D")
+
+[node name="PointLight2D" type="PointLight2D" parent="Constellation/Star1" unique_id=786480797]
+position = Vector2(258.6301, 103.23287)
+scale = Vector2(0.68544, 0.6316799)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="ConnectingStar3" type="Sprite2D" parent="Constellation/Star1" unique_id=1108749560]
+position = Vector2(258.6301, 103.23287)
+scale = Vector2(0.357, 0.32899997)
+texture = ExtResource("2_qnmmg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Constellation/Star1" unique_id=1933837386]
+position = Vector2(258.24, 105.43)
+scale = Vector2(1.74, 1.74)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Star2" type="Area2D" parent="Constellation" unique_id=362694279 node_paths=PackedStringArray("_light")]
+script = ExtResource("2_j8oic")
+_starIndex = 2
+_light = NodePath("PointLight2D")
+
+[node name="ConnectingStar4" type="Sprite2D" parent="Constellation/Star2" unique_id=734240214]
+position = Vector2(412.05472, 277.2055)
+scale = Vector2(0.357, 0.32899997)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Constellation/Star2" unique_id=200303689]
+position = Vector2(413.19174, 300.4931)
+scale = Vector2(0.68544, 0.6316799)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Constellation/Star2" unique_id=1803653215]
+position = Vector2(415.01, 275.63)
+scale = Vector2(1.74, 1.74)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Star3" type="Area2D" parent="Constellation" unique_id=683155177 node_paths=PackedStringArray("_light")]
+script = ExtResource("2_j8oic")
+_starIndex = 3
+_light = NodePath("PointLight2D")
+
+[node name="PointLight2D" type="PointLight2D" parent="Constellation/Star3" unique_id=929779636]
+position = Vector2(647, 373)
+scale = Vector2(0.84479994, 0.84479994)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="ConnectingStar" type="Sprite2D" parent="Constellation/Star3" unique_id=487174269]
 position = Vector2(647, 373)
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_qnmmg")
 
-[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar" unique_id=929779636]
-scale = Vector2(1.92, 1.92)
-color = Color(1, 0.9764706, 0.6156863, 1)
-energy = 1.79
-texture = SubResource("GradientTexture2D_j8oic")
-texture_scale = 7.15
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Constellation/Star3" unique_id=363987078]
+position = Vector2(650.3, 372.23)
+scale = Vector2(1.74, 1.74)
+shape = SubResource("CircleShape2D_xuaeq")
 
-[node name="ConnectingStar2" type="Sprite2D" parent="Otava" unique_id=127454353]
-position = Vector2(-66.02739, 127.8904)
-scale = Vector2(0.357, 0.329)
-texture = ExtResource("2_qnmmg")
+[node name="Star4" type="Area2D" parent="Constellation" unique_id=951884122 node_paths=PackedStringArray("_light")]
+script = ExtResource("2_j8oic")
+_starIndex = 4
+_light = NodePath("PointLight2D")
 
-[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar2" unique_id=1890201816]
-scale = Vector2(1.92, 1.92)
-color = Color(1, 0.9764706, 0.6156863, 1)
-energy = 1.79
-texture = SubResource("GradientTexture2D_j8oic")
-texture_scale = 7.15
-
-[node name="ConnectingStar3" type="Sprite2D" parent="Otava" unique_id=1108749560]
-position = Vector2(258.6301, 103.23289)
-scale = Vector2(0.357, 0.329)
-texture = ExtResource("2_qnmmg")
-
-[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar3" unique_id=786480797]
-scale = Vector2(1.92, 1.92)
-color = Color(1, 0.9764706, 0.6156863, 1)
-energy = 1.79
-texture = SubResource("GradientTexture2D_j8oic")
-texture_scale = 7.15
-
-[node name="ConnectingStar4" type="Sprite2D" parent="Otava" unique_id=734240214]
-position = Vector2(412.05478, 277.2055)
-scale = Vector2(0.357, 0.329)
-texture = ExtResource("2_qnmmg")
-
-[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar4" unique_id=200303689]
-scale = Vector2(1.92, 1.92)
-color = Color(1, 0.9764706, 0.6156863, 1)
-energy = 1.79
-texture = SubResource("GradientTexture2D_j8oic")
-texture_scale = 7.15
-
-[node name="ConnectingStar5" type="Sprite2D" parent="Otava" unique_id=475986621]
+[node name="ConnectingStar5" type="Sprite2D" parent="Constellation/Star4" unique_id=475986621]
 position = Vector2(1001, 431)
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_qnmmg")
 
-[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar5" unique_id=1029814245]
-scale = Vector2(1.92, 1.92)
+[node name="PointLight2D" type="PointLight2D" parent="Constellation/Star4" unique_id=1029814245]
+position = Vector2(1001, 431)
+scale = Vector2(0.84479994, 0.84479994)
+enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
-energy = 1.79
+energy = 1.1
 texture = SubResource("GradientTexture2D_j8oic")
-texture_scale = 7.15
+texture_scale = 21.4
 
-[node name="ConnectingStar6" type="Sprite2D" parent="Otava" unique_id=893637124]
-position = Vector2(513.4246, 615.56165)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Constellation/Star4" unique_id=1392534928]
+position = Vector2(1002.97, 431.59)
+scale = Vector2(1.74, 1.74)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Star5" type="Area2D" parent="Constellation" unique_id=901951072 node_paths=PackedStringArray("_light")]
+script = ExtResource("2_j8oic")
+_starIndex = 5
+_light = NodePath("PointLight2D")
+
+[node name="ConnectingStar7" type="Sprite2D" parent="Constellation/Star5" unique_id=1987086251]
+position = Vector2(892.8766, 705.9725)
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_qnmmg")
 
-[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar6" unique_id=1066624760]
-scale = Vector2(1.92, 1.92)
+[node name="PointLight2D" type="PointLight2D" parent="Constellation/Star5" unique_id=1506937469]
+position = Vector2(892.87646, 705.9725)
+scale = Vector2(0.84479994, 0.84479994)
+enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
-energy = 1.79
+energy = 1.1
 texture = SubResource("GradientTexture2D_j8oic")
-texture_scale = 7.15
+texture_scale = 21.4
 
-[node name="ConnectingStar7" type="Sprite2D" parent="Otava" unique_id=1987086251]
-position = Vector2(892.8768, 705.9725)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Constellation/Star5" unique_id=828338350]
+position = Vector2(894.2, 700.12)
+scale = Vector2(1.74, 1.74)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Star6" type="Area2D" parent="Constellation" unique_id=658742123 node_paths=PackedStringArray("_light")]
+script = ExtResource("2_j8oic")
+_starIndex = 6
+_light = NodePath("PointLight2D")
+
+[node name="ConnectingStar6" type="Sprite2D" parent="Constellation/Star6" unique_id=893637124]
+position = Vector2(513.42456, 615.56165)
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_qnmmg")
 
-[node name="PointLight2D" type="PointLight2D" parent="Otava/ConnectingStar7" unique_id=1506937469]
-scale = Vector2(1.92, 1.92)
+[node name="PointLight2D" type="PointLight2D" parent="Constellation/Star6" unique_id=1066624760]
+position = Vector2(513.42456, 615.56165)
+scale = Vector2(0.84479994, 0.84479994)
+enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
-energy = 1.79
+energy = 1.1
 texture = SubResource("GradientTexture2D_j8oic")
-texture_scale = 7.15
+texture_scale = 21.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Constellation/Star6" unique_id=1086319313]
+position = Vector2(515.02, 611.18)
+scale = Vector2(1.74, 1.74)
+shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="ConnectStarsText" type="Label" parent="." unique_id=1303538926]
 offset_left = 476.0

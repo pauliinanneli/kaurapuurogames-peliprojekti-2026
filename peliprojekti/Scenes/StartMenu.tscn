@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cuscp5aotr6hs"]
 
-[ext_resource type="Script" uid="uid://cir2u7yr6exoe" path="res://Scenes/StartMenu.cs" id="1_dl0pg"]
+[ext_resource type="Script" uid="uid://cir2u7yr6exoe" path="res://Code/StartMenu.cs" id="1_dl0pg"]
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_dvnd1"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="2_xtte2"]
 
