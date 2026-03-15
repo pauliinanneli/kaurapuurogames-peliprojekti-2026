@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c1yxxdf2xeya3" path="res://Scenes/PlayerCharacter.tscn" id="2_flrky"]
 
 [node name="LevelMover" type="Node2D" unique_id=1321373785]
+scale = Vector2(1.66, 1.66)
 script = ExtResource("1_r2q7f")
 _normalSpeed = 300.0
 

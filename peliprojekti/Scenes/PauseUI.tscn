@@ -5,6 +5,8 @@
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="3_svktx"]
 
 [node name="PauseUI" type="CanvasLayer" unique_id=1141652004]
+scale = Vector2(1.66, 1.66)
+transform = Transform2D(1.66, 0, 0, 1.66, 0, 0)
 script = ExtResource("1_iqps6")
 metadata/_edit_vertical_guides_ = [585.0]
 

@@ -18,6 +18,8 @@ fill_from = Vector2(0.47863248, 0.47863248)
 radius = 38.554916
 
 [node name="ConnectingStars" type="Node2D" unique_id=1890405732]
+position = Vector2(0, -2.9999998)
+scale = Vector2(1.66, 1.66)
 metadata/_edit_vertical_guides_ = [585.0]
 
 [node name="Background" type="Node2D" parent="." unique_id=1609287081]
@@ -34,16 +36,15 @@ position = Vector2(185.37, 6.64)
 scale = Vector2(0.73, 0.73)
 
 [node name="Star0" type="Area2D" parent="Otava" unique_id=982098321 node_paths=PackedStringArray("_light")]
+position = Vector2(-66, 128)
 script = ExtResource("2_j8oic")
 _light = NodePath("PointLight2D")
 
 [node name="ConnectingStar2" type="Sprite2D" parent="Otava/Star0" unique_id=127454353]
-position = Vector2(-66.02742, 127.89038)
 scale = Vector2(0.357, 0.329)
 texture = ExtResource("2_qnmmg")
 
 [node name="PointLight2D" type="PointLight2D" parent="Otava/Star0" unique_id=1890201816]
-position = Vector2(-66.02742, 127.89038)
 scale = Vector2(0.68544, 0.63167995)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
@@ -52,17 +53,24 @@ texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Otava/Star0" unique_id=1865575618]
-position = Vector2(-67.89, 130.52)
-scale = Vector2(2.09, 2.09)
+scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star1" type="Area2D" parent="Otava" unique_id=1415172591 node_paths=PackedStringArray("_light")]
+position = Vector2(259, 103)
 script = ExtResource("2_j8oic")
 _starIndex = 1
 _light = NodePath("PointLight2D")
 
+[node name="ConnectingStar3" type="Sprite2D" parent="Otava/Star1" unique_id=1108749560]
+scale = Vector2(0.357, 0.32899997)
+texture = ExtResource("2_qnmmg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Otava/Star1" unique_id=1933837386]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_xuaeq")
+
 [node name="PointLight2D" type="PointLight2D" parent="Otava/Star1" unique_id=786480797]
-position = Vector2(258.6301, 103.23287)
 scale = Vector2(0.68544, 0.6316799)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
@@ -70,28 +78,17 @@ energy = 1.1
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
-[node name="ConnectingStar3" type="Sprite2D" parent="Otava/Star1" unique_id=1108749560]
-position = Vector2(258.6301, 103.23287)
-scale = Vector2(0.357, 0.32899997)
-texture = ExtResource("2_qnmmg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Otava/Star1" unique_id=1933837386]
-position = Vector2(258.24, 105.43)
-scale = Vector2(2.09, 2.09)
-shape = SubResource("CircleShape2D_xuaeq")
-
 [node name="Star2" type="Area2D" parent="Otava" unique_id=362694279 node_paths=PackedStringArray("_light")]
+position = Vector2(412, 277)
 script = ExtResource("2_j8oic")
 _starIndex = 2
 _light = NodePath("PointLight2D")
 
 [node name="ConnectingStar4" type="Sprite2D" parent="Otava/Star2" unique_id=734240214]
-position = Vector2(412.05472, 277.2055)
 scale = Vector2(0.357, 0.32899997)
 texture = ExtResource("2_qnmmg")
 
 [node name="PointLight2D" type="PointLight2D" parent="Otava/Star2" unique_id=200303689]
-position = Vector2(413.19174, 300.4931)
 scale = Vector2(0.68544, 0.6316799)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
@@ -100,17 +97,16 @@ texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Otava/Star2" unique_id=1803653215]
-position = Vector2(415.01, 275.63)
-scale = Vector2(2.09, 2.09)
+scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star3" type="Area2D" parent="Otava" unique_id=683155177 node_paths=PackedStringArray("_light")]
+position = Vector2(647, 373)
 script = ExtResource("2_j8oic")
 _starIndex = 3
 _light = NodePath("PointLight2D")
 
 [node name="PointLight2D" type="PointLight2D" parent="Otava/Star3" unique_id=929779636]
-position = Vector2(647, 373)
 scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
@@ -119,27 +115,24 @@ texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
 [node name="ConnectingStar" type="Sprite2D" parent="Otava/Star3" unique_id=487174269]
-position = Vector2(647, 373)
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_qnmmg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Otava/Star3" unique_id=363987078]
-position = Vector2(650.3, 372.23)
-scale = Vector2(2.09, 2.09)
+scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star4" type="Area2D" parent="Otava" unique_id=951884122 node_paths=PackedStringArray("_light")]
+position = Vector2(1001, 431)
 script = ExtResource("2_j8oic")
 _starIndex = 4
 _light = NodePath("PointLight2D")
 
 [node name="ConnectingStar5" type="Sprite2D" parent="Otava/Star4" unique_id=475986621]
-position = Vector2(1001, 431)
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_qnmmg")
 
 [node name="PointLight2D" type="PointLight2D" parent="Otava/Star4" unique_id=1029814245]
-position = Vector2(1001, 431)
 scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
@@ -148,22 +141,20 @@ texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Otava/Star4" unique_id=1392534928]
-position = Vector2(1002.97, 431.59)
-scale = Vector2(2.09, 2.09)
+scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star5" type="Area2D" parent="Otava" unique_id=901951072 node_paths=PackedStringArray("_light")]
+position = Vector2(893, 706)
 script = ExtResource("2_j8oic")
 _starIndex = 5
 _light = NodePath("PointLight2D")
 
 [node name="ConnectingStar7" type="Sprite2D" parent="Otava/Star5" unique_id=1987086251]
-position = Vector2(892.8766, 705.9725)
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_qnmmg")
 
 [node name="PointLight2D" type="PointLight2D" parent="Otava/Star5" unique_id=1506937469]
-position = Vector2(892.87646, 705.9725)
 scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
@@ -172,22 +163,20 @@ texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Otava/Star5" unique_id=828338350]
-position = Vector2(894.2, 700.12)
-scale = Vector2(2.09, 2.09)
+scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star6" type="Area2D" parent="Otava" unique_id=658742123 node_paths=PackedStringArray("_light")]
+position = Vector2(513, 615)
 script = ExtResource("2_j8oic")
 _starIndex = 6
 _light = NodePath("PointLight2D")
 
 [node name="ConnectingStar6" type="Sprite2D" parent="Otava/Star6" unique_id=893637124]
-position = Vector2(513.42456, 615.56165)
 scale = Vector2(0.44, 0.44)
 texture = ExtResource("2_qnmmg")
 
 [node name="PointLight2D" type="PointLight2D" parent="Otava/Star6" unique_id=1066624760]
-position = Vector2(513.42456, 615.56165)
 scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
@@ -196,9 +185,16 @@ texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Otava/Star6" unique_id=1086319313]
-position = Vector2(515.02, 611.18)
-scale = Vector2(2.09, 2.09)
+scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Line2D" type="Line2D" parent="Otava" unique_id=2052901008]
+points = PackedVector2Array(-79.95889, 129.26027)
+width = 5.0
+default_color = Color(1, 0.9764706, 0.92941177, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [node name="ConnectStarsText" type="Label" parent="." unique_id=1303538926]
 offset_left = 476.0

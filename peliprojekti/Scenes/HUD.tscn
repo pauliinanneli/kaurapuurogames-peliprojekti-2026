@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bhngvysqmhugb" path="res://Scenes/Dot.tscn" id="2_psnte"]
 
 [node name="HUD" type="CanvasLayer" unique_id=989878847 node_paths=PackedStringArray("_etsijäContainer", "_edistäjäContainer", "_etenijäContainer")]
+scale = Vector2(1.66, 1.66)
+transform = Transform2D(1.66, 0, 0, 1.66, 0, 0)
 script = ExtResource("1_jo1ms")
 _dot = ExtResource("2_psnte")
 "_etsijäContainer" = NodePath("Score/EtsijäContainer/EtsijäDotContainer")

@@ -9,6 +9,7 @@ size = Vector2(300.27676, 26.181786)
 size = Vector2(297.8617, 26.181873)
 
 [node name="Node2D" type="Node2D" unique_id=785505358]
+scale = Vector2(1.66, 1.66)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1782564142]
 collision_mask = 2
