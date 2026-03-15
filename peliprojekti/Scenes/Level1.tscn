@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://k30hveqr7w2q" path="res://Code/SlowMo.cs" id="9_bdlbp"]
 [ext_resource type="PackedScene" uid="uid://cx8iaunu8h0n" path="res://Scenes/HUD.tscn" id="9_kylad"]
 [ext_resource type="PackedScene" uid="uid://cmpbuj530sgae" path="res://Scenes/PauseUI.tscn" id="11_2h8qs"]
+[ext_resource type="PackedScene" uid="uid://405u8ltkiqk6" path="res://Scenes/BlackHole.tscn" id="12_rpty4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3or0"]
 size = Vector2(386.5, 675)
@@ -89,6 +90,10 @@ scale = Vector2(1.4, 1.4)
 texture = ExtResource("2_slnnj")
 region_enabled = true
 region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="BlackHole" parent="." unique_id=1563931321 instance=ExtResource("12_rpty4")]
+position = Vector2(18118, 332)
+scale = Vector2(0.6, 0.6)
 
 [node name="LevelMover" parent="." unique_id=1321373785 instance=ExtResource("3_slnnj")]
 

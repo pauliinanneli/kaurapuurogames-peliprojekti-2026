@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://405u8ltkiqk6"]
+
+[ext_resource type="Texture2D" uid="uid://bw2ya6xtclrfx" path="res://Art/blackhole.png" id="1_bntxl"]
+[ext_resource type="Script" uid="uid://bekleny1uwets" path="res://Code/BlackHole.cs" id="1_rc0iu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bntxl"]
+
+[node name="BlackHole" type="Area2D" unique_id=1563931321]
+collision_mask = 2
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 44.0
+gravity = 1000.0
+script = ExtResource("1_rc0iu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1989875380]
+position = Vector2(32.11, 139.32)
+texture = ExtResource("1_bntxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1267503126]
+scale = Vector2(44.45, 44.45)
+shape = SubResource("CircleShape2D_bntxl")
