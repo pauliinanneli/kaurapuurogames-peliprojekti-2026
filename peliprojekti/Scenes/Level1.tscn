@@ -22,7 +22,6 @@ size = Vector2(312, 204)
 size = Vector2(90.99473, 91.937164)
 
 [node name="Level1" type="Node2D" unique_id=2140551516]
-scale = Vector2(1.66, 1.66)
 
 [node name="Backgrounds" type="Node2D" parent="." unique_id=1544963235]
 

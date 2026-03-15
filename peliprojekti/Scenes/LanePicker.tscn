@@ -21,7 +21,7 @@ texture = ExtResource("1_81433")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=564936726]
 position = Vector2(190.50002, 212.50002)
-scale = Vector2(1.2421874, 0.07)
+scale = Vector2(1.242, 0.02)
 shape = SubResource("RectangleShape2D_tbrrn")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=671679547]
@@ -29,7 +29,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1125762490]
 position = Vector2(190.00003, 433.5)
-scale = Vector2(1.2421874, 0.07)
+scale = Vector2(1.242, 0.02)
 shape = SubResource("RectangleShape2D_mjvlm")
 
 [node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D2" unique_id=719625678]

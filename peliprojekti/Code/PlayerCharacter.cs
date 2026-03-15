@@ -88,23 +88,25 @@ public partial class PlayerCharacter : CharacterBody2D
 	private void ClampArea()
     {
 		// get current screen size
-		Vector2 screenSize = GetViewportRect().Size;
+		Vector2 globalPos = GlobalPosition;
+
+		Rect2 worldRect = GetViewport().GetCanvasTransform().AffineInverse() * GetViewportRect();
 
 		// padding so doesnt touch the edge
 		float padding = 50.0f;
 
-		// where to crop the area on the right, area can use 40% of screen
-		float max = screenSize.X * 0.35f;
+		// define playable zone (now 35% of what screen is being used)
+		float minX = worldRect.Position.X + padding;
+		float maxX = worldRect.Position.X + (worldRect.Size.X * 0.35f);
+		float minY = worldRect.Position.Y + padding;
+		float maxY = worldRect.End.Y - padding;
 
-		Vector2 position = Position;
 
 		// clamp between left side and "wall" on the right
-		position.X = Mathf.Clamp(position.X, padding, max);
+		globalPos.X = Mathf.Clamp(globalPos.X, minX, maxX);
+		globalPos.Y = Mathf.Clamp(globalPos.Y, minY, maxY);
 
-		// full size vertically
-		position.Y = Mathf.Clamp(position.Y, padding, screenSize.Y - padding);
-
-		Position = position;
+		GlobalPosition = globalPos;
     }
 
 	private void UpdateGlowVisuals()
