@@ -4,14 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://c1yxxdf2xeya3" path="res://Scenes/PlayerCharacter.tscn" id="2_flrky"]
 
 [node name="LevelMover" type="Node2D" unique_id=1321373785]
-scale = Vector2(1.66, 1.66)
 script = ExtResource("1_r2q7f")
-_normalSpeed = 300.0
+_normalSpeed = 200.0
 
 [node name="CharacterBody2D2" parent="." unique_id=1958617562 instance=ExtResource("2_flrky")]
 position = Vector2(188, 364)
 _speed = 400.0
 _friction = 0.1
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1852005941]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1884729296]
 anchor_mode = 0
