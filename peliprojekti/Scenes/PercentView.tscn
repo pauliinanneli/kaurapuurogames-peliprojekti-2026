@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://e5og2wnjw33e"]
 
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_5j0br"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="2_h7a1t"]
 
 [node name="PercentView" type="Control" unique_id=1172003261]
 layout_mode = 3
@@ -19,3 +20,18 @@ scale = Vector2(0.5852217, 0.33870965)
 texture = ExtResource("1_5j0br")
 region_enabled = true
 region_rect = Rect2(0, 0, 2030, 2046)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=301971129]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1824784464]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -111.0
+offset_top = 96.72
+offset_right = 111.0
+offset_bottom = 168.72
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_h7a1t")
+theme_override_font_sizes/font_size = 55
+text = "Pisteesi:"
