@@ -31,7 +31,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 2030, 2046)
 
 [node name="Otava" type="Node2D" parent="." unique_id=669780749]
-position = Vector2(656.14, 67.37)
+position = Vector2(443.02, 67.37)
 scale = Vector2(1.17, 1.17)
 
 [node name="Star0" type="Area2D" parent="Otava" unique_id=982098321 node_paths=PackedStringArray("_light")]
@@ -205,10 +205,13 @@ grow_vertical = 2
 
 [node name="ConnectStarsText" type="Label" parent="Control" unique_id=1303538926]
 layout_mode = 0
-offset_left = 1128.53
+offset_left = 816.47
 offset_top = 921.6
-offset_right = 1418.5316
+offset_right = 1106.47
 offset_bottom = 991.6
 theme_override_fonts/font = ExtResource("3_xuaeq")
 theme_override_font_sizes/font_size = 40
 text = "Yhdistä tähdet"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=65876897]
+anchor_mode = 0

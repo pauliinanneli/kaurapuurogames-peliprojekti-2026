@@ -63,7 +63,14 @@ public partial class GameManager : Node
     /// </summary>
     public override void _Process(double delta)
     {
-        Health -= _drainHealth * (float)delta;
+        if (GetTree().CurrentScene.Name == "StartMenu" || GetTree().CurrentScene.Name == "ConnectingStars")
+        {
+            return;
+        }
+        else
+        {
+            Health -= _drainHealth * (float)delta;
+        }
     }
 
     public bool AddHealth(float amount)
