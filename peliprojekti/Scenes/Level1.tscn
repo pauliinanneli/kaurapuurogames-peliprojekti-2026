@@ -54,7 +54,7 @@ region_rect = Rect2(0, 0, 1023, 297)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=226133395]
 modulate = Color(1, 1, 1, 0.5803922)
-position = Vector2(96.68, 299.19)
+position = Vector2(96.68, 357.43)
 scale = Vector2(1.23, 1.23)
 texture = ExtResource("2_slnnj")
 region_enabled = true
@@ -76,7 +76,7 @@ region_rect = Rect2(0, 660, 1023, 363)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=2007023863]
 modulate = Color(1, 1, 1, 0.6156863)
-position = Vector2(0, 708.95)
+position = Vector2(0, 779.76)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("2_slnnj")
 region_enabled = true

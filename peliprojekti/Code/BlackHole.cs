@@ -15,8 +15,6 @@ public partial class BlackHole : Area2D
         // check if the thing that hits is player
         if (body is CharacterBody2D)
         {
-            GD.Print("kusipaska");
-
             //change scene
             GetTree().ChangeSceneToFile(NextScenePath);
         }

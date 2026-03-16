@@ -5,8 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bhngvysqmhugb" path="res://Scenes/Dot.tscn" id="2_psnte"]
 
 [node name="HUD" type="CanvasLayer" unique_id=989878847 node_paths=PackedStringArray("_etsijäContainer", "_edistäjäContainer", "_etenijäContainer")]
-scale = Vector2(1.66, 1.66)
-transform = Transform2D(1.66, 0, 0, 1.66, 0, 0)
 script = ExtResource("1_jo1ms")
 _dot = ExtResource("2_psnte")
 "_etsijäContainer" = NodePath("Score/EtsijäContainer/EtsijäDotContainer")
@@ -18,10 +16,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 35.66
-offset_right = 35.660034
+offset_left = 496.26
+offset_top = 4.8
+offset_right = 496.25952
+offset_bottom = 4.800049
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 
 [node name="EtsijäContainer" type="VBoxContainer" parent="Score" unique_id=1238901580]
 layout_mode = 0

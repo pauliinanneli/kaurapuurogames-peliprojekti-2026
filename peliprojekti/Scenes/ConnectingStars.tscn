@@ -18,11 +18,10 @@ fill_from = Vector2(0.47863248, 0.47863248)
 radius = 38.554916
 
 [node name="ConnectingStars" type="Node2D" unique_id=1890405732]
-position = Vector2(0, -2.9999998)
-scale = Vector2(1.66, 1.66)
-metadata/_edit_vertical_guides_ = [585.0]
+metadata/_edit_vertical_guides_ = [585.0, 961.0]
 
 [node name="Background" type="Node2D" parent="." unique_id=1609287081]
+scale = Vector2(5.09, 1.66)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=158353212]
 position = Vector2(576.00006, 329.5)
@@ -32,8 +31,8 @@ region_enabled = true
 region_rect = Rect2(0, 0, 2030, 2046)
 
 [node name="Otava" type="Node2D" parent="." unique_id=669780749]
-position = Vector2(185.37, 6.64)
-scale = Vector2(0.73, 0.73)
+position = Vector2(656.14, 67.37)
+scale = Vector2(1.17, 1.17)
 
 [node name="Star0" type="Area2D" parent="Otava" unique_id=982098321 node_paths=PackedStringArray("_light")]
 position = Vector2(-66, 128)
@@ -197,10 +196,10 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="ConnectStarsText" type="Label" parent="." unique_id=1303538926]
-offset_left = 476.0
-offset_top = 558.0
-offset_right = 695.0
-offset_bottom = 628.0
+offset_left = 1128.53
+offset_top = 921.6
+offset_right = 1418.5316
+offset_bottom = 991.6
 theme_override_fonts/font = ExtResource("3_xuaeq")
-theme_override_font_sizes/font_size = 29
+theme_override_font_sizes/font_size = 40
 text = "Yhdistä tähdet"
