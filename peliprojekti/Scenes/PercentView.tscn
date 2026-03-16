@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://e5og2wnjw33e"]
 
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_5j0br"]
+
 [node name="PercentView" type="Control" unique_id=1172003261]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="Node2D" parent="." unique_id=1861598107]
+scale = Vector2(5.09, 1.66)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=540480664]
+position = Vector2(576.00006, 329.5)
+scale = Vector2(0.5852217, 0.33870965)
+texture = ExtResource("1_5j0br")
+region_enabled = true
+region_rect = Rect2(0, 0, 2030, 2046)

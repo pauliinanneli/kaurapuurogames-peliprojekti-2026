@@ -132,6 +132,13 @@ public partial class ConnectStar : Area2D
         {
             _line.SetPointPosition(_line.GetPointCount() - 1, Position);
         }
+
+        // look for script in scene root
+        if (Owner is ConnectingStars levelRoot)
+        {
+            levelRoot.OnConstellationFinished();
+        }
+
         _currentIndex = 999;
     }
 
