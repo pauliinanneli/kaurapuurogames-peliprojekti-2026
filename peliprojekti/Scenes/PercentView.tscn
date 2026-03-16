@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://e5og2wnjw33e"]
+
+[node name="PercentView" type="Control" unique_id=1172003261]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

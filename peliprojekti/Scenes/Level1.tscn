@@ -93,7 +93,7 @@ region_rect = Rect2(0, 660, 1023, 363)
 
 [node name="BlackHole" parent="." unique_id=1563931321 instance=ExtResource("12_rpty4")]
 position = Vector2(18118, 332)
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.48, 0.48)
 
 [node name="LevelMover" parent="." unique_id=1321373785 instance=ExtResource("3_slnnj")]
 
