@@ -59,16 +59,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -519.5
-offset_top = -448.71997
-offset_right = 519.5
-offset_bottom = -122.71979
+offset_left = -579.0
+offset_top = -869.41003
+offset_right = 579.0
+offset_bottom = -215.41003
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 300
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=2013040201]
 layout_mode = 2
+theme_override_constants/separation = 18
 
 [node name="EdistäjäProgressBar" type="ProgressBar" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=1054037991]
 custom_minimum_size = Vector2(186.53, 500)
@@ -93,6 +94,7 @@ text = "Edistäjä"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=221682190]
 layout_mode = 2
+theme_override_constants/separation = 18
 
 [node name="EtenijäProgressBar" type="ProgressBar" parent="CanvasLayer/HBoxContainer/VBoxContainer2" unique_id=552411948]
 custom_minimum_size = Vector2(186.53, 500)
@@ -117,6 +119,7 @@ text = "Etenijä"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=397438058]
 layout_mode = 2
+theme_override_constants/separation = 18
 
 [node name="EtsijäProgressBar" type="ProgressBar" parent="CanvasLayer/HBoxContainer/VBoxContainer3" unique_id=1522457471]
 custom_minimum_size = Vector2(186.53, 500)
@@ -138,3 +141,21 @@ size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_h7a1t")
 theme_override_font_sizes/font_size = 45
 text = "Etsijä"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=622687514]
+
+[node name="InstructionLabel" type="Label" parent="CanvasLayer2" unique_id=803399708]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.5
+offset_top = -117.28998
+offset_right = 150.5
+offset_bottom = -65.289856
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_h7a1t")
+theme_override_font_sizes/font_size = 40
+text = "Napauta näyttöä palataksesi päävalikkoon."

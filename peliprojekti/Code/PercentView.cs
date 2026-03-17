@@ -10,9 +10,27 @@ public partial class PercentView : Control
     [Export] public ProgressBar EtenijäBar;
     [Export] public ProgressBar EtsijäBar;
 
+    [Export] public string NextScenePath = "res://Scenes/StartMenu.tscn";
+    private bool _waitingForTap = false;
+
     public override void _Ready()
     {
         CalculateResults();
+        _waitingForTap = true;
+    }
+
+    public override void _Input(InputEvent @event)
+    {
+        // check if waiting for tap and if event is tap
+        if (_waitingForTap && @event is InputEventMouseButton tap)
+        {
+            // trigger when finger is pressed down
+            if (tap.Pressed && tap.ButtonIndex == MouseButton.Left)
+            {
+                _waitingForTap = false;
+                GetTree().ChangeSceneToFile(NextScenePath);
+            }
+        }
     }
 
     private void CalculateResults()
@@ -66,6 +84,7 @@ public partial class PercentView : Control
                 EtsijäBar.Value = etsijäPercent;
             }
 
+            // add % to these labels
             Edistäjä.Text = $"{edistäjäPercent}%";
             Etenijä.Text = $"{etenijäPercent}%";
             Etsijä.Text = $"{etsijäPercent}%";
