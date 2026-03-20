@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da4wtibqmi56j"
-path="res://.godot/imported/MeteoriittiSuihke.png-c92c86649be19659f0f46fbac88df4af.ctex"
+path="res://.godot/imported/MeteoriittiSuihke.png-4e00812ccab5bf4c5e55663c5734bb3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/MeteoriittiSuihke.png"
-dest_files=["res://.godot/imported/MeteoriittiSuihke.png-c92c86649be19659f0f46fbac88df4af.ctex"]
+source_file="res://art/MeteoriittiSuihke.png"
+dest_files=["res://.godot/imported/MeteoriittiSuihke.png-4e00812ccab5bf4c5e55663c5734bb3d.ctex"]
 
 [params]
 
