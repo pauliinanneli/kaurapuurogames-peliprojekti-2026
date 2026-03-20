@@ -12,30 +12,48 @@ public partial class PauseUI : CanvasLayer
     private Control pauseMenu;
 
     /// <summary>
-    /// Kutsutaan kun node on valmis. 
-    /// Haetaan pause menu ja piilotetaan se aluksi.
+    /// gets called when node is ready
+    /// Gets pause menu and hides it
     /// </summary>
     public override void _Ready()
     {
-        pauseMenu = GetNode<Control>("PauseMenu"); // haetaan PauseMenu node
-        pauseMenu.Visible = false; // menu ei näy pelin alussa
+        pauseMenu = GetNode<Control>("PauseMenu"); // gets PauseMenu node
+        pauseMenu.Visible = false; // menu not visible 
     }
 
     /// <summary>
-    /// Pysäyttää pelin ja näyttää pause-menun.
+    /// Stops the game and shows PauseMenu
     /// </summary>
     public void OnPausePressed()
     {
-        GetTree().Paused = true; // pausettaa pelin
-        pauseMenu.Visible = true; // näyttää pause-menun
+        GetTree().Paused = true; // pause game
+        pauseMenu.Visible = true; // shows pause-menu
     }
 
     /// <summary>
-    /// Jatkaa peliä ja piilottaa pause-menun.
+    /// Continues the game and hides the menu
     /// </summary>
     public void OnContinuePressed()
     {
         GetTree().Paused = false; // jatkaa peliä
         pauseMenu.Visible = false; // piilottaa pause-menun
+    }
+
+    /// <summary>
+    /// Restarts the game from pause menu
+    /// </summary>
+    public void OnRestartPressed()
+    {
+        GetTree().Paused = false; // unpause first
+        GameManager.Instance.ResetGame(); // reset singleton state
+        GetTree().ReloadCurrentScene(); // reload the current scene
+    }
+
+    /// <summary>
+    /// Quits the game from pause menu
+    /// </summary>
+    public void OnQuitPressed()
+    {
+        GetTree().Quit();
     }
 }
