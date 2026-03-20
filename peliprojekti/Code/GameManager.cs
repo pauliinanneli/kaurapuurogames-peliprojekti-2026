@@ -33,8 +33,37 @@ public partial class GameManager : Node
     }
     #endregion
 
+    /// <summary>
+    /// Called when node enters the scene tree.
+    /// Used here to reset death state when scene is reloaded.
+    /// </summary>
+    public override void _Ready()
+    {
+        /// <summary>
+        /// Reset death flag so player can die again after restarting the game.
+        /// Without this, _isDead would remain true after first death,
+        /// preventing Die() from triggering again.
+        /// </summary>
+        _isDead = false;
+    }
+
+        /// <summary>
+        /// Resets game state when restarting the game
+        /// </summary>
+    public void ResetGame()
+    {
+        _isDead = false;
+        _health = 0.6f;     // same value in constructor
+    }
+
 #region health
     private float _health;
+
+    /// <summary>
+    /// Tracks if player is already dead to prevent multiple Die() calls
+    /// </summary>
+    private bool _isDead = false;
+
     private List<string> _personalityChoices = new List<string>(); // list that will store which Muusa role answers correspond with
     [Export] private float _drainHealth = 0.1f; // loses 10% glow per second, evaluate if thats a smart value or not
 
@@ -42,6 +71,7 @@ public partial class GameManager : Node
     [Export] public Color _etsijäColor = Color.FromHtml("#00E5FF");
     [Export] public Color _etenijäColor = Color.FromHtml("#FF7EB9");
     [Export] public Color _edistäjäColor = Color.FromHtml("#D4FF91");
+
     public float Health
     {
         get {return _health;}
@@ -51,10 +81,35 @@ public partial class GameManager : Node
             _health = Mathf.Clamp(value, 0, 1);
             // GD.Print($"Health atm: {_health}");
 
-            if (_health <= 0)
+            /// <summary>
+            /// Trigger death only once when health reaches zero
+            /// </summary>
+            if (_health <= 0 && !_isDead)
             {
-                GetTree().ReloadCurrentScene(); // reloads level when not enough health. need to also add some kind of message for losing
+                Die(); // triggers death state and shows die menu
             }
+        }
+    }
+
+    /// <summary>
+    /// Handles player death: pauses game and shows DieMenu UI
+    /// </summary>
+    public void Die()
+    {
+        _isDead = true;
+
+        GetTree().Paused = true;
+
+        // try to find DieUI safely from current scene
+        var dieUI = GetTree().CurrentScene.GetNodeOrNull<DieUI>("DieUI");
+
+        if (dieUI != null)
+        {
+            dieUI.ShowMenu();
+        }
+        else
+        {
+            GD.Print("DieUI not found in scene!");
         }
     }
 
@@ -63,7 +118,14 @@ public partial class GameManager : Node
     /// </summary>
     public override void _Process(double delta)
     {
-        Health -= _drainHealth * (float)delta;
+        if (GetTree().CurrentScene.Name == "StartMenu" || GetTree().CurrentScene.Name == "ConnectingStars" || GetTree().CurrentScene.Name == "PercentView")
+        {
+            return;
+        }
+        else
+        {
+            Health -= _drainHealth * (float)delta;
+        }
     }
 
     public bool AddHealth(float amount)

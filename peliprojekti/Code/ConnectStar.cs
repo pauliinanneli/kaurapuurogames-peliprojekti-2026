@@ -127,8 +127,19 @@ public partial class ConnectStar : Area2D
 
     private void FinalizeConstellation()
     {
+        //snap back to loopback star
+        if (_line != null && _line.GetPointCount() > _currentIndex)
+        {
+            _line.SetPointPosition(_line.GetPointCount() - 1, Position);
+        }
+
+        // look for script in scene root
+        if (Owner is ConnectingStars levelRoot)
+        {
+            levelRoot.OnConstellationFinished();
+        }
+
         _currentIndex = 999;
-        // TO DO add logic for when constellation is finished
     }
 
     public void LightUp()

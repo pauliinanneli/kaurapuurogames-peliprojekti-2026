@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dk7d0f8t6fuml"]
 
-[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_slnnj"]
-[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="3_jghel"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://art/Stardust.png" id="2_slnnj"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://art/Taustat.png" id="3_jghel"]
 [ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="3_joc8x"]
 [ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_slnnj"]
 [ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="4_slnnj"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cx8iaunu8h0n" path="res://Scenes/HUD.tscn" id="9_kylad"]
 [ext_resource type="PackedScene" uid="uid://cmpbuj530sgae" path="res://Scenes/PauseUI.tscn" id="11_2h8qs"]
 [ext_resource type="PackedScene" uid="uid://405u8ltkiqk6" path="res://Scenes/BlackHole.tscn" id="12_rpty4"]
+[ext_resource type="Script" uid="uid://d2jqrr8qyalsl" path="res://Code/DieUI.cs" id="13_6jj8j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3or0"]
 size = Vector2(386.5, 675)
@@ -93,7 +94,7 @@ region_rect = Rect2(0, 660, 1023, 363)
 
 [node name="BlackHole" parent="." unique_id=1563931321 instance=ExtResource("12_rpty4")]
 position = Vector2(18118, 332)
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.48, 0.48)
 
 [node name="LevelMover" parent="." unique_id=1321373785 instance=ExtResource("3_slnnj")]
 
@@ -790,3 +791,74 @@ shape = SubResource("RectangleShape2D_2h8qs")
 [node name="HUD" parent="." unique_id=989878847 instance=ExtResource("9_kylad")]
 
 [node name="PauseUI" parent="." unique_id=1141652004 instance=ExtResource("11_2h8qs")]
+
+[node name="DieUI" type="CanvasLayer" parent="." unique_id=1324062091]
+process_mode = 2
+script = ExtResource("13_6jj8j")
+
+[node name="DieMenu" type="Control" parent="DieUI" unique_id=1988229446]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="DieUI/DieMenu" unique_id=997978419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="YouDied" type="Label" parent="DieUI/DieMenu/ColorRect" unique_id=577874324]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -164.0
+offset_top = 126.0
+offset_right = 195.0
+offset_bottom = 225.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 72
+text = "YOU DIED!"
+
+[node name="QuitButton" type="Button" parent="DieUI/DieMenu/ColorRect" unique_id=620339118]
+custom_minimum_size = Vector2(0, -500)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 615.0
+offset_top = -261.0
+offset_right = 911.0
+offset_bottom = -181.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 52
+text = "QUIT GAME"
+
+[node name="RestartButton" type="Button" parent="DieUI/DieMenu/ColorRect" unique_id=259878266]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -881.0
+offset_top = 285.0
+offset_right = -493.0
+offset_bottom = 365.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 52
+text = "RESTART GAME"
+
+[connection signal="pressed" from="DieUI/DieMenu/ColorRect/QuitButton" to="DieUI" method="OnQuitPressed"]
+[connection signal="pressed" from="DieUI/DieMenu/ColorRect/RestartButton" to="DieUI" method="OnRestartPressed"]

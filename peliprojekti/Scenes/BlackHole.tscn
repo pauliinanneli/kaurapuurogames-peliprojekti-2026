@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://405u8ltkiqk6"]
 
-[ext_resource type="Texture2D" uid="uid://bw2ya6xtclrfx" path="res://Art/blackhole.png" id="1_bntxl"]
 [ext_resource type="Script" uid="uid://bekleny1uwets" path="res://Code/BlackHole.cs" id="1_rc0iu"]
+[ext_resource type="Texture2D" uid="uid://drsirfj6ram2y" path="res://Art/Musta-aukko3.png" id="2_rc0iu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bntxl"]
 
@@ -14,8 +14,11 @@ gravity = 1000.0
 script = ExtResource("1_rc0iu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1989875380]
-position = Vector2(32.11, 139.32)
-texture = ExtResource("1_bntxl")
+position = Vector2(106.69, 48.69)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_rc0iu")
+region_enabled = true
+region_rect = Rect2(7315, 0, 3309, 2481)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1267503126]
 scale = Vector2(44.45, 44.45)
