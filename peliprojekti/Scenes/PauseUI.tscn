@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cmpbuj530sgae"]
 
 [ext_resource type="Script" uid="uid://cnn3twtwcujdj" path="res://Code/PauseUI.cs" id="1_iqps6"]
-[ext_resource type="FontFile" uid="uid://dqqqxddhd1hrq" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" id="2_iwm0q"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="3_svktx"]
 
 [node name="PauseUI" type="CanvasLayer" unique_id=1141652004]
@@ -34,14 +33,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -98.0
-offset_top = -36.0
-offset_right = 116.0
-offset_bottom = 27.0
+offset_left = -138.0
+offset_top = -40.0
+offset_right = 138.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_iwm0q")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 52
 text = "CONTINUE"
 
 [node name="Label" type="Label" parent="PauseMenu" unique_id=2023662512]
@@ -55,8 +53,26 @@ offset_right = 125.0
 offset_bottom = 233.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3_svktx")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 92
 text = "PAUSED"
+
+[node name="RestartButton" type="Button" parent="PauseMenu" unique_id=961048182]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 881.0
+offset_right = 450.0
+offset_bottom = 953.0
+theme_override_font_sizes/font_size = 46
+text = "RESTART GAME"
+
+[node name="QuitButton" type="Button" parent="PauseMenu" unique_id=1220960441]
+layout_mode = 0
+offset_left = 1509.0
+offset_top = 874.0
+offset_right = 1771.0
+offset_bottom = 946.0
+theme_override_font_sizes/font_size = 46
+text = "QUIT GAME"
 
 [node name="PauseButton" type="Button" parent="." unique_id=1929380044]
 custom_minimum_size = Vector2(80, 0)
@@ -68,4 +84,6 @@ theme_override_font_sizes/font_size = 60
 text = "||"
 
 [connection signal="pressed" from="PauseMenu/ContinueButton" to="." method="OnContinuePressed"]
+[connection signal="pressed" from="PauseMenu/RestartButton" to="." method="OnRestartPressed"]
+[connection signal="pressed" from="PauseMenu/QuitButton" to="." method="OnQuitPressed"]
 [connection signal="pressed" from="PauseButton" to="." method="OnPausePressed"]
