@@ -22,9 +22,9 @@ public partial class DeadZone : Area2D
         {
             stardust.Miss();
         }
-        else if (area is Collectible otherCollectible)
+        else if (area is Meteor meteor)
         {
-            otherCollectible.QueueFree();
+            meteor.QueueFree();
         }
     }
 }
