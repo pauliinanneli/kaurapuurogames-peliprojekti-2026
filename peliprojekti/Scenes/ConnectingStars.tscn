@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_foggk"]
 [ext_resource type="Script" uid="uid://dbhnnqshgh1vd" path="res://Code/ConnectingStars.cs" id="1_xiqrn"]
 [ext_resource type="Script" uid="uid://btnqstlx2j8jt" path="res://Code/ConnectStar.cs" id="2_j8oic"]
-[ext_resource type="Texture2D" uid="uid://d10rc5xoj2e17" path="res://Art/ConnectingStar.png" id="2_qnmmg"]
+[ext_resource type="Texture2D" uid="uid://vglk7vb43o02" path="res://Art/ConnectingStar.png" id="2_qnmmg"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="3_xuaeq"]
 
 [sub_resource type="Gradient" id="Gradient_xuaeq"]
