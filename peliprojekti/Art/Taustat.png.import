@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kqfbo45ghus1"
-path="res://.godot/imported/Taustat.png-da27a418abe9ed3940177bb31b73e5eb.ctex"
+path="res://.godot/imported/Taustat.png-32b21f637c1baada32198fb0e0be8b3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Taustat.png"
-dest_files=["res://.godot/imported/Taustat.png-da27a418abe9ed3940177bb31b73e5eb.ctex"]
+source_file="res://Art/Taustat.png"
+dest_files=["res://.godot/imported/Taustat.png-32b21f637c1baada32198fb0e0be8b3a.ctex"]
 
 [params]
 

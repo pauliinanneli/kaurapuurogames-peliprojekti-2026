@@ -13,7 +13,7 @@ public partial class BlackHole : Area2D
     private void OnBodyEntered(Node2D body)
     {
         // check if the thing that hits is player
-        if (body is CharacterBody2D)
+        if (body is CharacterBody2D player)
         {
             //change scene
             GetTree().ChangeSceneToFile(NextScenePath);

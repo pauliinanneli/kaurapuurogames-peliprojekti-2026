@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi8ec7sriq635"
-path="res://.godot/imported/Musta-aukko2.png-3eeadc76a644928d84ae5e315c9e5e66.ctex"
+path="res://.godot/imported/Musta-aukko2.png-88898984caba3e91a2a18c24bd4d18d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Musta-aukko2.png"
-dest_files=["res://.godot/imported/Musta-aukko2.png-3eeadc76a644928d84ae5e315c9e5e66.ctex"]
+source_file="res://Art/Musta-aukko2.png"
+dest_files=["res://.godot/imported/Musta-aukko2.png-88898984caba3e91a2a18c24bd4d18d7.ctex"]
 
 [params]
 
