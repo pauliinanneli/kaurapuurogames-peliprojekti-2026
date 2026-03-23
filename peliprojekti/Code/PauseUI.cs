@@ -2,14 +2,15 @@ using Godot;
 using System;
 
 /// <summary>
-/// Hoitaa pelin pause-toiminnon ja pause-menun näyttämisen.
+/// Handles pause function and determines if the pause menu is showed or not.
 /// </summary>
 public partial class PauseUI : CanvasLayer
 {
     /// <summary>
-    /// Viittaus pause menu -nodeen.
+    /// Reference to the pause menu node.
     /// </summary>
     private Control pauseMenu;
+    
 
     /// <summary>
     /// gets called when node is ready
@@ -30,13 +31,14 @@ public partial class PauseUI : CanvasLayer
         pauseMenu.Visible = true; // shows pause-menu
     }
 
+
     /// <summary>
     /// Continues the game and hides the menu
     /// </summary>
     public void OnContinuePressed()
     {
-        GetTree().Paused = false; // jatkaa peliä
-        pauseMenu.Visible = false; // piilottaa pause-menun
+        GetTree().Paused = false; // the game continues
+        pauseMenu.Visible = false; // hides the pause menu
     }
 
     /// <summary>
