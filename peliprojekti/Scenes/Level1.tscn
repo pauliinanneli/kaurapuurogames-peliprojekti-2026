@@ -790,10 +790,6 @@ position = Vector2(7331.48, 376)
 scale = Vector2(9.55, 9.55)
 shape = SubResource("RectangleShape2D_2h8qs")
 
-[node name="HUD" parent="." unique_id=989878847 instance=ExtResource("9_kylad")]
-
-[node name="PauseUI" parent="." unique_id=1141652004 instance=ExtResource("11_2h8qs")]
-
 [node name="Meteors" type="Node2D" parent="." unique_id=1538944454]
 
 [node name="Meteor" parent="Meteors" unique_id=405699312 instance=ExtResource("15_ubfni")]
@@ -824,5 +820,9 @@ collision_mask = 2
 _floatAmplitude = 200.0
 _floatSpeed = 1.0
 _smoothing = 3.0
+
+[node name="HUD" parent="." unique_id=989878847 instance=ExtResource("9_kylad")]
+
+[node name="PauseUI" parent="." unique_id=1141652004 instance=ExtResource("11_2h8qs")]
 
 [node name="DieUI" parent="." unique_id=210363600 instance=ExtResource("13_6jj8j")]
