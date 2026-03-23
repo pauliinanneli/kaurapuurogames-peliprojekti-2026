@@ -36,7 +36,8 @@ public partial class Meteor : Area2D
         {
             //lose health
 			GameManager.Instance.SubstractHealth(_damageAmount);
-			// TO DO add some kind of screen shake / other feedback for hitting comet
+			Input.VibrateHandheld(500);
+			// TO DO test vibration!!!
 			QueueFree();
 
         }
