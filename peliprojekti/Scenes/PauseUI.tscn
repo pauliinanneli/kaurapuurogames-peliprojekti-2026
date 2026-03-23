@@ -40,7 +40,7 @@ offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 52
-text = "CONTINUE"
+text = "JATKA"
 
 [node name="Label" type="Label" parent="PauseMenu" unique_id=2023662512]
 layout_mode = 1
@@ -63,7 +63,7 @@ offset_top = 881.0
 offset_right = 450.0
 offset_bottom = 953.0
 theme_override_font_sizes/font_size = 46
-text = "RESTART GAME"
+text = "ALOITA UUDELLEEN"
 
 [node name="QuitButton" type="Button" parent="PauseMenu" unique_id=1220960441]
 layout_mode = 0
@@ -72,7 +72,7 @@ offset_top = 874.0
 offset_right = 1771.0
 offset_bottom = 946.0
 theme_override_font_sizes/font_size = 46
-text = "QUIT GAME"
+text = "POISTU PELISTÄ"
 
 [node name="PauseButton" type="Button" parent="." unique_id=1929380044]
 custom_minimum_size = Vector2(80, 0)

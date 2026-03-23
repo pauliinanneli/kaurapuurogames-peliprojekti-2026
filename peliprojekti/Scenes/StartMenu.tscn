@@ -55,6 +55,5 @@ theme_override_fonts/font = ExtResource("2_xtte2")
 theme_override_font_sizes/font_size = 35
 text = "LEVELS"
 
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
 [connection signal="pressed" from="LevelsButton" to="." method="OnLevelsButtonPressed"]
