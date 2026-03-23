@@ -1,13 +1,22 @@
 [gd_scene format=3 uid="uid://c1vo5itr4g5v4"]
 
-[ext_resource type="Script" uid="uid://cwikwvp5jjdqy" path="res://Scenes/LevelChooser.cs" id="1_1bx87"]
+[ext_resource type="Script" uid="uid://cwikwvp5jjdqy" path="res://Code/LevelChooser.cs" id="1_cio0u"]
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_d456p"]
+[ext_resource type="Script" uid="uid://ja722bsf8ay7" path="res://Code/Planet.cs" id="2_1bx87"]
 [ext_resource type="Texture2D" uid="uid://bbeefpojq57vf" path="res://Art/LevelPickers.png" id="2_m37ox"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m37ox"]
 
-[node name="LevelChooser" type="Node2D" unique_id=544228479]
-script = ExtResource("1_1bx87")
+[node name="LevelChooser" type="Control" unique_id=1120240481]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_cio0u")
+metadata/_edit_horizontal_guides_ = [1500.0]
 
 [node name="Background" type="Node2D" parent="." unique_id=1985390252]
 scale = Vector2(5.09, 1.66)
@@ -19,36 +28,47 @@ texture = ExtResource("1_d456p")
 region_enabled = true
 region_rect = Rect2(0, 0, 2030, 2046)
 
-[node name="Level1" type="Node2D" parent="." unique_id=1942260075]
-position = Vector2(1311.65, 681.04)
-scale = Vector2(0.45, 0.45)
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2085827275]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="Level1" unique_id=1644152603]
+[node name="Control" type="Control" parent="ScrollContainer" unique_id=1613972346]
+custom_minimum_size = Vector2(0, 1500)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Level1" type="Area2D" parent="ScrollContainer/Control" unique_id=346835284]
+position = Vector2(1343.19, 1137.61)
+scale = Vector2(0.45, 0.45)
+script = ExtResource("2_1bx87")
+
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/Control/Level1" unique_id=1644152603]
 texture = ExtResource("2_m37ox")
 region_enabled = true
 region_rect = Rect2(1352, 1701, 713, 710)
 
-[node name="Area2D" type="Area2D" parent="Level1" unique_id=1736450462]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1/Area2D" unique_id=1186916059]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/Control/Level1" unique_id=1186916059]
 scale = Vector2(36.15, 36.15)
 shape = SubResource("CircleShape2D_m37ox")
 
-[node name="Level2" type="Node2D" parent="." unique_id=1036517237]
-position = Vector2(548.42, 183.65)
+[node name="Level2" type="Area2D" parent="ScrollContainer/Control" unique_id=819111188]
+position = Vector2(445.05, 641.26)
 scale = Vector2(0.45, 0.45)
+script = ExtResource("2_1bx87")
+LevelPath = "res://Scenes/Level2.tscn"
 
-[node name="Sprite2D" type="Sprite2D" parent="Level2" unique_id=9424492]
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/Control/Level2" unique_id=9424492]
 texture = ExtResource("2_m37ox")
 region_enabled = true
 region_rect = Rect2(672, 840, 714, 735)
 
-[node name="Area2D" type="Area2D" parent="Level2" unique_id=1797169014]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level2/Area2D" unique_id=2069589281]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/Control/Level2" unique_id=2069589281]
 scale = Vector2(36.15, 36.15)
 shape = SubResource("CircleShape2D_m37ox")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=228095773]
-anchor_mode = 0
-limit_top = -805
