@@ -8,11 +8,13 @@ public partial class StartMenu : Control
 
 	public void OnStartButtonPressed()
     {
+        Input.VibrateHandheld(50); // small haptic feedbackk
         GetTree().ChangeSceneToFile(GameScenePath);
     }
 
     public void OnLevelsButtonPressed()
     {
+        Input.VibrateHandheld(50); // small haptic feedbackk
         GetTree().ChangeSceneToFile(LevelsScenePath);
     }
 }

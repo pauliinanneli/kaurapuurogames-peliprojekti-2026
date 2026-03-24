@@ -131,6 +131,7 @@ public partial class ConnectStar : Area2D
         if (_line != null && _line.GetPointCount() > _currentIndex)
         {
             _line.SetPointPosition(_line.GetPointCount() - 1, Position);
+            Input.VibrateHandheld(150); // vibration
         }
 
         // look for script in scene root
@@ -145,6 +146,7 @@ public partial class ConnectStar : Area2D
     public void LightUp()
     {
         IsLit = true;
+        Input.VibrateHandheld(100); // vibration when lighting up
         _light.Enabled = true;
     }
 }
