@@ -7,13 +7,16 @@ public partial class PlayerCharacter : CharacterBody2D
 	[Export] private float _speed = 300.0f;
 
 	[Export] private float _friction = 0.2f;
+	[Export] private float _maxStretch = 0.3f;
+	[Export] private float _stretchSmoothing = 0.1f;
+
+
 	private PointLight2D _starLight;
 	private Sprite2D _glowSprite;
 	private Vector2 _inputDirection = Vector2.Zero;
-
 	private bool _isTouching = false;
 
-	private Vector2 _lastTouchPos;
+	private Vector2 _starInitialScale; // save scale of star from editor
 
     public override void _Input(InputEvent @event)
     {
@@ -44,6 +47,7 @@ public partial class PlayerCharacter : CharacterBody2D
     {
         _starLight = GetNode<PointLight2D>("PointLight2D");
 		_glowSprite = GetNode<Sprite2D>("Glow");
+		_starInitialScale = GetNode<Sprite2D>("Star").Scale; // get scale of star from editor
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -59,7 +63,6 @@ public partial class PlayerCharacter : CharacterBody2D
     {
 		// multiply direction with speed
 		// if input direction is 0, we stop
-		// PROBABLY NEEDS TO BE CHANGED LATER FOR AUTO SCROLLING
         Vector2 targetVelocity = _inputDirection * _speed;
 
 		// add to character
@@ -69,12 +72,27 @@ public partial class PlayerCharacter : CharacterBody2D
 		// to make it move on limited area of the screen:
 		ClampArea();
 
+		//get star sprite
+		var playerStar = GetNode<Sprite2D>("Star");
+
+		// squash and stretch:
+		// calculate stretching based on velocity, dividing by speed so 0.0 = stopped and 1.0 = max speed
+		float speedRatio = Velocity.Length() / _speed;
+		float stretch = speedRatio * _maxStretch; // tells how much should scale grow to stretch length of star
+
+		//apply stretch to initial scale
+		Vector2 targetScale = new Vector2(
+										_starInitialScale.X + (_starInitialScale.X * stretch),
+										_starInitialScale.Y - (_starInitialScale.Y * stretch * 0.5f));
+
+		playerStar.Scale = playerStar.Scale.Lerp(targetScale, _stretchSmoothing);
+
+		// rotation
 		//to make it rotate to the direction the player is dragging:
 		if (_inputDirection.Length() > 0)
         {
             float targetAngle = _inputDirection.Angle();
 
-			var playerStar = GetNode<Sprite2D>("Star");
 			float smoothRotation = (float) Mathf.LerpAngle(playerStar.Rotation, targetAngle, 0.04f);
 			playerStar.Rotation = smoothRotation;
 			_glowSprite.Rotation = smoothRotation;
@@ -115,6 +133,10 @@ public partial class PlayerCharacter : CharacterBody2D
 		Color targetColor = GameManager.Instance.PersonalityColor(); // color that corresponds to role with most answers
 		Color lerpedColor = _glowSprite.SelfModulate.Lerp(targetColor, 0.05f);
 
+		// velocity stretch (same as star has)
+		float speedRatio = Velocity.Length() / _speed;
+		float stretch = speedRatio * _maxStretch;
+
         if (_starLight != null)
         {
 			_starLight.Color = lerpedColor;
@@ -126,8 +148,15 @@ public partial class PlayerCharacter : CharacterBody2D
         {
             _glowSprite.SelfModulate = new Color(lerpedColor.R, lerpedColor.G, lerpedColor.B, currentGlow); // changing alpha to fade it out
 
-			float glowScale = Mathf.Lerp(0.1f, 0.3f, currentGlow);
-			_glowSprite.Scale = new Vector2(glowScale, glowScale);
+			float initialGlowScale = Mathf.Lerp(0.1f, 0.3f, currentGlow);
+
+			Vector2 targetGlowScale = new Vector2(
+												initialGlowScale + (initialGlowScale * stretch),
+												initialGlowScale - (initialGlowScale * stretch * 0.5f)
+												);
+
+
+			_glowSprite.Scale = _glowSprite.Scale.Lerp(targetGlowScale, _stretchSmoothing);
 
         }
     }

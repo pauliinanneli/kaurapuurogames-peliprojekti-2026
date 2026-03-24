@@ -84,7 +84,7 @@ region_enabled = true
 region_rect = Rect2(7539, 0, 2373, 2394)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1267503126]
-scale = Vector2(2.79, 2.79)
+scale = Vector2(36.27, 36.27)
 shape = SubResource("CircleShape2D_bntxl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=745361787]

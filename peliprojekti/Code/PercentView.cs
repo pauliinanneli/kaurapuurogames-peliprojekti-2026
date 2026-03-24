@@ -28,6 +28,7 @@ public partial class PercentView : Control
             if (tap.Pressed && tap.ButtonIndex == MouseButton.Left)
             {
                 _waitingForTap = false;
+                Input.VibrateHandheld(50); // small haptic feedback
                 GetTree().ChangeSceneToFile(NextScenePath);
             }
         }

@@ -29,6 +29,8 @@ collision_mask = 13
 motion_mode = 1
 script = ExtResource("1_5gnj7")
 _friction = 0.1
+_maxStretch = 0.2
+_stretchSmoothing = 0.2
 
 [node name="Glow" type="Sprite2D" parent="." unique_id=519461340 node_paths=PackedStringArray("_targetStar")]
 modulate = Color(1, 1, 1, 0.627451)
