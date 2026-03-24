@@ -10,6 +10,7 @@ public partial class PauseUI : CanvasLayer
     /// Reference to the pause menu node.
     /// </summary>
     private Control pauseMenu;
+    private Button pauseButton;
     
 
     /// <summary>
@@ -19,7 +20,8 @@ public partial class PauseUI : CanvasLayer
     public override void _Ready()
     {
         pauseMenu = GetNode<Control>("PauseMenu"); // gets PauseMenu node
-        pauseMenu.Visible = false; // menu not visible 
+        pauseMenu.Visible = false; // menu not visible
+        pauseButton = GetNode<Button>("PauseButton"); // gets PauseButton
     }
 
     /// <summary>
@@ -29,6 +31,7 @@ public partial class PauseUI : CanvasLayer
     {
         GetTree().Paused = true; // pause game
         pauseMenu.Visible = true; // shows pause-menu
+        pauseButton.Visible = false; // hides the || -button when paused
     }
 
 
@@ -39,6 +42,7 @@ public partial class PauseUI : CanvasLayer
     {
         GetTree().Paused = false; // the game continues
         pauseMenu.Visible = false; // hides the pause menu
+        pauseButton.Visible = true; // shows the || -button when resuming the game
     }
 
     /// <summary>

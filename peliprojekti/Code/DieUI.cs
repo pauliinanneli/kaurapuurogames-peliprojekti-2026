@@ -10,11 +10,15 @@ public partial class DieUI : CanvasLayer
     /// Reference to the actual menu UI
     /// </summary>
     private Control dieMenu;
+    private Button pauseButton;
 
     public override void _Ready()
     {
         dieMenu = GetNode<Control>("DieMenu");
         dieMenu.Visible = false; // hidden at start
+
+        // get PauseButton from PauseUI for hiding || -button from backround when DieMenu is visible
+        pauseButton = GetTree().CurrentScene.GetNode<Button>("PauseUI/PauseButton"); 
     }
 
     /// <summary>
@@ -22,7 +26,8 @@ public partial class DieUI : CanvasLayer
     /// </summary>
     public void ShowMenu()
     {
-        dieMenu.Visible = true;
+        dieMenu.Visible = true;         // shows DieMenu
+        pauseButton.Visible = false;    // hides || -button from backround when DieMenu visible
     }
 
     /// <summary>
@@ -31,7 +36,8 @@ public partial class DieUI : CanvasLayer
     public void OnRestartPressed()
     {
         // Unpause the game so everything can run normally again
-        GetTree().Paused = false;
+        GetTree().Paused = false;       // game unpaused
+        pauseButton.Visible = true;     // shows || -button when restarting the game
 
         // Reset GameManager state (health & etc.)
         // This is required because GameManager is a singleton and does not reset automatically
