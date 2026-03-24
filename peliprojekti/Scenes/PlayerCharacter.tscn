@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://be8fiy8ua71oj" path="res://Code/PlayerCharacter.cs" id="1_5gnj7"]
 [ext_resource type="Texture2D" uid="uid://dwclnl60cwvh1" path="res://Art/hohdot2.png" id="2_5gnj7"]
+[ext_resource type="Script" uid="uid://bqb88lwxrffe7" path="res://Code/Glow.cs" id="3_2getf"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5gnj7"]
 blend_mode = 1
@@ -29,20 +30,24 @@ motion_mode = 1
 script = ExtResource("1_5gnj7")
 _friction = 0.1
 
+[node name="Glow" type="Sprite2D" parent="." unique_id=519461340 node_paths=PackedStringArray("_targetStar")]
+modulate = Color(1, 1, 1, 0.627451)
+top_level = true
+material = SubResource("CanvasItemMaterial_5gnj7")
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_5gnj7")
+region_enabled = true
+region_rect = Rect2(1610, 1254, 1505, 1188)
+script = ExtResource("3_2getf")
+_targetStar = NodePath("../Star")
+_followSpeed = 12.0
+
 [node name="Star" type="Sprite2D" parent="." unique_id=704000034]
 modulate = Color(1, 1, 1, 0.9529412)
 scale = Vector2(0.14, 0.14)
 texture = ExtResource("2_5gnj7")
 region_enabled = true
 region_rect = Rect2(420, 363, 1015, 759)
-
-[node name="Glow" type="Sprite2D" parent="." unique_id=519461340]
-modulate = Color(1, 1, 1, 0.627451)
-material = SubResource("CanvasItemMaterial_5gnj7")
-scale = Vector2(0.13, 0.13)
-texture = ExtResource("2_5gnj7")
-region_enabled = true
-region_rect = Rect2(1610, 1254, 1505, 1188)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=2042126508]
 position = Vector2(5.722046e-06, -8.821487e-06)
