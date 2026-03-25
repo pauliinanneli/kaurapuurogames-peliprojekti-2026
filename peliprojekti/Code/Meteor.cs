@@ -6,7 +6,7 @@ public partial class Meteor : Area2D
 	[Export] public float _floatAmplitude = 150f;
 	[Export] public float _floatSpeed = 2f;
 	[Export] public float _smoothing = 5f;
-	[Export] private float _damageAmount = 0.2f;
+	[Export] private float _damageAmount = 0.1f;
 
 	private float _time = 0f;
 	private float _startY;
@@ -34,6 +34,8 @@ public partial class Meteor : Area2D
     {
         if (body is PlayerCharacter playerCharacter)
         {
+			// flash red
+			playerCharacter.OnMeteorHit();
             //lose health
 			GameManager.Instance.SubstractHealth(_damageAmount);
 			Input.VibrateHandheld(500);
