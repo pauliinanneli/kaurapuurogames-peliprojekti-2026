@@ -15,7 +15,7 @@ public partial class StardustCollectible : Collectible
 
     public void Miss()
     {
-        GD.Print($"Missed stardust, health lost {_lostGlow}");
+
         // TO DO: evaluate if it's a smart amount of health to lose when missing
         GameManager.Instance.SubstractHealth(_lostGlow);
         QueueFree();

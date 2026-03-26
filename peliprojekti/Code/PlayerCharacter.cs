@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 public partial class PlayerCharacter : CharacterBody2D
 {
@@ -8,7 +9,6 @@ public partial class PlayerCharacter : CharacterBody2D
 	[Export] private float _friction = 0.2f;
 	[Export] private float _maxStretch = 0.3f; // max % star can stretch to
 	[Export] private float _stretchSmoothing = 0.1f;
-	private bool _isHit = false;
 	[Export] private Color _hitColor = Colors.Red;
 
 
@@ -17,6 +17,10 @@ public partial class PlayerCharacter : CharacterBody2D
 	private Sprite2D _starSprite;
 	private Vector2 _inputDirection = Vector2.Zero;
 	private bool _isTouching = false;
+	private bool _isHit = false;
+	private bool _blackHole = false;
+	private string _targetScene;
+
 
 	private Vector2 _starInitialScale; // save scale of star from editor
 
@@ -69,6 +73,13 @@ public partial class PlayerCharacter : CharacterBody2D
 
     public override void _PhysicsProcess(double delta)
     {
+		// dont execute rest of this if currently being sucked into the black hole
+		if (_blackHole)
+        {
+			MoveAndSlide(); // so gravity will still move us
+            return;
+        }
+
 		// multiply direction with speed
 		// if input direction is 0, we stop
         Vector2 targetVelocity = _inputDirection * _speed;
@@ -225,5 +236,41 @@ public partial class PlayerCharacter : CharacterBody2D
 			playerStar.Rotation = smoothRotation;
 			_glowSprite.Rotation = smoothRotation;
         }
+    }
+
+	/// <summary>
+    /// executes what happens when player hits black hole at the end of level
+    /// </summary>
+	public void BlackHoleSuck(string scenePath, Vector2 holePosition)
+    {
+        if (_blackHole)
+        {
+            return;
+        }
+
+		_blackHole = true;
+		_targetScene = scenePath;
+
+		LookAt(holePosition); // make star "look at" center of black hole
+
+		// create sucking tween
+		var suckTween = GetTree().CreateTween();
+
+		suckTween.SetParallel(true); // make animations run at same time
+
+		// visuals
+		suckTween.TweenProperty(this, "global_position", holePosition, 1.0f); // move player body to center of black hole in 1sec
+		suckTween.TweenProperty(_starSprite, "scale", new Vector2(3.0f, 0.01f), 1.0f); // stretch player star to be long and thin
+		suckTween.TweenProperty(_glowSprite, "scale", new Vector2(4.0f, 0.02f), 1.0f); // stretch player star to be long and thin
+		suckTween.TweenProperty(this, "modulate:a", 0.0f, 1.0f); // fade player stars transparency to 0
+
+		suckTween.SetParallel(false); // stop running animations when they end
+
+		suckTween.Finished += FinishBlackHole;
+    }
+
+	private void FinishBlackHole()
+    {
+        GetTree().ChangeSceneToFile(_targetScene);
     }
 }

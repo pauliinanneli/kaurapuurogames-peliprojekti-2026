@@ -104,6 +104,7 @@ _normalSpeed = 200.0
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("4_slnnj")
+_healthLost = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelMover/DeadZone" unique_id=176261799]
 position = Vector2(-265.25, 327)
@@ -115,262 +116,357 @@ position = Vector2(115, 13)
 [node name="StardustCollectible" parent="StardustCollectibles" unique_id=512965182 instance=ExtResource("3_joc8x")]
 position = Vector2(638, 402)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible2" parent="StardustCollectibles" unique_id=1802206280 instance=ExtResource("3_joc8x")]
 position = Vector2(1095, 240.00003)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible3" parent="StardustCollectibles" unique_id=1980197097 instance=ExtResource("3_joc8x")]
 position = Vector2(1350.0001, 438.00003)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible4" parent="StardustCollectibles" unique_id=1271448631 instance=ExtResource("3_joc8x")]
 position = Vector2(1641, 117)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible5" parent="StardustCollectibles" unique_id=1643760790 instance=ExtResource("3_joc8x")]
 position = Vector2(1955, 285)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible6" parent="StardustCollectibles" unique_id=294770064 instance=ExtResource("3_joc8x")]
 position = Vector2(2525, 159)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible7" parent="StardustCollectibles" unique_id=1910953785 instance=ExtResource("3_joc8x")]
 position = Vector2(2744, 404)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible8" parent="StardustCollectibles" unique_id=1165762050 instance=ExtResource("3_joc8x")]
 position = Vector2(2233, 464)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible9" parent="StardustCollectibles" unique_id=1187525951 instance=ExtResource("3_joc8x")]
 position = Vector2(3852, 525.32)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible10" parent="StardustCollectibles" unique_id=987091168 instance=ExtResource("3_joc8x")]
 position = Vector2(3852.4502, 303.04)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible11" parent="StardustCollectibles" unique_id=556087747 instance=ExtResource("3_joc8x")]
 position = Vector2(3852.4502, 84)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible12" parent="StardustCollectibles" unique_id=1510347797 instance=ExtResource("3_joc8x")]
 position = Vector2(4151, 198)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible13" parent="StardustCollectibles" unique_id=2053158818 instance=ExtResource("3_joc8x")]
 position = Vector2(4367, 418)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible14" parent="StardustCollectibles" unique_id=1392818003 instance=ExtResource("3_joc8x")]
 position = Vector2(4689, 151)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible15" parent="StardustCollectibles" unique_id=535084890 instance=ExtResource("3_joc8x")]
 position = Vector2(4890, 493)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible16" parent="StardustCollectibles" unique_id=917900912 instance=ExtResource("3_joc8x")]
 position = Vector2(5126, 127)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible17" parent="StardustCollectibles" unique_id=1548002137 instance=ExtResource("3_joc8x")]
 position = Vector2(5270, 355)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible18" parent="StardustCollectibles" unique_id=1798348824 instance=ExtResource("3_joc8x")]
 position = Vector2(5486, 219)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible19" parent="StardustCollectibles" unique_id=1635785650 instance=ExtResource("3_joc8x")]
 position = Vector2(5612, 570)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible20" parent="StardustCollectibles" unique_id=1265676225 instance=ExtResource("3_joc8x")]
 position = Vector2(5969, 296)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible21" parent="StardustCollectibles" unique_id=361717327 instance=ExtResource("3_joc8x")]
 position = Vector2(6678, 225)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible22" parent="StardustCollectibles" unique_id=942031726 instance=ExtResource("3_joc8x")]
 position = Vector2(6368, 463)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible23" parent="StardustCollectibles" unique_id=1897022770 instance=ExtResource("3_joc8x")]
 position = Vector2(3049.0002, 187)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible24" parent="StardustCollectibles" unique_id=1416166184 instance=ExtResource("3_joc8x")]
 position = Vector2(7428, 539.32)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible25" parent="StardustCollectibles" unique_id=28077835 instance=ExtResource("3_joc8x")]
 position = Vector2(7428.45, 317.04)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible26" parent="StardustCollectibles" unique_id=1058912669 instance=ExtResource("3_joc8x")]
 position = Vector2(7428.45, 98)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible27" parent="StardustCollectibles" unique_id=1264972564 instance=ExtResource("3_joc8x")]
 position = Vector2(7818, 469)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible28" parent="StardustCollectibles" unique_id=1758975805 instance=ExtResource("3_joc8x")]
 position = Vector2(8017, 295.00003)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible29" parent="StardustCollectibles" unique_id=1355000767 instance=ExtResource("3_joc8x")]
 position = Vector2(8182, 459)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible30" parent="StardustCollectibles" unique_id=780316880 instance=ExtResource("3_joc8x")]
 position = Vector2(8351, 151.99998)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible31" parent="StardustCollectibles" unique_id=1330976882 instance=ExtResource("3_joc8x")]
 position = Vector2(8661, 183)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible32" parent="StardustCollectibles" unique_id=1119991045 instance=ExtResource("3_joc8x")]
 position = Vector2(8861, 446)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible33" parent="StardustCollectibles" unique_id=340096670 instance=ExtResource("3_joc8x")]
 position = Vector2(9695.001, 402.00003)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible34" parent="StardustCollectibles" unique_id=243572405 instance=ExtResource("3_joc8x")]
 position = Vector2(9113, 233)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible35" parent="StardustCollectibles" unique_id=906235881 instance=ExtResource("3_joc8x")]
 position = Vector2(9628.001, 151)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible36" parent="StardustCollectibles" unique_id=380241730 instance=ExtResource("3_joc8x")]
 position = Vector2(10649, 530.32)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible37" parent="StardustCollectibles" unique_id=1947022269 instance=ExtResource("3_joc8x")]
 position = Vector2(10649.45, 308.04)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible38" parent="StardustCollectibles" unique_id=852252593 instance=ExtResource("3_joc8x")]
 position = Vector2(10649.45, 89)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible39" parent="StardustCollectibles" unique_id=1634958457 instance=ExtResource("3_joc8x")]
 position = Vector2(10984, 300.00006)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible40" parent="StardustCollectibles" unique_id=636361775 instance=ExtResource("3_joc8x")]
 position = Vector2(11149, 464)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible41" parent="StardustCollectibles" unique_id=3552025 instance=ExtResource("3_joc8x")]
 position = Vector2(11318, 157)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible42" parent="StardustCollectibles" unique_id=733649558 instance=ExtResource("3_joc8x")]
 position = Vector2(11628, 188.00002)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible43" parent="StardustCollectibles" unique_id=1495945996 instance=ExtResource("3_joc8x")]
 position = Vector2(11828, 451)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible44" parent="StardustCollectibles" unique_id=61935540 instance=ExtResource("3_joc8x")]
 position = Vector2(12647.001, 389.00003)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible45" parent="StardustCollectibles" unique_id=1277379303 instance=ExtResource("3_joc8x")]
 position = Vector2(12065, 220)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible46" parent="StardustCollectibles" unique_id=2134824108 instance=ExtResource("3_joc8x")]
 position = Vector2(12580.001, 138)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible47" parent="StardustCollectibles" unique_id=340359230 instance=ExtResource("3_joc8x")]
 position = Vector2(14012, 535.32)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible48" parent="StardustCollectibles" unique_id=1972059489 instance=ExtResource("3_joc8x")]
 position = Vector2(14012.45, 313.04)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible49" parent="StardustCollectibles" unique_id=494406563 instance=ExtResource("3_joc8x")]
 position = Vector2(14012.45, 94)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible50" parent="StardustCollectibles" unique_id=272143508 instance=ExtResource("3_joc8x")]
 position = Vector2(13060, 457)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible51" parent="StardustCollectibles" unique_id=974474325 instance=ExtResource("3_joc8x")]
 position = Vector2(13285, 198)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible52" parent="StardustCollectibles" unique_id=1666544899 instance=ExtResource("3_joc8x")]
 position = Vector2(17116, 529.32)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible53" parent="StardustCollectibles" unique_id=437222199 instance=ExtResource("3_joc8x")]
 position = Vector2(17116.45, 307.04)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible54" parent="StardustCollectibles" unique_id=1593687338 instance=ExtResource("3_joc8x")]
 position = Vector2(17116.45, 88)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible55" parent="StardustCollectibles" unique_id=1816177277 instance=ExtResource("3_joc8x")]
 position = Vector2(14295, 308.00006)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible56" parent="StardustCollectibles" unique_id=2041478142 instance=ExtResource("3_joc8x")]
 position = Vector2(14460, 472)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible57" parent="StardustCollectibles" unique_id=431369703 instance=ExtResource("3_joc8x")]
 position = Vector2(14629, 165)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible58" parent="StardustCollectibles" unique_id=307636829 instance=ExtResource("3_joc8x")]
 position = Vector2(14788.001, 488)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible59" parent="StardustCollectibles" unique_id=1500444516 instance=ExtResource("3_joc8x")]
 position = Vector2(14975, 259)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible60" parent="StardustCollectibles" unique_id=2003120009 instance=ExtResource("3_joc8x")]
 position = Vector2(15124, 481)
 scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
 
 [node name="StardustCollectible61" parent="StardustCollectibles" unique_id=2063401503 instance=ExtResource("3_joc8x")]
 position = Vector2(15431, 396)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible62" parent="StardustCollectibles" unique_id=694158535 instance=ExtResource("3_joc8x")]
 position = Vector2(15602, 151)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible63" parent="StardustCollectibles" unique_id=155703645 instance=ExtResource("3_joc8x")]
 position = Vector2(15944, 197)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible64" parent="StardustCollectibles" unique_id=1361218140 instance=ExtResource("3_joc8x")]
 position = Vector2(16144, 460)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="StardustCollectible65" parent="StardustCollectibles" unique_id=1018272223 instance=ExtResource("3_joc8x")]
 position = Vector2(16436, 220.00003)
 scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
+
+[node name="StardustCollectible66" parent="StardustCollectibles" unique_id=372228833 instance=ExtResource("3_joc8x")]
+position = Vector2(874, 131.99997)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible67" parent="StardustCollectibles" unique_id=1553819322 instance=ExtResource("3_joc8x")]
+position = Vector2(1836, 527)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible68" parent="StardustCollectibles" unique_id=1571469316 instance=ExtResource("3_joc8x")]
+position = Vector2(8566, 517)
+scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
+
+[node name="StardustCollectible69" parent="StardustCollectibles" unique_id=1664366263 instance=ExtResource("3_joc8x")]
+position = Vector2(12226.001, 472.00003)
+scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
+
+[node name="StardustCollectible70" parent="StardustCollectibles" unique_id=19019707 instance=ExtResource("3_joc8x")]
+position = Vector2(12859, 564)
+scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
+
+[node name="StardustCollectible71" parent="StardustCollectibles" unique_id=1828620275 instance=ExtResource("3_joc8x")]
+position = Vector2(15372, 163)
+scale = Vector2(0.6724, 0.6724)
+_lostGlow = 0.0
 
 [node name="Meteors" type="Node2D" parent="." unique_id=1538944454]
 
@@ -378,32 +474,33 @@ scale = Vector2(0.6724, 0.6724)
 position = Vector2(1033, 412)
 collision_layer = 4
 _floatAmplitude = 250.0
-_floatSpeed = 1.5
+_floatSpeed = 1.3
 
 [node name="Meteor2" parent="Meteors" unique_id=121057303 instance=ExtResource("15_ubfni")]
 position = Vector2(1644, 145)
 collision_layer = 4
+_floatAmplitude = 170.0
 _floatSpeed = 1.0
 _smoothing = 3.0
 
 [node name="Meteor4" parent="Meteors" unique_id=1471539488 instance=ExtResource("15_ubfni")]
 position = Vector2(4159.62, 271)
 collision_layer = 4
-_floatSpeed = 1.7
+_floatSpeed = 1.5
 _smoothing = 6.0
 
 [node name="Meteor3" parent="Meteors" unique_id=1507177752 instance=ExtResource("15_ubfni")]
 position = Vector2(2499, 706)
 collision_layer = 4
 _floatAmplitude = 200.0
-_floatSpeed = 1.0
+_floatSpeed = 1.1
 _smoothing = 3.0
 
 [node name="Meteor5" parent="Meteors" unique_id=477194483 instance=ExtResource("15_ubfni")]
 position = Vector2(5125, 267)
 collision_layer = 4
-_floatAmplitude = 100.0
-_floatSpeed = 1.0
+_floatAmplitude = 200.0
+_floatSpeed = 1.5
 _smoothing = 6.0
 
 [node name="Meteor6" parent="Meteors" unique_id=1653229308 instance=ExtResource("15_ubfni")]
@@ -449,13 +546,15 @@ _smoothing = 6.0
 [node name="Meteor12" parent="Meteors" unique_id=1994818526 instance=ExtResource("15_ubfni")]
 position = Vector2(12505, 185)
 collision_layer = 4
-_floatAmplitude = 100.0
+_floatAmplitude = 300.0
+_floatSpeed = 1.7
 _smoothing = 6.0
 
 [node name="Meteor13" parent="Meteors" unique_id=650943217 instance=ExtResource("15_ubfni")]
 position = Vector2(14413, 439)
 collision_layer = 4
 _floatAmplitude = 100.0
+_floatSpeed = 1.7
 _smoothing = 6.0
 
 [node name="Meteor14" parent="Meteors" unique_id=869001270 instance=ExtResource("15_ubfni")]
@@ -467,7 +566,7 @@ _smoothing = 6.0
 [node name="Meteor15" parent="Meteors" unique_id=1242259381 instance=ExtResource("15_ubfni")]
 position = Vector2(15737, 458)
 collision_layer = 4
-_floatAmplitude = 100.0
+_floatAmplitude = 130.0
 _floatSpeed = 1.2
 _smoothing = 6.0
 

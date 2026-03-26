@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 public partial class BlackHole : Area2D
 {
@@ -13,12 +14,12 @@ public partial class BlackHole : Area2D
     private void OnBodyEntered(Node2D body)
     {
         // check if the thing that hits is player
-        if (body is CharacterBody2D player)
+        if (body is PlayerCharacter player)
         {
             Input.VibrateHandheld(200); // vibration when going in and changing scene
             // TO DO dip to black before going straight into next scene??
-            //change scene
-            GetTree().ChangeSceneToFile(NextScenePath);
+
+            player.BlackHoleSuck(NextScenePath, GlobalPosition); // trigger animation and give path to change scene to
         }
     }
 }
