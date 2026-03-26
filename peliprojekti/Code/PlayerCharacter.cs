@@ -260,8 +260,7 @@ public partial class PlayerCharacter : CharacterBody2D
 
 		// visuals
 		suckTween.TweenProperty(this, "global_position", holePosition, 1.0f); // move player body to center of black hole in 1sec
-		suckTween.TweenProperty(_starSprite, "scale", new Vector2(3.0f, 0.01f), 1.0f); // stretch player star to be long and thin
-		suckTween.TweenProperty(_glowSprite, "scale", new Vector2(4.0f, 0.02f), 1.0f); // stretch player star to be long and thin
+		suckTween.TweenProperty(this, "scale", new Vector2(9.0f, 0.01f), 1.0f); // stretch player star to be long and thin
 		suckTween.TweenProperty(this, "modulate:a", 0.0f, 1.0f); // fade player stars transparency to 0
 
 		suckTween.SetParallel(false); // stop running animations when they end
