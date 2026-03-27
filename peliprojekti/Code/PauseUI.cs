@@ -11,7 +11,8 @@ public partial class PauseUI : CanvasLayer
     /// </summary>
     private Control pauseMenu;
     private Button pauseButton;
-    
+    [Export] public string MenuScenePath = "res://Scenes/StartMenu.tscn";
+
 
     /// <summary>
     /// gets called when node is ready
@@ -60,6 +61,6 @@ public partial class PauseUI : CanvasLayer
     /// </summary>
     public void OnQuitPressed()
     {
-        GetTree().Quit();
+        GetTree().ChangeSceneToFile(MenuScenePath);
     }
 }
