@@ -11,13 +11,19 @@ public partial class GameManager : Node
 {
     #region Singleton
 
-
+    /// <summary>
+    /// getter and setter for singleton instance
+    /// </summary>
     public static GameManager Instance
     {
         get;
         private set;
     }
 
+    /// <summary>
+    /// constructor that initializes singleton and sets initial health.
+    /// if instance already exists, this is destroyed with queuefree
+    /// </summary>
     public GameManager()
     {
         if (Instance == null)
@@ -74,6 +80,10 @@ public partial class GameManager : Node
     [Export] public Color _etenijäColor = Color.FromHtml("#FF7EB9");
     [Export] public Color _edistäjäColor = Color.FromHtml("#D4FF91");
 
+    /// <summary>
+    /// players current health/glow level. values are between 0 and 1
+    /// triggers die() when reaches 0
+    /// </summary>
     public float Health
     {
         get {return _health;}
@@ -131,6 +141,11 @@ public partial class GameManager : Node
         }
     }
 
+    /// <summary>
+    /// increases players health by a specific amount
+    /// </summary>
+    /// <param name="amount">the amount of health to add</param>
+    /// <returns>true if worked</returns>
     public bool AddHealth(float amount)
     {
         if (amount < 0)
@@ -142,6 +157,11 @@ public partial class GameManager : Node
         return true;
     }
 
+    /// <summary>
+    /// decreases health by a specific amount
+    /// </summary>
+    /// <param name="amount">the amount of health to subtract</param>
+    /// <returns>true if worked</returns>
     public bool SubstractHealth(float amount)
     {
         if (amount < 0)
@@ -156,11 +176,21 @@ public partial class GameManager : Node
 
 #region personalityscore
 
+    /// <summary>
+    /// gets list of all personality choices saved during game session
+    /// </summary>
+    /// <returns>list of strings that has roles chosen during game</returns>
     public List<string> GetChoices()
     {
         return _personalityChoices;
     }
-        public void SaveChoice(string Role)
+
+
+    /// <summary>
+    /// saves chosen personality choice and refreshes hud visuals with "personality score"
+    /// </summary>
+    /// <param name="Role">name of the personality role</param>
+    public void SaveChoice(string Role)
     {
         _personalityChoices.Add(Role);
         GD.Print("Current answers: " + string.Join(", ", _personalityChoices));
@@ -172,6 +202,11 @@ public partial class GameManager : Node
         }
     }
 
+    /// <summary>
+    /// calculates which personality has been chosen most times and returns its color
+    /// goes to defaultcolor if no choices made
+    /// </summary>
+    /// <returns>the color corresponding to the personality that has been chosen most times</returns>
     public Color PersonalityColor()
     {
         //count how many time the word is in the list
