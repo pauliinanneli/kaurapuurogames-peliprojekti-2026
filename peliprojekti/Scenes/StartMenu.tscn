@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_dvnd1"]
 [ext_resource type="Texture2D" uid="uid://bpacaf0xgai6h" path="res://Art/TextLogoB&W.png" id="3_h303d"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="4_ujd4t"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="5_ujd4t"]
 
 [node name="StartMenu" type="Control" unique_id=1614769704]
 layout_mode = 3
@@ -36,6 +37,14 @@ scale = Vector2(0.55, 0.55)
 texture = ExtResource("3_h303d")
 region_enabled = true
 region_rect = Rect2(273, 294, 2058, 903)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=688816083]
+position = Vector2(972.37, 218.54)
+rotation = -0.16580626
+scale = Vector2(2.052, 3.688)
+texture = ExtResource("5_ujd4t")
+region_enabled = true
+region_rect = Rect2(0, 315, 1029, 273)
 
 [node name="StartButton" type="Button" parent="." unique_id=440388182]
 layout_mode = 1
