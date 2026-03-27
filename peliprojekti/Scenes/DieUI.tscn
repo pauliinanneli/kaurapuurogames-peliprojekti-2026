@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://fw8wifrnjgqu"]
 
 [ext_resource type="Script" uid="uid://d2jqrr8qyalsl" path="res://Code/DieUI.cs" id="1_x85ng"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="2_lenoj"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="2_m64vj"]
-[ext_resource type="FontFile" uid="uid://dqqqxddhd1hrq" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" id="3_lenoj"]
 
 [node name="DieUI" type="CanvasLayer" unique_id=210363600]
 process_mode = 2
@@ -36,6 +36,7 @@ offset_top = 206.82
 offset_right = 492.00012
 offset_bottom = 332.81998
 grow_horizontal = 2
+theme = ExtResource("2_lenoj")
 theme_override_fonts/font = ExtResource("2_m64vj")
 theme_override_font_sizes/font_size = 92
 text = "TÄHTIENERGIA LOPPUI"
@@ -55,8 +56,7 @@ offset_right = 320.0
 offset_bottom = 283.74994
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_lenoj")
-theme_override_font_sizes/font_size = 45
+theme = ExtResource("2_lenoj")
 text = "POISTU PELISTÄ"
 
 [node name="RestartButton" type="Button" parent="DieMenu/ColorRect" unique_id=820184263]
@@ -72,8 +72,7 @@ offset_right = 323.0
 offset_bottom = 54.45984
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_lenoj")
-theme_override_font_sizes/font_size = 50
+theme = ExtResource("2_lenoj")
 text = "YRITÄ UUDELLEEN"
 
 [connection signal="pressed" from="DieMenu/ColorRect/QuitButton" to="." method="OnQuitPressed"]

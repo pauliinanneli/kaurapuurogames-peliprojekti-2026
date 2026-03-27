@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cx8iaunu8h0n"]
 
 [ext_resource type="Script" uid="uid://c4gei3jdkqjea" path="res://Code/HUD.cs" id="1_jo1ms"]
-[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="1_sd512"]
 [ext_resource type="PackedScene" uid="uid://bhngvysqmhugb" path="res://Scenes/Dot.tscn" id="2_psnte"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="3_psnte"]
 
 [node name="HUD" type="CanvasLayer" unique_id=989878847 node_paths=PackedStringArray("_etsijäContainer", "_edistäjäContainer", "_etenijäContainer")]
 script = ExtResource("1_jo1ms")
@@ -33,7 +33,7 @@ offset_bottom = 82.96
 
 [node name="Etsijä" type="Label" parent="Score/EtsijäContainer" unique_id=2065188138]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_sd512")
+theme = ExtResource("3_psnte")
 theme_override_font_sizes/font_size = 18
 text = "ETSIJÄ"
 vertical_alignment = 2
@@ -52,7 +52,7 @@ offset_bottom = 139.62001
 
 [node name="Edistäjä" type="Label" parent="Score/EdistäjäContainer" unique_id=1375727640]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_sd512")
+theme = ExtResource("3_psnte")
 theme_override_font_sizes/font_size = 18
 text = "EDISTÄJÄ"
 vertical_alignment = 2
@@ -71,7 +71,7 @@ offset_bottom = 202.02007
 
 [node name="Etenijä" type="Label" parent="Score/EtenijäContainer" unique_id=397631061]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_sd512")
+theme = ExtResource("3_psnte")
 theme_override_font_sizes/font_size = 18
 text = "ETENIJÄ"
 vertical_alignment = 2

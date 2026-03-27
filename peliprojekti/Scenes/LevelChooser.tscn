@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_d456p"]
 [ext_resource type="Script" uid="uid://ja722bsf8ay7" path="res://Code/Planet.cs" id="2_1bx87"]
 [ext_resource type="Texture2D" uid="uid://bbeefpojq57vf" path="res://Art/LevelPickers.png" id="2_m37ox"]
-[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="5_q5dyp"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="5_blli4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m37ox"]
 
@@ -80,8 +80,7 @@ offset_left = 49.35
 offset_top = 41.29
 offset_right = 348.49002
 offset_bottom = 182.92001
-theme_override_fonts/font = ExtResource("5_q5dyp")
-theme_override_font_sizes/font_size = 50
+theme = ExtResource("5_blli4")
 text = "< BACK"
 
 [connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmpbuj530sgae"]
 
 [ext_resource type="Script" uid="uid://cnn3twtwcujdj" path="res://Code/PauseUI.cs" id="1_iqps6"]
-[ext_resource type="FontFile" uid="uid://dqqqxddhd1hrq" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf" id="2_iwm0q"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="2_svktx"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="3_svktx"]
 
 [node name="PauseUI" type="CanvasLayer" unique_id=1141652004]
@@ -38,13 +38,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -221.84497
+offset_left = -279.635
 offset_top = -219.01999
-offset_right = 223.15503
+offset_right = 278.44482
 offset_bottom = -49.01999
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_iwm0q")
+theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 40
 text = "JATKA PELIÄ"
 
@@ -58,6 +58,7 @@ offset_top = 150.0
 offset_right = 125.0
 offset_bottom = 233.0
 grow_horizontal = 2
+theme = ExtResource("2_svktx")
 theme_override_fonts/font = ExtResource("3_svktx")
 theme_override_font_sizes/font_size = 92
 text = "PELI ON TAUOLLA"
@@ -69,13 +70,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -222.5
-offset_top = -22.359985
-offset_right = 222.50012
-offset_bottom = 147.64001
+offset_left = -279.635
+offset_top = -24.27002
+offset_right = 278.44482
+offset_bottom = 145.72998
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_iwm0q")
+theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 40
 text = "ALOITA UUDELLEEN"
 
@@ -86,13 +87,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -222.5
+offset_left = -279.635
 offset_top = -364.09998
-offset_right = 222.5
+offset_right = 278.44482
 offset_bottom = -194.09998
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_iwm0q")
+theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 40
 text = "POISTU PELISTÄ"
 
@@ -102,7 +103,8 @@ offset_left = 54.0
 offset_top = 57.0
 offset_right = 252.15
 offset_bottom = 220.28998
-theme_override_font_sizes/font_size = 60
+theme = ExtResource("2_svktx")
+theme_override_font_sizes/font_size = 61
 text = "||"
 
 [connection signal="pressed" from="PauseMenu/ContinueButton" to="." method="OnContinuePressed"]
