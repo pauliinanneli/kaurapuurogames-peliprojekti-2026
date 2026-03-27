@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://mmn7omade3bb"]
+
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="1_nrowq"]
+
+[resource]
+Label/font_sizes/font_size = 37
+Label/fonts/font = ExtResource("1_nrowq")

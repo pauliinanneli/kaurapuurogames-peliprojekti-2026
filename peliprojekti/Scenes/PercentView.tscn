@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_5j0br"]
 [ext_resource type="Script" uid="uid://b2e2or1uv0yrn" path="res://Code/PercentView.cs" id="1_fwms7"]
-[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="2_h7a1t"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="4_kpi66"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwms7"]
 bg_color = Color(0.83137256, 1, 0.5686275, 1)
@@ -49,8 +49,7 @@ offset_top = 73.68
 offset_right = 111.0
 offset_bottom = 145.68
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_h7a1t")
-theme_override_font_sizes/font_size = 55
+theme = ExtResource("4_kpi66")
 text = "Pisteesi:"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=135099305]
@@ -81,15 +80,13 @@ show_percentage = false
 [node name="EdistäjäPercent" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=907665404]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_h7a1t")
-theme_override_font_sizes/font_size = 45
+theme = ExtResource("4_kpi66")
 text = "%"
 
 [node name="EdistäjäText" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=471789853]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_h7a1t")
-theme_override_font_sizes/font_size = 45
+theme = ExtResource("4_kpi66")
 text = "Edistäjä"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=221682190]
@@ -106,15 +103,13 @@ show_percentage = false
 [node name="EtenijäPercent" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer2" unique_id=183868910]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_h7a1t")
-theme_override_font_sizes/font_size = 45
+theme = ExtResource("4_kpi66")
 text = "%"
 
 [node name="EtenijäText" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer2" unique_id=695552796]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_h7a1t")
-theme_override_font_sizes/font_size = 45
+theme = ExtResource("4_kpi66")
 text = "Etenijä"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=397438058]
@@ -131,15 +126,13 @@ show_percentage = false
 [node name="EtsijäPercent" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer3" unique_id=1078435502]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_h7a1t")
-theme_override_font_sizes/font_size = 45
+theme = ExtResource("4_kpi66")
 text = "%"
 
 [node name="EtsijäText" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer3" unique_id=1189176766]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_h7a1t")
-theme_override_font_sizes/font_size = 45
+theme = ExtResource("4_kpi66")
 text = "Etsijä"
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=622687514]
@@ -156,6 +149,5 @@ offset_right = 150.5
 offset_bottom = -65.289856
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_h7a1t")
-theme_override_font_sizes/font_size = 40
+theme = ExtResource("4_kpi66")
 text = "Napauta näyttöä palataksesi päävalikkoon."
