@@ -65,6 +65,10 @@ public partial class PlayerCharacter : CharacterBody2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		if (_blackHole) // so that visuals wont update with this if sucked into black hole
+        {
+            return;
+        }
 		_inputDirection = Input.GetVector(InputConfig.InputLeft, InputConfig.InputRight, InputConfig.InputUp, InputConfig.InputDown);
 
 		UpdateGlowVisuals();
@@ -259,9 +263,12 @@ public partial class PlayerCharacter : CharacterBody2D
 		suckTween.SetParallel(true); // make animations run at same time
 
 		// visuals
-		suckTween.TweenProperty(this, "global_position", holePosition, 1.0f); // move player body to center of black hole in 1sec
-		suckTween.TweenProperty(this, "scale", new Vector2(9.0f, 0.01f), 1.0f); // stretch player star to be long and thin
-		suckTween.TweenProperty(this, "modulate:a", 0.0f, 1.0f); // fade player stars transparency to 0
+		suckTween.TweenProperty(_starLight, "energy", 0.0f, 0.2f); // kill pointlight because it cant be stretched
+		suckTween.TweenProperty(_glowSprite, "modulate:a", 0.0f, 0.1f); // kill glow sprite because it looks dumb
+
+		suckTween.TweenProperty(this, "global_position", holePosition, 1.5f); // move player body to center of black hole in 1sec
+		suckTween.TweenProperty(_starSprite, "scale", new Vector2(7.0f, 0.01f), 1.5f); // stretch player star to be long and thin
+		suckTween.TweenProperty(this, "modulate", new Color(0, 0, 0, 0), 1.5f); // make star color modulate to black and transparency to 0
 
 		suckTween.SetParallel(false); // stop running animations when they end
 
