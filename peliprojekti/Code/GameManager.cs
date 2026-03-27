@@ -54,6 +54,8 @@ public partial class GameManager : Node
     {
         _isDead = false;
         _health = 0.6f;     // same value in constructor
+
+        _personalityChoices.Clear(); // clear choices from before restarting
     }
 
 #region health
