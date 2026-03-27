@@ -267,7 +267,7 @@ grow_vertical = 0
 theme = ExtResource("7_x7a1n")
 text = "Väistele meteoriitteja"
 
-[node name="AvoidLabel2" type="Label" parent="." unique_id=107002935]
+[node name="QuestionLabel" type="Label" parent="." unique_id=107002935]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0

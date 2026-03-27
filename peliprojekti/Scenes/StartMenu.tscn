@@ -54,9 +54,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -200.0
-offset_top = 43.679993
+offset_top = -6.9699707
 offset_right = 200.0
-offset_bottom = 193.67987
+offset_bottom = 143.0299
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
@@ -70,13 +70,30 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -200.0
-offset_top = 227.72998
+offset_top = 327.89
 offset_right = 200.0
-offset_bottom = 377.72998
+offset_bottom = 477.89
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
 text = "LEVELS"
 
+[node name="TutorialButton" type="Button" parent="." unique_id=1790385667]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 159.74005
+offset_right = 200.0
+offset_bottom = 309.73993
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_ujd4t")
+text = "TUTORIAL"
+
 [connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
 [connection signal="pressed" from="LevelsButton" to="." method="OnLevelsButtonPressed"]
+[connection signal="pressed" from="TutorialButton" to="." method="OnTutorialButtonPressed"]
