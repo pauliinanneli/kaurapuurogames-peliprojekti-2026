@@ -57,7 +57,7 @@ public partial class PauseUI : CanvasLayer
     }
 
     /// <summary>
-    /// Quits the game from pause menu
+    /// Quits the game from pause menu and opens start menu
     /// </summary>
     public void OnQuitPressed()
     {
