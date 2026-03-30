@@ -61,6 +61,7 @@ public partial class PauseUI : CanvasLayer
     /// </summary>
     public void OnQuitPressed()
     {
+        GetTree().Paused = false; // fixed bug: unpause so startmenu works
         GetTree().ChangeSceneToFile(MenuScenePath);
     }
 }

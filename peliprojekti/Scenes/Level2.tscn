@@ -101,7 +101,7 @@ position = Vector2(18118, 332)
 scale = Vector2(0.48, 0.48)
 
 [node name="LevelMover" parent="." unique_id=1321373785 instance=ExtResource("4_n3cqh")]
-_normalSpeed = 200.0
+_normalSpeed = 180.0
 
 [node name="DeadZone" type="Area2D" parent="LevelMover" unique_id=202483484]
 collision_layer = 0
