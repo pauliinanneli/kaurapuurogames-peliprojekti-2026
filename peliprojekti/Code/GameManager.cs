@@ -73,7 +73,7 @@ public partial class GameManager : Node
     private bool _isDead = false;
 
     private List<string> _personalityChoices = new List<string>(); // list that will store which Muusa role answers correspond with
-    [Export] private float _drainHealth = 0.12f; // loses 10% glow per second, evaluate if thats a smart value or not
+    [Export] private float _drainHealth = 0.08f; // loses 8% glow per second, evaluate if thats a smart value or not
 
     [Export] public Color _defaultColor = Color.FromHtml("#FFD580");
     [Export] public Color _etsijäColor = Color.FromHtml("#00E5FF");
