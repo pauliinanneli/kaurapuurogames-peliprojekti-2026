@@ -375,32 +375,107 @@ scale = Vector2(0.6724, 0.6724)
 position = Vector2(16436, 220.00003)
 scale = Vector2(0.6724, 0.6724)
 
-[node name="Meteors VAIHDA PAIKKOJA JA SÄÄDÄ" type="Node2D" parent="." unique_id=584953809]
+[node name="Meteors" type="Node2D" parent="." unique_id=584953809]
 
-[node name="Meteor" parent="Meteors VAIHDA PAIKKOJA JA SÄÄDÄ" unique_id=405699312 instance=ExtResource("11_au75x")]
-position = Vector2(1033, 412)
+[node name="Meteor" parent="Meteors" unique_id=405699312 instance=ExtResource("11_au75x")]
+position = Vector2(972, 242)
 collision_layer = 4
-_floatAmplitude = 200.0
+_floatAmplitude = 120.0
+_floatSpeed = 1.3
 
-[node name="Meteor2" parent="Meteors VAIHDA PAIKKOJA JA SÄÄDÄ" unique_id=1425216172 instance=ExtResource("11_au75x")]
-position = Vector2(1644, 145)
+[node name="Meteor2" parent="Meteors" unique_id=1425216172 instance=ExtResource("11_au75x")]
+position = Vector2(1637, 277)
 collision_layer = 4
-_floatSpeed = 1.0
+_floatAmplitude = 230.0
+_floatSpeed = 1.5
 _smoothing = 3.0
 
-[node name="Meteor4" parent="Meteors VAIHDA PAIKKOJA JA SÄÄDÄ" unique_id=1813736099 instance=ExtResource("11_au75x")]
-position = Vector2(3013, 271)
+[node name="Meteor4" parent="Meteors" unique_id=1813736099 instance=ExtResource("11_au75x")]
+position = Vector2(4370, 396)
 collision_layer = 4
-_floatAmplitude = 100.0
+_floatAmplitude = 250.0
 _floatSpeed = 1.5
 _smoothing = 6.0
 
-[node name="Meteor3" parent="Meteors VAIHDA PAIKKOJA JA SÄÄDÄ" unique_id=416773598 instance=ExtResource("11_au75x")]
-position = Vector2(2499, 706)
+[node name="Meteor3" parent="Meteors" unique_id=416773598 instance=ExtResource("11_au75x")]
+position = Vector2(2463, 504)
+collision_layer = 4
+_floatSpeed = 1.2
+_smoothing = 3.0
+
+[node name="Meteor5" parent="Meteors" unique_id=869096368 instance=ExtResource("11_au75x")]
+position = Vector2(5105, 205)
+collision_layer = 4
+_floatAmplitude = 140.0
+_floatSpeed = 1.3
+_smoothing = 6.0
+
+[node name="Meteor6" parent="Meteors" unique_id=1561617143 instance=ExtResource("11_au75x")]
+position = Vector2(5849, 432)
+collision_layer = 4
+_floatAmplitude = 170.0
+_floatSpeed = 1.5
+_smoothing = 6.0
+
+[node name="Meteor7" parent="Meteors" unique_id=1073701316 instance=ExtResource("11_au75x")]
+position = Vector2(8077, 266)
 collision_layer = 4
 _floatAmplitude = 200.0
-_floatSpeed = 1.0
-_smoothing = 3.0
+_floatSpeed = 1.6
+_smoothing = 6.0
+
+[node name="Meteor8" parent="Meteors" unique_id=1296764527 instance=ExtResource("11_au75x")]
+position = Vector2(8662, 385)
+collision_layer = 4
+_floatSpeed = 1.2
+_smoothing = 6.0
+
+[node name="Meteor9" parent="Meteors" unique_id=87141063 instance=ExtResource("11_au75x")]
+position = Vector2(9230, 293)
+collision_layer = 4
+_floatAmplitude = 170.0
+_floatSpeed = 1.7
+_smoothing = 6.0
+
+[node name="Meteor10" parent="Meteors" unique_id=1610222961 instance=ExtResource("11_au75x")]
+position = Vector2(11230, 255)
+collision_layer = 4
+_floatSpeed = 1.5
+_smoothing = 6.0
+
+[node name="Meteor11" parent="Meteors" unique_id=1242156241 instance=ExtResource("11_au75x")]
+position = Vector2(11886, 390)
+collision_layer = 4
+_floatAmplitude = 250.0
+_smoothing = 6.0
+
+[node name="Meteor12" parent="Meteors" unique_id=1644111934 instance=ExtResource("11_au75x")]
+position = Vector2(12511, 340)
+collision_layer = 4
+_floatAmplitude = 160.0
+_floatSpeed = 1.2
+_smoothing = 6.0
+
+[node name="Meteor13" parent="Meteors" unique_id=1500655729 instance=ExtResource("11_au75x")]
+position = Vector2(14591, 297)
+collision_layer = 4
+_floatAmplitude = 140.0
+_floatSpeed = 1.4
+_smoothing = 6.0
+
+[node name="Meteor14" parent="Meteors" unique_id=938899080 instance=ExtResource("11_au75x")]
+position = Vector2(15138, 454)
+collision_layer = 4
+_floatAmplitude = 140.0
+_floatSpeed = 1.4
+_smoothing = 6.0
+
+[node name="Meteor15" parent="Meteors" unique_id=671607379 instance=ExtResource("11_au75x")]
+position = Vector2(15707, 358)
+collision_layer = 4
+_floatAmplitude = 180.0
+_floatSpeed = 1.6
+_smoothing = 6.0
 
 [node name="Lanepickers" type="Node2D" parent="." unique_id=289857977]
 
