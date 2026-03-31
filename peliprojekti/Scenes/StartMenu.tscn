@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cuscp5aotr6hs"]
 
 [ext_resource type="Script" uid="uid://cir2u7yr6exoe" path="res://Code/StartMenu.cs" id="1_dl0pg"]
-[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_dvnd1"]
-[ext_resource type="Texture2D" uid="uid://bpacaf0xgai6h" path="res://Art/TextLogoB&W.png" id="3_h303d"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://art/Taustat.png" id="1_dvnd1"]
+[ext_resource type="Texture2D" uid="uid://bpacaf0xgai6h" path="res://art/TextLogoB&W.png" id="3_h303d"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="4_ujd4t"]
-[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="5_ujd4t"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://art/Stardust.png" id="5_ujd4t"]
 
 [node name="StartMenu" type="Control" unique_id=1614769704]
 layout_mode = 3
@@ -60,7 +60,7 @@ offset_bottom = 143.0299
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
-text = "START"
+text = "ALOITA"
 
 [node name="LevelsButton" type="Button" parent="." unique_id=393806509]
 layout_mode = 1
@@ -76,7 +76,7 @@ offset_bottom = 477.89
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
-text = "LEVELS"
+text = "TASOT"
 
 [node name="TutorialButton" type="Button" parent="." unique_id=1790385667]
 layout_mode = 1
@@ -92,7 +92,7 @@ offset_bottom = 309.73993
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
-text = "TUTORIAL"
+text = "TUTORIAALI"
 
 [connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
 [connection signal="pressed" from="LevelsButton" to="." method="OnLevelsButtonPressed"]

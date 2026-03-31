@@ -11,6 +11,7 @@ public partial class DieUI : CanvasLayer
     /// </summary>
     private Control dieMenu;
     private Button pauseButton;
+    [Export] public string MenuScenePath = "res://Scenes/StartMenu.tscn";
 
     public override void _Ready()
     {
@@ -52,6 +53,8 @@ public partial class DieUI : CanvasLayer
     /// </summary>
     public void OnQuitPressed()
     {
-        GetTree().Quit();
+        GetTree().Paused = false; // fixed bug: unpause so startmenu works
+        GameManager.Instance.ResetGame(); // reset singleton state
+        GetTree().ChangeSceneToFile(MenuScenePath); // opens StartMenu
     }
 }
