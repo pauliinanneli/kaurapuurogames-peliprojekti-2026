@@ -34,7 +34,7 @@ position = Vector2(1041.0001, 305)
 scale = Vector2(23.47, 0.385)
 texture = ExtResource("1_2o727")
 region_enabled = true
-region_rect = Rect2(0, 0, 2048, 2048)
+region_rect = Rect2(4473, 0, 1911, 2048)
 
 [node name="BackgroundStars" type="Parallax2D" parent="Backgrounds" unique_id=1323061386]
 scale = Vector2(1, 1.57)

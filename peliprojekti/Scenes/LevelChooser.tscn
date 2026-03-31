@@ -46,7 +46,7 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="Level1" type="Area2D" parent="ScrollContainer/Control" unique_id=346835284]
-position = Vector2(1343.19, 1137.61)
+position = Vector2(412.28, 671.22)
 scale = Vector2(0.45, 0.45)
 script = ExtResource("2_1bx87")
 
@@ -60,7 +60,7 @@ scale = Vector2(36.15, 36.15)
 shape = SubResource("CircleShape2D_m37ox")
 
 [node name="Level2" type="Area2D" parent="ScrollContainer/Control" unique_id=819111188]
-position = Vector2(445.05, 641.26)
+position = Vector2(1355.63, 242.62)
 scale = Vector2(0.45, 0.45)
 script = ExtResource("2_1bx87")
 LevelPath = "res://Scenes/Level2.tscn"
@@ -71,6 +71,21 @@ region_enabled = true
 region_rect = Rect2(672, 840, 714, 735)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/Control/Level2" unique_id=2069589281]
+scale = Vector2(36.15, 36.15)
+shape = SubResource("CircleShape2D_m37ox")
+
+[node name="Level3" type="Area2D" parent="ScrollContainer/Control" unique_id=2018818550]
+position = Vector2(1343.19, 1137.61)
+scale = Vector2(0.45, 0.45)
+script = ExtResource("2_1bx87")
+LevelPath = "res://Scenes/Tutorial.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/Control/Level3" unique_id=1508386508]
+texture = ExtResource("2_m37ox")
+region_enabled = true
+region_rect = Rect2(-20, -20, 735, 734)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/Control/Level3" unique_id=1700564618]
 scale = Vector2(36.15, 36.15)
 shape = SubResource("CircleShape2D_m37ox")
 
