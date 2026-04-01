@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://fw8wifrnjgqu"]
+
+[ext_resource type="Script" uid="uid://d2jqrr8qyalsl" path="res://Code/DieUI.cs" id="1_x85ng"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="2_lenoj"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="2_m64vj"]
+
+[node name="DieUI" type="CanvasLayer" unique_id=210363600]
+process_mode = 2
+script = ExtResource("1_x85ng")
+
+[node name="DieMenu" type="Control" parent="." unique_id=794153939]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="DieMenu" unique_id=388820808]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="YouDied" type="Label" parent="DieMenu/ColorRect" unique_id=1476808072]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -515.0
+offset_top = 206.82
+offset_right = 492.00012
+offset_bottom = 332.81998
+grow_horizontal = 2
+theme = ExtResource("2_lenoj")
+theme_override_fonts/font = ExtResource("2_m64vj")
+theme_override_font_sizes/font_size = 92
+text = "TÄHTIENERGIA LOPPUI"
+horizontal_alignment = 1
+
+[node name="QuitButton" type="Button" parent="DieMenu/ColorRect" unique_id=2093984625]
+custom_minimum_size = Vector2(0, -500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = 85.75
+offset_right = 320.0
+offset_bottom = 283.74994
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_lenoj")
+text = "POISTU PELISTÄ"
+
+[node name="RestartButton" type="Button" parent="DieMenu/ColorRect" unique_id=820184263]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.0
+offset_top = -143.54001
+offset_right = 323.0
+offset_bottom = 54.45984
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_lenoj")
+text = "YRITÄ UUDELLEEN"
+
+[connection signal="pressed" from="DieMenu/ColorRect/QuitButton" to="." method="OnQuitPressed"]
+[connection signal="pressed" from="DieMenu/ColorRect/RestartButton" to="." method="OnRestartPressed"]

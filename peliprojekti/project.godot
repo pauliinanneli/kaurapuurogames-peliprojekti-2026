@@ -19,13 +19,26 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="peliprojekti"
+<<<<<<< HEAD
 run/main_scene="uid://dk7d0f8t6fuml"
 config/features=PackedStringArray("4.5", "C#", "Mobile")
+=======
+run/main_scene="uid://cuscp5aotr6hs"
+config/features=PackedStringArray("4.6", "C#", "Mobile")
+>>>>>>> 7b17a517981369dd0ffb1b7733abaacb6c601746
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*uid://ds5id0x4jd0c4"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=1
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 

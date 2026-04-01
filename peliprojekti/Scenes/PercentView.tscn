@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://e5og2wnjw33e"]
+
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_5j0br"]
+[ext_resource type="Script" uid="uid://b2e2or1uv0yrn" path="res://Code/PercentView.cs" id="1_fwms7"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="4_kpi66"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwms7"]
+bg_color = Color(0.83137256, 1, 0.5686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpi66"]
+bg_color = Color(1, 0.49411765, 0.7254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dw1o"]
+bg_color = Color(0, 0.8980392, 1, 1)
+
+[node name="PercentView" type="Control" unique_id=1172003261 node_paths=PackedStringArray("Edistäjä", "Etenijä", "Etsijä", "EdistäjäBar", "EtenijäBar", "EtsijäBar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fwms7")
+"Edistäjä" = NodePath("CanvasLayer/HBoxContainer/VBoxContainer/EdistäjäPercent")
+"Etenijä" = NodePath("CanvasLayer/HBoxContainer/VBoxContainer2/EtenijäPercent")
+"Etsijä" = NodePath("CanvasLayer/HBoxContainer/VBoxContainer3/EtsijäPercent")
+"EdistäjäBar" = NodePath("CanvasLayer/HBoxContainer/VBoxContainer/EdistäjäProgressBar")
+"EtenijäBar" = NodePath("CanvasLayer/HBoxContainer/VBoxContainer2/EtenijäProgressBar")
+"EtsijäBar" = NodePath("CanvasLayer/HBoxContainer/VBoxContainer3/EtsijäProgressBar")
+
+[node name="Background" type="Node2D" parent="." unique_id=1861598107]
+scale = Vector2(5.09, 1.66)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=540480664]
+position = Vector2(576.00006, 329.5)
+scale = Vector2(0.5852217, 0.33870965)
+texture = ExtResource("1_5j0br")
+region_enabled = true
+region_rect = Rect2(0, 0, 2030, 2046)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=301971129]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=1824784464]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -111.0
+offset_top = 73.68
+offset_right = 111.0
+offset_bottom = 145.68
+grow_horizontal = 2
+theme = ExtResource("4_kpi66")
+text = "Pisteesi:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=135099305]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -579.0
+offset_top = -869.41003
+offset_right = 579.0
+offset_bottom = -215.41003
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 300
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=2013040201]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="EdistäjäProgressBar" type="ProgressBar" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=1054037991]
+custom_minimum_size = Vector2(186.53, 500)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_fwms7")
+fill_mode = 3
+show_percentage = false
+
+[node name="EdistäjäPercent" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=907665404]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_kpi66")
+text = "%"
+
+[node name="EdistäjäText" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer" unique_id=471789853]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_kpi66")
+text = "Edistäjä"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=221682190]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="EtenijäProgressBar" type="ProgressBar" parent="CanvasLayer/HBoxContainer/VBoxContainer2" unique_id=552411948]
+custom_minimum_size = Vector2(186.53, 500)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_kpi66")
+fill_mode = 3
+show_percentage = false
+
+[node name="EtenijäPercent" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer2" unique_id=183868910]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_kpi66")
+text = "%"
+
+[node name="EtenijäText" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer2" unique_id=695552796]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_kpi66")
+text = "Etenijä"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=397438058]
+layout_mode = 2
+theme_override_constants/separation = 18
+
+[node name="EtsijäProgressBar" type="ProgressBar" parent="CanvasLayer/HBoxContainer/VBoxContainer3" unique_id=1522457471]
+custom_minimum_size = Vector2(186.53, 500)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_8dw1o")
+fill_mode = 3
+show_percentage = false
+
+[node name="EtsijäPercent" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer3" unique_id=1078435502]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_kpi66")
+text = "%"
+
+[node name="EtsijäText" type="Label" parent="CanvasLayer/HBoxContainer/VBoxContainer3" unique_id=1189176766]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_kpi66")
+text = "Etsijä"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=622687514]
+
+[node name="InstructionLabel" type="Label" parent="CanvasLayer2" unique_id=803399708]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.5
+offset_top = -117.28998
+offset_right = 150.5
+offset_bottom = -65.289856
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_kpi66")
+text = "Napauta näyttöä palataksesi päävalikkoon."

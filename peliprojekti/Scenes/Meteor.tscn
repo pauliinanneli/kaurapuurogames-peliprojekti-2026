@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c7bisqd2s2fim"]
+
+[ext_resource type="Texture2D" uid="uid://b2i40x8wo32md" path="res://Art/LevelObstacles.png" id="1_5wds4"]
+[ext_resource type="Script" uid="uid://rnjt7lmv7f3u" path="res://Code/Meteor.cs" id="1_fdert"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5wds4"]
+
+[node name="Meteor" type="Area2D" unique_id=405699312]
+scale = Vector2(0.25, 0.25)
+collision_mask = 2
+script = ExtResource("1_fdert")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=656665447]
+texture = ExtResource("1_5wds4")
+region_enabled = true
+region_rect = Rect2(1470, 1092, 609, 588)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=490626270]
+scale = Vector2(28.18, 28.18)
+shape = SubResource("CircleShape2D_5wds4")
