@@ -19,6 +19,27 @@ public partial class PercentView : Control
         _waitingForTap = true;
     }
 
+    /// <summary>
+    /// updates text labels to match the current animated value of progress bars
+    /// </summary>
+    public override void _PhysicsProcess(double delta)
+    {
+        if (EdistäjäBar != null && Edistäjä != null)
+        {
+            Edistäjä.Text = $"{(int)EdistäjäBar.Value}%";
+        }
+
+        if (EtenijäBar != null && Etenijä != null)
+        {
+            Etenijä.Text = $"{(int)EtenijäBar.Value}%";
+        }
+
+        if (EtsijäBar != null && Etsijä != null)
+        {
+            Etsijä.Text = $"{(int)EtsijäBar.Value}%";
+        }
+    }
+
     public override void _Input(InputEvent @event)
     {
         // check if waiting for tap and if event is tap
@@ -34,6 +55,9 @@ public partial class PercentView : Control
         }
     }
 
+    /// <summary>
+    /// calculates % based on player choices
+    /// </summary>
     private void CalculateResults()
     {
         var choices = GameManager.Instance.GetChoices();
@@ -41,12 +65,6 @@ public partial class PercentView : Control
         float edistäjäCount = 0;
         float etenijäCount = 0;
         float etsijäCount = 0;
-
-
-        if (total == 0)
-        {
-            return;
-        }
 
         foreach (string choice in choices)
         {
@@ -71,24 +89,32 @@ public partial class PercentView : Control
             int etenijäPercent = Mathf.RoundToInt((etenijäCount / total) * 100);
             int etsijäPercent = Mathf.RoundToInt((etsijäCount / total) * 100);
 
-            // put those numbers into progresss bars
-            if (EdistäjäBar != null)
-            {
-                EdistäjäBar.Value = edistäjäPercent;
-            }
-            if (EtenijäBar != null)
-            {
-                EtenijäBar.Value = etenijäPercent;
-            }
-            if (EtsijäBar != null)
-            {
-                EtsijäBar.Value = etsijäPercent;
-            }
 
-            // add % to these labels
-            Edistäjä.Text = $"{edistäjäPercent}%";
-            Etenijä.Text = $"{etenijäPercent}%";
-            Etsijä.Text = $"{etsijäPercent}%";
+            // call animation method for bars to animate them from bottom to top
+            AnimateBar(EdistäjäBar, edistäjäPercent);
+            AnimateBar(EtsijäBar, etsijäPercent);
+            AnimateBar(EtenijäBar, etenijäPercent);
         }
+    }
+
+    /// <summary>
+    /// a method for animating the progress bars from bottom to top with the values of players answers
+    /// </summary>
+    /// <param name="progressbar">the progress bar</param>
+    /// <param name="targetPercent">the percent value the bar will be animated to from 0</param>
+    private void AnimateBar(ProgressBar progressbar, int targetPercent)
+    {
+        if (progressbar == null)
+        {
+            return;
+        }
+
+        // start progressbar from zero
+        progressbar.Value = 0;
+
+        var tween = GetTree().CreateTween();
+
+        // change value of progressbar over 2,5 seconds and set type of transition and easing for it
+        tween.TweenProperty(progressbar, "value", (float)targetPercent, 2.5f).SetTrans(Tween.TransitionType.Quart).SetEase(Tween.EaseType.Out);
     }
 }
