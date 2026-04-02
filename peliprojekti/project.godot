@@ -89,6 +89,10 @@ MoveLeft={
 
 pointing/emulate_touch_from_mouse=true
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://Language_Texts-InGame/Language.en.translation", "res://Language_Texts-InGame/Language.fi.translation")
+
 [layer_names]
 
 2d_physics/layer_1="World"
