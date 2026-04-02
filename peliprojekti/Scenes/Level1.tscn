@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dk7d0f8t6fuml"]
 
-[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_slnnj"]
-[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="3_jghel"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://art/Stardust.png" id="2_slnnj"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://art/Taustat.png" id="3_jghel"]
 [ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="3_joc8x"]
 [ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_slnnj"]
 [ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="4_slnnj"]
