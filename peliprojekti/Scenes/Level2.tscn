@@ -434,7 +434,7 @@ _smoothing = 6.0
 position = Vector2(9230, 293)
 collision_layer = 4
 _floatAmplitude = 170.0
-_floatSpeed = 1.7
+_floatSpeed = 1.5
 _smoothing = 6.0
 
 [node name="Meteor10" parent="Meteors" unique_id=1610222961 instance=ExtResource("11_au75x")]
@@ -447,6 +447,7 @@ _smoothing = 6.0
 position = Vector2(11886, 390)
 collision_layer = 4
 _floatAmplitude = 250.0
+_floatSpeed = 1.7
 _smoothing = 6.0
 
 [node name="Meteor12" parent="Meteors" unique_id=1644111934 instance=ExtResource("11_au75x")]
@@ -460,13 +461,13 @@ _smoothing = 6.0
 position = Vector2(14591, 297)
 collision_layer = 4
 _floatAmplitude = 140.0
-_floatSpeed = 1.4
+_floatSpeed = 1.5
 _smoothing = 6.0
 
 [node name="Meteor14" parent="Meteors" unique_id=938899080 instance=ExtResource("11_au75x")]
 position = Vector2(15138, 454)
 collision_layer = 4
-_floatAmplitude = 140.0
+_floatAmplitude = 180.0
 _floatSpeed = 1.4
 _smoothing = 6.0
 

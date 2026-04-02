@@ -217,3 +217,169 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("5_xiqrn")
 text = "Yhdistä tähdet."
+
+[node name="Leijona" type="Node2D" parent="." unique_id=1855158800]
+visible = false
+position = Vector2(443.02, 67.37)
+scale = Vector2(1.17, 1.17)
+
+[node name="Star0" type="Area2D" parent="Leijona" unique_id=770518429 node_paths=PackedStringArray("_light")]
+position = Vector2(-66, 128)
+script = ExtResource("2_j8oic")
+_light = NodePath("PointLight2D")
+
+[node name="ConnectingStar2" type="Sprite2D" parent="Leijona/Star0" unique_id=263105900]
+scale = Vector2(0.357, 0.329)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Leijona/Star0" unique_id=1771758695]
+scale = Vector2(0.68544, 0.63167995)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leijona/Star0" unique_id=1549074301]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Star1" type="Area2D" parent="Leijona" unique_id=687035369 node_paths=PackedStringArray("_light")]
+position = Vector2(259, 103)
+script = ExtResource("2_j8oic")
+_starIndex = 1
+_light = NodePath("PointLight2D")
+
+[node name="ConnectingStar3" type="Sprite2D" parent="Leijona/Star1" unique_id=1910501409]
+scale = Vector2(0.357, 0.32899997)
+texture = ExtResource("2_qnmmg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leijona/Star1" unique_id=638541512]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="PointLight2D" type="PointLight2D" parent="Leijona/Star1" unique_id=46690066]
+scale = Vector2(0.68544, 0.6316799)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="Star2" type="Area2D" parent="Leijona" unique_id=1892094634 node_paths=PackedStringArray("_light")]
+position = Vector2(412, 277)
+script = ExtResource("2_j8oic")
+_starIndex = 2
+_light = NodePath("PointLight2D")
+
+[node name="ConnectingStar4" type="Sprite2D" parent="Leijona/Star2" unique_id=1884719164]
+scale = Vector2(0.357, 0.32899997)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Leijona/Star2" unique_id=248472990]
+scale = Vector2(0.68544, 0.6316799)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leijona/Star2" unique_id=466711355]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Star3" type="Area2D" parent="Leijona" unique_id=380798660 node_paths=PackedStringArray("_light")]
+position = Vector2(647, 373)
+script = ExtResource("2_j8oic")
+_starIndex = 3
+_light = NodePath("PointLight2D")
+
+[node name="PointLight2D" type="PointLight2D" parent="Leijona/Star3" unique_id=1504194441]
+scale = Vector2(0.84479994, 0.84479994)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="ConnectingStar" type="Sprite2D" parent="Leijona/Star3" unique_id=1304677780]
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_qnmmg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leijona/Star3" unique_id=1468946819]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Star4" type="Area2D" parent="Leijona" unique_id=41562115 node_paths=PackedStringArray("_light")]
+position = Vector2(1001, 431)
+script = ExtResource("2_j8oic")
+_starIndex = 4
+_light = NodePath("PointLight2D")
+
+[node name="ConnectingStar5" type="Sprite2D" parent="Leijona/Star4" unique_id=1649438901]
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Leijona/Star4" unique_id=1089052993]
+scale = Vector2(0.84479994, 0.84479994)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leijona/Star4" unique_id=1441662151]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Star5" type="Area2D" parent="Leijona" unique_id=548209034 node_paths=PackedStringArray("_light")]
+position = Vector2(893, 706)
+script = ExtResource("2_j8oic")
+_starIndex = 5
+_light = NodePath("PointLight2D")
+
+[node name="ConnectingStar7" type="Sprite2D" parent="Leijona/Star5" unique_id=698495767]
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Leijona/Star5" unique_id=1788658723]
+scale = Vector2(0.84479994, 0.84479994)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leijona/Star5" unique_id=876004702]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Star6" type="Area2D" parent="Leijona" unique_id=1947319845 node_paths=PackedStringArray("_light")]
+position = Vector2(513, 615)
+script = ExtResource("2_j8oic")
+_starIndex = 6
+_light = NodePath("PointLight2D")
+
+[node name="ConnectingStar6" type="Sprite2D" parent="Leijona/Star6" unique_id=1217247100]
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_qnmmg")
+
+[node name="PointLight2D" type="PointLight2D" parent="Leijona/Star6" unique_id=1187099340]
+scale = Vector2(0.84479994, 0.84479994)
+enabled = false
+color = Color(1, 0.9764706, 0.6156863, 1)
+energy = 1.1
+texture = SubResource("GradientTexture2D_j8oic")
+texture_scale = 21.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leijona/Star6" unique_id=1073378853]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Line2D" type="Line2D" parent="Leijona" unique_id=445665522]
+points = PackedVector2Array(-79.95889, 129.26027)
+width = 3.0
+default_color = Color(1, 0.9764706, 0.92941177, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
