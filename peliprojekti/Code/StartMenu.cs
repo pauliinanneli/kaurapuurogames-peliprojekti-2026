@@ -7,6 +7,7 @@ public partial class StartMenu : Control
     [Export] public string LevelsScenePath = "res://Scenes/LevelChooser.tscn";
 
     [Export] public string TutorialScenePath = "res://Scenes/Tutorial.tscn";
+    [Export] public string CreditsScenePath = "res://Scenes/Credits.tscn";
 
 
     public void OnStartButtonPressed()
@@ -24,5 +25,11 @@ public partial class StartMenu : Control
     {
         Input.VibrateHandheld(50); // small haptic feedbackk
         GetTree().ChangeSceneToFile(TutorialScenePath);
+    }
+
+    public void OnCreditsButtonPressed()
+    {
+        Input.VibrateHandheld(50); // small haptic feedbackk
+        GetTree().ChangeSceneToFile(CreditsScenePath);
     }
 }
