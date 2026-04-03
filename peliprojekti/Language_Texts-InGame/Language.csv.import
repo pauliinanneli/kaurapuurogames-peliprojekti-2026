@@ -2,22 +2,15 @@
 
 importer="csv_translation"
 type="Translation"
-uid="uid://bd2cm4fnaldsr"
+uid="uid://bjal1qno5xvd7"
 
 [deps]
 
-files=["res://Language_Texts-InGame/Language.fi.translation", "res://Language_Texts-InGame/Language.en.translation"]
-
 source_file="res://Language_Texts-InGame/Language.csv"
-dest_files=["res://Language_Texts-InGame/Language.fi.translation", "res://Language_Texts-InGame/Language.en.translation"]
 
 [params]
 
 compress=1
-<<<<<<< HEAD
 delimiter=0
-=======
-delimiter=1
->>>>>>> origin/Tony
 unescape_keys=false
 unescape_translations=true

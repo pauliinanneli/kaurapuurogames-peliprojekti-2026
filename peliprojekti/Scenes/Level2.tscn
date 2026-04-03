@@ -99,6 +99,7 @@ region_rect = Rect2(0, 660, 1023, 363)
 [node name="BlackHole" parent="." unique_id=1563931321 instance=ExtResource("3_ms0wi")]
 position = Vector2(18118, 332)
 scale = Vector2(0.48, 0.48)
+NextScenePath = "res://Scenes/ConnectingStarsLevel2.tscn"
 
 [node name="LevelMover" parent="." unique_id=1321373785 instance=ExtResource("4_n3cqh")]
 _normalSpeed = 180.0

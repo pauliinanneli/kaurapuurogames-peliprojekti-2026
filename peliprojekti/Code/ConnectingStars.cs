@@ -34,6 +34,7 @@ public partial class ConnectingStars : Node2D
 		//change text on instructionlabel when constellation done
         if (_instructionLabel != null)
         {
+                // TO DO: find out how this works out with the translation?
             _instructionLabel.Text = "Napauta näyttöä nähdäksesi tuloksesi.";
         }
 		_waitingForTap = true;

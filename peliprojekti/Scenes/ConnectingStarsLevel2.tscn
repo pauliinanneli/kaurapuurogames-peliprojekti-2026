@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dg3yn6ib7wrj3"]
+
+[ext_resource type="PackedScene" uid="uid://cos4aghpkqpq5" path="res://Scenes/ConnectingStarsLevel1.tscn" id="1_m86b4"]
+
+[node name="ConnectingStars" unique_id=1890405732 instance=ExtResource("1_m86b4")]
+
+[node name="Otava" parent="." index="1" unique_id=669780749]
+visible = false
+
+[node name="Leijona" parent="." index="4" unique_id=1855158800]
+visible = true
