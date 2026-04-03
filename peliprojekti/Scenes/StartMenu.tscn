@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://cuscp5aotr6hs"]
 
 [ext_resource type="Script" uid="uid://cir2u7yr6exoe" path="res://Code/StartMenu.cs" id="1_dl0pg"]
-[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://art/Taustat.png" id="1_dvnd1"]
-[ext_resource type="Texture2D" uid="uid://bpacaf0xgai6h" path="res://art/TextLogoB&W.png" id="3_h303d"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_dvnd1"]
+[ext_resource type="Texture2D" uid="uid://bpacaf0xgai6h" path="res://Art/TextLogoB&W.png" id="3_h303d"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="4_ujd4t"]
-[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://art/Stardust.png" id="5_ujd4t"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="5_ujd4t"]
+[ext_resource type="Texture2D" uid="uid://ix2h5pgs8dlp" path="res://Art/Logos/FI_co-funded by VERTICAL RGB_POS.png" id="6_dibtv"]
+[ext_resource type="Texture2D" uid="uid://38umljaqr14e" path="res://Art/Logos/MUUSA logo neliö iso.png" id="7_o6asp"]
 
 [node name="StartMenu" type="Control" unique_id=1614769704]
 layout_mode = 3
@@ -93,6 +95,27 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
 text = "TUTORIAALI"
+
+[node name="Logot" type="Node2D" parent="." unique_id=1543908431]
+position = Vector2(0.01, 473.3)
+scale = Vector2(0.55, 0.55)
+
+[node name="ColorRect" type="ColorRect" parent="Logot" unique_id=100205646]
+offset_left = 57.0
+offset_top = 647.01544
+offset_right = 996.92316
+offset_bottom = 1052.9998
+color = Color(1, 0.9764706, 0.92941177, 1)
+
+[node name="FiCoFundedByVerticalRgbPos" type="Sprite2D" parent="Logot" unique_id=1714678851]
+position = Vector2(262, 852)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("6_dibtv")
+
+[node name="MuusaLogoNeliöIso" type="Sprite2D" parent="Logot" unique_id=1216079630]
+position = Vector2(678.098, 862.4)
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("7_o6asp")
 
 [connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
 [connection signal="pressed" from="LevelsButton" to="." method="OnLevelsButtonPressed"]
