@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_i8h6y"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8h6y"]
+atlas = ExtResource("1_i8h6y")
+region = Rect2(0, 0, 2016, 2037)
+
 [node name="Credits" type="Control" unique_id=1663221396]
 layout_mode = 3
 anchors_preset = 15
@@ -10,12 +14,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="Node2D" parent="." unique_id=441739677]
-scale = Vector2(5.09, 1.66)
-
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1294635330]
-position = Vector2(576.00006, 329.5)
-scale = Vector2(0.5852217, 0.33870965)
-texture = ExtResource("1_i8h6y")
-region_enabled = true
-region_rect = Rect2(0, 0, 2030, 2046)
+[node name="bg" type="TextureRect" parent="." unique_id=2099941105]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_i8h6y")
+expand_mode = 1

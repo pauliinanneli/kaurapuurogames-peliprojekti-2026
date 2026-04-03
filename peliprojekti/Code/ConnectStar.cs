@@ -21,11 +21,12 @@ public partial class ConnectStar : Area2D
         {
             _currentIndex = 0; //reset counter when level starts
 
-            _line = GetParent().GetNode<Line2D>("Line2D"); // gets line from parent node
+            _line = GetParent().GetTree().CurrentScene.FindChild("Line2D") as Line2D; // gets line from parent node
+
             if (_line != null)
             {
                 _line.ClearPoints(); // deletes old points from line2d
-                _line.AddPoint(Position); // add first point to the middle of first star
+                _line.AddPoint(GlobalPosition); // add first point to the middle of first star
             }
         }
         MouseEntered += OnTouch;
@@ -38,24 +39,19 @@ public partial class ConnectStar : Area2D
             return;
         }
 
-        try
+
+        if (IsLit && _starIndex == _currentIndex - 1) // only last lit star can start stretching line
         {
-            if (IsLit && _starIndex == _currentIndex - 1) // only last lit star can start stretching line
+            // if finger is down, move the line
+            if (Input.IsMouseButtonPressed(MouseButton.Left))
             {
-                // if finger is down, move the line
-                if (Input.IsMouseButtonPressed(MouseButton.Left))
-                {
-                    UpdateStretchyLine();
-                }
-                else
-                {
-                    RemoveStretchyLine();
-                }
+                UpdateStretchyLine();
             }
-        }
-        catch (Exception e)
-        {
-            GD.Print("caught a crash: " + e.Message);
+            else
+            {
+                RemoveStretchyLine();
+            }
+
         }
     }
 
@@ -66,7 +62,7 @@ public partial class ConnectStar : Area2D
             return;
         }
 
-        Vector2 mousePosition = _line.ToLocal(GetGlobalMousePosition());
+        Vector2 mousePosition = GetGlobalMousePosition();
 
         if (_line.GetPointCount() <= _currentIndex)
         {
@@ -114,11 +110,11 @@ public partial class ConnectStar : Area2D
             return;
         }
 
-        Vector2 starPosition = _line.ToLocal(GlobalPosition);
+
         // snap finger point and snap to stars center
         if (_line.GetPointCount() > _currentIndex)
         {
-            _line.SetPointPosition(_line.GetPointCount() - 1, starPosition);
+            _line.SetPointPosition(_line.GetPointCount() - 1, GlobalPosition);
         }
 
         LightUp();
@@ -130,12 +126,12 @@ public partial class ConnectStar : Area2D
         //snap back to loopback star
         if (_line != null && _line.GetPointCount() > _currentIndex)
         {
-            _line.SetPointPosition(_line.GetPointCount() - 1, Position);
+            _line.SetPointPosition(_line.GetPointCount() - 1, GlobalPosition);
             Input.VibrateHandheld(150); // vibration
         }
 
         // look for script in scene root
-        if (Owner is ConnectingStars levelRoot)
+        if (GetTree().CurrentScene is ConnectingStars levelRoot)
         {
             levelRoot.OnConstellationFinished();
         }

@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://vglk7vb43o02" path="res://Art/ConnectingStar.png" id="2_qnmmg"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="5_xiqrn"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_14rk4"]
+atlas = ExtResource("1_foggk")
+region = Rect2(0, 0, 2016, 2037)
+
 [sub_resource type="Gradient" id="Gradient_xuaeq"]
 offsets = PackedFloat32Array(0, 0.61290324)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -23,15 +27,19 @@ script = ExtResource("1_xiqrn")
 _instructionLabel = NodePath("CanvasLayer/InstructionLabel")
 metadata/_edit_vertical_guides_ = [585.0, 961.0]
 
-[node name="Background" type="Node2D" parent="." unique_id=1609287081]
-scale = Vector2(5.09, 1.66)
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=719420876]
+layer = -1
 
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=158353212]
-position = Vector2(576.00006, 329.5)
-scale = Vector2(0.5852217, 0.33870965)
-texture = ExtResource("1_foggk")
-region_enabled = true
-region_rect = Rect2(0, 0, 2030, 2046)
+[node name="bg" type="TextureRect" parent="CanvasLayer2" unique_id=232081244]
+z_index = -10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_14rk4")
+expand_mode = 1
 
 [node name="Otava" type="Node2D" parent="." unique_id=669780749]
 position = Vector2(443.02, 67.37)
@@ -51,6 +59,8 @@ scale = Vector2(0.68544, 0.63167995)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -77,6 +87,8 @@ scale = Vector2(0.68544, 0.6316799)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -95,6 +107,8 @@ scale = Vector2(0.68544, 0.6316799)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -113,6 +127,8 @@ scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -139,6 +155,8 @@ scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -161,6 +179,8 @@ scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -183,6 +203,8 @@ scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -191,15 +213,14 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Line2D" type="Line2D" parent="Otava" unique_id=2052901008]
+top_level = true
+z_index = 100
 points = PackedVector2Array(-79.95889, 129.26027)
 width = 3.0
 default_color = Color(1, 0.9764706, 0.92941177, 1)
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=65876897]
-anchor_mode = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1256125377]
 
@@ -239,6 +260,8 @@ scale = Vector2(0.68544, 0.63167995)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -267,6 +290,8 @@ scale = Vector2(0.68544, 0.6316799)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -287,6 +312,8 @@ scale = Vector2(0.68544, 0.6316799)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -307,6 +334,8 @@ scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -335,6 +364,8 @@ scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -359,6 +390,8 @@ scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
@@ -383,20 +416,14 @@ scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leijona/Star6" unique_id=1073378853]
 scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
-
-[node name="Line2D" type="Line2D" parent="Leijona" unique_id=445665522]
-points = PackedVector2Array(-79.95889, 129.26027)
-width = 3.0
-default_color = Color(1, 0.9764706, 0.92941177, 1)
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
 
 [node name="Star7" type="Area2D" parent="Leijona" unique_id=1702381355 node_paths=PackedStringArray("_light")]
 position = Vector2(-32.78, 375.39)
@@ -415,9 +442,19 @@ scale = Vector2(0.84479994, 0.84479994)
 enabled = false
 color = Color(1, 0.9764706, 0.6156863, 1)
 energy = 1.1
+range_layer_min = -1024
+range_layer_max = 1024
 texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Leijona/Star7" unique_id=389338012]
 scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
+
+[node name="Line2D" type="Line2D" parent="Leijona" unique_id=445665522]
+points = PackedVector2Array(-79.95889, 129.26027)
+width = 3.0
+default_color = Color(1, 0.9764706, 0.92941177, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2

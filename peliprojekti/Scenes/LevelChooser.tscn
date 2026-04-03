@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bbeefpojq57vf" path="res://Art/LevelPickers.png" id="2_m37ox"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="5_blli4"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5dyp"]
+atlas = ExtResource("1_d456p")
+region = Rect2(0, 0, 2016, 2037)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_m37ox"]
 
 [node name="LevelChooser" type="Control" unique_id=1120240481]
@@ -19,15 +23,15 @@ mouse_filter = 1
 script = ExtResource("1_cio0u")
 metadata/_edit_horizontal_guides_ = [1500.0]
 
-[node name="Background" type="Node2D" parent="." unique_id=1985390252]
-scale = Vector2(5.09, 1.66)
-
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1744895847]
-position = Vector2(576.00006, 226.50598)
-scale = Vector2(0.5852217, 0.7254826)
-texture = ExtResource("1_d456p")
-region_enabled = true
-region_rect = Rect2(0, 0, 2030, 2046)
+[node name="bg" type="TextureRect" parent="." unique_id=320322431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_q5dyp")
+expand_mode = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2085827275]
 layout_mode = 1
