@@ -71,7 +71,7 @@ layout_mode = 0
 offset_left = 740.95
 offset_top = 421.38
 offset_right = 930.95
-offset_bottom = 524.38
+offset_bottom = 550.36
 theme = ExtResource("1_flfri")
 text = "FI"
 
@@ -80,7 +80,7 @@ layout_mode = 0
 offset_left = 1017.23
 offset_top = 421.38
 offset_right = 1207.2301
-offset_bottom = 524.38
+offset_bottom = 550.36
 theme = ExtResource("1_flfri")
 text = "EN"
 

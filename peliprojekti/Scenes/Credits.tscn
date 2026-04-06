@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://mjqmrl6i3qp8"]
 
+[ext_resource type="Script" uid="uid://2pc6820fwdjk" path="res://Scenes/Credits.cs" id="1_7xmno"]
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_i8h6y"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="2_xbebw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i8h6y"]
 atlas = ExtResource("1_i8h6y")
@@ -13,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7xmno")
 
 [node name="bg" type="TextureRect" parent="." unique_id=2099941105]
 layout_mode = 1
@@ -23,3 +26,99 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_i8h6y")
 expand_mode = 1
+
+[node name="BackButton" type="Button" parent="." unique_id=1452692537]
+layout_mode = 0
+offset_left = 49.35
+offset_top = 41.29
+offset_right = 348.49002
+offset_bottom = 182.92001
+theme = ExtResource("2_xbebw")
+text = "BACK"
+
+[node name="CreditsLabel" type="Label" parent="." unique_id=1908820068]
+layout_mode = 0
+offset_left = 786.0
+offset_top = 96.0
+offset_right = 1101.0
+offset_bottom = 199.0
+theme = ExtResource("2_xbebw")
+theme_override_font_sizes/font_size = 80
+text = "CREDITS"
+
+[node name="Programmers" type="Label" parent="." unique_id=1846893041]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 355.0
+offset_right = 564.0
+offset_bottom = 420.0
+theme = ExtResource("2_xbebw")
+theme_override_font_sizes/font_size = 50
+text = "PROGRAMMERS"
+
+[node name="Pauliina" type="Label" parent="." unique_id=1785040457]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 447.14
+offset_right = 453.0
+offset_bottom = 495.14
+theme = ExtResource("2_xbebw")
+text = "Pauliina Pietilä"
+
+[node name="Tony" type="Label" parent="." unique_id=1098855775]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 517.7
+offset_right = 453.0
+offset_bottom = 565.7
+theme = ExtResource("2_xbebw")
+text = "Tony Ellilä"
+
+[node name="Art" type="Label" parent="." unique_id=2045214849]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 645.53
+offset_right = 564.0
+offset_bottom = 710.53
+theme = ExtResource("2_xbebw")
+theme_override_font_sizes/font_size = 50
+text = "ART"
+
+[node name="Oliver" type="Label" parent="." unique_id=976654149]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 737.54
+offset_right = 453.0
+offset_bottom = 785.54004
+theme = ExtResource("2_xbebw")
+text = "Oliver Murzich"
+
+[node name="Aleksi" type="Label" parent="." unique_id=929901444]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 814.29
+offset_right = 453.0
+offset_bottom = 862.29004
+theme = ExtResource("2_xbebw")
+text = "Aleksi Jaaksi"
+
+[node name="Yhteyshenkilö" type="Label" parent="." unique_id=50068347]
+layout_mode = 0
+offset_left = 761.33
+offset_top = 355.0
+offset_right = 1140.3306
+offset_bottom = 420.0
+theme = ExtResource("2_xbebw")
+theme_override_font_sizes/font_size = 50
+text = "YHTEYSHENKILÖ"
+
+[node name="V-P" type="Label" parent="." unique_id=1462907100]
+layout_mode = 0
+offset_left = 761.33
+offset_top = 447.14
+offset_right = 1056.3303
+offset_bottom = 495.14
+theme = ExtResource("2_xbebw")
+text = "Veli-Petteri Alvur"
+
+[connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]
