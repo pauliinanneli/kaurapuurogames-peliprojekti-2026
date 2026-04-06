@@ -148,3 +148,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="Control/LevelsButton" to="." method="OnLevelsButtonPressed"]
 [connection signal="pressed" from="Control/TutorialButton" to="." method="OnTutorialButtonPressed"]
 [connection signal="pressed" from="Control/CreditsButton" to="." method="OnCreditsButtonPressed"]
+[connection signal="pressed" from="Control/SettingsButton" to="." method="OnSettingsButtonPressed"]
