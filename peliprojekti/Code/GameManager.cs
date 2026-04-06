@@ -141,6 +141,16 @@ public partial class GameManager : Node
         }
     }
 
+/// <summary>
+/// used to manage language settings ( fi / en )
+/// </summary>
+/// <param name="locale"></param>
+    public void SetLocale(string locale)
+    {
+        TranslationServer.SetLocale(locale);
+    }
+
+
     /// <summary>
     /// increases players health by a specific amount
     /// </summary>

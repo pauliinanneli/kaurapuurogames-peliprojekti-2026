@@ -8,7 +8,14 @@ public partial class StartMenu : Control
 
     [Export] public string TutorialScenePath = "res://Scenes/Tutorial.tscn";
     [Export] public string CreditsScenePath = "res://Scenes/Credits.tscn";
+    private Button fiButton;
+    private Button enButton;
 
+
+    public override void _Ready()
+    {
+        TranslationServer.SetLocale("fi");
+    }
 
     public void OnStartButtonPressed()
     {
@@ -31,5 +38,15 @@ public partial class StartMenu : Control
     {
         Input.VibrateHandheld(50); // small haptic feedbackk
         GetTree().ChangeSceneToFile(CreditsScenePath);
+    }
+
+    public void OnEnPressed()
+    {
+        GameManager.Instance.SetLocale("en");  // switches the lang to eng
+    }
+
+    public void OnFiPressed()
+    {
+        GameManager.Instance.SetLocale("fi");  // switches the lang to fi
     }
 }

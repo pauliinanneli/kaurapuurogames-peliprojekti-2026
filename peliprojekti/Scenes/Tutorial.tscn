@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dvnc16pur4gjv"]
 
-[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_2o727"]
-[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_uo1fs"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://art/Taustat.png" id="1_2o727"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://art/Stardust.png" id="2_uo1fs"]
 [ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_7bloo"]
 [ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="4_rlm2d"]
 [ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="5_rlm2d"]
@@ -250,7 +250,7 @@ offset_bottom = 337.00012
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("7_x7a1n")
-text = "Kerää tähtipölyä jotta hohtosi ei sammu"
+text = "TUTOLINE_01"
 
 [node name="AvoidLabel" type="Label" parent="." unique_id=315970056]
 anchors_preset = 7
@@ -265,7 +265,7 @@ offset_bottom = 337.00012
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("7_x7a1n")
-text = "Väistele meteoriitteja"
+text = "TUTOLINE_02"
 
 [node name="QuestionLabel" type="Label" parent="." unique_id=107002935]
 anchors_preset = 7
@@ -280,7 +280,7 @@ offset_bottom = 337.00012
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("7_x7a1n")
-text = "Vastaa kysymyksiin valitsemalla portti vastauksesi mukaan"
+text = "TUTOLINE_03"
 
 [node name="Lanedivider" parent="." unique_id=785505358 instance=ExtResource("9_hxa32")]
 position = Vector2(4853.89, -0.13)
@@ -295,7 +295,7 @@ offset_bottom = 165.0
 theme = ExtResource("7_x7a1n")
 theme_override_fonts/font = ExtResource("10_dlght")
 theme_override_font_sizes/font_size = 25
-text = "Ok"
+text = "TUTOANS_01"
 
 [node name="Etenijä" type="Label" parent="Lanedivider/Answers" unique_id=2113507538]
 offset_top = 310.41
@@ -304,7 +304,7 @@ offset_bottom = 384.4099
 theme = ExtResource("7_x7a1n")
 theme_override_fonts/font = ExtResource("10_dlght")
 theme_override_font_sizes/font_size = 25
-text = "Selvä"
+text = "TUTOANS_02"
 
 [node name="Etsijä" type="Label" parent="Lanedivider/Answers" unique_id=153870131]
 offset_top = 529.69
@@ -313,7 +313,7 @@ offset_bottom = 603.69
 theme = ExtResource("7_x7a1n")
 theme_override_fonts/font = ExtResource("10_dlght")
 theme_override_font_sizes/font_size = 25
-text = "Olen valmis"
+text = "TUTOANS_03"
 
 [node name="SlowMo3" type="Area2D" parent="." unique_id=1991856302]
 position = Vector2(616, -5)

@@ -92,6 +92,7 @@ pointing/emulate_touch_from_mouse=true
 [internationalization]
 
 locale/translations=PackedStringArray("res://Language_Texts-InGame/Language.en.translation", "res://Language_Texts-InGame/Language.fi.translation")
+locale/fallback="fi"
 
 [layer_names]
 

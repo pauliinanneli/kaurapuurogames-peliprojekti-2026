@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b2v0x6sm3ohl8"]
+
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="1_flfri"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="2_yrknh"]
+
+[node name="Settings" type="Control" unique_id=710396582]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMenu" type="Control" parent="." unique_id=1790491307]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=1390824909]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = 3.0
+offset_right = 17.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="PauseText" type="Label" parent="PauseMenu" unique_id=1643467985]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -107.0
+offset_top = 150.0
+offset_right = 125.0
+offset_bottom = 233.0
+grow_horizontal = 2
+theme = ExtResource("1_flfri")
+theme_override_fonts/font = ExtResource("2_yrknh")
+theme_override_font_sizes/font_size = 92
+text = "SETTINGS"

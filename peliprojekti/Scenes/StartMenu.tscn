@@ -66,8 +66,7 @@ anchor_bottom = 0.5212221
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
-text = "ALOITA"
-metadata/_edit_use_anchors_ = true
+text = "MENUSTART"
 
 [node name="LevelsButton" type="Button" parent="Control" unique_id=393806509]
 layout_mode = 1
@@ -79,8 +78,7 @@ anchor_bottom = 0.7991481
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
-text = "TASOT"
-metadata/_edit_use_anchors_ = true
+text = "MENULEVELS"
 
 [node name="TutorialButton" type="Button" parent="Control" unique_id=1790385667]
 layout_mode = 1
@@ -92,7 +90,7 @@ anchor_bottom = 0.6597965
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
-text = "TUTORIAALI"
+text = "MENUTUTORIAL"
 metadata/_edit_use_anchors_ = true
 
 [node name="Logot" type="Control" parent="Control" unique_id=973980322]
@@ -129,7 +127,7 @@ anchor_right = 0.9550625
 anchor_bottom = 0.938787
 offset_top = -6.1035156e-05
 theme = ExtResource("4_ujd4t")
-text = "TEKIJÄT"
+text = "CREDITS"
 metadata/_edit_use_anchors_ = true
 
 [node name="SettingsButton" type="Button" parent="Control" unique_id=420649474]
@@ -143,7 +141,7 @@ offset_top = -6.1035156e-05
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
-text = "ASETUKSET"
+text = "SETTINGS"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Control/StartButton" to="." method="OnStartButtonPressed"]
