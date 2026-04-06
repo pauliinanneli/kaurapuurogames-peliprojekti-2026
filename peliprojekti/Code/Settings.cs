@@ -6,7 +6,6 @@ public partial class Settings : Control
 
     private Button fiButton;
     private Button enButton;
-    [Export] public string BackScenePath = "res://Scenes/StartMenu.tscn";
 
     public void OnEnPressed()
     {
@@ -23,6 +22,6 @@ public partial class Settings : Control
      public void OnBackButtonPressed()
     {
         Input.VibrateHandheld(50); // small haptic feedbackk
-        GetTree().ChangeSceneToFile(BackScenePath);
+        Hide();
     }
 }

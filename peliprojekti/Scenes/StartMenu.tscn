@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="5_ujd4t"]
 [ext_resource type="Texture2D" uid="uid://ix2h5pgs8dlp" path="res://Art/Logos/FI_co-funded by VERTICAL RGB_POS.png" id="6_dibtv"]
 [ext_resource type="Texture2D" uid="uid://38umljaqr14e" path="res://Art/Logos/MUUSA logo neliö iso.png" id="7_o6asp"]
+[ext_resource type="PackedScene" uid="uid://b2v0x6sm3ohl8" path="res://Scenes/Settings.tscn" id="8_o6asp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dibtv"]
 atlas = ExtResource("1_dvnd1")
@@ -166,6 +167,9 @@ grow_vertical = 2
 theme = ExtResource("4_ujd4t")
 text = "SETTINGS"
 metadata/_edit_use_anchors_ = true
+
+[node name="Settings" parent="." unique_id=710396582 instance=ExtResource("8_o6asp")]
+layout_mode = 1
 
 [connection signal="pressed" from="Control/StartButton" to="." method="OnStartButtonPressed"]
 [connection signal="pressed" from="Control/LevelsButton" to="." method="OnLevelsButtonPressed"]

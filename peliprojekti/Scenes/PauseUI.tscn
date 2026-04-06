@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cnn3twtwcujdj" path="res://Code/PauseUI.cs" id="1_iqps6"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="2_svktx"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="3_svktx"]
+[ext_resource type="PackedScene" uid="uid://b2v0x6sm3ohl8" path="res://Scenes/Settings.tscn" id="4_svktx"]
 
 [node name="PauseUI" type="CanvasLayer" unique_id=1141652004]
 script = ExtResource("1_iqps6")
@@ -10,7 +11,6 @@ metadata/_edit_vertical_guides_ = [585.0]
 
 [node name="PauseMenu" type="Control" parent="." unique_id=1620103599]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,7 +37,7 @@ anchors_preset = -1
 anchor_left = 0.35435677
 anchor_top = 0.29720372
 anchor_right = 0.64502335
-anchor_bottom = 0.45461112
+anchor_bottom = 0.4361204
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_svktx")
@@ -66,9 +66,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.35435677
-anchor_top = 0.47752777
+anchor_top = 0.4575
 anchor_right = 0.64502335
-anchor_bottom = 0.63493514
+anchor_bottom = 0.59641623
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_svktx")
@@ -80,14 +80,28 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.35435677
-anchor_top = 0.6628704
+anchor_top = 0.7786019
 anchor_right = 0.64502335
-anchor_bottom = 0.8202778
+anchor_bottom = 0.91751856
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 40
 text = "PAUSEQUIT"
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsButton" type="Button" parent="PauseMenu" unique_id=454078466]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35435677
+anchor_top = 0.61644447
+anchor_right = 0.6450232
+anchor_bottom = 0.75536114
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_svktx")
+theme_override_font_sizes/font_size = 40
+text = "SETTINGS"
 metadata/_edit_use_anchors_ = true
 
 [node name="PauseButton" type="Button" parent="." unique_id=1929380044]
@@ -100,7 +114,10 @@ theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 61
 text = "||"
 
+[node name="Settings" parent="." unique_id=710396582 instance=ExtResource("4_svktx")]
+
 [connection signal="pressed" from="PauseMenu/ContinueButton" to="." method="OnContinuePressed"]
 [connection signal="pressed" from="PauseMenu/RestartButton" to="." method="OnRestartPressed"]
 [connection signal="pressed" from="PauseMenu/QuitButton" to="." method="OnQuitPressed"]
+[connection signal="pressed" from="PauseMenu/SettingsButton" to="." method="OnSettingsButtonPressed"]
 [connection signal="pressed" from="PauseButton" to="." method="OnPausePressed"]
