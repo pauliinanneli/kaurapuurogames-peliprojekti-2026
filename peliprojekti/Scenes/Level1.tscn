@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dk7d0f8t6fuml"]
 
+[ext_resource type="Script" uid="uid://dyosw02robeb2" path="res://Code/LevelReset.cs" id="1_ug0sv"]
 [ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_slnnj"]
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="3_jghel"]
 [ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="3_joc8x"]
@@ -26,6 +27,7 @@ size = Vector2(312, 178.31761)
 size = Vector2(90.99473, 91.937164)
 
 [node name="Level1" type="Node2D" unique_id=2140551516]
+script = ExtResource("1_ug0sv")
 
 [node name="Backgrounds" type="Node2D" parent="." unique_id=1544963235]
 
@@ -106,7 +108,6 @@ _normalSpeed = 160.0
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("4_slnnj")
-_healthLost = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelMover/DeadZone" unique_id=176261799]
 position = Vector2(-265.25, 327)

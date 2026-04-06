@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://mjqmrl6i3qp8"]
 
-[ext_resource type="Script" uid="uid://2pc6820fwdjk" path="res://Scenes/Credits.cs" id="1_7xmno"]
+[ext_resource type="Script" uid="uid://2pc6820fwdjk" path="res://Code/Credits.cs" id="1_7xmno"]
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_i8h6y"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="2_xbebw"]
 
