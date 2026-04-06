@@ -11,6 +11,7 @@ metadata/_edit_vertical_guides_ = [585.0]
 
 [node name="PauseMenu" type="Control" parent="." unique_id=1620103599]
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
