@@ -30,11 +30,11 @@ public partial class StartMenu : Control
 
     public void OnEnPressed()
     {
-        GameManager.Instance.SetLocale("en");
+        GameManager.Instance.SetLocale("en");  // switches the lang to eng
     }
 
     public void OnFiPressed()
     {
-        GameManager.Instance.SetLocale("fi");
+        GameManager.Instance.SetLocale("fi");  // switches the lang to fi
     }
 }
