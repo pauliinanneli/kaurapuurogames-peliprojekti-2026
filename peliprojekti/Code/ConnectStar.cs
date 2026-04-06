@@ -16,12 +16,12 @@ public partial class ConnectStar : Area2D
 
     public override void _Ready()
     {
+        _line = GetParent().GetTree().CurrentScene.FindChild("Line2D") as Line2D; // gets line from parent node
 
         if (_starIndex == 0)
         {
             _currentIndex = 0; //reset counter when level starts
 
-            _line = GetParent().GetTree().CurrentScene.FindChild("Line2D") as Line2D; // gets line from parent node
 
             if (_line != null)
             {
