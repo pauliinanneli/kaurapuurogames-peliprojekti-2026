@@ -33,69 +33,62 @@ color = Color(0, 0, 0, 0.6666667)
 
 [node name="ContinueButton" type="Button" parent="PauseMenu" unique_id=1260311230]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -279.635
-offset_top = -219.01999
-offset_right = 278.44482
-offset_bottom = -49.01999
+anchors_preset = -1
+anchor_left = 0.35435677
+anchor_top = 0.29720372
+anchor_right = 0.64502335
+anchor_bottom = 0.45461112
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 40
 text = "PAUSECONTINUE"
+metadata/_edit_use_anchors_ = true
 
 [node name="PauseText" type="Label" parent="PauseMenu" unique_id=2023662512]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -107.0
-offset_top = 150.0
-offset_right = 125.0
-offset_bottom = 233.0
+anchors_preset = -1
+anchor_left = 0.3671875
+anchor_top = 0.1388889
+anchor_right = 0.6421875
+anchor_bottom = 0.24814814
+offset_left = 148.0
+offset_right = -148.0
+offset_bottom = -35.0
 grow_horizontal = 2
 theme = ExtResource("2_svktx")
 theme_override_fonts/font = ExtResource("3_svktx")
 theme_override_font_sizes/font_size = 92
 text = "PAUSETOPIC"
+metadata/_edit_use_anchors_ = true
 
 [node name="RestartButton" type="Button" parent="PauseMenu" unique_id=961048182]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -279.635
-offset_top = -24.27002
-offset_right = 278.44482
-offset_bottom = 145.72998
+anchors_preset = -1
+anchor_left = 0.35435677
+anchor_top = 0.47752777
+anchor_right = 0.64502335
+anchor_bottom = 0.63493514
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 40
 text = "PAUSERESTART"
+metadata/_edit_use_anchors_ = true
 
 [node name="QuitButton" type="Button" parent="PauseMenu" unique_id=1220960441]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -279.635
-offset_top = -364.09998
-offset_right = 278.44482
-offset_bottom = -194.09998
+anchors_preset = -1
+anchor_left = 0.35435677
+anchor_top = 0.6628704
+anchor_right = 0.64502335
+anchor_bottom = 0.8202778
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 40
 text = "PAUSEQUIT"
+metadata/_edit_use_anchors_ = true
 
 [node name="PauseButton" type="Button" parent="." unique_id=1929380044]
 custom_minimum_size = Vector2(80, 0)

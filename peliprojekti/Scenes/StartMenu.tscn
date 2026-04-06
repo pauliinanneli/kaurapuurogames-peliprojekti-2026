@@ -95,29 +95,52 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Logot" type="Control" parent="Control" unique_id=973980322]
 layout_mode = 1
-anchor_top = 0.45380554
-anchor_bottom = 0.45380554
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.5, 0.5)
-metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="Control/Logot" unique_id=100205646]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 647.01544
-offset_right = 996.92316
-offset_bottom = 1052.9998
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08645833
+anchor_top = 1.4962963
+anchor_right = 0.5760016
+anchor_bottom = 1.8722078
 color = Color(1, 0.9764706, 0.92941177, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="FiCoFundedByVerticalRgbPos" type="Sprite2D" parent="Control/Logot" unique_id=1714678851]
-position = Vector2(262, 852)
-scale = Vector2(0.38, 0.38)
-texture = ExtResource("6_dibtv")
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Logot/ColorRect" unique_id=758473601]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
 
-[node name="MuusaLogoNeliöIso" type="Sprite2D" parent="Control/Logot" unique_id=1216079630]
-position = Vector2(678.098, 862.4)
-scale = Vector2(0.16, 0.16)
+[node name="MuusaLogoNeliöIso" type="TextureRect" parent="Control/Logot/ColorRect/HBoxContainer" unique_id=1213709157]
+clip_contents = true
+custom_minimum_size = Vector2(300, 400)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
 texture = ExtResource("7_o6asp")
+expand_mode = 3
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="FiCoFundedByVerticalRgbPos" type="TextureRect" parent="Control/Logot/ColorRect/HBoxContainer" unique_id=2126502511]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("6_dibtv")
+expand_mode = 3
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
 
 [node name="CreditsButton" type="Button" parent="Control" unique_id=86055514]
 layout_mode = 0
