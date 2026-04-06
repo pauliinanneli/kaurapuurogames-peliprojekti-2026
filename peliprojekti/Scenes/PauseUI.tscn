@@ -46,7 +46,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 40
-text = "JATKA PELIÄ"
+text = "PAUSECONTINUE"
 
 [node name="PauseText" type="Label" parent="PauseMenu" unique_id=2023662512]
 layout_mode = 1
@@ -61,7 +61,7 @@ grow_horizontal = 2
 theme = ExtResource("2_svktx")
 theme_override_fonts/font = ExtResource("3_svktx")
 theme_override_font_sizes/font_size = 92
-text = "PELI ON TAUOLLA"
+text = "PAUSETOPIC"
 
 [node name="RestartButton" type="Button" parent="PauseMenu" unique_id=961048182]
 layout_mode = 1
@@ -78,7 +78,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 40
-text = "ALOITA UUDELLEEN"
+text = "PAUSERESTART"
 
 [node name="QuitButton" type="Button" parent="PauseMenu" unique_id=1220960441]
 layout_mode = 1
@@ -95,7 +95,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 40
-text = "POISTU PELISTÄ"
+text = "PAUSEQUIT"
 
 [node name="PauseButton" type="Button" parent="." unique_id=1929380044]
 custom_minimum_size = Vector2(80, 0)

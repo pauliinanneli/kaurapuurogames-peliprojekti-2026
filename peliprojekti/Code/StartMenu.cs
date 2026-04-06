@@ -7,6 +7,8 @@ public partial class StartMenu : Control
     [Export] public string LevelsScenePath = "res://Scenes/LevelChooser.tscn";
 
     [Export] public string TutorialScenePath = "res://Scenes/Tutorial.tscn";
+    private Button fiButton;
+    private Button enButton;
 
 
     public void OnStartButtonPressed()
@@ -24,5 +26,15 @@ public partial class StartMenu : Control
     {
         Input.VibrateHandheld(50); // small haptic feedbackk
         GetTree().ChangeSceneToFile(TutorialScenePath);
+    }
+
+    public void OnEnPressed()
+    {
+        GameManager.Instance.SetLocale("en");
+    }
+
+    public void OnFiPressed()
+    {
+        GameManager.Instance.SetLocale("fi");
     }
 }

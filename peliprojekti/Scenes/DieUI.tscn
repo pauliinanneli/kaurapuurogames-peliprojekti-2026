@@ -39,7 +39,7 @@ grow_horizontal = 2
 theme = ExtResource("2_lenoj")
 theme_override_fonts/font = ExtResource("2_m64vj")
 theme_override_font_sizes/font_size = 92
-text = "TÄHTIENERGIA LOPPUI"
+text = "DIETOPIC"
 horizontal_alignment = 1
 
 [node name="QuitButton" type="Button" parent="DieMenu/ColorRect" unique_id=2093984625]
@@ -57,7 +57,7 @@ offset_bottom = 283.74994
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_lenoj")
-text = "POISTU PELISTÄ"
+text = "DIEQUIT"
 
 [node name="RestartButton" type="Button" parent="DieMenu/ColorRect" unique_id=820184263]
 layout_mode = 1
@@ -73,7 +73,7 @@ offset_bottom = 54.45984
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_lenoj")
-text = "YRITÄ UUDELLEEN"
+text = "DIERESTART"
 
 [connection signal="pressed" from="DieMenu/ColorRect/QuitButton" to="." method="OnQuitPressed"]
 [connection signal="pressed" from="DieMenu/ColorRect/RestartButton" to="." method="OnRestartPressed"]

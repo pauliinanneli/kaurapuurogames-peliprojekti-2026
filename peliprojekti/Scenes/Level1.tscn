@@ -586,7 +586,7 @@ offset_bottom = 377.0
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
-text = "Missä koet olevasi urallasi juuri nyt?"
+text = "KYSYMYS_01"
 
 [node name="LanePicker" parent="Lanepickers/Question1" unique_id=785505358 instance=ExtResource("6_t3or0")]
 position = Vector2(3905.93, 0)
@@ -635,7 +635,7 @@ offset_bottom = 165.0
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Paljon ideoita mielessä"
+text = "EDI_01"
 
 [node name="Etenijä" type="Label" parent="Lanepickers/Question1/Answers" unique_id=1495938434]
 offset_left = 3829.0
@@ -645,7 +645,7 @@ offset_bottom = 384.4099
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Suunta melko selkeä"
+text = "ETE_01"
 
 [node name="Etsijä" type="Label" parent="Lanepickers/Question1/Answers" unique_id=1703189168]
 offset_left = 3829.0
@@ -655,7 +655,7 @@ offset_bottom = 603.69
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Pohdin mitä haluan"
+text = "ETS_01"
 
 [node name="SlowMo" type="Area2D" parent="Lanepickers/Question1" unique_id=1469780605]
 collision_mask = 2
@@ -679,7 +679,7 @@ offset_bottom = 165.0
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Mietin miten se sopii tavoitteisiin"
+text = "ETE_02"
 
 [node name="Etsijä" type="Label" parent="Lanepickers/Question2/Answers" unique_id=231265029]
 offset_left = 7879.16
@@ -689,7 +689,7 @@ offset_bottom = 384.4099
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Jään pohtimaan sitä"
+text = "ETS_02"
 
 [node name="Edistäjä" type="Label" parent="Lanepickers/Question2/Answers" unique_id=1955279924]
 offset_left = 7879.16
@@ -699,7 +699,7 @@ offset_bottom = 603.69
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Innostun nopeasti"
+text = "EDI_02"
 
 [node name="LanePicker" parent="Lanepickers/Question2" unique_id=2074034633 instance=ExtResource("6_t3or0")]
 position = Vector2(7900, 0)
@@ -745,7 +745,7 @@ offset_bottom = 377.0
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
-text = "Miten reagoit uuteen ideaan tai mahdollisuuteen?"
+text = "KYSYMYS_02"
 
 [node name="SlowMo" type="Area2D" parent="Lanepickers/Question2" unique_id=890423875]
 collision_mask = 2
@@ -769,7 +769,7 @@ offset_bottom = 165.0
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Tilaa pohtia asioita"
+text = "ETS_03"
 
 [node name="Edistäjä" type="Label" parent="Lanepickers/Question3/Answers" unique_id=253538197]
 offset_left = 7879.16
@@ -779,7 +779,7 @@ offset_bottom = 384.4099
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Rohkaisua ja sparrausta"
+text = "EDI_03"
 
 [node name="Etenijä" type="Label" parent="Lanepickers/Question3/Answers" unique_id=1217133571]
 offset_left = 7879.16
@@ -789,7 +789,7 @@ offset_bottom = 603.69
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Selkeä suunnitelma"
+text = "ETE_03"
 
 [node name="LanePicker" parent="Lanepickers/Question3" unique_id=2085544376 instance=ExtResource("6_t3or0")]
 position = Vector2(7900, 0)
@@ -835,7 +835,7 @@ offset_bottom = 377.0
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
-text = "Millainen tuki auttaisi sinua eniten?"
+text = "KYSYMYS_03"
 
 [node name="SlowMo" type="Area2D" parent="Lanepickers/Question3" unique_id=1186003185]
 collision_mask = 2
@@ -859,7 +859,7 @@ offset_bottom = 165.0
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Juttelen jonkun kanssa"
+text = "EDI_04"
 
 [node name="Etsijä" type="Label" parent="Lanepickers/Question4/Answers" unique_id=1619985246]
 offset_left = 7879.16
@@ -869,7 +869,7 @@ offset_bottom = 384.4099
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Mietin mikä tuntuu oikealta"
+text = "ETS_04"
 
 [node name="Etenijä" type="Label" parent="Lanepickers/Question4/Answers" unique_id=1786752849]
 offset_left = 7879.16
@@ -879,7 +879,7 @@ offset_bottom = 603.69
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Jäsennän vaihtoehdot"
+text = "ETE_04"
 
 [node name="LanePicker" parent="Lanepickers/Question4" unique_id=931939322 instance=ExtResource("6_t3or0")]
 position = Vector2(7900, 0)
@@ -925,7 +925,7 @@ offset_bottom = 377.0
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
-text = "Mitä teet jos seuraava askel ei ole selvä?"
+text = "KYSYMYS_04"
 
 [node name="SlowMo" type="Area2D" parent="Lanepickers/Question4" unique_id=1716340767]
 collision_mask = 2
@@ -949,7 +949,7 @@ offset_bottom = 165.0
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Ymmärtää mikä sopii minulle"
+text = "ETS_05"
 
 [node name="Etenijä" type="Label" parent="Lanepickers/Question5/Answers" unique_id=193828455]
 offset_left = 7879.16
@@ -959,7 +959,7 @@ offset_bottom = 384.4099
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Päästä kohti tavoitetta"
+text = "ETE_05"
 
 [node name="Edistäjä" type="Label" parent="Lanepickers/Question5/Answers" unique_id=478746501]
 offset_left = 7879.16
@@ -969,7 +969,7 @@ offset_bottom = 603.69
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 25
-text = "Laittaa ideat liikkeelle"
+text = "EDI_05"
 
 [node name="LanePicker" parent="Lanepickers/Question5" unique_id=2105346518 instance=ExtResource("6_t3or0")]
 position = Vector2(7900, 0)
@@ -1015,7 +1015,7 @@ offset_bottom = 377.0
 theme = ExtResource("8_ubfni")
 theme_override_fonts/font = ExtResource("7_ysn8j")
 theme_override_font_sizes/font_size = 29
-text = "Mikä tuntuu nyt tärkeimmältä työelämässä?"
+text = "KYSYMYS_05"
 
 [node name="SlowMo" type="Area2D" parent="Lanepickers/Question5" unique_id=1336451812]
 collision_mask = 2

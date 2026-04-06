@@ -141,6 +141,12 @@ public partial class GameManager : Node
         }
     }
 
+    public void SetLocale(string locale)
+    {
+        TranslationServer.SetLocale(locale);
+    }
+
+
     /// <summary>
     /// increases players health by a specific amount
     /// </summary>

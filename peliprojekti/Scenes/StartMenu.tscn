@@ -60,7 +60,7 @@ offset_bottom = 143.0299
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
-text = "ALOITA"
+text = "MENUSTART"
 
 [node name="LevelsButton" type="Button" parent="." unique_id=393806509]
 layout_mode = 1
@@ -76,7 +76,7 @@ offset_bottom = 477.89
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
-text = "TASOT"
+text = "MENULEVELS"
 
 [node name="TutorialButton" type="Button" parent="." unique_id=1790385667]
 layout_mode = 1
@@ -92,8 +92,42 @@ offset_bottom = 309.73993
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
-text = "TUTORIAALI"
+text = "MENUTUTORIAL"
+
+[node name="FIButton" type="Button" parent="." unique_id=1388249631]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -535.0
+offset_top = -157.0
+offset_right = -298.0
+offset_bottom = -41.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "FI"
+
+[node name="ENButton" type="Button" parent="." unique_id=296665317]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -266.0
+offset_top = -156.0
+offset_right = -21.0
+offset_bottom = -43.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "EN"
 
 [connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
 [connection signal="pressed" from="LevelsButton" to="." method="OnLevelsButtonPressed"]
 [connection signal="pressed" from="TutorialButton" to="." method="OnTutorialButtonPressed"]
+[connection signal="pressed" from="FIButton" to="." method="OnFiPressed"]
+[connection signal="pressed" from="ENButton" to="." method="OnEnPressed"]
