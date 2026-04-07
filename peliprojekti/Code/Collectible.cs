@@ -30,18 +30,28 @@ public partial class Collectible : Area2D
 /// <exception cref="NotImplementedException"></exception>
     private void OnBodyEntered(Node2D body)
     {
+        if (_isCollected)
+        {
+            return;
+        }
+
         if (body is PlayerCharacter playerCharacter)
         {
             //törmäys tapahtui pelaajan kanssa, reagoi
             _isCollected = true;
             Collect(playerCharacter);
 
-            QueueFree();
+            Clear();
         }
     }
 
     protected virtual void Collect(PlayerCharacter playerCharacter)
     {
 
+    }
+
+    protected virtual void Clear()
+    {
+        QueueFree();
     }
 }
