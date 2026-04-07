@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ix2h5pgs8dlp" path="res://Art/Logos/FI_co-funded by VERTICAL RGB_POS.png" id="6_dibtv"]
 [ext_resource type="Texture2D" uid="uid://38umljaqr14e" path="res://Art/Logos/MUUSA logo neliö iso.png" id="7_o6asp"]
 [ext_resource type="PackedScene" uid="uid://b2v0x6sm3ohl8" path="res://Scenes/Settings.tscn" id="8_o6asp"]
+[ext_resource type="AudioStream" uid="uid://dfs1qob0gwkrc" path="res://Audio/PossibleMenuMusic.wav" id="9_o42a4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dibtv"]
 atlas = ExtResource("1_dvnd1")
@@ -181,6 +182,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Settings" parent="." unique_id=710396582 instance=ExtResource("8_o6asp")]
 layout_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1873196161]
+stream = ExtResource("9_o42a4")
+autoplay = true
 
 [connection signal="pressed" from="Control/StartButton" to="." method="OnStartButtonPressed"]
 [connection signal="pressed" from="Control/LevelsButton" to="." method="OnLevelsButtonPressed"]
