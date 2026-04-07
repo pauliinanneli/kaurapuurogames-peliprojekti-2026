@@ -12,6 +12,7 @@ public partial class DieUI : CanvasLayer
     private Control dieMenu;
     private Button pauseButton;
     [Export] public string MenuScenePath = "res://Scenes/StartMenu.tscn";
+    [Export] private AudioStreamPlayer2D _deathSound;
 
     public override void _Ready()
     {
@@ -19,7 +20,7 @@ public partial class DieUI : CanvasLayer
         dieMenu.Visible = false; // hidden at start
 
         // get PauseButton from PauseUI for hiding || -button from backround when DieMenu is visible
-        pauseButton = GetTree().CurrentScene.GetNode<Button>("PauseUI/PauseButton"); 
+        pauseButton = GetTree().CurrentScene.GetNode<Button>("PauseUI/PauseButton");
     }
 
     /// <summary>
@@ -29,6 +30,11 @@ public partial class DieUI : CanvasLayer
     {
         dieMenu.Visible = true;         // shows DieMenu
         pauseButton.Visible = false;    // hides || -button from backround when DieMenu visible
+
+        if (_deathSound != null)
+        {
+            _deathSound.Play();
+        }
     }
 
     /// <summary>
