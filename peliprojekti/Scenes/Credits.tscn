@@ -110,7 +110,7 @@ offset_right = 1140.3306
 offset_bottom = 420.0
 theme = ExtResource("2_xbebw")
 theme_override_font_sizes/font_size = 50
-text = "YHTEYSHENKILÖ"
+text = "CONTACTPERSON"
 
 [node name="V-P" type="Label" parent="." unique_id=1462907100]
 layout_mode = 0
@@ -120,5 +120,42 @@ offset_right = 1056.3303
 offset_bottom = 495.14
 theme = ExtResource("2_xbebw")
 text = "Veli-Petteri Alvur"
+
+[node name="Yhteyshenkilö2" type="Label" parent="." unique_id=973829965]
+layout_mode = 0
+offset_left = 761.33
+offset_top = 580.61
+offset_right = 1165.3303
+offset_bottom = 645.61
+theme = ExtResource("2_xbebw")
+theme_override_font_sizes/font_size = 50
+text = "TEACHERS"
+
+[node name="Outi" type="Label" parent="." unique_id=1549360700]
+layout_mode = 0
+offset_left = 761.33
+offset_top = 672.14
+offset_right = 1056.3303
+offset_bottom = 720.1401
+theme = ExtResource("2_xbebw")
+text = "Outi Tuisku "
+
+[node name="Sami" type="Label" parent="." unique_id=1331295570]
+layout_mode = 0
+offset_left = 761.33
+offset_top = 747.09
+offset_right = 1056.3303
+offset_bottom = 795.0901
+theme = ExtResource("2_xbebw")
+text = "Sami Kojo"
+
+[node name="Pasi" type="Label" parent="." unique_id=781320129]
+layout_mode = 0
+offset_left = 761.33
+offset_top = 819.15
+offset_right = 1056.3303
+offset_bottom = 867.1501
+theme = ExtResource("2_xbebw")
+text = "Pasi Pekkanen"
 
 [connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]
