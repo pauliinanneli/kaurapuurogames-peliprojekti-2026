@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://405u8ltkiqk6" path="res://Scenes/BlackHole.tscn" id="12_rpty4"]
 [ext_resource type="PackedScene" uid="uid://fw8wifrnjgqu" path="res://Scenes/DieUI.tscn" id="13_6jj8j"]
 [ext_resource type="PackedScene" uid="uid://c7bisqd2s2fim" path="res://Scenes/Meteor.tscn" id="15_ubfni"]
-[ext_resource type="AudioStream" uid="uid://bj4jrmbn24on8" path="res://Audio/Flyingsound.wav" id="17_0wsr5"]
+[ext_resource type="AudioStream" uid="uid://bmb47cbun48oo" path="res://Audio/Flyingsound.wav" id="17_0wsr5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3or0"]
 size = Vector2(386.5, 675)
@@ -1035,7 +1035,7 @@ shape = SubResource("RectangleShape2D_2h8qs")
 
 [node name="DieUI" parent="." unique_id=210363600 instance=ExtResource("13_6jj8j")]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=64726672]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=1670532907]
 stream = ExtResource("17_0wsr5")
 autoplay = true
 bus = &"LevelBGsound"
