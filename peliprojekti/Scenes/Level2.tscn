@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cx8iaunu8h0n" path="res://Scenes/HUD.tscn" id="12_ycmr1"]
 [ext_resource type="PackedScene" uid="uid://cmpbuj530sgae" path="res://Scenes/PauseUI.tscn" id="13_2jwna"]
 [ext_resource type="PackedScene" uid="uid://fw8wifrnjgqu" path="res://Scenes/DieUI.tscn" id="14_sgc6j"]
+[ext_resource type="AudioStream" uid="uid://bj4jrmbn24on8" path="res://Audio/Flyingsound.wav" id="17_xx40l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ehjmi"]
 size = Vector2(386.5, 675)
@@ -939,3 +940,8 @@ shape = SubResource("RectangleShape2D_2jwna")
 [node name="PauseUI" parent="." unique_id=1141652004 instance=ExtResource("13_2jwna")]
 
 [node name="DieUI" parent="." unique_id=210363600 instance=ExtResource("14_sgc6j")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=228012674]
+stream = ExtResource("17_xx40l")
+autoplay = true
+bus = &"LevelBGsound"
