@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bbeefpojq57vf" path="res://Art/LevelPickers.png" id="2_m37ox"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="5_blli4"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5dyp"]
+atlas = ExtResource("1_d456p")
+region = Rect2(0, 0, 2016, 2037)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_m37ox"]
 
 [node name="LevelChooser" type="Control" unique_id=1120240481]
@@ -19,15 +23,15 @@ mouse_filter = 1
 script = ExtResource("1_cio0u")
 metadata/_edit_horizontal_guides_ = [1500.0]
 
-[node name="Background" type="Node2D" parent="." unique_id=1985390252]
-scale = Vector2(5.09, 1.66)
-
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1744895847]
-position = Vector2(576.00006, 226.50598)
-scale = Vector2(0.5852217, 0.7254826)
-texture = ExtResource("1_d456p")
-region_enabled = true
-region_rect = Rect2(0, 0, 2030, 2046)
+[node name="bg" type="TextureRect" parent="." unique_id=320322431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_q5dyp")
+expand_mode = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2085827275]
 layout_mode = 1
@@ -59,6 +63,16 @@ region_rect = Rect2(1352, 1701, 713, 710)
 scale = Vector2(36.15, 36.15)
 shape = SubResource("CircleShape2D_m37ox")
 
+[node name="level1" type="Label" parent="ScrollContainer/Control/Level1" unique_id=1093963976]
+offset_left = -120.62222
+offset_top = -27.155493
+offset_right = 107.37778
+offset_bottom = 62.844505
+theme = ExtResource("5_blli4")
+theme_type_variation = &"HeaderMedium"
+theme_override_font_sizes/font_size = 70
+text = "LEVEL1"
+
 [node name="Level2" type="Area2D" parent="ScrollContainer/Control" unique_id=819111188]
 position = Vector2(1355.63, 242.62)
 scale = Vector2(0.45, 0.45)
@@ -74,20 +88,40 @@ region_rect = Rect2(672, 840, 714, 735)
 scale = Vector2(36.15, 36.15)
 shape = SubResource("CircleShape2D_m37ox")
 
-[node name="Level3" type="Area2D" parent="ScrollContainer/Control" unique_id=2018818550]
+[node name="level2" type="Label" parent="ScrollContainer/Control/Level2" unique_id=1884345948]
+offset_left = -130.28885
+offset_top = -43.59999
+offset_right = 109.71115
+offset_bottom = 46.40001
+theme = ExtResource("5_blli4")
+theme_type_variation = &"HeaderMedium"
+theme_override_font_sizes/font_size = 70
+text = "LEVEL2"
+
+[node name="Tutorial" type="Area2D" parent="ScrollContainer/Control" unique_id=2018818550]
 position = Vector2(1343.19, 1137.61)
 scale = Vector2(0.45, 0.45)
 script = ExtResource("2_1bx87")
 LevelPath = "res://Scenes/Tutorial.tscn"
 
-[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/Control/Level3" unique_id=1508386508]
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/Control/Tutorial" unique_id=1508386508]
 texture = ExtResource("2_m37ox")
 region_enabled = true
 region_rect = Rect2(-20, -20, 735, 734)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/Control/Level3" unique_id=1700564618]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/Control/Tutorial" unique_id=1700564618]
 scale = Vector2(36.15, 36.15)
 shape = SubResource("CircleShape2D_m37ox")
+
+[node name="tutorial" type="Label" parent="ScrollContainer/Control/Tutorial" unique_id=883083045]
+offset_left = -166.3
+offset_top = -36.911
+offset_right = 345.7
+offset_bottom = 53.089
+theme = ExtResource("5_blli4")
+theme_type_variation = &"HeaderMedium"
+theme_override_font_sizes/font_size = 70
+text = "MENUTUTORIAL"
 
 [node name="BackButton" type="Button" parent="." unique_id=999994584]
 layout_mode = 1
@@ -96,6 +130,6 @@ offset_top = 41.29
 offset_right = 348.49002
 offset_bottom = 182.92001
 theme = ExtResource("5_blli4")
-text = "< BACK"
+text = "BACK"
 
 [connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]

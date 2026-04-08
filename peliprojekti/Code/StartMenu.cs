@@ -7,8 +7,17 @@ public partial class StartMenu : Control
     [Export] public string LevelsScenePath = "res://Scenes/LevelChooser.tscn";
 
     [Export] public string TutorialScenePath = "res://Scenes/Tutorial.tscn";
+    [Export] public string CreditsScenePath = "res://Scenes/Credits.tscn";
+
+    private Control _settingsMenu;
+
     private Button fiButton;
     private Button enButton;
+
+    public override void _Ready()
+    {
+        _settingsMenu = GetNode<Control>("Settings");
+    }
 
 
     public void OnStartButtonPressed()
@@ -28,13 +37,27 @@ public partial class StartMenu : Control
         GetTree().ChangeSceneToFile(TutorialScenePath);
     }
 
+    public void OnCreditsButtonPressed()
+    {
+        Input.VibrateHandheld(50); // small haptic feedbackk
+        GetTree().ChangeSceneToFile(CreditsScenePath);
+    }
+
+    public void OnSettingsButtonPressed()
+    {
+        Input.VibrateHandheld(50); // small haptic feedbackk
+        _settingsMenu.Show();
+    }
+
     public void OnEnPressed()
     {
+        Input.VibrateHandheld(50); // small haptic feedbackk
         GameManager.Instance.SetLocale("en");  // switches the lang to eng
     }
 
     public void OnFiPressed()
     {
+        Input.VibrateHandheld(50); // small haptic feedbackk
         GameManager.Instance.SetLocale("fi");  // switches the lang to fi
     }
 }

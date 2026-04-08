@@ -16,7 +16,7 @@
 size = Vector2(386.5, 675)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x7a1n"]
-size = Vector2(59.37172, 91.937164)
+size = Vector2(63.455513, 91.937164)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlght"]
 size = Vector2(20.221237, 20)
@@ -321,7 +321,7 @@ collision_mask = 2
 script = ExtResource("6_3j26a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SlowMo3" unique_id=5027255]
-position = Vector2(3376.5, 332)
+position = Vector2(3396, 332)
 scale = Vector2(9.55, 9.55)
 shape = SubResource("RectangleShape2D_x7a1n")
 

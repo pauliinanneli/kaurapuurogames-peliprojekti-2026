@@ -28,52 +28,45 @@ color = Color(0, 0, 0, 0.6666667)
 
 [node name="YouDied" type="Label" parent="DieMenu/ColorRect" unique_id=1476808072]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -515.0
-offset_top = 206.82
-offset_right = 492.00012
-offset_bottom = 332.81998
+anchors_preset = -1
+anchor_left = 0.23177083
+anchor_top = 0.19150001
+anchor_right = 0.7562501
+anchor_bottom = 0.30816665
 grow_horizontal = 2
 theme = ExtResource("2_lenoj")
 theme_override_fonts/font = ExtResource("2_m64vj")
 theme_override_font_sizes/font_size = 92
 text = "DIETOPIC"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="QuitButton" type="Button" parent="DieMenu/ColorRect" unique_id=2093984625]
 custom_minimum_size = Vector2(0, -500)
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -320.0
-offset_top = 85.75
-offset_right = 320.0
-offset_bottom = 283.74994
+anchors_preset = -1
+anchor_left = 0.33333334
+anchor_top = 0.57939816
+anchor_right = 0.6666667
+anchor_bottom = 0.76273143
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_lenoj")
 text = "DIEQUIT"
+metadata/_edit_use_anchors_ = true
 
 [node name="RestartButton" type="Button" parent="DieMenu/ColorRect" unique_id=820184263]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -317.0
-offset_top = -143.54001
-offset_right = 323.0
-offset_bottom = 54.45984
+anchors_preset = -1
+anchor_left = 0.33489582
+anchor_top = 0.36709258
+anchor_right = 0.66822916
+anchor_bottom = 0.55042577
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_lenoj")
 text = "DIERESTART"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="DieMenu/ColorRect/QuitButton" to="." method="OnQuitPressed"]
 [connection signal="pressed" from="DieMenu/ColorRect/RestartButton" to="." method="OnRestartPressed"]

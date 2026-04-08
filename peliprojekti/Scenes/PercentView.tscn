@@ -4,6 +4,10 @@
 [ext_resource type="Script" uid="uid://b2e2or1uv0yrn" path="res://Code/PercentView.cs" id="1_fwms7"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="4_kpi66"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwms7"]
+atlas = ExtResource("1_5j0br")
+region = Rect2(0, 0, 2016, 2037)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwms7"]
 bg_color = Color(0.83137256, 1, 0.5686275, 1)
 
@@ -28,43 +32,39 @@ script = ExtResource("1_fwms7")
 "EtenijäBar" = NodePath("CanvasLayer/HBoxContainer/VBoxContainer2/EtenijäProgressBar")
 "EtsijäBar" = NodePath("CanvasLayer/HBoxContainer/VBoxContainer3/EtsijäProgressBar")
 
-[node name="Background" type="Node2D" parent="." unique_id=1861598107]
-scale = Vector2(5.09, 1.66)
-
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=540480664]
-position = Vector2(576.00006, 329.5)
-scale = Vector2(0.5852217, 0.33870965)
-texture = ExtResource("1_5j0br")
-region_enabled = true
-region_rect = Rect2(0, 0, 2030, 2046)
+[node name="bg" type="TextureRect" parent="." unique_id=401810395]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_fwms7")
+expand_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=301971129]
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=1824784464]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -111.0
-offset_top = 73.68
-offset_right = 111.0
-offset_bottom = 145.68
+anchors_preset = -1
+anchor_left = 0.4421875
+anchor_top = 0.068222225
+anchor_right = 0.5578125
+anchor_bottom = 0.13488889
 grow_horizontal = 2
 theme = ExtResource("4_kpi66")
 text = "Pisteesi:"
+metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=135099305]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -579.0
-offset_top = -869.41003
-offset_right = 579.0
-offset_bottom = -215.41003
+anchors_preset = -1
+anchor_left = 0.1984375
+anchor_top = 0.19499071
+anchor_right = 0.8015625
+anchor_bottom = 0.8005463
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 300
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/HBoxContainer" unique_id=2013040201]
 layout_mode = 2
@@ -138,16 +138,15 @@ text = "Etsijä"
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=622687514]
 
 [node name="InstructionLabel" type="Label" parent="CanvasLayer2" unique_id=803399708]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -150.5
-offset_top = -117.28998
-offset_right = 150.5
-offset_bottom = -65.289856
+anchors_preset = -1
+anchor_left = 0.30052084
+anchor_top = 0.8913982
+anchor_right = 0.69947916
+anchor_bottom = 0.9395464
+offset_left = 232.5
+offset_right = -232.5
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("4_kpi66")
 text = "Napauta näyttöä palataksesi päävalikkoon."
+metadata/_edit_use_anchors_ = true

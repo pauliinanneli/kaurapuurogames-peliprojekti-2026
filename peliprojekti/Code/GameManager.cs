@@ -131,7 +131,8 @@ public partial class GameManager : Node
     public override void _Process(double delta)
     {
         if (GetTree().CurrentScene.Name == "StartMenu" || GetTree().CurrentScene.Name == "ConnectingStars"
-            || GetTree().CurrentScene.Name == "PercentView" || GetTree().CurrentScene.Name == "LevelChooser")
+            || GetTree().CurrentScene.Name == "PercentView" || GetTree().CurrentScene.Name == "LevelChooser"
+            || GetTree().CurrentScene.Name == "Settings" || GetTree().CurrentScene.Name == "Credits")
         {
             return;
         }

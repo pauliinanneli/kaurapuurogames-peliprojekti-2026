@@ -12,6 +12,8 @@ public partial class PauseUI : CanvasLayer
     private Control pauseMenu;
     private Button pauseButton;
     [Export] public string MenuScenePath = "res://Scenes/StartMenu.tscn";
+    private Control _settingsMenu;
+
 
 
     /// <summary>
@@ -23,6 +25,7 @@ public partial class PauseUI : CanvasLayer
         pauseMenu = GetNode<Control>("PauseMenu"); // gets PauseMenu node
         pauseMenu.Visible = false; // menu not visible
         pauseButton = GetNode<Button>("PauseButton"); // gets PauseButton
+         _settingsMenu = GetNode<Control>("Settings");
     }
 
     /// <summary>
@@ -63,5 +66,10 @@ public partial class PauseUI : CanvasLayer
     {
         GetTree().Paused = false; // fixed bug: unpause so startmenu works
         GetTree().ChangeSceneToFile(MenuScenePath);
+    }
+
+    public void OnSettingsButtonPressed()
+    {
+        _settingsMenu.Show();
     }
 }

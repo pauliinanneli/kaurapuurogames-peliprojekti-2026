@@ -3,8 +3,6 @@ using System;
 
 public partial class DeadZone : Area2D
 {
-    // evaluate later if it's a sane amount of health to lose?
-    [Export] private float _healthLost = 0.05f;
 
     public override void _EnterTree()
     {

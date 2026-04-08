@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://cuscp5aotr6hs"]
 
 [ext_resource type="Script" uid="uid://cir2u7yr6exoe" path="res://Code/StartMenu.cs" id="1_dl0pg"]
-[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://art/Taustat.png" id="1_dvnd1"]
-[ext_resource type="Texture2D" uid="uid://bpacaf0xgai6h" path="res://art/TextLogoB&W.png" id="3_h303d"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_dvnd1"]
+[ext_resource type="Texture2D" uid="uid://bpacaf0xgai6h" path="res://Art/TextLogoB&W.png" id="3_h303d"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="4_ujd4t"]
-[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://art/Stardust.png" id="5_ujd4t"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="5_ujd4t"]
+[ext_resource type="Texture2D" uid="uid://ix2h5pgs8dlp" path="res://Art/Logos/FI_co-funded by VERTICAL RGB_POS.png" id="6_dibtv"]
+[ext_resource type="Texture2D" uid="uid://38umljaqr14e" path="res://Art/Logos/MUUSA logo neliö iso.png" id="7_o6asp"]
+[ext_resource type="PackedScene" uid="uid://b2v0x6sm3ohl8" path="res://Scenes/Settings.tscn" id="8_o6asp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dibtv"]
+atlas = ExtResource("1_dvnd1")
+region = Rect2(0, 0, 2016, 2037)
 
 [node name="StartMenu" type="Control" unique_id=1614769704]
 layout_mode = 3
@@ -23,22 +30,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="bg" type="Sprite2D" parent="." unique_id=1731972823]
-position = Vector2(575.904, 519.888)
-scale = Vector2(2.875, 0.615)
-texture = ExtResource("1_dvnd1")
-region_enabled = true
-region_rect = Rect2(0, 0, 2030, 2046)
+[node name="bg" type="TextureRect" parent="Control" unique_id=63798040]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_dibtv")
+expand_mode = 1
 
-[node name="logo" type="Sprite2D" parent="." unique_id=1883643455]
-position = Vector2(966.5, 304.69)
+[node name="logo" type="Sprite2D" parent="Control" unique_id=1883643455]
+position = Vector2(966.5, 216.93)
 scale = Vector2(0.55, 0.55)
 texture = ExtResource("3_h303d")
 region_enabled = true
 region_rect = Rect2(273, 294, 2058, 903)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=688816083]
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=688816083]
 position = Vector2(972.37, 218.54)
 rotation = -0.16580626
 scale = Vector2(2.052, 3.688)
@@ -46,88 +57,122 @@ texture = ExtResource("5_ujd4t")
 region_enabled = true
 region_rect = Rect2(0, 315, 1029, 273)
 
-[node name="StartButton" type="Button" parent="." unique_id=440388182]
+[node name="StartButton" type="Button" parent="Control" unique_id=440388182]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -6.9699707
-offset_right = 200.0
-offset_bottom = 143.0299
+anchors_preset = -1
+anchor_left = 0.39583334
+anchor_top = 0.4049815
+anchor_right = 0.6041669
+anchor_bottom = 0.5212221
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
 text = "MENUSTART"
 
-[node name="LevelsButton" type="Button" parent="." unique_id=393806509]
+[node name="LevelsButton" type="Button" parent="Control" unique_id=393806509]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = 327.89
-offset_right = 200.0
-offset_bottom = 477.89
+anchors_preset = -1
+anchor_left = 0.39583334
+anchor_top = 0.6829074
+anchor_right = 0.6041667
+anchor_bottom = 0.7991481
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
 text = "MENULEVELS"
 
-[node name="TutorialButton" type="Button" parent="." unique_id=1790385667]
+[node name="TutorialButton" type="Button" parent="Control" unique_id=1790385667]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = 159.74005
-offset_right = 200.0
-offset_bottom = 309.73993
+anchors_preset = -1
+anchor_left = 0.39583334
+anchor_top = 0.54355556
+anchor_right = 0.6041666
+anchor_bottom = 0.6597965
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_ujd4t")
 text = "MENUTUTORIAL"
+metadata/_edit_use_anchors_ = true
 
-[node name="FIButton" type="Button" parent="." unique_id=1388249631]
+[node name="Logot" type="Control" parent="Control" unique_id=973980322]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -394.0
-offset_top = -441.0
-offset_right = -77.0
-offset_bottom = -275.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_font_sizes/font_size = 40
-text = "FI"
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 
-[node name="ENButton" type="Button" parent="." unique_id=296665317]
+[node name="ColorRect" type="ColorRect" parent="Control/Logot" unique_id=100205646]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = -1
+anchor_left = 0.08645833
+anchor_top = 1.4962963
+anchor_right = 0.5760016
+anchor_bottom = 1.8722078
+color = Color(1, 0.9764706, 0.92941177, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Logot/ColorRect" unique_id=758473601]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -390.0
-offset_top = -203.0
-offset_right = -68.0
-offset_bottom = -43.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_font_sizes/font_size = 40
-text = "EN"
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
 
-[connection signal="pressed" from="StartButton" to="." method="OnStartButtonPressed"]
-[connection signal="pressed" from="LevelsButton" to="." method="OnLevelsButtonPressed"]
-[connection signal="pressed" from="TutorialButton" to="." method="OnTutorialButtonPressed"]
-[connection signal="pressed" from="FIButton" to="." method="OnFiPressed"]
-[connection signal="pressed" from="ENButton" to="." method="OnEnPressed"]
+[node name="MuusaLogoNeliöIso" type="TextureRect" parent="Control/Logot/ColorRect/HBoxContainer" unique_id=1213709157]
+clip_contents = true
+custom_minimum_size = Vector2(300, 400)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("7_o6asp")
+expand_mode = 3
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="FiCoFundedByVerticalRgbPos" type="TextureRect" parent="Control/Logot/ColorRect/HBoxContainer" unique_id=2126502511]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("6_dibtv")
+expand_mode = 3
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CreditsButton" type="Button" parent="Control" unique_id=86055514]
+layout_mode = 0
+anchor_left = 0.77797914
+anchor_top = 0.8225463
+anchor_right = 0.9550625
+anchor_bottom = 0.938787
+offset_top = -6.1035156e-05
+theme = ExtResource("4_ujd4t")
+text = "CREDITS"
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsButton" type="Button" parent="Control" unique_id=420649474]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39583334
+anchor_top = 0.8225463
+anchor_right = 0.6041667
+anchor_bottom = 0.938787
+offset_top = -6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_ujd4t")
+text = "SETTINGS"
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" parent="." unique_id=710396582 instance=ExtResource("8_o6asp")]
+layout_mode = 1
+
+[connection signal="pressed" from="Control/StartButton" to="." method="OnStartButtonPressed"]
+[connection signal="pressed" from="Control/LevelsButton" to="." method="OnLevelsButtonPressed"]
+[connection signal="pressed" from="Control/TutorialButton" to="." method="OnTutorialButtonPressed"]
+[connection signal="pressed" from="Control/CreditsButton" to="." method="OnCreditsButtonPressed"]
+[connection signal="pressed" from="Control/SettingsButton" to="." method="OnSettingsButtonPressed"]

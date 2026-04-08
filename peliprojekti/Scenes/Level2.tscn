@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cu15gapatccdg"]
 
-[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://art/Taustat.png" id="1_0plju"]
-[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://art/Stardust.png" id="2_ms0wi"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_0plju"]
+[ext_resource type="Script" uid="uid://dyosw02robeb2" path="res://Code/LevelReset.cs" id="1_sgc6j"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_ms0wi"]
 [ext_resource type="PackedScene" uid="uid://405u8ltkiqk6" path="res://Scenes/BlackHole.tscn" id="3_ms0wi"]
 [ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="4_n3cqh"]
 [ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="5_jriq2"]
@@ -26,6 +27,7 @@ size = Vector2(312, 178.31761)
 size = Vector2(90.99473, 91.937164)
 
 [node name="Level2" type="Node2D" unique_id=1567263960]
+script = ExtResource("1_sgc6j")
 
 [node name="Backgrounds" type="Node2D" parent="." unique_id=883925433]
 
@@ -99,6 +101,7 @@ region_rect = Rect2(0, 660, 1023, 363)
 [node name="BlackHole" parent="." unique_id=1563931321 instance=ExtResource("3_ms0wi")]
 position = Vector2(18118, 332)
 scale = Vector2(0.48, 0.48)
+NextScenePath = "res://Scenes/ConnectingStarsLevel2.tscn"
 
 [node name="LevelMover" parent="." unique_id=1321373785 instance=ExtResource("4_n3cqh")]
 _normalSpeed = 180.0
@@ -434,7 +437,7 @@ _smoothing = 6.0
 position = Vector2(9230, 293)
 collision_layer = 4
 _floatAmplitude = 170.0
-_floatSpeed = 1.7
+_floatSpeed = 1.5
 _smoothing = 6.0
 
 [node name="Meteor10" parent="Meteors" unique_id=1610222961 instance=ExtResource("11_au75x")]
@@ -447,6 +450,7 @@ _smoothing = 6.0
 position = Vector2(11886, 390)
 collision_layer = 4
 _floatAmplitude = 250.0
+_floatSpeed = 1.7
 _smoothing = 6.0
 
 [node name="Meteor12" parent="Meteors" unique_id=1644111934 instance=ExtResource("11_au75x")]
@@ -460,13 +464,13 @@ _smoothing = 6.0
 position = Vector2(14591, 297)
 collision_layer = 4
 _floatAmplitude = 140.0
-_floatSpeed = 1.4
+_floatSpeed = 1.5
 _smoothing = 6.0
 
 [node name="Meteor14" parent="Meteors" unique_id=938899080 instance=ExtResource("11_au75x")]
 position = Vector2(15138, 454)
 collision_layer = 4
-_floatAmplitude = 140.0
+_floatAmplitude = 180.0
 _floatSpeed = 1.4
 _smoothing = 6.0
 

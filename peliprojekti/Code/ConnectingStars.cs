@@ -12,7 +12,7 @@ public partial class ConnectingStars : Node2D
 		// set first text of label
         if (_instructionLabel != null)
         {
-            _instructionLabel.Text = "Yhdistä tähdet";
+            _instructionLabel.Text = Tr("INSTRUCTIONCONNECT");
         }
     }
 
@@ -34,7 +34,8 @@ public partial class ConnectingStars : Node2D
 		//change text on instructionlabel when constellation done
         if (_instructionLabel != null)
         {
-            _instructionLabel.Text = "Napauta näyttöä nähdäksesi tuloksesi.";
+                // TO DO: find out how this works out with the translation?
+            _instructionLabel.Text = Tr("INSTRUCTIONTAP");
         }
 		_waitingForTap = true;
     }
