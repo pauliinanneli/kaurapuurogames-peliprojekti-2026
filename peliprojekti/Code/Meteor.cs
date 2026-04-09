@@ -7,6 +7,8 @@ public partial class Meteor : Area2D
 	[Export] public float _floatSpeed = 2f;
 	[Export] public float _smoothing = 5f;
 	[Export] private float _damageAmount = 0.1f;
+    [Export] private Sprite2D _sprite = null;
+    [Export] private GpuParticles2D _particleEffect = null;
 
 	private float _time = 0f;
 	private float _startY;
@@ -40,8 +42,21 @@ public partial class Meteor : Area2D
 			GameManager.Instance.SubstractHealth(_damageAmount);
 			Input.VibrateHandheld(500);
 			// TO DO test vibration!!!
-			QueueFree();
+			Explode();
 
+        }
+    }
+
+    private void Explode()
+    {
+        if (_sprite != null)
+        {
+            _sprite.Hide();
+        }
+
+        if (_particleEffect != null)
+        {
+            _particleEffect.Emitting = true;
         }
     }
 }
