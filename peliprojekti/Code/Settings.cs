@@ -19,6 +19,7 @@ public partial class Settings : Control
     private int _masterBusIndex = -1;
     private int _musicBusIndex = -1;
     private int _effectsBusIndex = -1;
+    private bool _unmuffleOnClosing = true;
 
     public override void _Ready()
     {
@@ -29,8 +30,9 @@ public partial class Settings : Control
         _muffle = (AudioEffectLowPassFilter)AudioServer.GetBusEffect(_musicBusIndex, 0);
     }
 
-    public void OpenSettings()
+    public void OpenSettings(bool doUnmuffleOnClosing = true)
     {
+        _unmuffleOnClosing = doUnmuffleOnClosing;
         Show();
         SetMuffle(true); // make music sound muffled when opening settings
     }
@@ -50,7 +52,11 @@ public partial class Settings : Control
      public void OnBackButtonPressed()
     {
         Input.VibrateHandheld(50); // small haptic feedbackk
-        SetMuffle(false); // stop muffling music when going back from settings
+
+        if (_unmuffleOnClosing) // ONLY unmuffle when going back from settings if we are going back to startmenu instead of pauseui
+        {
+            SetMuffle(false); // stop muffling music when going back from settings
+        }
         Hide();
     }
 

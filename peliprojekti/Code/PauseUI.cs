@@ -76,6 +76,6 @@ public partial class PauseUI : CanvasLayer
 
     public void OnSettingsButtonPressed()
     {
-        _settingsMenu.OpenSettings();
+        _settingsMenu.OpenSettings(false);
     }
 }

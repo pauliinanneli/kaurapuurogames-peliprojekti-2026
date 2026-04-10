@@ -46,7 +46,7 @@ public partial class StartMenu : Control
     public void OnSettingsButtonPressed()
     {
         Input.VibrateHandheld(50); // small haptic feedbackk
-        _settingsMenu.OpenSettings();
+        _settingsMenu.OpenSettings(true);
     }
 
     public void OnEnPressed()
