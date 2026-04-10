@@ -9,7 +9,7 @@
 atlas = ExtResource("1_yrknh")
 region = Rect2(0, 0, 2016, 2037)
 
-[node name="Settings" type="Control" unique_id=710396582]
+[node name="Settings" type="Control" unique_id=710396582 node_paths=PackedStringArray("_masterVolume", "_musicVolume", "_effectsVolume")]
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -18,6 +18,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w1nw0")
+_masterVolume = NodePath("ScrollContainer/Control/Stuff/Volume/MasterSlider")
+_musicVolume = NodePath("ScrollContainer/Control/Stuff/Volume/MusicSlider")
+_effectsVolume = NodePath("ScrollContainer/Control/Stuff/Volume/EffectsSlider")
 metadata/_edit_vertical_guides_ = [960.0]
 
 [node name="bg" type="TextureRect" parent="." unique_id=1704124110]
@@ -160,4 +163,7 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="ScrollContainer/Control/Stuff/LanguageControl/HBoxContainer/FiButton" to="." method="OnFiPressed"]
 [connection signal="pressed" from="ScrollContainer/Control/Stuff/LanguageControl/HBoxContainer/EnButton" to="." method="OnEnPressed"]
+[connection signal="value_changed" from="ScrollContainer/Control/Stuff/Volume/MasterSlider" to="." method="OnMasterVolumeChanged"]
+[connection signal="value_changed" from="ScrollContainer/Control/Stuff/Volume/MusicSlider" to="." method="OnMusicVolumeChanged"]
+[connection signal="value_changed" from="ScrollContainer/Control/Stuff/Volume/EffectsSlider" to="." method="OnEffectsVolumeChanged"]
 [connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]

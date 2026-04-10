@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_5j0br"]
 [ext_resource type="Script" uid="uid://b2e2or1uv0yrn" path="res://Code/PercentView.cs" id="1_fwms7"]
+[ext_resource type="AudioStream" uid="uid://dfs1qob0gwkrc" path="res://Audio/PossibleMenuMusic.wav" id="4_8dw1o"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="4_kpi66"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fwms7"]
@@ -150,3 +151,8 @@ grow_vertical = 0
 theme = ExtResource("4_kpi66")
 text = "Napauta näyttöä palataksesi päävalikkoon."
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=580890671]
+stream = ExtResource("4_8dw1o")
+autoplay = true
+bus = &"Music"

@@ -944,4 +944,4 @@ shape = SubResource("RectangleShape2D_2jwna")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=718282645]
 stream = ExtResource("17_xx40l")
 autoplay = true
-bus = &"LevelBGsound"
+bus = &"Music"

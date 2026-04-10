@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://2pc6820fwdjk" path="res://Code/Credits.cs" id="1_7xmno"]
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_i8h6y"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="2_xbebw"]
+[ext_resource type="AudioStream" uid="uid://dfs1qob0gwkrc" path="res://Audio/PossibleMenuMusic.wav" id="4_uy3b0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i8h6y"]
 atlas = ExtResource("1_i8h6y")
@@ -203,5 +204,10 @@ anchor_bottom = 0.80291677
 theme = ExtResource("2_xbebw")
 text = "GRAPHICS"
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=736162126]
+stream = ExtResource("4_uy3b0")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]

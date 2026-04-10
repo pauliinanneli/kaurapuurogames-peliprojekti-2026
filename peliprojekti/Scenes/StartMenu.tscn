@@ -186,6 +186,7 @@ layout_mode = 1
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1873196161]
 stream = ExtResource("9_o42a4")
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Control/StartButton" to="." method="OnStartButtonPressed"]
 [connection signal="pressed" from="Control/LevelsButton" to="." method="OnLevelsButtonPressed"]

@@ -9,14 +9,14 @@ public partial class StartMenu : Control
     [Export] public string TutorialScenePath = "res://Scenes/Tutorial.tscn";
     [Export] public string CreditsScenePath = "res://Scenes/Credits.tscn";
 
-    private Control _settingsMenu;
+    private Settings _settingsMenu;
 
     private Button fiButton;
     private Button enButton;
 
     public override void _Ready()
     {
-        _settingsMenu = GetNode<Control>("Settings");
+        _settingsMenu = GetNode<Settings>("Settings");
     }
 
 
@@ -46,7 +46,7 @@ public partial class StartMenu : Control
     public void OnSettingsButtonPressed()
     {
         Input.VibrateHandheld(50); // small haptic feedbackk
-        _settingsMenu.Show();
+        _settingsMenu.OpenSettings();
     }
 
     public void OnEnPressed()

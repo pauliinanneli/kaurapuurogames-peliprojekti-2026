@@ -12,7 +12,7 @@ public partial class PauseUI : CanvasLayer
     private Control pauseMenu;
     private Button pauseButton;
     [Export] public string MenuScenePath = "res://Scenes/StartMenu.tscn";
-    private Control _settingsMenu;
+    private Settings _settingsMenu;
 
 
 
@@ -25,7 +25,7 @@ public partial class PauseUI : CanvasLayer
         pauseMenu = GetNode<Control>("PauseMenu"); // gets PauseMenu node
         pauseMenu.Visible = false; // menu not visible
         pauseButton = GetNode<Button>("PauseButton"); // gets PauseButton
-         _settingsMenu = GetNode<Control>("Settings");
+         _settingsMenu = GetNode<Settings>("Settings");
     }
 
     /// <summary>
@@ -36,6 +36,8 @@ public partial class PauseUI : CanvasLayer
         GetTree().Paused = true; // pause game
         pauseMenu.Visible = true; // shows pause-menu
         pauseButton.Visible = false; // hides the || -button when paused
+
+        _settingsMenu.SetMuffle(true); // make music muffled when opening PauseUI
     }
 
 
