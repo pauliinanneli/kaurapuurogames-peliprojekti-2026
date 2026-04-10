@@ -942,6 +942,7 @@ shape = SubResource("RectangleShape2D_2jwna")
 [node name="DieUI" parent="." unique_id=210363600 instance=ExtResource("14_sgc6j")]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=718282645]
+process_mode = 3
 stream = ExtResource("17_xx40l")
 autoplay = true
 bus = &"Music"
