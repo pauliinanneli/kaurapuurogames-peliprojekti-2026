@@ -49,6 +49,8 @@ public partial class PauseUI : CanvasLayer
         GetTree().Paused = false; // the game continues
         pauseMenu.Visible = false; // hides the pause menu
         pauseButton.Visible = true; // shows the || -button when resuming the game
+
+        _settingsMenu.SetMuffle(false); // stop muffling music when continue is pressed
     }
 
     /// <summary>
@@ -56,6 +58,7 @@ public partial class PauseUI : CanvasLayer
     /// </summary>
     public void OnRestartPressed()
     {
+        _settingsMenu.SetMuffle(false); // stop muffling music when restart pressed
         GetTree().Paused = false; // unpause first
         GameManager.Instance.ResetGame(); // reset singleton state
         GetTree().ReloadCurrentScene(); // reload the current scene
@@ -66,12 +69,13 @@ public partial class PauseUI : CanvasLayer
     /// </summary>
     public void OnQuitPressed()
     {
+        _settingsMenu.SetMuffle(false); // stop muffling music when quit pressed
         GetTree().Paused = false; // fixed bug: unpause so startmenu works
         GetTree().ChangeSceneToFile(MenuScenePath);
     }
 
     public void OnSettingsButtonPressed()
     {
-        _settingsMenu.Show();
+        _settingsMenu.OpenSettings();
     }
 }

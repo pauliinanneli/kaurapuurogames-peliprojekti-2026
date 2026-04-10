@@ -11,6 +11,7 @@ public partial class DieUI : CanvasLayer
     /// </summary>
     private Control dieMenu;
     private Button pauseButton;
+    private Settings _settingsMenu;
     [Export] public string MenuScenePath = "res://Scenes/StartMenu.tscn";
     [Export] private AudioStreamPlayer2D _deathSound;
 
@@ -18,6 +19,9 @@ public partial class DieUI : CanvasLayer
     {
         dieMenu = GetNode<Control>("DieMenu");
         dieMenu.Visible = false; // hidden at start
+
+        // find settings node to use, need to search 'globally' within the project because it doesnt exist in dieui
+        _settingsMenu = GetTree().CurrentScene.FindChild("Settings", true, false) as Settings;
 
         // get PauseButton from PauseUI for hiding || -button from backround when DieMenu is visible
         pauseButton = GetTree().CurrentScene.GetNode<Button>("PauseUI/PauseButton");
@@ -30,6 +34,8 @@ public partial class DieUI : CanvasLayer
     {
         dieMenu.Visible = true;         // shows DieMenu
         pauseButton.Visible = false;    // hides || -button from backround when DieMenu visible
+
+        _settingsMenu.SetMuffle(true); // muffle music when dieui is shown
 
         if (_deathSound != null)
         {
@@ -46,6 +52,8 @@ public partial class DieUI : CanvasLayer
         GetTree().Paused = false;       // game unpaused
         pauseButton.Visible = true;     // shows || -button when restarting the game
 
+        _settingsMenu.SetMuffle(false); // stop muffling sound when restart is pressed
+
         // Reset GameManager state (health & etc.)
         // This is required because GameManager is a singleton and does not reset automatically
         GameManager.Instance.ResetGame();
@@ -60,6 +68,9 @@ public partial class DieUI : CanvasLayer
     public void OnQuitPressed()
     {
         GetTree().Paused = false; // fixed bug: unpause so startmenu works
+
+        _settingsMenu.SetMuffle(false);
+
         GameManager.Instance.ResetGame(); // reset singleton state
         GetTree().ChangeSceneToFile(MenuScenePath); // opens StartMenu
     }
