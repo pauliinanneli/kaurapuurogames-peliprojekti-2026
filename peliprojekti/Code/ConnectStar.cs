@@ -134,6 +134,7 @@ public partial class ConnectStar : Area2D
         if (GetTree().CurrentScene is ConnectingStars levelRoot)
         {
             levelRoot.OnConstellationFinished();
+            levelRoot.PlayStarSound();
         }
 
         _currentIndex = 999;
@@ -141,6 +142,11 @@ public partial class ConnectStar : Area2D
 
     public void LightUp()
     {
+        if (GetTree().CurrentScene is ConnectingStars levelRoot)
+        {
+            levelRoot.PlayStarSound();
+        }
+
         IsLit = true;
         Input.VibrateHandheld(100); // vibration when lighting up
         _light.Enabled = true;
