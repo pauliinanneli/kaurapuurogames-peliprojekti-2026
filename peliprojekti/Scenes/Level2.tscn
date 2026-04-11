@@ -18,6 +18,10 @@
 [ext_resource type="PackedScene" uid="uid://fw8wifrnjgqu" path="res://Scenes/DieUI.tscn" id="14_sgc6j"]
 [ext_resource type="AudioStream" uid="uid://bmb47cbun48oo" path="res://Audio/Flyingsound.wav" id="17_xx40l"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx40l"]
+atlas = ExtResource("1_0plju")
+region = Rect2(2184, 21, 2037, 2037)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ehjmi"]
 size = Vector2(386.5, 675)
 
@@ -30,18 +34,22 @@ size = Vector2(90.99473, 91.937164)
 [node name="Level2" type="Node2D" unique_id=1567263960]
 script = ExtResource("1_sgc6j")
 
+[node name="GradientBG" type="CanvasLayer" parent="." unique_id=118828433]
+layer = -100
+
+[node name="Sprite2D" type="TextureRect" parent="GradientBG" unique_id=1606883576]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -412.17
+offset_right = -412.17004
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(61.265, 1.005)
+texture = SubResource("AtlasTexture_xx40l")
+expand_mode = 1
+
 [node name="Backgrounds" type="Node2D" parent="." unique_id=883925433]
-
-[node name="Background" type="Parallax2D" parent="Backgrounds" unique_id=497167768]
-scroll_scale = Vector2(0, 0)
-follow_viewport = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Background" unique_id=1048847559]
-position = Vector2(831.39, 380.38)
-scale = Vector2(23.47, 0.4244336)
-texture = ExtResource("1_0plju")
-region_enabled = true
-region_rect = Rect2(2205, 0, 2016, 2048)
 
 [node name="BackgroundStars" type="Parallax2D" parent="Backgrounds" unique_id=1845950747]
 scale = Vector2(1, 1.57)
@@ -938,6 +946,7 @@ shape = SubResource("RectangleShape2D_2jwna")
 [node name="HUD" parent="." unique_id=989878847 instance=ExtResource("12_ycmr1")]
 
 [node name="PauseUI" parent="." unique_id=1141652004 instance=ExtResource("13_2jwna")]
+visible = false
 
 [node name="DieUI" parent="." unique_id=210363600 instance=ExtResource("14_sgc6j")]
 

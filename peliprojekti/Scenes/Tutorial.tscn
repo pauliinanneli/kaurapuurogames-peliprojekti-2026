@@ -13,6 +13,10 @@
 [ext_resource type="Script" uid="uid://bohhj2hp2nlpu" path="res://Code/Portal.cs" id="11_8i65c"]
 [ext_resource type="AudioStream" uid="uid://bmb47cbun48oo" path="res://Audio/Flyingsound.wav" id="12_m35rq"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_m35rq"]
+atlas = ExtResource("1_2o727")
+region = Rect2(4431, 63, 2037, 2017)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3j26a"]
 size = Vector2(386.5, 675)
 
@@ -24,18 +28,20 @@ size = Vector2(20.221237, 20)
 
 [node name="Tutorial" type="Node2D" unique_id=1201764242]
 
+[node name="GradientBG" type="CanvasLayer" parent="." unique_id=769035163]
+layer = -100
+
+[node name="Sprite2D" type="TextureRect" parent="GradientBG" unique_id=2025980436]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(61.265, 1.005)
+texture = SubResource("AtlasTexture_m35rq")
+expand_mode = 1
+
 [node name="Backgrounds" type="Node2D" parent="." unique_id=344995140]
-
-[node name="Background" type="Parallax2D" parent="Backgrounds" unique_id=1775388817]
-scroll_scale = Vector2(0, 0)
-follow_viewport = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Background" unique_id=62161516]
-position = Vector2(1041.0001, 305)
-scale = Vector2(23.47, 0.385)
-texture = ExtResource("1_2o727")
-region_enabled = true
-region_rect = Rect2(4473, 0, 1911, 2048)
 
 [node name="BackgroundStars" type="Parallax2D" parent="Backgrounds" unique_id=1323061386]
 scale = Vector2(1, 1.57)
