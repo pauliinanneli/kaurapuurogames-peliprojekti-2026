@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crrewfm5k1qmf"
-path="res://.godot/imported/Meteoriittipallo.png-f452413af0ebf1da9acb40866d4f61a5.ctex"
+path="res://.godot/imported/Meteoriittipallo.png-9299d43d9bae5cd4b2b2a4213224eaf0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Meteoriittipallo.png"
-dest_files=["res://.godot/imported/Meteoriittipallo.png-f452413af0ebf1da9acb40866d4f61a5.ctex"]
+source_file="res://art/Meteoriittipallo.png"
+dest_files=["res://.godot/imported/Meteoriittipallo.png-9299d43d9bae5cd4b2b2a4213224eaf0.ctex"]
 
 [params]
 
