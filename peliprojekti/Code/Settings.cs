@@ -37,18 +37,21 @@ public partial class Settings : Control
 
     public void OnEnPressed()
     {
+        GameManager.Instance.PlayClick();
         Input.VibrateHandheld(50); // small haptic feedbackk
         GameManager.Instance.SetLocale("en");  // switches the lang to eng
     }
 
     public void OnFiPressed()
     {
+        GameManager.Instance.PlayClick();
         Input.VibrateHandheld(50); // small haptic feedbackk
         GameManager.Instance.SetLocale("fi");  // switches the lang to fi
     }
 
      public void OnBackButtonPressed()
     {
+        GameManager.Instance.PlayClick();
         Input.VibrateHandheld(50); // small haptic feedbackk
 
         if (_unmuffleOnClosing) // ONLY unmuffle when going back from settings if we are going back to startmenu instead of pauseui

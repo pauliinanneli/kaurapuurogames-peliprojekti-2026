@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d3bai3x0464sf"]
+
+[ext_resource type="Script" uid="uid://ds5id0x4jd0c4" path="res://Code/GameManager.cs" id="1_m2tc1"]
+[ext_resource type="AudioStream" uid="uid://gr78ah2bgo1l" path="res://Audio/klikkausmenuun.wav" id="2_bwyv8"]
+
+[node name="GameManager" type="Node2D" unique_id=927370107 node_paths=PackedStringArray("_clickPlayer")]
+script = ExtResource("1_m2tc1")
+_clickPlayer = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1113279323]
+process_mode = 3
+stream = ExtResource("2_bwyv8")
+bus = &"Effects"

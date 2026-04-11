@@ -48,6 +48,7 @@ public partial class PercentView : Control
             // trigger when finger is pressed down
             if (tap.Pressed && tap.ButtonIndex == MouseButton.Left)
             {
+                GameManager.Instance.PlayClick();
                 _waitingForTap = false;
                 Input.VibrateHandheld(50); // small haptic feedback
                 GetTree().ChangeSceneToFile(NextScenePath);

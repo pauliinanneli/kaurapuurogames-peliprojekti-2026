@@ -278,4 +278,17 @@ public void ChangeGameSpeed(float targetSpeed, float duration)
         tween.TweenProperty(Engine.GetSingleton("Engine"), "time_scale", targetSpeed, duration).SetTrans(Tween.TransitionType.Cubic).SetEase(Tween.EaseType.Out);
     }
 #endregion
+
+#region audio
+
+    [Export] private AudioStreamPlayer _clickPlayer;
+
+    public void PlayClick()
+    {
+        if (_clickPlayer != null)
+        {
+            _clickPlayer.Play();
+        }
+    }
+#endregion
 }

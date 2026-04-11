@@ -21,6 +21,7 @@ public partial class LevelChooser : Control
 
     public void OnBackButtonPressed()
     {
+        GameManager.Instance.PlayClick();
         Input.VibrateHandheld(50); // small haptic feedbackk
         GetTree().ChangeSceneToFile(BackScenePath);
     }

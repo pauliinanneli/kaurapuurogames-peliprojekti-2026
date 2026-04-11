@@ -48,6 +48,7 @@ public partial class DieUI : CanvasLayer
     /// </summary>
     public void OnRestartPressed()
     {
+        GameManager.Instance.PlayClick();
         // Unpause the game so everything can run normally again
         GetTree().Paused = false;       // game unpaused
         pauseButton.Visible = true;     // shows || -button when restarting the game
@@ -67,6 +68,7 @@ public partial class DieUI : CanvasLayer
     /// </summary>
     public void OnQuitPressed()
     {
+        GameManager.Instance.PlayClick();
         GetTree().Paused = false; // fixed bug: unpause so startmenu works
 
         _settingsMenu.SetMuffle(false);

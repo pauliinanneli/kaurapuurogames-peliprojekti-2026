@@ -16,6 +16,7 @@ cutoff_hz = 20000.0
 resource_name = "Reverb"
 
 [resource]
+bus/0/volume_db = -6.085921
 bus/0/effect/0/effect = SubResource("AudioEffectHighPassFilter_j3pel")
 bus/0/effect/0/enabled = true
 bus/0/effect/1/effect = SubResource("AudioEffectLowPassFilter_j3pel")
