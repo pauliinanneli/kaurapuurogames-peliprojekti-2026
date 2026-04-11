@@ -23,9 +23,7 @@ public partial class Settings : Control
 
     public override void _Ready()
     {
-        _masterBusIndex = AudioServer.GetBusIndex(MasterBus);
-        _musicBusIndex = AudioServer.GetBusIndex(MusicBus);
-        _effectsBusIndex = AudioServer.GetBusIndex(EffectsBus);
+        InitializeAudio();
 
         _muffle = (AudioEffectLowPassFilter)AudioServer.GetBusEffect(_musicBusIndex, 0);
     }
@@ -97,5 +95,23 @@ public partial class Settings : Control
         {
             _muffle.CutoffHz = 20000f; // all frequencies heard
         }
+    }
+
+    private void InitializeAudio()
+    {
+        _masterBusIndex = AudioServer.GetBusIndex(MasterBus);
+        _musicBusIndex = AudioServer.GetBusIndex(MusicBus);
+        _effectsBusIndex = AudioServer.GetBusIndex(EffectsBus);
+
+        SetVolume(_masterBusIndex, _masterVolume);
+        SetVolume(_musicBusIndex, _musicVolume);
+        SetVolume(_effectsBusIndex, _effectsVolume);
+    }
+
+    private void SetVolume(int busIndex, Slider volumeSlider)
+    {
+        float dbVolume = AudioServer.GetBusVolumeDb(busIndex);
+        float linearVolume = Mathf.DbToLinear(dbVolume);
+        volumeSlider.Value = linearVolume;
     }
 }

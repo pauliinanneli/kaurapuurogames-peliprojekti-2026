@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://do3m2uc36yyjs"
-path="res://.godot/imported/Meteoriitti.png-5083a03c683aea80e750a50d03fb24bd.ctex"
+path="res://.godot/imported/Meteoriitti.png-e0d270065831c9fc15f956661b8bb51d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Meteoriitti.png"
-dest_files=["res://.godot/imported/Meteoriitti.png-5083a03c683aea80e750a50d03fb24bd.ctex"]
+source_file="res://Art/Meteoriitti.png"
+dest_files=["res://.godot/imported/Meteoriitti.png-e0d270065831c9fc15f956661b8bb51d.ctex"]
 
 [params]
 

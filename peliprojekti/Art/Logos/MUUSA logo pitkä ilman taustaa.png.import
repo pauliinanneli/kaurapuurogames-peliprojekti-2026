@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://be5smjw41cnty"
-path="res://.godot/imported/MUUSA logo pitkä ilman taustaa.png-2f0fc780717d5f5bbbfc8e692b3a467a.ctex"
+path="res://.godot/imported/MUUSA logo pitkä ilman taustaa.png-469d1c21e55ecdccc5445480e15e72ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Logos/MUUSA logo pitkä ilman taustaa.png"
-dest_files=["res://.godot/imported/MUUSA logo pitkä ilman taustaa.png-2f0fc780717d5f5bbbfc8e692b3a467a.ctex"]
+source_file="res://Art/Logos/MUUSA logo pitkä ilman taustaa.png"
+dest_files=["res://.godot/imported/MUUSA logo pitkä ilman taustaa.png-469d1c21e55ecdccc5445480e15e72ac.ctex"]
 
 [params]
 
