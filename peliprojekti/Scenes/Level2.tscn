@@ -75,6 +75,15 @@ texture = ExtResource("2_ms0wi")
 region_enabled = true
 region_rect = Rect2(0, 1023, 1023, 429)
 
+[node name="Sprite2D3" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=815867537]
+modulate = Color(1, 1, 1, 0.5921569)
+texture_repeat = 2
+position = Vector2(548.19, 609.39)
+scale = Vector2(1.26, 1.26)
+texture = ExtResource("2_ms0wi")
+region_enabled = true
+region_rect = Rect2(0, 0, 1023, 297)
+
 [node name="BackgroundStars2" type="Parallax2D" parent="Backgrounds" unique_id=1006857603]
 scroll_scale = Vector2(0.1, 0.1)
 repeat_size = Vector2(1391.68, 0)
@@ -103,6 +112,16 @@ modulate = Color(1, 1, 1, 0.5882353)
 position = Vector2(244.77, 713.35)
 rotation = 3.1415927
 scale = Vector2(1.36, 1.36)
+texture = ExtResource("2_ms0wi")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1022842876]
+modulate = Color(1, 1, 1, 0.5764706)
+texture_repeat = 2
+position = Vector2(616.72, 816.22)
+rotation = 3.1415927
+scale = Vector2(1.74, 1.74)
 texture = ExtResource("2_ms0wi")
 region_enabled = true
 region_rect = Rect2(0, 660, 1023, 363)
@@ -946,7 +965,6 @@ shape = SubResource("RectangleShape2D_2jwna")
 [node name="HUD" parent="." unique_id=989878847 instance=ExtResource("12_ycmr1")]
 
 [node name="PauseUI" parent="." unique_id=1141652004 instance=ExtResource("13_2jwna")]
-visible = false
 
 [node name="DieUI" parent="." unique_id=210363600 instance=ExtResource("14_sgc6j")]
 

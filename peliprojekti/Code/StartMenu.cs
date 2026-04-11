@@ -36,6 +36,7 @@ public partial class StartMenu : Control
 
     public void OnTutorialButtonPressed()
     {
+        GameManager.Instance._cameFromStartMenu = true;
         GameManager.Instance.PlayClick();
         Input.VibrateHandheld(50); // small haptic feedbackk
         GetTree().ChangeSceneToFile(TutorialScenePath);

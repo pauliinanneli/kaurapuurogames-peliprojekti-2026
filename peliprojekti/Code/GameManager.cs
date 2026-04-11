@@ -291,4 +291,9 @@ public void ChangeGameSpeed(float targetSpeed, float duration)
         }
     }
 #endregion
+
+#region otherstuff
+public bool _cameFromStartMenu = true;
+
+#endregion
 }
