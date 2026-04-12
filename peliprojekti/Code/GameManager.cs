@@ -9,6 +9,22 @@ using System.Threading;
 /// </summary>
 public partial class GameManager : Node
 {
+
+    private float _health;
+    private bool _isDead = false;
+
+    private List<string> _personalityChoices = new List<string>(); // list that will store which Muusa role answers correspond with
+    [Export] private float _drainHealth = 0.08f; // loses 8% glow per second, evaluate if thats a smart value or not
+
+    [Export] public Color _defaultColor = Color.FromHtml("#FFD580");
+    [Export] public Color _etsijäColor = Color.FromHtml("#00E5FF");
+    [Export] public Color _etenijäColor = Color.FromHtml("#FF7EB9");
+    [Export] public Color _edistäjäColor = Color.FromHtml("#D4FF91");
+    [Export] private AudioStreamPlayer _clickPlayer;
+    [Export] private AudioStreamPlayer _gateSoundPlayer;
+    [Export] private AudioStreamPlayer _musicPlayer;
+    public bool _cameFromStartMenu = true;
+
     #region Singleton
 
     /// <summary>
@@ -65,20 +81,6 @@ public partial class GameManager : Node
     }
 
 #region health
-    private float _health;
-
-    /// <summary>
-    /// Tracks if player is already dead to prevent multiple Die() calls
-    /// </summary>
-    private bool _isDead = false;
-
-    private List<string> _personalityChoices = new List<string>(); // list that will store which Muusa role answers correspond with
-    [Export] private float _drainHealth = 0.08f; // loses 8% glow per second, evaluate if thats a smart value or not
-
-    [Export] public Color _defaultColor = Color.FromHtml("#FFD580");
-    [Export] public Color _etsijäColor = Color.FromHtml("#00E5FF");
-    [Export] public Color _etenijäColor = Color.FromHtml("#FF7EB9");
-    [Export] public Color _edistäjäColor = Color.FromHtml("#D4FF91");
 
     /// <summary>
     /// players current health/glow level. values are between 0 and 1
@@ -130,15 +132,31 @@ public partial class GameManager : Node
     /// </summary>
     public override void _Process(double delta)
     {
-        if (GetTree().CurrentScene.Name == "StartMenu" || GetTree().CurrentScene.Name == "ConnectingStars"
-            || GetTree().CurrentScene.Name == "PercentView" || GetTree().CurrentScene.Name == "LevelChooser"
-            || GetTree().CurrentScene.Name == "Settings" || GetTree().CurrentScene.Name == "Credits")
+        bool isMainMenu = GetTree().CurrentScene.Name == "StartMenu" || GetTree().CurrentScene.Name == "LevelChooser" || GetTree().CurrentScene.Name == "Credits";
+
+        if (isMainMenu)
         {
+            if (_musicPlayer.Playing)
+            {
+                _musicPlayer.Stop(); // dont play level music when in main menu scenes
+            }
             return;
         }
+
         else
         {
-            Health -= _drainHealth * (float)delta;
+            if (!_musicPlayer.Playing)
+            {
+                _musicPlayer.Play(); // if in level or settings etc, let the music play
+            }
+
+            bool isSafeScene = GetTree().CurrentScene.Name == "StartMenu" || GetTree().CurrentScene.Name == "ConnectingStars"
+                                || GetTree().CurrentScene.Name == "Tutorial" || GetTree().CurrentScene.Name == "PercentView";
+
+            if (!GetTree().Paused && !isSafeScene)
+            {
+                Health -= _drainHealth * (float)delta;
+            }
         }
     }
 
@@ -281,9 +299,6 @@ public void ChangeGameSpeed(float targetSpeed, float duration)
 
 #region audio
 
-    [Export] private AudioStreamPlayer _clickPlayer;
-    [Export] private AudioStreamPlayer _gateSoundPlayer;
-
     public void PlayClick()
     {
         if (_clickPlayer != null)
@@ -299,11 +314,6 @@ public void ChangeGameSpeed(float targetSpeed, float duration)
             _gateSoundPlayer.Play();
         }
     }
-
-#endregion
-
-#region otherstuff
-public bool _cameFromStartMenu = true;
 
 #endregion
 }

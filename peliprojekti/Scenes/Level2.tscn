@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://cx8iaunu8h0n" path="res://Scenes/HUD.tscn" id="12_ycmr1"]
 [ext_resource type="PackedScene" uid="uid://cmpbuj530sgae" path="res://Scenes/PauseUI.tscn" id="13_2jwna"]
 [ext_resource type="PackedScene" uid="uid://fw8wifrnjgqu" path="res://Scenes/DieUI.tscn" id="14_sgc6j"]
-[ext_resource type="AudioStream" uid="uid://bmb47cbun48oo" path="res://Audio/Flyingsound.wav" id="17_xx40l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xx40l"]
 atlas = ExtResource("1_0plju")
@@ -967,9 +966,3 @@ shape = SubResource("RectangleShape2D_2jwna")
 [node name="PauseUI" parent="." unique_id=1141652004 instance=ExtResource("13_2jwna")]
 
 [node name="DieUI" parent="." unique_id=210363600 instance=ExtResource("14_sgc6j")]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=718282645]
-process_mode = 3
-stream = ExtResource("17_xx40l")
-autoplay = true
-bus = &"Music"

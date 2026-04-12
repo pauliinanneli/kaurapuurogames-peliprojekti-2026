@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://ddh1ccrjx4eko" path="res://Scenes/LanePicker.tscn" id="9_hxa32"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="10_dlght"]
 [ext_resource type="Script" uid="uid://bohhj2hp2nlpu" path="res://Code/Portal.cs" id="11_8i65c"]
-[ext_resource type="AudioStream" uid="uid://bmb47cbun48oo" path="res://Audio/Flyingsound.wav" id="12_m35rq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m35rq"]
 atlas = ExtResource("1_2o727")
@@ -358,11 +357,6 @@ script = ExtResource("11_8i65c")
 position = Vector2(5367.5, 277)
 scale = Vector2(22.6, 71.72)
 shape = SubResource("RectangleShape2D_dlght")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=362754880]
-stream = ExtResource("12_m35rq")
-autoplay = true
-bus = &"Music"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=833349624]
 
