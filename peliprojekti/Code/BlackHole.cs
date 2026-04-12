@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 public partial class BlackHole : Area2D
 {
     [Export] public string NextScenePath = "res://Scenes/ConnectingStars.tscn";
+    [Export] private AudioStreamPlayer2D _audioClip = null;
 
     public override void _Ready()
     {
@@ -17,7 +18,11 @@ public partial class BlackHole : Area2D
         if (body is PlayerCharacter player)
         {
             Input.VibrateHandheld(200); // vibration when going in and changing scene
-            // TO DO dip to black before going straight into next scene??
+
+            if (_audioClip != null)
+            {
+                _audioClip.Play();
+            }
 
             player.BlackHoleSuck(NextScenePath, GlobalPosition); // trigger animation and give path to change scene to
         }
