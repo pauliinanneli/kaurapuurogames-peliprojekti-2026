@@ -282,6 +282,7 @@ public void ChangeGameSpeed(float targetSpeed, float duration)
 #region audio
 
     [Export] private AudioStreamPlayer _clickPlayer;
+    [Export] private AudioStreamPlayer _gateSoundPlayer;
 
     public void PlayClick()
     {
@@ -290,6 +291,15 @@ public void ChangeGameSpeed(float targetSpeed, float duration)
             _clickPlayer.Play();
         }
     }
+
+    public void GateSound()
+    {
+        if (_gateSoundPlayer != null)
+        {
+            _gateSoundPlayer.Play();
+        }
+    }
+
 #endregion
 
 #region otherstuff

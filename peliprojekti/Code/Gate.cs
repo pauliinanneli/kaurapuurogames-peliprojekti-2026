@@ -18,6 +18,8 @@ public partial class Gate : Area2D
             GD.Print($"Player chose {Role} path");
             Input.VibrateHandheld(50); // small haptic feedbackk
 
+            GameManager.Instance.GateSound();
+
             GameManager.Instance.SaveChoice(Role);
             GameManager.Instance.AddHealth(0.2f);
 
