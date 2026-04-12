@@ -293,7 +293,15 @@ public partial class GameManager : Node
 public void ChangeGameSpeed(float targetSpeed, float duration)
     {
         Tween tween = GetTree().CreateTween();
+
+        tween.SetParallel(true); // makes game speed and pitch change parallel
+
         tween.TweenProperty(Engine.GetSingleton("Engine"), "time_scale", targetSpeed, duration).SetTrans(Tween.TransitionType.Cubic).SetEase(Tween.EaseType.Out);
+
+        if (_musicPlayer != null)
+        {
+            tween.TweenProperty(_musicPlayer, "pitch_scale", targetSpeed, duration).SetTrans(Tween.TransitionType.Cubic).SetEase(Tween.EaseType.Out);
+        }
     }
 #endregion
 
