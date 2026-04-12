@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b2i40x8wo32md" path="res://Art/LevelObstacles.png" id="1_5wds4"]
 [ext_resource type="Script" uid="uid://rnjt7lmv7f3u" path="res://Code/Meteor.cs" id="1_fdert"]
 [ext_resource type="Texture2D" uid="uid://61v0duol3ga5" path="res://Art/particle.png" id="3_ogeg7"]
+[ext_resource type="AudioStream" uid="uid://b1wevcv670ug5" path="res://Audio/HitMeteor.wav" id="4_f0y0n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5wds4"]
 
@@ -32,12 +33,13 @@ scale_max = 2.5
 color_ramp = SubResource("GradientTexture1D_c08hu")
 collision_mode = 2
 
-[node name="Meteor" type="Area2D" unique_id=405699312 node_paths=PackedStringArray("_sprite", "_particleEffect")]
+[node name="Meteor" type="Area2D" unique_id=405699312 node_paths=PackedStringArray("_sprite", "_particleEffect", "_audioClip")]
 scale = Vector2(0.25, 0.25)
 collision_mask = 2
 script = ExtResource("1_fdert")
 _sprite = NodePath("Sprite2D")
 _particleEffect = NodePath("GPUParticles2D")
+_audioClip = NodePath("AudioStreamPlayer2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=656665447]
 texture = ExtResource("1_5wds4")
@@ -55,3 +57,7 @@ texture = ExtResource("3_ogeg7")
 one_shot = true
 preprocess = 1.0
 process_material = SubResource("ParticleProcessMaterial_dgtdq")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=26858115]
+stream = ExtResource("4_f0y0n")
+bus = &"Effects"

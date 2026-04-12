@@ -9,9 +9,11 @@ public partial class Meteor : Area2D
 	[Export] private float _damageAmount = 0.1f;
     [Export] private Sprite2D _sprite = null;
     [Export] private GpuParticles2D _particleEffect = null;
+    [Export] private AudioStreamPlayer2D _audioClip = null;
 
 	private float _time = 0f;
 	private float _startY;
+    private bool _hasExploded = false;
 
     public override void _Ready()
     {
@@ -34,8 +36,16 @@ public partial class Meteor : Area2D
 
 	private void OnBodyEntered(Node2D body)
     {
+        // if meteor has already exploded, no need to execute
+        if (_hasExploded)
+        {
+            return;
+        }
+
+
         if (body is PlayerCharacter playerCharacter)
         {
+            _hasExploded = true; // to only hit the meteor once
 			// flash red
 			playerCharacter.OnMeteorHit();
             //lose health
@@ -54,9 +64,16 @@ public partial class Meteor : Area2D
             _sprite.Hide();
         }
 
+        if (_audioClip != null)
+        {
+            _audioClip.Play();
+        }
+
         if (_particleEffect != null)
         {
             _particleEffect.Emitting = true;
         }
+
+        GetTree().CreateTimer(1.0f).Timeout += QueueFree; // timer to wait until particle effect has played before destroying
     }
 }
