@@ -11,6 +11,7 @@ region = Rect2(0, 0, 2016, 2037)
 
 [node name="Settings" type="Control" unique_id=710396582 node_paths=PackedStringArray("_masterVolume", "_musicVolume", "_effectsVolume")]
 process_mode = 3
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
