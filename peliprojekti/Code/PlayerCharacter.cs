@@ -107,7 +107,6 @@ public partial class PlayerCharacter : CharacterBody2D
     {
 		// get current screen size
 		Vector2 globalPos = GlobalPosition;
-
 		Rect2 worldRect = GetViewport().GetCanvasTransform().AffineInverse() * GetViewportRect();
 
 		// padding so doesnt touch the edge
@@ -266,7 +265,7 @@ public partial class PlayerCharacter : CharacterBody2D
 		suckTween.TweenProperty(_starLight, "energy", 0.0f, 0.2f); // kill pointlight because it cant be stretched
 		suckTween.TweenProperty(_glowSprite, "modulate:a", 0.0f, 0.1f); // kill glow sprite because it looks dumb
 
-		suckTween.TweenProperty(this, "global_position", holePosition, 1.5f); // move player body to center of black hole in 1sec
+		suckTween.TweenProperty(this, "global_position", holePosition, 1.5f); // move player body to center of black hole
 		suckTween.TweenProperty(_starSprite, "scale", new Vector2(7.0f, 0.01f), 1.5f); // stretch player star to be long and thin
 		suckTween.TweenProperty(this, "modulate", new Color(0, 0, 0, 0), 1.5f); // make star color modulate to black and transparency to 0
 

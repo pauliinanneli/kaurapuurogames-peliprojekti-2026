@@ -17,14 +17,12 @@ public partial class Planet : Area2D
         {
             GameManager.Instance.PlayClick();
             GameManager.Instance._cameFromStartMenu = false;
-            Input.VibrateHandheld(50); // small haptic feedback
             GetTree().ChangeSceneToFile(LevelPath);
         }
         else if (@event is InputEventScreenTouch touchEvent && touchEvent.Pressed)
         {
             GameManager.Instance.PlayClick();
             GameManager.Instance._cameFromStartMenu = false;
-            Input.VibrateHandheld(50); // small haptic feedback
             GetTree().ChangeSceneToFile(LevelPath);
         }
     }

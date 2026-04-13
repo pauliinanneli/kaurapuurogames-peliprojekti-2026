@@ -50,7 +50,7 @@ shape = SubResource("CircleShape2D_5wds4")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=511592254]
 emitting = false
-amount = 200
+amount = 100
 texture = ExtResource("3_ogeg7")
 one_shot = true
 preprocess = 1.0

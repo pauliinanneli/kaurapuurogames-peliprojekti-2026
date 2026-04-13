@@ -50,7 +50,6 @@ public partial class PercentView : Control
             {
                 GameManager.Instance.PlayClick();
                 _waitingForTap = false;
-                Input.VibrateHandheld(50); // small haptic feedback
                 GetTree().ChangeSceneToFile(NextScenePath);
             }
         }

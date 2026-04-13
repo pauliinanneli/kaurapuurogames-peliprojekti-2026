@@ -12,10 +12,12 @@ public partial class Tutorial : Node2D
 
         if (GameManager.Instance._cameFromStartMenu)
         {
+            GameManager.Instance.PlayClick();
             GetTree().ChangeSceneToFile(StartMenuPath);
         }
         else
         {
+            GameManager.Instance.PlayClick();
             GetTree().ChangeSceneToFile(LevelChooserPath);
         }
     }
