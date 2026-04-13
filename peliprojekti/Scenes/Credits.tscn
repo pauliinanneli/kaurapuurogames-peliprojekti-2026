@@ -48,9 +48,9 @@ text = "CREDITS"
 
 [node name="Programmers" type="Label" parent="." unique_id=1846893041]
 layout_mode = 0
-offset_left = 195.0
+offset_left = 470.86
 offset_top = 355.0
-offset_right = 564.0
+offset_right = 839.86
 offset_bottom = 420.0
 theme = ExtResource("2_xbebw")
 theme_override_font_sizes/font_size = 50
@@ -58,27 +58,27 @@ text = "PROGRAMMERS"
 
 [node name="Pauliina" type="Label" parent="." unique_id=1785040457]
 layout_mode = 0
-offset_left = 196.0
+offset_left = 470.86
 offset_top = 447.14
-offset_right = 453.0
+offset_right = 727.86
 offset_bottom = 495.14
 theme = ExtResource("2_xbebw")
 text = "Pauliina Pietilä"
 
 [node name="Tony" type="Label" parent="." unique_id=1098855775]
 layout_mode = 0
-offset_left = 196.0
+offset_left = 470.86
 offset_top = 517.7
-offset_right = 453.0
+offset_right = 727.8596
 offset_bottom = 565.7
 theme = ExtResource("2_xbebw")
 text = "Tony Ellilä"
 
 [node name="Art" type="Label" parent="." unique_id=2045214849]
 layout_mode = 0
-offset_left = 195.0
+offset_left = 470.86
 offset_top = 645.53
-offset_right = 564.0
+offset_right = 839.85974
 offset_bottom = 710.53
 theme = ExtResource("2_xbebw")
 theme_override_font_sizes/font_size = 50
@@ -86,39 +86,103 @@ text = "ART"
 
 [node name="Oliver" type="Label" parent="." unique_id=976654149]
 layout_mode = 0
-offset_left = 196.0
+offset_left = 470.86
 offset_top = 737.54
-offset_right = 453.0
+offset_right = 727.8596
 offset_bottom = 785.54004
 theme = ExtResource("2_xbebw")
 text = "Oliver Murzich"
 
 [node name="Aleksi" type="Label" parent="." unique_id=929901444]
 layout_mode = 0
-offset_left = 196.0
+offset_left = 470.86
 offset_top = 814.29
-offset_right = 453.0
+offset_right = 727.8596
 offset_bottom = 862.29004
 theme = ExtResource("2_xbebw")
 text = "Aleksi Jaaksi"
 
 [node name="Yhteyshenkilö" type="Label" parent="." unique_id=50068347]
 layout_mode = 0
-offset_left = 761.33
+offset_left = 1042.73
 offset_top = 355.0
-offset_right = 1140.3306
+offset_right = 1446.7303
 offset_bottom = 420.0
 theme = ExtResource("2_xbebw")
 theme_override_font_sizes/font_size = 50
-text = "YHTEYSHENKILÖ"
+text = "CONTACTPERSON"
 
 [node name="V-P" type="Label" parent="." unique_id=1462907100]
 layout_mode = 0
-offset_left = 761.33
+offset_left = 1042.73
 offset_top = 447.14
-offset_right = 1056.3303
+offset_right = 1337.7303
 offset_bottom = 495.14
 theme = ExtResource("2_xbebw")
 text = "Veli-Petteri Alvur"
+
+[node name="Teachers" type="Label" parent="." unique_id=973829965]
+layout_mode = 0
+offset_left = 1042.73
+offset_top = 580.61
+offset_right = 1446.7299
+offset_bottom = 645.61
+theme = ExtResource("2_xbebw")
+theme_override_font_sizes/font_size = 50
+text = "TEACHERS"
+
+[node name="Outi" type="Label" parent="." unique_id=1549360700]
+layout_mode = 0
+offset_left = 1042.73
+offset_top = 672.14
+offset_right = 1337.7299
+offset_bottom = 720.1401
+theme = ExtResource("2_xbebw")
+text = "Outi Tuisku "
+
+[node name="Sami" type="Label" parent="." unique_id=1331295570]
+layout_mode = 0
+offset_left = 1042.73
+offset_top = 747.09
+offset_right = 1337.7299
+offset_bottom = 795.0901
+theme = ExtResource("2_xbebw")
+text = "Sami Kojo"
+
+[node name="Pasi" type="Label" parent="." unique_id=781320129]
+layout_mode = 0
+offset_left = 1042.73
+offset_top = 819.15
+offset_right = 1337.7299
+offset_bottom = 867.1501
+theme = ExtResource("2_xbebw")
+text = "Pasi Pekkanen"
+
+[node name="Coaching" type="Label" parent="." unique_id=179639129]
+layout_mode = 0
+offset_left = 1339.04
+offset_top = 672.14
+offset_right = 1634.0396
+offset_bottom = 720.1401
+theme = ExtResource("2_xbebw")
+text = "COACHING"
+
+[node name="Programming" type="Label" parent="." unique_id=163107031]
+layout_mode = 0
+offset_left = 1339.04
+offset_top = 747.09
+offset_right = 1634.0398
+offset_bottom = 795.0901
+theme = ExtResource("2_xbebw")
+text = "PROGRAMMING"
+
+[node name="Graphics" type="Label" parent="." unique_id=1384577696]
+layout_mode = 0
+offset_left = 1339.04
+offset_top = 819.15
+offset_right = 1634.0398
+offset_bottom = 867.1501
+theme = ExtResource("2_xbebw")
+text = "GRAPHICS"
 
 [connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]

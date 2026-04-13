@@ -3,10 +3,12 @@
 [ext_resource type="Script" uid="uid://d2jqrr8qyalsl" path="res://Code/DieUI.cs" id="1_x85ng"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="2_lenoj"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="2_m64vj"]
+[ext_resource type="AudioStream" uid="uid://0c5bm3x1ox27" path="res://Audio/GameOver.wav" id="4_lenoj"]
 
-[node name="DieUI" type="CanvasLayer" unique_id=210363600]
+[node name="DieUI" type="CanvasLayer" unique_id=210363600 node_paths=PackedStringArray("_deathSound")]
 process_mode = 2
 script = ExtResource("1_x85ng")
+_deathSound = NodePath("AudioStreamPlayer2D")
 
 [node name="DieMenu" type="Control" parent="." unique_id=794153939]
 visible = false
@@ -67,6 +69,10 @@ grow_vertical = 2
 theme = ExtResource("2_lenoj")
 text = "DIERESTART"
 metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1261554506]
+stream = ExtResource("4_lenoj")
+bus = &"Death Sound"
 
 [connection signal="pressed" from="DieMenu/ColorRect/QuitButton" to="." method="OnQuitPressed"]
 [connection signal="pressed" from="DieMenu/ColorRect/RestartButton" to="." method="OnRestartPressed"]

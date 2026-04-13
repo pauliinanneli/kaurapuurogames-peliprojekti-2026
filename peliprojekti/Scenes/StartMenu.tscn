@@ -8,10 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://ix2h5pgs8dlp" path="res://Art/Logos/FI_co-funded by VERTICAL RGB_POS.png" id="6_dibtv"]
 [ext_resource type="Texture2D" uid="uid://38umljaqr14e" path="res://Art/Logos/MUUSA logo neliö iso.png" id="7_o6asp"]
 [ext_resource type="PackedScene" uid="uid://b2v0x6sm3ohl8" path="res://Scenes/Settings.tscn" id="8_o6asp"]
+[ext_resource type="AudioStream" uid="uid://dfs1qob0gwkrc" path="res://Audio/PossibleMenuMusic.wav" id="9_o42a4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dibtv"]
 atlas = ExtResource("1_dvnd1")
 region = Rect2(0, 0, 2016, 2037)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6asp"]
+atlas = ExtResource("3_h303d")
+region = Rect2(273, 336, 2100, 840)
 
 [node name="StartMenu" type="Control" unique_id=1614769704]
 layout_mode = 3
@@ -42,12 +47,19 @@ grow_vertical = 2
 texture = SubResource("AtlasTexture_dibtv")
 expand_mode = 1
 
-[node name="logo" type="Sprite2D" parent="Control" unique_id=1883643455]
-position = Vector2(966.5, 216.93)
-scale = Vector2(0.55, 0.55)
-texture = ExtResource("3_h303d")
-region_enabled = true
-region_rect = Rect2(273, 294, 2058, 903)
+[node name="logo" type="TextureRect" parent="Control" unique_id=1185915345]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -559.88
+offset_right = 385.12012
+offset_bottom = 378.0
+grow_horizontal = 2
+scale = Vector2(1.19, 1.19)
+texture = SubResource("AtlasTexture_o6asp")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=688816083]
 position = Vector2(972.37, 218.54)
@@ -170,6 +182,11 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Settings" parent="." unique_id=710396582 instance=ExtResource("8_o6asp")]
 layout_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1873196161]
+stream = ExtResource("9_o42a4")
+autoplay = true
+bus = &"Menu music"
 
 [connection signal="pressed" from="Control/StartButton" to="." method="OnStartButtonPressed"]
 [connection signal="pressed" from="Control/LevelsButton" to="." method="OnLevelsButtonPressed"]

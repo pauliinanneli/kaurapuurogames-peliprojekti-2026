@@ -70,18 +70,18 @@ text = "SETTINGS"
 [node name="FiButton" type="Button" parent="SettingsMenu" unique_id=1134608287]
 layout_mode = 0
 offset_left = 740.95
-offset_top = 421.38
+offset_top = 759.53
 offset_right = 930.95
-offset_bottom = 550.36
+offset_bottom = 888.50995
 theme = ExtResource("1_flfri")
 text = "FI"
 
 [node name="EnButton" type="Button" parent="SettingsMenu" unique_id=615641175]
 layout_mode = 0
-offset_left = 1017.23
-offset_top = 421.38
-offset_right = 1207.2301
-offset_bottom = 550.36
+offset_left = 998.44
+offset_top = 759.53
+offset_right = 1188.4402
+offset_bottom = 888.50995
 theme = ExtResource("1_flfri")
 text = "EN"
 
@@ -93,6 +93,15 @@ offset_right = 348.49002
 offset_bottom = 182.92001
 theme = ExtResource("1_flfri")
 text = "BACK"
+
+[node name="Language" type="Label" parent="SettingsMenu" unique_id=1661812415]
+layout_mode = 0
+offset_left = 871.0
+offset_top = 649.0
+offset_right = 1056.0
+offset_bottom = 697.0
+theme = ExtResource("1_flfri")
+text = "LANGUAGE"
 
 [connection signal="pressed" from="SettingsMenu/FiButton" to="." method="OnFiPressed"]
 [connection signal="pressed" from="SettingsMenu/EnButton" to="." method="OnEnPressed"]
