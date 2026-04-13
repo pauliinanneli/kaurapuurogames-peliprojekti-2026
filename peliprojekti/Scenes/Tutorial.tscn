@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dvnc16pur4gjv"]
 
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_2o727"]
-[ext_resource type="Script" uid="uid://cxyvgdcdsot86" path="res://Scenes/Tutorial.cs" id="1_sgy12"]
+[ext_resource type="Script" uid="uid://cxyvgdcdsot86" path="res://Code/Tutorial.cs" id="1_sgy12"]
 [ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_uo1fs"]
 [ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_7bloo"]
 [ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="4_rlm2d"]

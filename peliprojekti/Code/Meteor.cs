@@ -45,7 +45,7 @@ public partial class Meteor : Area2D
 
         if (body is PlayerCharacter playerCharacter)
         {
-            _hasExploded = true; // to only hit the meteor once
+            // _hasExploded = true; // to only hit the meteor once
 			// flash red
 			playerCharacter.OnMeteorHit();
             //lose health
@@ -59,6 +59,8 @@ public partial class Meteor : Area2D
 
     private void Explode()
     {
+        _hasExploded = true; // to only hit the meteor once
+
         if (_sprite != null)
         {
             _sprite.Hide();
@@ -73,6 +75,10 @@ public partial class Meteor : Area2D
         {
             _particleEffect.Emitting = true;
         }
+
+        SetProcess(false); // stop doing the math during the wait until particle effect is played and destroyed
+        SetDeferred(PropertyName.Monitoring, false); // stop checking if player is still touching the meteor
+        SetDeferred(PropertyName.Monitorable, false);
 
         GetTree().CreateTimer(1.0f).Timeout += QueueFree; // timer to wait until particle effect has played before destroying
     }
