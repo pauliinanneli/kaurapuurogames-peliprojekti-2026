@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://ja722bsf8ay7" path="res://Code/Planet.cs" id="2_1bx87"]
 [ext_resource type="Texture2D" uid="uid://bbeefpojq57vf" path="res://Art/LevelPickers.png" id="2_m37ox"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="5_blli4"]
+[ext_resource type="AudioStream" uid="uid://dfs1qob0gwkrc" path="res://Audio/PossibleMenuMusic.wav" id="6_blli4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5dyp"]
 atlas = ExtResource("1_d456p")
@@ -131,5 +132,10 @@ offset_right = 348.49002
 offset_bottom = 182.92001
 theme = ExtResource("5_blli4")
 text = "BACK"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1530254638]
+stream = ExtResource("6_blli4")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]

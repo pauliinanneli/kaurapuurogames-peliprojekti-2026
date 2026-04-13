@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b2v0x6sm3ohl8" path="res://Scenes/Settings.tscn" id="4_svktx"]
 
 [node name="PauseUI" type="CanvasLayer" unique_id=1141652004]
+process_mode = 3
 script = ExtResource("1_iqps6")
 metadata/_edit_vertical_guides_ = [585.0]
 
 [node name="PauseMenu" type="Control" parent="." unique_id=1620103599]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -107,10 +107,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="PauseButton" type="Button" parent="." unique_id=1929380044]
 custom_minimum_size = Vector2(80, 0)
-offset_left = 54.0
-offset_top = 57.0
-offset_right = 252.15
-offset_bottom = 220.28998
+offset_left = 48.0
+offset_top = 40.66
+offset_right = 348.0
+offset_bottom = 181.29999
 theme = ExtResource("2_svktx")
 theme_override_font_sizes/font_size = 61
 text = "||"

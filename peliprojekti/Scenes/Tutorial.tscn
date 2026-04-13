@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dvnc16pur4gjv"]
 
-[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://art/Taustat.png" id="1_2o727"]
-[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://art/Stardust.png" id="2_uo1fs"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_2o727"]
+[ext_resource type="Script" uid="uid://cxyvgdcdsot86" path="res://Scenes/Tutorial.cs" id="1_sgy12"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_uo1fs"]
 [ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_7bloo"]
 [ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="4_rlm2d"]
 [ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="5_rlm2d"]
@@ -11,6 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://ddh1ccrjx4eko" path="res://Scenes/LanePicker.tscn" id="9_hxa32"]
 [ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="10_dlght"]
 [ext_resource type="Script" uid="uid://bohhj2hp2nlpu" path="res://Code/Portal.cs" id="11_8i65c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m35rq"]
+atlas = ExtResource("1_2o727")
+region = Rect2(4431, 63, 2037, 2017)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3j26a"]
 size = Vector2(386.5, 675)
@@ -22,19 +27,22 @@ size = Vector2(63.455513, 91.937164)
 size = Vector2(20.221237, 20)
 
 [node name="Tutorial" type="Node2D" unique_id=1201764242]
+script = ExtResource("1_sgy12")
+
+[node name="GradientBG" type="CanvasLayer" parent="." unique_id=769035163]
+layer = -100
+
+[node name="Sprite2D" type="TextureRect" parent="GradientBG" unique_id=2025980436]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(61.265, 1.005)
+texture = SubResource("AtlasTexture_m35rq")
+expand_mode = 1
 
 [node name="Backgrounds" type="Node2D" parent="." unique_id=344995140]
-
-[node name="Background" type="Parallax2D" parent="Backgrounds" unique_id=1775388817]
-scroll_scale = Vector2(0, 0)
-follow_viewport = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Background" unique_id=62161516]
-position = Vector2(1041.0001, 305)
-scale = Vector2(23.47, 0.385)
-texture = ExtResource("1_2o727")
-region_enabled = true
-region_rect = Rect2(4473, 0, 1911, 2048)
 
 [node name="BackgroundStars" type="Parallax2D" parent="Backgrounds" unique_id=1323061386]
 scale = Vector2(1, 1.57)
@@ -59,6 +67,23 @@ scale = Vector2(1.23, 1.23)
 texture = ExtResource("2_uo1fs")
 region_enabled = true
 region_rect = Rect2(0, 1023, 1023, 429)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=1979585810]
+modulate = Color(1, 1, 1, 0.6156863)
+position = Vector2(0, 449.11)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_uo1fs")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=1616290537]
+modulate = Color(1, 1, 1, 0.5921569)
+texture_repeat = 2
+position = Vector2(554.85, 700.04)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_uo1fs")
+region_enabled = true
+region_rect = Rect2(0, 0, 1023, 297)
 
 [node name="BackgroundStars2" type="Parallax2D" parent="Backgrounds" unique_id=131652080]
 scroll_scale = Vector2(0.15, 0.15)
@@ -99,7 +124,6 @@ _normalSpeed = 200.0
 collision_layer = 0
 collision_mask = 8
 script = ExtResource("4_rlm2d")
-_healthLost = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LevelMover/DeadZone" unique_id=1490956568]
 position = Vector2(-265.25, 327)
@@ -333,3 +357,15 @@ script = ExtResource("11_8i65c")
 position = Vector2(5367.5, 277)
 scale = Vector2(22.6, 71.72)
 shape = SubResource("RectangleShape2D_dlght")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=833349624]
+
+[node name="BackButton" type="Button" parent="CanvasLayer" unique_id=936414121]
+offset_left = 49.35
+offset_top = 41.29
+offset_right = 348.49002
+offset_bottom = 182.92001
+theme = ExtResource("7_x7a1n")
+text = "BACK"
+
+[connection signal="pressed" from="CanvasLayer/BackButton" to="." method="OnBackButtonPressed"]

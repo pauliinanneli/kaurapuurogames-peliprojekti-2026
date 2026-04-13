@@ -23,9 +23,13 @@ run/main_scene="uid://cuscp5aotr6hs"
 config/features=PackedStringArray("4.6", "C#", "Mobile")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://v6h56v61ohpp"
+
 [autoload]
 
-GameManager="*uid://ds5id0x4jd0c4"
+GameManager="*uid://d3bai3x0464sf"
 
 [display]
 

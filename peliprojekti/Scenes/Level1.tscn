@@ -16,7 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://405u8ltkiqk6" path="res://Scenes/BlackHole.tscn" id="12_rpty4"]
 [ext_resource type="PackedScene" uid="uid://fw8wifrnjgqu" path="res://Scenes/DieUI.tscn" id="13_6jj8j"]
 [ext_resource type="PackedScene" uid="uid://c7bisqd2s2fim" path="res://Scenes/Meteor.tscn" id="15_ubfni"]
-[ext_resource type="AudioStream" uid="uid://bmb47cbun48oo" path="res://Audio/Flyingsound.wav" id="17_0wsr5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wsr5"]
+atlas = ExtResource("3_jghel")
+region = Rect2(21, 21, 1932, 2016)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t3or0"]
 size = Vector2(386.5, 675)
@@ -30,18 +33,22 @@ size = Vector2(90.99473, 91.937164)
 [node name="Level1" type="Node2D" unique_id=2140551516]
 script = ExtResource("1_ug0sv")
 
+[node name="GradientBG" type="CanvasLayer" parent="." unique_id=1139275070]
+layer = -100
+
+[node name="Sprite2D" type="TextureRect" parent="GradientBG" unique_id=198792430]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -412.17
+offset_right = -412.17004
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(61.265, 1.005)
+texture = SubResource("AtlasTexture_0wsr5")
+expand_mode = 1
+
 [node name="Backgrounds" type="Node2D" parent="." unique_id=1544963235]
-
-[node name="Background" type="Parallax2D" parent="Backgrounds" unique_id=1917256133]
-scroll_scale = Vector2(0, 0)
-follow_viewport = false
-
-[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/Background" unique_id=971174430]
-position = Vector2(831.39, 340)
-scale = Vector2(23.47, 0.385)
-texture = ExtResource("3_jghel")
-region_enabled = true
-region_rect = Rect2(0, 0, 2048, 2048)
 
 [node name="BackgroundStars" type="Parallax2D" parent="Backgrounds" unique_id=433458029]
 scale = Vector2(1, 1.57)
@@ -61,6 +68,14 @@ region_rect = Rect2(0, 0, 1023, 297)
 [node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=226133395]
 modulate = Color(1, 1, 1, 0.5803922)
 position = Vector2(96.68, 357.43)
+scale = Vector2(1.23, 1.23)
+texture = ExtResource("2_slnnj")
+region_enabled = true
+region_rect = Rect2(0, 1023, 1023, 429)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=1442962123]
+modulate = Color(1, 1, 1, 0.5803922)
+position = Vector2(96.68, 629.67)
 scale = Vector2(1.23, 1.23)
 texture = ExtResource("2_slnnj")
 region_enabled = true
@@ -93,6 +108,15 @@ modulate = Color(1, 1, 1, 0.5882353)
 position = Vector2(245.92, 373.9)
 rotation = 3.1415927
 scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_slnnj")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1935096790]
+modulate = Color(1, 1, 1, 0.5764706)
+texture_repeat = 2
+position = Vector2(599.92, 1294.93)
+scale = Vector2(1.37, 1.37)
 texture = ExtResource("2_slnnj")
 region_enabled = true
 region_rect = Rect2(0, 660, 1023, 363)
@@ -1034,8 +1058,3 @@ shape = SubResource("RectangleShape2D_2h8qs")
 [node name="PauseUI" parent="." unique_id=1141652004 instance=ExtResource("11_2h8qs")]
 
 [node name="DieUI" parent="." unique_id=210363600 instance=ExtResource("13_6jj8j")]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=1670532907]
-stream = ExtResource("17_0wsr5")
-autoplay = true
-bus = &"LevelBGsound"

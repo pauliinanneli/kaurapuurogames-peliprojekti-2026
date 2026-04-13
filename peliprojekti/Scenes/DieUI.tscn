@@ -72,7 +72,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1261554506]
 stream = ExtResource("4_lenoj")
-bus = &"Death Sound"
+volume_db = 7.263
+bus = &"Effects"
 
 [connection signal="pressed" from="DieMenu/ColorRect/QuitButton" to="." method="OnQuitPressed"]
 [connection signal="pressed" from="DieMenu/ColorRect/RestartButton" to="." method="OnRestartPressed"]

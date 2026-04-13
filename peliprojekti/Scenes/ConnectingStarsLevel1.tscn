@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://btnqstlx2j8jt" path="res://Code/ConnectStar.cs" id="2_j8oic"]
 [ext_resource type="Texture2D" uid="uid://vglk7vb43o02" path="res://Art/ConnectingStar.png" id="2_qnmmg"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="5_xiqrn"]
+[ext_resource type="AudioStream" uid="uid://ut6fg0dqyvxi" path="res://Audio/CollectStardust.wav" id="6_ylv75"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_14rk4"]
 atlas = ExtResource("1_foggk")
@@ -22,9 +23,10 @@ fill_from = Vector2(0.47863248, 0.47863248)
 [sub_resource type="CircleShape2D" id="CircleShape2D_xuaeq"]
 radius = 38.554916
 
-[node name="ConnectingStars" type="Node2D" unique_id=1890405732 node_paths=PackedStringArray("_instructionLabel")]
+[node name="ConnectingStars" type="Node2D" unique_id=1890405732 node_paths=PackedStringArray("_instructionLabel", "_sound")]
 script = ExtResource("1_xiqrn")
 _instructionLabel = NodePath("CanvasLayer/InstructionLabel")
+_sound = NodePath("AudioStreamPlayer")
 metadata/_edit_vertical_guides_ = [585.0, 961.0]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=719420876]
@@ -458,3 +460,7 @@ default_color = Color(1, 0.9764706, 0.92941177, 1)
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2142099165]
+stream = ExtResource("6_ylv75")
+bus = &"Effects"

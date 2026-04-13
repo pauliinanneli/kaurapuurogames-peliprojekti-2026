@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bekleny1uwets" path="res://Code/BlackHole.cs" id="1_rc0iu"]
 [ext_resource type="Texture2D" uid="uid://drsirfj6ram2y" path="res://Art/Musta-aukko3.png" id="2_rc0iu"]
+[ext_resource type="AudioStream" uid="uid://dep5718cid3hi" path="res://Audio/BlackHole.wav" id="3_5r7v0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bntxl"]
+radius = 7.5375423
 
 [sub_resource type="Animation" id="Animation_rc0iu"]
 resource_name = "Idle"
@@ -67,7 +69,7 @@ _data = {
 &"RESET": SubResource("Animation_5r7v0")
 }
 
-[node name="BlackHole" type="Area2D" unique_id=1563931321]
+[node name="BlackHole" type="Area2D" unique_id=1563931321 node_paths=PackedStringArray("_audioClip")]
 collision_mask = 2
 gravity_space_override = 3
 gravity_point = true
@@ -76,6 +78,7 @@ gravity = 1000.0
 linear_damp_space_override = 3
 linear_damp = 5.0
 script = ExtResource("1_rc0iu")
+_audioClip = NodePath("AudioStreamPlayer")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1989875380]
 scale = Vector2(0.6, 0.6)
@@ -84,9 +87,14 @@ region_enabled = true
 region_rect = Rect2(7539, 0, 2373, 2394)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1267503126]
+position = Vector2(79, -11)
 scale = Vector2(92.75, 189.51)
 shape = SubResource("CircleShape2D_bntxl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=745361787]
 libraries/ = SubResource("AnimationLibrary_oek00")
 autoplay = &"Idle"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="." unique_id=159555552]
+stream = ExtResource("3_5r7v0")
+bus = &"Effects"
