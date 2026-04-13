@@ -1,0 +1,178 @@
+/* Perusasetuksia */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* Fontti, voi vaihtaa */
+}
+
+/* Headeri pysyy ylhäällä scrollatessa */
+header {
+    position: sticky;
+    top: 0; /* Yläpalkki jää ns. ylös */
+    position: relative;
+}
+
+/* Id:lle smoothi scrollaus */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Säädöt menupalkille */
+/* HUOM! Linkit = Menupalkin klikattavat kohdat eli Team Trailer Home ja Download */
+ul {
+    display: flex;  /* Linkit vierekkäin */
+    justify-content: center; /* Tasaa näppäimet */
+    align-items: center; /* Keskittää linkit pystysuunnassa */
+    gap: 20px; /* Väli linkkien välissä */
+    flex-wrap: wrap; /* Linkit siirtyy mikäli ikkuna pienenee */
+
+    list-style: none; /* Poistaa pallot linkeistä */
+    padding: 20px 0; /* */
+    margin: 0; /* */
+
+    background-color: #5d4b8e; /* Taustaväri, sama mitä käytettiin pelissä taustana */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Pikkusen varjoa, voi halutessaan muokata */
+}
+
+/* Linkkien näppäimien säädöt */
+/* Poistaa alleviivaukset ja samalla siisti valkoinen tausta */
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+
+    min-width: 110px; /* Tuskin näppäimien sisältö muuttuu, mutta tällä tasakokoiset napit */
+    text-align: center; /* Ja teksti keskelle */
+}
+
+/* Hoveri linkki-napeille */
+a:hover {
+    background-color: #ddd;
+}
+
+/* Sivun osioiden säädöt */
+section {
+    min-height: 100vh; /* Täyttää koko ruudun eli kaikki ei näy ns. yhdellä sivulla */
+
+    display: flex; /* Osiot pysyy keskellä, keskitys vaakasuunnassa */
+    justify-content: center;
+
+    align-items: center; /* Osiot siistin kokoiset, keskitys pystysuunnassa*/
+    padding: 20px;
+}
+
+/* Laatikoiden säädöt */
+.content-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 900px; /* Maksimileveys laatikoille */
+    width: 100%;
+    overflow-x: auto;
+
+    text-align: center; /* Teksti laatikon keskelle */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Pientä varjostusta laatikoille */
+}
+
+footer {
+    background-color: white;
+    padding: 30px 20px;
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-images img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+/* Team */
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.team-member {
+    width: 140px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    ul {
+        gap: 10px;
+    }
+
+    a {
+        min-width: auto;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+}
+
+.lang-switch {
+    text-align: right;
+    padding: 10px 20px;
+    background-color: #5d4b8e;
+}
+
+.lang-switch button {
+    background-color: white;
+    border: none;
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.lang-switch button:hover {
+    background-color: #ddd;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+}
+
+/* Osioiden taustavärit, laitoin vain jotkut, muokataan tarvittaessa ennen julkaisua */
+#home { background-color: #f4f4f4; }
+#trailer { background-color: #ddd; }
+#team { background-color: #bbb; }
+#download { background-color: #999; }
+#portal { background-color: #5d4b8e;}
