@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dbhnnqshgh1vd" path="res://Code/ConnectingStars.cs" id="1_arv81"]
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="2_2mlle"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="3_pcom7"]
+[ext_resource type="Script" uid="uid://dtylw7pk4havt" path="res://Code/CenterConnectStars.cs" id="4_pcom7"]
 [ext_resource type="Script" uid="uid://btnqstlx2j8jt" path="res://Code/ConnectStar.cs" id="4_qs7ii"]
 [ext_resource type="Texture2D" uid="uid://vglk7vb43o02" path="res://Art/ConnectingStar.png" id="5_jre3h"]
 [ext_resource type="AudioStream" uid="uid://ut6fg0dqyvxi" path="res://Audio/CollectStardust.wav" id="6_2mlle"]
@@ -63,6 +64,7 @@ text = "INSTRUCTIONCONNECT"
 [node name="Leijona" type="Node2D" parent="." unique_id=1855158800]
 position = Vector2(443.02, 67.37)
 scale = Vector2(1.17, 1.17)
+script = ExtResource("4_pcom7")
 
 [node name="Star0" type="Area2D" parent="Leijona" unique_id=770518429 node_paths=PackedStringArray("_light")]
 position = Vector2(-93.21, 110.5)
