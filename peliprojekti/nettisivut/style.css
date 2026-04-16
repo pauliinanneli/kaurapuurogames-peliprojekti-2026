@@ -1,0 +1,193 @@
+/* Perusasetuksia - MOBIILI ENSIN */
+body {
+    margin: 0; /* Poistetaan selaimen oletusmarginaalit */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Pehmeä liukuminen ankkurilinkkeihin */
+}
+
+header {
+    position: relative; /* Mahdollistaa logon absoluuttisen sijoittelun sisällä */
+    display: flex;
+    flex-direction: column; /* Mobiililla logo ja nav allekkain */
+    align-items: center;
+    background-color: #5d4b8e;
+}
+
+.header-logo {
+    height: 60px; /* Mobiililla pienempi logo */
+}
+
+.lang-switch {
+    position: absolute; /* Kiinnitetään oikeaan yläkulmaan */
+    top: 10px;
+    right: 10px;
+}
+
+.lang-switch button {
+    background-color: white;
+    border: none;
+    padding: 6px 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer; /* Näyttää käden kursorin napin päällä */
+    margin-left: 10px;
+}
+
+.lang-switch button:hover {
+    background-color: #ddd; /* Harmaa hover-efekti */
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Väli nappien välissä */
+    flex-wrap: wrap; /* Napit rivittyvät jos ei mahdu */
+    list-style: none; /* Poistetaan pallot listan edestä */
+    padding: 10px;
+    margin: 0;
+    background-color: #5d4b8e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Varjo navipalkin alle */
+    width: 100%;
+    box-sizing: border-box; /* Padding lasketaan leveyden sisään */
+}
+
+a {
+    text-decoration: none; /* Poistetaan linkkien alleviivaus */
+    color: black;
+    font-weight: bold;
+    font-size: 13px; /* Mobiililla pienempi fontti */
+    background-color: white;
+    padding: 6px 8px; /* Mobiililla pienempi padding */
+    border-radius: 8px;
+    min-width: 60px; /* Minimileveys, jotta napit ovat tasakokoiset */
+    text-align: center;
+}
+
+a:hover {
+    background-color: #ddd;
+}
+
+section {
+    min-height: 100vh; /* Jokainen osio täyttää koko ruudun */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Sisältö pystysuunnassa keskellä */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-box {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    max-width: 900px; /* Rajoitetaan leveyttä isoilla näytöillä */
+    width: 100%;
+    overflow-x: auto;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: white;
+    padding: 30px 20px;
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Logot rivittyvät pienellä näytöllä */
+}
+
+.footer-images img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Team */
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Jäsenet tasataan ylhäältä */
+    flex-wrap: wrap; /* Mobiililla rivittyvät */
+    gap: 30px;
+}
+
+.team-member {
+    width: 120px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    max-height: 100px;
+    object-fit: cover; /* Kuva täyttää alueen leikkaamalla */
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9; /* Pitää videon oikeassa kuvasuhteessa */
+    border-radius: 10px;
+}
+
+/* Osioiden taustavärit */
+#home { background-color: #f4f4f4; }
+#trailer { background-color: #ddd; }
+#team { background-color: #bbb; }
+#download { background-color: #999; }
+#portal { background-color: #5d4b8e; } /* Sama violetti kuin navigointipalkki */
+
+/* DESKTOP - isommat asetukset kun näyttö on leveämpi kuin 600px */
+@media (min-width: 600px) {
+    .header-logo {
+        height: 80px; /* Isompi logo desktopilla */
+    }
+
+    a {
+        font-size: 20px; /* Isompi fontti desktopilla */
+        padding: 12px 25px;
+        min-width: 110px;
+    }
+
+    ul {
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .content-box {
+        padding: 40px; /* Enemmän tilaa desktopilla */
+    }
+
+    .team-member {
+        width: 140px;
+    }
+
+    .team-member img {
+        width: 120px;
+        max-height: 120px;
+    }
+
+    .footer-images img {
+        width: 100px;
+    }
+}
