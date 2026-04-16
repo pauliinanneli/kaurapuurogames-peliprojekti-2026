@@ -58,4 +58,5 @@ process_material = SubResource("ParticleProcessMaterial_dgtdq")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=26858115]
 stream = ExtResource("4_f0y0n")
+volume_db = 5.613
 bus = &"Effects"
