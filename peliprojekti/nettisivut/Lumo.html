@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Peli projekti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const texts = {
+            fin: {
+                navHome: "Etusivu",
+                navTrailer: "Traileri",
+                navTeam: "Tiimi",
+                navDownload: "Lataa",
+                navPortal: "Portaali",
+
+                homeTitle: "Etusivu",
+                homeText: "Tervetuloa Lumon pariin",
+                homeText2: "Lumo on peli juuri sinulle, joka kaipaat ohjausta työelämässä!",
+                homeText3: "Nappaa tähdestä kiinni ja lähde avaruusmatkalle keräämään tähtienergiaa jotta loisteesi ei sammu,",
+                homeText4: "sekä väistele meteoriitteja avaruudessa samalla kun vastailet kysymyksiin.",
+
+                trailerTitle: "Traileri",
+                trailerText: "Video pelistä",
+
+                teamTitle: "Tiimi",
+
+                downloadTitle: "Lataa",
+                downloadText: "Latauslinkki",
+
+                portalTitle: "Portaali",
+                portalText: "Linkki portaaliin",
+                portalLink: "Siirry portaaliin",
+                role1: "Yhteyshenkilö",
+                role2: "Artisti",
+                role3: "Artisti",
+                role4: "Ohjelmoija",
+                role5: "Ohjelmoija"
+            },
+            en: {
+                navHome: "Home",
+                navTrailer: "Trailer",
+                navTeam: "Team",
+                navDownload: "Download",
+                navPortal: "Portal",
+
+                homeTitle: "Home",
+                homeText: "Welcome to Lumo",
+                homeText2: "Lumo is a game just for you, if you're looking for guidance in working life!",
+                homeText3: "Grab onto a star and embark on a space journey to collect star energy so your glow doesn't fade,",
+                homeText4: "and dodge meteors in space while answering questions.",
+
+                trailerTitle: "Trailer",
+                trailerText: "Video from the game",
+
+                teamTitle: "Team",
+
+                downloadTitle: "Download",
+                downloadText: "Download link",
+
+                portalTitle: "Portal",
+                portalText: "Portal link",
+                portalLink: "Go to portal",
+                role1: "Contact person",
+                role2: "Artist",
+                role3: "Artist",
+                role4: "Programmer",
+                role5: "Programmer"
+            }
+        };
+
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll("[data-key]");
+
+            elements.forEach(el => {
+                const key = el.getAttribute("data-key");
+                el.textContent = texts[lang][key];
+            });
+        }
+        window.onload = () => {
+            setLanguage('fin');
+            window.scrollTo(0, 0);
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="photos/logo.png" alt="Lumo logo" class="header-logo">
+        <div class="lang-switch">
+            <button onclick="setLanguage('fin')">FIN</button>
+            <button onclick="setLanguage('en')">ENG</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" data-key="navHome"></a></li>
+                <li><a href="#trailer" data-key="navTrailer"></a></li>
+                <li><a href="#team" data-key="navTeam"></a></li>
+                <li><a href="#download" data-key="navDownload"></a></li>
+                <li><a href="https://webpages.tuni.fi/25tiko/" target="_blank" data-key="navPortal"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="content-box">
+                <h1 data-key="homeTitle"></h1>
+                <p data-key="homeText"></p>
+                <p data-key="homeText2"></p>
+                <p data-key="homeText3"></p>
+                <p data-key="homeText4"></p>
+            </div>
+        </section>
+        <section id="trailer">
+            <div class="content-box">
+                <h1 data-key="trailerTitle"></h1>
+                <p data-key="trailerText"></p>
+                <div class="video-container">
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/v=OrOmhWZ5kKY&list=RDOrOmhWZ5kKY&start_radio=1"
+                        title="Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write" ;
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        <section id="team">
+            <div class="content-box">
+                <h1 data-key="teamTitle"></h1>
+                <div class="team-container">
+                    <div class="team-member">
+                        <img src="photos/VP.JPG" alt="Jäsen 1">
+                        <p data-key="role1"></p>
+                    </div>
+                    <div class="team-member">
+                        <img src="photos/Oliver.jpeg" alt="Jäsen 2">
+                        <p data-key="role2"></p>
+                    </div>
+                    <div class="team-member">
+                        <img src="photos/Aleksi.JPG" alt="Jäsen 3">
+                        <p data-key="role3"></p>
+                    </div>
+                    <div class="team-member">
+                        <img src="photos/Pauliina.jpg" alt="Jäsen 4">
+                        <p data-key="role4"></p>
+                    </div>
+                    <div class="team-member">
+                        <img src="photos/Tony.jpeg" alt="Jäsen 5">
+                        <p data-key="role5"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="download">
+            <div class="content-box">
+                <h1 data-key="downloadTitle"></h1>
+                <p data-key="downloadText"></p>
+            </div>
+        </section>
+        <section id="portal">
+            <div class="content-box">
+                <h1 data-key="portalTitle"></h1>
+                <a href="https://webpages.tuni.fi/25tiko/" target="_blank" data-key="portalLink"></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-images">
+            <img src="photos/MuusaLogo.png" alt="Muusa logo">
+            <img src="photos/EuLogo.png" alt="Euroopan unionin tunnus">
+        </div>
+    </footer>
+</body>
+
+</html>
