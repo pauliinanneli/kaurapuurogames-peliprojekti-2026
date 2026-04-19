@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bjal1qno5xvd7"
+
+[deps]
+
+files=["res://Language_Texts-InGame/Language.fi.translation", "res://Language_Texts-InGame/Language.en.translation"]
+
+source_file="res://Language_Texts-InGame/Language.csv"
+dest_files=["res://Language_Texts-InGame/Language.fi.translation", "res://Language_Texts-InGame/Language.en.translation"]
+
+[params]
+
+compress=1
+delimiter=1
+unescape_keys=false
+unescape_translations=true

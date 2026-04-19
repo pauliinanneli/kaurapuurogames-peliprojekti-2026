@@ -1,0 +1,371 @@
+[gd_scene format=3 uid="uid://dvnc16pur4gjv"]
+
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_2o727"]
+[ext_resource type="Script" uid="uid://cxyvgdcdsot86" path="res://Code/Tutorial.cs" id="1_sgy12"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_uo1fs"]
+[ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="3_7bloo"]
+[ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="4_rlm2d"]
+[ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="5_rlm2d"]
+[ext_resource type="Script" uid="uid://k30hveqr7w2q" path="res://Code/SlowMo.cs" id="6_3j26a"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="7_x7a1n"]
+[ext_resource type="PackedScene" uid="uid://c7bisqd2s2fim" path="res://Scenes/Meteor.tscn" id="8_vv0ms"]
+[ext_resource type="PackedScene" uid="uid://ddh1ccrjx4eko" path="res://Scenes/LanePicker.tscn" id="9_hxa32"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="10_dlght"]
+[ext_resource type="Script" uid="uid://bohhj2hp2nlpu" path="res://Code/Portal.cs" id="11_8i65c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m35rq"]
+atlas = ExtResource("1_2o727")
+region = Rect2(4431, 63, 2037, 2017)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3j26a"]
+size = Vector2(386.5, 675)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7a1n"]
+size = Vector2(63.455513, 91.937164)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlght"]
+size = Vector2(20.221237, 20)
+
+[node name="Tutorial" type="Node2D" unique_id=1201764242]
+script = ExtResource("1_sgy12")
+
+[node name="GradientBG" type="CanvasLayer" parent="." unique_id=769035163]
+layer = -100
+
+[node name="Sprite2D" type="TextureRect" parent="GradientBG" unique_id=2025980436]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(61.265, 1.005)
+texture = SubResource("AtlasTexture_m35rq")
+expand_mode = 1
+
+[node name="Backgrounds" type="Node2D" parent="." unique_id=344995140]
+
+[node name="BackgroundStars" type="Parallax2D" parent="Backgrounds" unique_id=1323061386]
+scale = Vector2(1, 1.57)
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1246.02, 0)
+repeat_times = 40
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=67020727]
+modulate = Color(1, 1, 1, 0.5921569)
+texture_repeat = 2
+position = Vector2(554.85, 128.84)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_uo1fs")
+region_enabled = true
+region_rect = Rect2(0, 0, 1023, 297)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=1864821354]
+visible = false
+modulate = Color(1, 1, 1, 0.5803922)
+position = Vector2(96.68, 357.43)
+scale = Vector2(1.23, 1.23)
+texture = ExtResource("2_uo1fs")
+region_enabled = true
+region_rect = Rect2(0, 1023, 1023, 429)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=1979585810]
+modulate = Color(1, 1, 1, 0.6156863)
+position = Vector2(0, 449.11)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_uo1fs")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=1616290537]
+modulate = Color(1, 1, 1, 0.5921569)
+texture_repeat = 2
+position = Vector2(554.85, 700.04)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_uo1fs")
+region_enabled = true
+region_rect = Rect2(0, 0, 1023, 297)
+
+[node name="BackgroundStars2" type="Parallax2D" parent="Backgrounds" unique_id=131652080]
+scroll_scale = Vector2(0.15, 0.15)
+repeat_size = Vector2(1391.68, 0)
+repeat_times = 40
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1601981841]
+visible = false
+modulate = Color(1, 1, 1, 0.5764706)
+texture_repeat = 2
+position = Vector2(599.92, 274.47)
+scale = Vector2(1.37, 1.37)
+texture = ExtResource("2_uo1fs")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1529080617]
+modulate = Color(1, 1, 1, 0.6156863)
+position = Vector2(0, 779.76)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_uo1fs")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1601567027]
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(245.92, 373.9)
+rotation = 3.1415927
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_uo1fs")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="LevelMover" parent="." unique_id=1321373785 instance=ExtResource("3_7bloo")]
+_normalSpeed = 200.0
+
+[node name="DeadZone" type="Area2D" parent="LevelMover" unique_id=622830969]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("4_rlm2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelMover/DeadZone" unique_id=1490956568]
+position = Vector2(-265.25, 327)
+shape = SubResource("RectangleShape2D_3j26a")
+
+[node name="Collectible" type="Node2D" parent="." unique_id=1191315692]
+position = Vector2(616, -5)
+
+[node name="StardustCollectible" parent="Collectible" unique_id=512965182 instance=ExtResource("5_rlm2d")]
+position = Vector2(975, 432)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible2" parent="Collectible" unique_id=749473421 instance=ExtResource("5_rlm2d")]
+position = Vector2(1266, 210)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible3" parent="Collectible" unique_id=1490759200 instance=ExtResource("5_rlm2d")]
+position = Vector2(1643, 317)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible4" parent="Collectible" unique_id=1793667814 instance=ExtResource("5_rlm2d")]
+position = Vector2(511.25, 252.19)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible5" parent="Collectible" unique_id=1908106043 instance=ExtResource("5_rlm2d")]
+position = Vector2(2133, 541)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible6" parent="Collectible" unique_id=1732811688 instance=ExtResource("5_rlm2d")]
+position = Vector2(3138, 120)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible7" parent="Collectible" unique_id=767700930 instance=ExtResource("5_rlm2d")]
+position = Vector2(2820, 482)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible8" parent="Collectible" unique_id=1218100992 instance=ExtResource("5_rlm2d")]
+position = Vector2(149, 293)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible9" parent="Collectible" unique_id=1564702045 instance=ExtResource("5_rlm2d")]
+position = Vector2(-129, 425)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible10" parent="Collectible" unique_id=1799855720 instance=ExtResource("5_rlm2d")]
+position = Vector2(3316, 491)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible11" parent="Collectible" unique_id=768152760 instance=ExtResource("5_rlm2d")]
+position = Vector2(3503, 220.00003)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible12" parent="Collectible" unique_id=562957341 instance=ExtResource("5_rlm2d")]
+position = Vector2(3861, 411)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible13" parent="Collectible" unique_id=1685184543 instance=ExtResource("5_rlm2d")]
+position = Vector2(2589, 400)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible14" parent="Collectible" unique_id=1963864554 instance=ExtResource("5_rlm2d")]
+position = Vector2(2306, 102)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible15" parent="Collectible" unique_id=216619104 instance=ExtResource("5_rlm2d")]
+position = Vector2(4101, 146)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible16" parent="Collectible" unique_id=1858202537 instance=ExtResource("5_rlm2d")]
+position = Vector2(1352, 510)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible17" parent="Collectible" unique_id=2136667853 instance=ExtResource("5_rlm2d")]
+position = Vector2(2685, 107)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible18" parent="Collectible" unique_id=658838327 instance=ExtResource("5_rlm2d")]
+position = Vector2(972, 140)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="StardustCollectible19" parent="Collectible" unique_id=1800193771 instance=ExtResource("5_rlm2d")]
+position = Vector2(1099, 63)
+scale = Vector2(0.82, 0.82)
+_lostGlow = 0.0
+
+[node name="SlowMo" type="Area2D" parent="." unique_id=1458142697]
+position = Vector2(616, -5)
+collision_mask = 2
+script = ExtResource("6_3j26a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlowMo" unique_id=1989529037]
+position = Vector2(466, 340)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_x7a1n")
+
+[node name="SlowMo2" type="Area2D" parent="." unique_id=1161680358]
+position = Vector2(616, -5)
+collision_mask = 2
+script = ExtResource("6_3j26a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlowMo2" unique_id=869347048]
+position = Vector2(1822.9999, 337)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_x7a1n")
+
+[node name="Meteors" type="Node2D" parent="." unique_id=748162239]
+position = Vector2(421, -5)
+
+[node name="Meteor" parent="Meteors" unique_id=405699312 instance=ExtResource("8_vv0ms")]
+position = Vector2(2547, 366)
+collision_layer = 4
+_floatAmplitude = 250.0
+_floatSpeed = 1.3
+
+[node name="Meteor2" parent="Meteors" unique_id=1569209589 instance=ExtResource("8_vv0ms")]
+position = Vector2(3082, 287)
+collision_layer = 4
+_floatSpeed = 1.7
+
+[node name="CollectLabel" type="Label" parent="." unique_id=806452419]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 1026.0
+offset_top = 285.0
+offset_right = 1736.0
+offset_bottom = 337.00012
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("7_x7a1n")
+text = "TUTOLINE_01"
+
+[node name="AvoidLabel" type="Label" parent="." unique_id=315970056]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 2424.28
+offset_top = 285.0
+offset_right = 2891.0
+offset_bottom = 337.00012
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("7_x7a1n")
+text = "TUTOLINE_02"
+
+[node name="QuestionLabel" type="Label" parent="." unique_id=107002935]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 3678.569
+offset_top = 285.0
+offset_right = 4729.5703
+offset_bottom = 337.00012
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("7_x7a1n")
+text = "TUTOLINE_03"
+
+[node name="Lanedivider" parent="." unique_id=785505358 instance=ExtResource("9_hxa32")]
+position = Vector2(4853.89, -0.13)
+
+[node name="Answers" type="Node2D" parent="Lanedivider" unique_id=1388874711]
+position = Vector2(63.77, 0)
+
+[node name="Edistäjä" type="Label" parent="Lanedivider/Answers" unique_id=1668184589]
+offset_top = 91.0
+offset_right = 384.0
+offset_bottom = 165.0
+theme = ExtResource("7_x7a1n")
+theme_override_fonts/font = ExtResource("10_dlght")
+theme_override_font_sizes/font_size = 25
+text = "TUTOANS_01"
+
+[node name="Etenijä" type="Label" parent="Lanedivider/Answers" unique_id=2113507538]
+offset_top = 310.41
+offset_right = 384.0
+offset_bottom = 384.4099
+theme = ExtResource("7_x7a1n")
+theme_override_fonts/font = ExtResource("10_dlght")
+theme_override_font_sizes/font_size = 25
+text = "TUTOANS_02"
+
+[node name="Etsijä" type="Label" parent="Lanedivider/Answers" unique_id=153870131]
+offset_top = 529.69
+offset_right = 384.0
+offset_bottom = 603.69
+theme = ExtResource("7_x7a1n")
+theme_override_fonts/font = ExtResource("10_dlght")
+theme_override_font_sizes/font_size = 25
+text = "TUTOANS_03"
+
+[node name="SlowMo3" type="Area2D" parent="." unique_id=1991856302]
+position = Vector2(616, -5)
+collision_mask = 2
+script = ExtResource("6_3j26a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SlowMo3" unique_id=5027255]
+position = Vector2(3396, 332)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_x7a1n")
+
+[node name="Portal" type="Area2D" parent="." unique_id=243907926]
+collision_mask = 2
+script = ExtResource("11_8i65c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal" unique_id=852360779]
+position = Vector2(5367.5, 277)
+scale = Vector2(22.6, 71.72)
+shape = SubResource("RectangleShape2D_dlght")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=833349624]
+
+[node name="BackButton" type="Button" parent="CanvasLayer" unique_id=936414121]
+offset_left = 49.35
+offset_top = 41.29
+offset_right = 348.49002
+offset_bottom = 182.92001
+theme = ExtResource("7_x7a1n")
+text = "BACK"
+
+[connection signal="pressed" from="CanvasLayer/BackButton" to="." method="OnBackButtonPressed"]

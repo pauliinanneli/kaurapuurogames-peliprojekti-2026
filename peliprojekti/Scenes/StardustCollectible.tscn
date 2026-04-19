@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dk0vq0mvfcapk"]
+
+[ext_resource type="Script" uid="uid://b323v7uw4d8ln" path="res://Code/StardustCollectible.cs" id="1_57jof"]
+[ext_resource type="Texture2D" uid="uid://cprlw8rj6xcm5" path="res://Art/Starenergy.png" id="2_57jof"]
+[ext_resource type="AudioStream" uid="uid://ut6fg0dqyvxi" path="res://Audio/CollectStardust.wav" id="3_t5km8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57jof"]
+radius = 38.118237
+
+[sub_resource type="Animation" id="Animation_57jof"]
+resource_name = "Pulsing"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("art:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 2.8284268, 1),
+"update": 0,
+"values": [Vector2(0.3, 0.3), Vector2(0.4, 0.4), Vector2(0.3, 0.3)]
+}
+
+[sub_resource type="Animation" id="Animation_t5km8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("art:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3, 0.3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b5txl"]
+_data = {
+&"Pulsing": SubResource("Animation_57jof"),
+&"RESET": SubResource("Animation_t5km8")
+}
+
+[node name="StardustCollectible" type="Area2D" unique_id=512965182 node_paths=PackedStringArray("_audioClip", "_sprite")]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_57jof")
+_audioClip = NodePath("AudioStreamPlayer2D")
+_sprite = NodePath("art")
+
+[node name="art" type="Sprite2D" parent="." unique_id=78585798]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_57jof")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1560220292]
+shape = SubResource("CircleShape2D_57jof")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=381124574]
+libraries/ = SubResource("AnimationLibrary_b5txl")
+autoplay = &"Pulsing"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=691501939]
+stream = ExtResource("3_t5km8")
+bus = &"Effects"

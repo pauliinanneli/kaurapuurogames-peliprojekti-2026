@@ -1,0 +1,968 @@
+[gd_scene format=3 uid="uid://cu15gapatccdg"]
+
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_0plju"]
+[ext_resource type="Script" uid="uid://dyosw02robeb2" path="res://Code/LevelReset.cs" id="1_sgc6j"]
+[ext_resource type="Texture2D" uid="uid://rrpqked7gyyr" path="res://Art/Stardust.png" id="2_ms0wi"]
+[ext_resource type="PackedScene" uid="uid://405u8ltkiqk6" path="res://Scenes/BlackHole.tscn" id="3_ms0wi"]
+[ext_resource type="PackedScene" uid="uid://nx7nhhkts8hs" path="res://Scenes/LevelMover.tscn" id="4_n3cqh"]
+[ext_resource type="Script" uid="uid://d2orcuaicd7g1" path="res://Code/DeadZone.cs" id="5_jriq2"]
+[ext_resource type="PackedScene" uid="uid://dk0vq0mvfcapk" path="res://Scenes/StardustCollectible.tscn" id="6_jriq2"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="7_ejprb"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="8_2jwna"]
+[ext_resource type="PackedScene" uid="uid://ddh1ccrjx4eko" path="res://Scenes/LanePicker.tscn" id="8_au75x"]
+[ext_resource type="Script" uid="uid://dyetpnay0rqmh" path="res://Code/Gate.cs" id="9_62f1r"]
+[ext_resource type="Script" uid="uid://k30hveqr7w2q" path="res://Code/SlowMo.cs" id="10_1je60"]
+[ext_resource type="PackedScene" uid="uid://c7bisqd2s2fim" path="res://Scenes/Meteor.tscn" id="11_au75x"]
+[ext_resource type="PackedScene" uid="uid://cx8iaunu8h0n" path="res://Scenes/HUD.tscn" id="12_ycmr1"]
+[ext_resource type="PackedScene" uid="uid://cmpbuj530sgae" path="res://Scenes/PauseUI.tscn" id="13_2jwna"]
+[ext_resource type="PackedScene" uid="uid://fw8wifrnjgqu" path="res://Scenes/DieUI.tscn" id="14_sgc6j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xx40l"]
+atlas = ExtResource("1_0plju")
+region = Rect2(2184, 21, 2037, 2037)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehjmi"]
+size = Vector2(386.5, 675)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ycmr1"]
+size = Vector2(312, 178.31761)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2jwna"]
+size = Vector2(90.99473, 91.937164)
+
+[node name="Level2" type="Node2D" unique_id=1567263960]
+script = ExtResource("1_sgc6j")
+
+[node name="GradientBG" type="CanvasLayer" parent="." unique_id=118828433]
+layer = -100
+
+[node name="Sprite2D" type="TextureRect" parent="GradientBG" unique_id=1606883576]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -412.17
+offset_right = -412.17004
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(61.265, 1.005)
+texture = SubResource("AtlasTexture_xx40l")
+expand_mode = 1
+
+[node name="Backgrounds" type="Node2D" parent="." unique_id=883925433]
+
+[node name="BackgroundStars" type="Parallax2D" parent="Backgrounds" unique_id=1845950747]
+scale = Vector2(1, 1.57)
+scroll_scale = Vector2(0.2, 0.2)
+scroll_offset = Vector2(0, 256.99997)
+repeat_size = Vector2(1246.02, 0)
+repeat_times = 40
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=2062491007]
+modulate = Color(1, 1, 1, 0.5921569)
+texture_repeat = 2
+position = Vector2(548.19, 65.11)
+scale = Vector2(1.26, 1.26)
+texture = ExtResource("2_ms0wi")
+region_enabled = true
+region_rect = Rect2(0, 0, 1023, 297)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=1784322994]
+modulate = Color(1, 1, 1, 0.5803922)
+position = Vector2(96.68, 122.3)
+scale = Vector2(1.23, 1.23)
+texture = ExtResource("2_ms0wi")
+region_enabled = true
+region_rect = Rect2(0, 1023, 1023, 429)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Backgrounds/BackgroundStars" unique_id=815867537]
+modulate = Color(1, 1, 1, 0.5921569)
+texture_repeat = 2
+position = Vector2(548.19, 609.39)
+scale = Vector2(1.26, 1.26)
+texture = ExtResource("2_ms0wi")
+region_enabled = true
+region_rect = Rect2(0, 0, 1023, 297)
+
+[node name="BackgroundStars2" type="Parallax2D" parent="Backgrounds" unique_id=1006857603]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1391.68, 0)
+repeat_times = 40
+
+[node name="Sprite2D" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=131033288]
+modulate = Color(1, 1, 1, 0.5764706)
+texture_repeat = 2
+position = Vector2(616.72, 571.77)
+rotation = 3.1415927
+scale = Vector2(1.74, 1.74)
+texture = ExtResource("2_ms0wi")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=7607946]
+modulate = Color(1, 1, 1, 0.6156863)
+position = Vector2(0, 161.58)
+scale = Vector2(1.86, 1.86)
+texture = ExtResource("2_ms0wi")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1653028413]
+modulate = Color(1, 1, 1, 0.5882353)
+position = Vector2(244.77, 713.35)
+rotation = 3.1415927
+scale = Vector2(1.36, 1.36)
+texture = ExtResource("2_ms0wi")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Backgrounds/BackgroundStars2" unique_id=1022842876]
+modulate = Color(1, 1, 1, 0.5764706)
+texture_repeat = 2
+position = Vector2(616.72, 816.22)
+rotation = 3.1415927
+scale = Vector2(1.74, 1.74)
+texture = ExtResource("2_ms0wi")
+region_enabled = true
+region_rect = Rect2(0, 660, 1023, 363)
+
+[node name="BlackHole" parent="." unique_id=1563931321 instance=ExtResource("3_ms0wi")]
+position = Vector2(18118, 332)
+scale = Vector2(0.48, 0.48)
+NextScenePath = "res://Scenes/ConnectingStarsLevel2.tscn"
+
+[node name="LevelMover" parent="." unique_id=1321373785 instance=ExtResource("4_n3cqh")]
+_normalSpeed = 180.0
+
+[node name="DeadZone" type="Area2D" parent="LevelMover" unique_id=202483484]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("5_jriq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelMover/DeadZone" unique_id=575215501]
+position = Vector2(-265.25, 327)
+shape = SubResource("RectangleShape2D_ehjmi")
+
+[node name="StardustCollectibles" type="Node2D" parent="." unique_id=447858107]
+position = Vector2(115, 13)
+
+[node name="StardustCollectible" parent="StardustCollectibles" unique_id=512965182 instance=ExtResource("6_jriq2")]
+position = Vector2(615.00006, 203.00003)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible2" parent="StardustCollectibles" unique_id=1219051240 instance=ExtResource("6_jriq2")]
+position = Vector2(956, 399)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible3" parent="StardustCollectibles" unique_id=125507239 instance=ExtResource("6_jriq2")]
+position = Vector2(1138, 98.99997)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible4" parent="StardustCollectibles" unique_id=1709694770 instance=ExtResource("6_jriq2")]
+position = Vector2(1642.0001, 539)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible5" parent="StardustCollectibles" unique_id=566776249 instance=ExtResource("6_jriq2")]
+position = Vector2(2037, 258)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible6" parent="StardustCollectibles" unique_id=1251110280 instance=ExtResource("6_jriq2")]
+position = Vector2(2525, 159)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible7" parent="StardustCollectibles" unique_id=1136666298 instance=ExtResource("6_jriq2")]
+position = Vector2(2932, 230.00003)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible8" parent="StardustCollectibles" unique_id=716402721 instance=ExtResource("6_jriq2")]
+position = Vector2(2233, 464)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible9" parent="StardustCollectibles" unique_id=771546429 instance=ExtResource("6_jriq2")]
+position = Vector2(3852, 525.32)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible10" parent="StardustCollectibles" unique_id=1100235921 instance=ExtResource("6_jriq2")]
+position = Vector2(3852.4502, 303.04)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible11" parent="StardustCollectibles" unique_id=1689328352 instance=ExtResource("6_jriq2")]
+position = Vector2(3852.4502, 84)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible12" parent="StardustCollectibles" unique_id=774015291 instance=ExtResource("6_jriq2")]
+position = Vector2(4151, 198)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible13" parent="StardustCollectibles" unique_id=1047809803 instance=ExtResource("6_jriq2")]
+position = Vector2(4489, 309)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible14" parent="StardustCollectibles" unique_id=1599495275 instance=ExtResource("6_jriq2")]
+position = Vector2(4953, 373)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible15" parent="StardustCollectibles" unique_id=1281875521 instance=ExtResource("6_jriq2")]
+position = Vector2(4728, 180.00003)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible16" parent="StardustCollectibles" unique_id=1189583112 instance=ExtResource("6_jriq2")]
+position = Vector2(5101, 612)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible17" parent="StardustCollectibles" unique_id=1309118837 instance=ExtResource("6_jriq2")]
+position = Vector2(5366, 160)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible18" parent="StardustCollectibles" unique_id=1674263692 instance=ExtResource("6_jriq2")]
+position = Vector2(5596, 294)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible19" parent="StardustCollectibles" unique_id=927133531 instance=ExtResource("6_jriq2")]
+position = Vector2(5612, 570)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible20" parent="StardustCollectibles" unique_id=998553771 instance=ExtResource("6_jriq2")]
+position = Vector2(6001, 214)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible21" parent="StardustCollectibles" unique_id=1189715445 instance=ExtResource("6_jriq2")]
+position = Vector2(6641.0005, 227.00002)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible22" parent="StardustCollectibles" unique_id=344205882 instance=ExtResource("6_jriq2")]
+position = Vector2(6233, 482)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible23" parent="StardustCollectibles" unique_id=791003911 instance=ExtResource("6_jriq2")]
+position = Vector2(3131, 561)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible24" parent="StardustCollectibles" unique_id=1765978575 instance=ExtResource("6_jriq2")]
+position = Vector2(7428, 539.32)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible25" parent="StardustCollectibles" unique_id=207045430 instance=ExtResource("6_jriq2")]
+position = Vector2(7428.45, 317.04)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible26" parent="StardustCollectibles" unique_id=1058651381 instance=ExtResource("6_jriq2")]
+position = Vector2(7428.45, 98)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible27" parent="StardustCollectibles" unique_id=1314873262 instance=ExtResource("6_jriq2")]
+position = Vector2(7833, 184.00003)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible28" parent="StardustCollectibles" unique_id=1476667232 instance=ExtResource("6_jriq2")]
+position = Vector2(7989, 461.00003)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible29" parent="StardustCollectibles" unique_id=1521026283 instance=ExtResource("6_jriq2")]
+position = Vector2(8308, 350)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible30" parent="StardustCollectibles" unique_id=1344476151 instance=ExtResource("6_jriq2")]
+position = Vector2(8487, 151)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible31" parent="StardustCollectibles" unique_id=2006203369 instance=ExtResource("6_jriq2")]
+position = Vector2(8718.001, 498)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible32" parent="StardustCollectibles" unique_id=390087972 instance=ExtResource("6_jriq2")]
+position = Vector2(8986, 343)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible33" parent="StardustCollectibles" unique_id=874335077 instance=ExtResource("6_jriq2")]
+position = Vector2(9932, 303)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible34" parent="StardustCollectibles" unique_id=1034789476 instance=ExtResource("6_jriq2")]
+position = Vector2(9287, 139)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible35" parent="StardustCollectibles" unique_id=1506423604 instance=ExtResource("6_jriq2")]
+position = Vector2(9546, 321)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible36" parent="StardustCollectibles" unique_id=640878614 instance=ExtResource("6_jriq2")]
+position = Vector2(10649, 530.32)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible37" parent="StardustCollectibles" unique_id=380932951 instance=ExtResource("6_jriq2")]
+position = Vector2(10649.45, 308.04)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible38" parent="StardustCollectibles" unique_id=1628120928 instance=ExtResource("6_jriq2")]
+position = Vector2(10649.45, 89)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible39" parent="StardustCollectibles" unique_id=549917349 instance=ExtResource("6_jriq2")]
+position = Vector2(10984, 300.00006)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible40" parent="StardustCollectibles" unique_id=1746229930 instance=ExtResource("6_jriq2")]
+position = Vector2(11224, 494.00003)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible41" parent="StardustCollectibles" unique_id=2101232415 instance=ExtResource("6_jriq2")]
+position = Vector2(11405.001, 175)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible42" parent="StardustCollectibles" unique_id=1799695690 instance=ExtResource("6_jriq2")]
+position = Vector2(11603, 359)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible43" parent="StardustCollectibles" unique_id=2030740295 instance=ExtResource("6_jriq2")]
+position = Vector2(11900, 496)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible44" parent="StardustCollectibles" unique_id=326246227 instance=ExtResource("6_jriq2")]
+position = Vector2(12647.001, 389.00003)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible45" parent="StardustCollectibles" unique_id=43852413 instance=ExtResource("6_jriq2")]
+position = Vector2(12065, 220)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible46" parent="StardustCollectibles" unique_id=708628596 instance=ExtResource("6_jriq2")]
+position = Vector2(12443, 195)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible47" parent="StardustCollectibles" unique_id=1562526461 instance=ExtResource("6_jriq2")]
+position = Vector2(14012, 535.32)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible48" parent="StardustCollectibles" unique_id=96444536 instance=ExtResource("6_jriq2")]
+position = Vector2(14012.45, 313.04)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible49" parent="StardustCollectibles" unique_id=1585307271 instance=ExtResource("6_jriq2")]
+position = Vector2(14012.45, 94)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible50" parent="StardustCollectibles" unique_id=1407801241 instance=ExtResource("6_jriq2")]
+position = Vector2(13060, 457)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible51" parent="StardustCollectibles" unique_id=20604285 instance=ExtResource("6_jriq2")]
+position = Vector2(13285, 198)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible52" parent="StardustCollectibles" unique_id=529298494 instance=ExtResource("6_jriq2")]
+position = Vector2(17116, 529.32)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible53" parent="StardustCollectibles" unique_id=1565944740 instance=ExtResource("6_jriq2")]
+position = Vector2(17116.45, 307.04)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible54" parent="StardustCollectibles" unique_id=2037058065 instance=ExtResource("6_jriq2")]
+position = Vector2(17116.45, 88)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible55" parent="StardustCollectibles" unique_id=187798230 instance=ExtResource("6_jriq2")]
+position = Vector2(14295, 308.00006)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible56" parent="StardustCollectibles" unique_id=1176733908 instance=ExtResource("6_jriq2")]
+position = Vector2(14460, 472)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible57" parent="StardustCollectibles" unique_id=270353879 instance=ExtResource("6_jriq2")]
+position = Vector2(14629, 165)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible58" parent="StardustCollectibles" unique_id=756213467 instance=ExtResource("6_jriq2")]
+position = Vector2(14888, 290)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible59" parent="StardustCollectibles" unique_id=108226030 instance=ExtResource("6_jriq2")]
+position = Vector2(15281, 217)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible60" parent="StardustCollectibles" unique_id=1527093405 instance=ExtResource("6_jriq2")]
+position = Vector2(15124, 481)
+scale = Vector2(0.82, 0.82)
+
+[node name="StardustCollectible61" parent="StardustCollectibles" unique_id=285375161 instance=ExtResource("6_jriq2")]
+position = Vector2(16011.001, 143)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible62" parent="StardustCollectibles" unique_id=1731809871 instance=ExtResource("6_jriq2")]
+position = Vector2(15602, 151)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible63" parent="StardustCollectibles" unique_id=1912916869 instance=ExtResource("6_jriq2")]
+position = Vector2(15863, 418)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible64" parent="StardustCollectibles" unique_id=1977467710 instance=ExtResource("6_jriq2")]
+position = Vector2(16144, 460)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="StardustCollectible65" parent="StardustCollectibles" unique_id=1130920465 instance=ExtResource("6_jriq2")]
+position = Vector2(16436, 220.00003)
+scale = Vector2(0.6724, 0.6724)
+
+[node name="Meteors" type="Node2D" parent="." unique_id=584953809]
+
+[node name="Meteor" parent="Meteors" unique_id=405699312 instance=ExtResource("11_au75x")]
+position = Vector2(972, 242)
+collision_layer = 4
+_floatAmplitude = 120.0
+_floatSpeed = 1.3
+
+[node name="Meteor2" parent="Meteors" unique_id=1425216172 instance=ExtResource("11_au75x")]
+position = Vector2(1637, 277)
+collision_layer = 4
+_floatAmplitude = 230.0
+_floatSpeed = 1.5
+_smoothing = 3.0
+
+[node name="Meteor4" parent="Meteors" unique_id=1813736099 instance=ExtResource("11_au75x")]
+position = Vector2(4370, 396)
+collision_layer = 4
+_floatAmplitude = 250.0
+_floatSpeed = 1.5
+_smoothing = 6.0
+
+[node name="Meteor3" parent="Meteors" unique_id=416773598 instance=ExtResource("11_au75x")]
+position = Vector2(2463, 504)
+collision_layer = 4
+_floatSpeed = 1.2
+_smoothing = 3.0
+
+[node name="Meteor5" parent="Meteors" unique_id=869096368 instance=ExtResource("11_au75x")]
+position = Vector2(5105, 205)
+collision_layer = 4
+_floatAmplitude = 140.0
+_floatSpeed = 1.3
+_smoothing = 6.0
+
+[node name="Meteor6" parent="Meteors" unique_id=1561617143 instance=ExtResource("11_au75x")]
+position = Vector2(5849, 432)
+collision_layer = 4
+_floatAmplitude = 170.0
+_floatSpeed = 1.5
+_smoothing = 6.0
+
+[node name="Meteor7" parent="Meteors" unique_id=1073701316 instance=ExtResource("11_au75x")]
+position = Vector2(8077, 266)
+collision_layer = 4
+_floatAmplitude = 200.0
+_floatSpeed = 1.6
+_smoothing = 6.0
+
+[node name="Meteor8" parent="Meteors" unique_id=1296764527 instance=ExtResource("11_au75x")]
+position = Vector2(8662, 385)
+collision_layer = 4
+_floatSpeed = 1.2
+_smoothing = 6.0
+
+[node name="Meteor9" parent="Meteors" unique_id=87141063 instance=ExtResource("11_au75x")]
+position = Vector2(9230, 293)
+collision_layer = 4
+_floatAmplitude = 170.0
+_floatSpeed = 1.5
+_smoothing = 6.0
+
+[node name="Meteor10" parent="Meteors" unique_id=1610222961 instance=ExtResource("11_au75x")]
+position = Vector2(11230, 255)
+collision_layer = 4
+_floatSpeed = 1.5
+_smoothing = 6.0
+
+[node name="Meteor11" parent="Meteors" unique_id=1242156241 instance=ExtResource("11_au75x")]
+position = Vector2(11886, 390)
+collision_layer = 4
+_floatAmplitude = 250.0
+_floatSpeed = 1.7
+_smoothing = 6.0
+
+[node name="Meteor12" parent="Meteors" unique_id=1644111934 instance=ExtResource("11_au75x")]
+position = Vector2(12511, 340)
+collision_layer = 4
+_floatAmplitude = 160.0
+_floatSpeed = 1.2
+_smoothing = 6.0
+
+[node name="Meteor13" parent="Meteors" unique_id=1500655729 instance=ExtResource("11_au75x")]
+position = Vector2(14591, 297)
+collision_layer = 4
+_floatAmplitude = 140.0
+_floatSpeed = 1.5
+_smoothing = 6.0
+
+[node name="Meteor14" parent="Meteors" unique_id=938899080 instance=ExtResource("11_au75x")]
+position = Vector2(15138, 454)
+collision_layer = 4
+_floatAmplitude = 180.0
+_floatSpeed = 1.4
+_smoothing = 6.0
+
+[node name="Meteor15" parent="Meteors" unique_id=671607379 instance=ExtResource("11_au75x")]
+position = Vector2(15707, 358)
+collision_layer = 4
+_floatAmplitude = 180.0
+_floatSpeed = 1.6
+_smoothing = 6.0
+
+[node name="Lanepickers" type="Node2D" parent="." unique_id=289857977]
+
+[node name="Question1" type="Node2D" parent="Lanepickers" unique_id=644345024]
+position = Vector2(-427.54, 0)
+
+[node name="Question1" type="Label" parent="Lanepickers/Question1" unique_id=328981077]
+offset_left = 3122.0
+offset_top = 307.0
+offset_right = 3625.0
+offset_bottom = 377.0
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 29
+text = "KYSYMYS_06"
+
+[node name="LanePicker" parent="Lanepickers/Question1" unique_id=785505358 instance=ExtResource("8_au75x")]
+position = Vector2(3905.93, 0)
+
+[node name="Edistäjä" type="Area2D" parent="Lanepickers/Question1/LanePicker" unique_id=1218841070]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Edistäjä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question1/LanePicker/Edistäjä" unique_id=1528024592]
+position = Vector2(187.11, 99.435)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Etenijä" type="Area2D" parent="Lanepickers/Question1/LanePicker" unique_id=1054802494]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Etenijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question1/LanePicker/Etenijä" unique_id=1685363347]
+position = Vector2(187.11, 324.6625)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Etsijä" type="Area2D" parent="Lanepickers/Question1/LanePicker" unique_id=1511103790]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Etsijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question1/LanePicker/Etsijä" unique_id=611345311]
+position = Vector2(187.11, 545.6912)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Answers" type="Node2D" parent="Lanepickers/Question1" unique_id=1288690800]
+position = Vector2(63.77, 0)
+
+[node name="Edistäjä" type="Label" parent="Lanepickers/Question1/Answers" unique_id=1357067000]
+offset_left = 3829.0
+offset_top = 91.0
+offset_right = 4213.0
+offset_bottom = 165.0
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "EDI_06"
+
+[node name="Etenijä" type="Label" parent="Lanepickers/Question1/Answers" unique_id=246555465]
+offset_left = 3829.0
+offset_top = 310.41
+offset_right = 4213.0
+offset_bottom = 384.4099
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "ETE_06"
+
+[node name="Etsijä" type="Label" parent="Lanepickers/Question1/Answers" unique_id=1599581783]
+offset_left = 3829.0
+offset_top = 529.69
+offset_right = 4213.0
+offset_bottom = 603.69
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "ETS_06"
+
+[node name="SlowMo" type="Area2D" parent="Lanepickers/Question1" unique_id=1828592179]
+collision_mask = 2
+script = ExtResource("10_1je60")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question1/SlowMo" unique_id=1888183961]
+position = Vector2(3344.54, 380)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_2jwna")
+
+[node name="Question2" type="Node2D" parent="Lanepickers" unique_id=46946022]
+position = Vector2(-839.98, 0)
+
+[node name="Answers" type="Node2D" parent="Lanepickers/Question2" unique_id=2082798383]
+
+[node name="Etenijä" type="Label" parent="Lanepickers/Question2/Answers" unique_id=676889431]
+offset_left = 7879.16
+offset_top = 91.0
+offset_right = 8263.162
+offset_bottom = 165.0
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "ETE_07"
+
+[node name="Etsijä" type="Label" parent="Lanepickers/Question2/Answers" unique_id=864172140]
+offset_left = 7879.16
+offset_top = 310.41
+offset_right = 8263.162
+offset_bottom = 384.4099
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "ETS_07"
+
+[node name="Edistäjä" type="Label" parent="Lanepickers/Question2/Answers" unique_id=422578446]
+offset_left = 7879.16
+offset_top = 529.69
+offset_right = 8263.162
+offset_bottom = 603.69
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "EDI_07"
+
+[node name="LanePicker" parent="Lanepickers/Question2" unique_id=1235100171 instance=ExtResource("8_au75x")]
+position = Vector2(7900, 0)
+
+[node name="Etenijä" type="Area2D" parent="Lanepickers/Question2/LanePicker" unique_id=1807636031]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Etenijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question2/LanePicker/Etenijä" unique_id=1173699684]
+position = Vector2(180.85, 99.589386)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Etsijä" type="Area2D" parent="Lanepickers/Question2/LanePicker" unique_id=1210207519]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Etsijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question2/LanePicker/Etsijä" unique_id=1552374710]
+position = Vector2(180.85, 322.76)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Edistäjä" type="Area2D" parent="Lanepickers/Question2/LanePicker" unique_id=836841194]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Edistäjä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question2/LanePicker/Edistäjä" unique_id=2120852195]
+position = Vector2(180.85, 544.0653)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Question2" type="Label" parent="Lanepickers/Question2" unique_id=1622166349]
+offset_left = 7000.0
+offset_top = 307.0
+offset_right = 7701.0
+offset_bottom = 377.0
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 29
+text = "KYSYMYS_07"
+
+[node name="SlowMo" type="Area2D" parent="Lanepickers/Question2" unique_id=1834317133]
+collision_mask = 2
+script = ExtResource("10_1je60")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question2/SlowMo" unique_id=683878822]
+position = Vector2(7331.48, 376)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_2jwna")
+
+[node name="Question3" type="Node2D" parent="Lanepickers" unique_id=339192190]
+position = Vector2(2400, 0)
+
+[node name="Answers" type="Node2D" parent="Lanepickers/Question3" unique_id=224252632]
+
+[node name="Etsijä" type="Label" parent="Lanepickers/Question3/Answers" unique_id=1642795371]
+offset_left = 7879.16
+offset_top = 91.0
+offset_right = 8263.162
+offset_bottom = 165.0
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "ETS_08"
+
+[node name="Edistäjä" type="Label" parent="Lanepickers/Question3/Answers" unique_id=491157442]
+offset_left = 7879.16
+offset_top = 310.41
+offset_right = 8263.162
+offset_bottom = 384.4099
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "EDI_08"
+
+[node name="Etenijä" type="Label" parent="Lanepickers/Question3/Answers" unique_id=2073534353]
+offset_left = 7879.16
+offset_top = 529.69
+offset_right = 8263.162
+offset_bottom = 603.69
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "ETE_08"
+
+[node name="LanePicker" parent="Lanepickers/Question3" unique_id=1138131804 instance=ExtResource("8_au75x")]
+position = Vector2(7900, 0)
+
+[node name="Etsijä" type="Area2D" parent="Lanepickers/Question3/LanePicker" unique_id=618851884]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Etsijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question3/LanePicker/Etsijä" unique_id=31414900]
+position = Vector2(174.12, 99.40236)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Edistäjä" type="Area2D" parent="Lanepickers/Question3/LanePicker" unique_id=977316209]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Edistäjä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question3/LanePicker/Edistäjä" unique_id=38395503]
+position = Vector2(174.12, 322.76)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Etenijä" type="Area2D" parent="Lanepickers/Question3/LanePicker" unique_id=786400821]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Etenijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question3/LanePicker/Etenijä" unique_id=1471560044]
+position = Vector2(174.12, 545.1588)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Question3" type="Label" parent="Lanepickers/Question3" unique_id=1626736395]
+offset_left = 7000.0
+offset_top = 307.0
+offset_right = 7701.0
+offset_bottom = 377.0
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 29
+text = "KYSYMYS_08"
+
+[node name="SlowMo" type="Area2D" parent="Lanepickers/Question3" unique_id=879522260]
+collision_mask = 2
+script = ExtResource("10_1je60")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question3/SlowMo" unique_id=1841301428]
+position = Vector2(7331.48, 376)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_2jwna")
+
+[node name="Question4" type="Node2D" parent="Lanepickers" unique_id=1151575443]
+position = Vector2(5800, 0)
+
+[node name="Answers" type="Node2D" parent="Lanepickers/Question4" unique_id=1538587462]
+
+[node name="Edistäjä" type="Label" parent="Lanepickers/Question4/Answers" unique_id=630361602]
+offset_left = 7879.16
+offset_top = 91.0
+offset_right = 8263.162
+offset_bottom = 165.0
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "EDI_09"
+
+[node name="Etsijä" type="Label" parent="Lanepickers/Question4/Answers" unique_id=246158467]
+offset_left = 7879.16
+offset_top = 310.41
+offset_right = 8263.162
+offset_bottom = 384.4099
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "ETS_09"
+
+[node name="Etenijä" type="Label" parent="Lanepickers/Question4/Answers" unique_id=2027507739]
+offset_left = 7879.16
+offset_top = 529.69
+offset_right = 8263.162
+offset_bottom = 603.69
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "ETE_09"
+
+[node name="LanePicker" parent="Lanepickers/Question4" unique_id=1404046361 instance=ExtResource("8_au75x")]
+position = Vector2(7900, 0)
+
+[node name="Edistäjä" type="Area2D" parent="Lanepickers/Question4/LanePicker" unique_id=79170903]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Edistäjä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question4/LanePicker/Edistäjä" unique_id=1995922466]
+position = Vector2(172.64, 101.87)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Etsijä" type="Area2D" parent="Lanepickers/Question4/LanePicker" unique_id=898823428]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Etsijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question4/LanePicker/Etsijä" unique_id=1615764902]
+position = Vector2(172.64, 322.76)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Etenijä" type="Area2D" parent="Lanepickers/Question4/LanePicker" unique_id=892876368]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Etenijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question4/LanePicker/Etenijä" unique_id=1006476239]
+position = Vector2(172.64, 543.72)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Question4" type="Label" parent="Lanepickers/Question4" unique_id=736808009]
+offset_left = 7000.0
+offset_top = 307.0
+offset_right = 7701.0
+offset_bottom = 377.0
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 29
+text = "KYSYMYS_09"
+
+[node name="SlowMo" type="Area2D" parent="Lanepickers/Question4" unique_id=1887316901]
+collision_mask = 2
+script = ExtResource("10_1je60")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question4/SlowMo" unique_id=1273787746]
+position = Vector2(7331.48, 376)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_2jwna")
+
+[node name="Question5" type="Node2D" parent="Lanepickers" unique_id=718368513]
+position = Vector2(8900, 0)
+
+[node name="Answers" type="Node2D" parent="Lanepickers/Question5" unique_id=1843173112]
+
+[node name="Etsijä" type="Label" parent="Lanepickers/Question5/Answers" unique_id=1110008915]
+offset_left = 7879.16
+offset_top = 91.0
+offset_right = 8263.162
+offset_bottom = 165.0
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "ETS_10"
+
+[node name="Etenijä" type="Label" parent="Lanepickers/Question5/Answers" unique_id=1040270027]
+offset_left = 7879.16
+offset_top = 310.41
+offset_right = 8263.162
+offset_bottom = 384.4099
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "ETE_10"
+
+[node name="Edistäjä" type="Label" parent="Lanepickers/Question5/Answers" unique_id=79404523]
+offset_left = 7879.16
+offset_top = 529.69
+offset_right = 8263.162
+offset_bottom = 603.69
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 25
+text = "EDI_10"
+
+[node name="LanePicker" parent="Lanepickers/Question5" unique_id=1317077837 instance=ExtResource("8_au75x")]
+position = Vector2(7900, 0)
+
+[node name="Etsijä" type="Area2D" parent="Lanepickers/Question5/LanePicker" unique_id=45713435]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Etsijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question5/LanePicker/Etsijä" unique_id=808109675]
+position = Vector2(178.32, 101.87)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Etenijä" type="Area2D" parent="Lanepickers/Question5/LanePicker" unique_id=480992705]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Etenijä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question5/LanePicker/Etenijä" unique_id=508807605]
+position = Vector2(178.32, 322.76)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Edistäjä" type="Area2D" parent="Lanepickers/Question5/LanePicker" unique_id=30514720]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("9_62f1r")
+Role = "Edistäjä"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question5/LanePicker/Edistäjä" unique_id=781116185]
+position = Vector2(178.32, 543.72)
+scale = Vector2(0.8, 1)
+shape = SubResource("RectangleShape2D_ycmr1")
+
+[node name="Question5" type="Label" parent="Lanepickers/Question5" unique_id=1675274903]
+offset_left = 7000.0
+offset_top = 307.0
+offset_right = 7701.0
+offset_bottom = 377.0
+theme = ExtResource("8_2jwna")
+theme_override_fonts/font = ExtResource("7_ejprb")
+theme_override_font_sizes/font_size = 29
+text = "KYSYMYS_10"
+
+[node name="SlowMo" type="Area2D" parent="Lanepickers/Question5" unique_id=1910920480]
+collision_mask = 2
+script = ExtResource("10_1je60")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lanepickers/Question5/SlowMo" unique_id=805442697]
+position = Vector2(7331.48, 376)
+scale = Vector2(9.55, 9.55)
+shape = SubResource("RectangleShape2D_2jwna")
+
+[node name="HUD" parent="." unique_id=989878847 instance=ExtResource("12_ycmr1")]
+
+[node name="PauseUI" parent="." unique_id=1141652004 instance=ExtResource("13_2jwna")]
+
+[node name="DieUI" parent="." unique_id=210363600 instance=ExtResource("14_sgc6j")]

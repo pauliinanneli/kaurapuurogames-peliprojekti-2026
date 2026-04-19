@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://c1vo5itr4g5v4"]
+
+[ext_resource type="Script" uid="uid://cwikwvp5jjdqy" path="res://Code/LevelChooser.cs" id="1_cio0u"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_d456p"]
+[ext_resource type="Script" uid="uid://ja722bsf8ay7" path="res://Code/Planet.cs" id="2_1bx87"]
+[ext_resource type="Texture2D" uid="uid://bbeefpojq57vf" path="res://Art/LevelPickers.png" id="2_m37ox"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="5_blli4"]
+[ext_resource type="AudioStream" uid="uid://dfs1qob0gwkrc" path="res://Audio/PossibleMenuMusic.wav" id="6_blli4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5dyp"]
+atlas = ExtResource("1_d456p")
+region = Rect2(0, 0, 2016, 2037)
+
+[sub_resource type="Gradient" id="Gradient_blli4"]
+offsets = PackedFloat32Array(0, 0.36692014, 0.6596958, 1)
+colors = PackedColorArray(1, 0.9764706, 0.92941177, 1, 1, 1, 1, 0, 1, 0.9764706, 0.92941177, 1, 1, 0.9764706, 0.92941177, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m37ox"]
+
+[node name="LevelChooser" type="Control" unique_id=1120240481]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_cio0u")
+metadata/_edit_horizontal_guides_ = [1500.0]
+
+[node name="bg" type="TextureRect" parent="." unique_id=320322431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_q5dyp")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2085827275]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="Control" type="Control" parent="ScrollContainer" unique_id=1613972346]
+custom_minimum_size = Vector2(1920, 1500)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Line2D" type="Line2D" parent="ScrollContainer/Control" unique_id=1073829515]
+points = PackedVector2Array(1343, 1149, 399, 679, 1359, 243)
+width = 2.0
+default_color = Color(1, 0.9764706, 0.92941177, 1)
+gradient = SubResource("Gradient_blli4")
+
+[node name="Level1" type="Area2D" parent="ScrollContainer/Control" unique_id=346835284]
+position = Vector2(412.28, 671.22)
+scale = Vector2(0.45, 0.45)
+script = ExtResource("2_1bx87")
+
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/Control/Level1" unique_id=1644152603]
+texture = ExtResource("2_m37ox")
+region_enabled = true
+region_rect = Rect2(1352, 1701, 713, 710)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/Control/Level1" unique_id=1186916059]
+scale = Vector2(36.15, 36.15)
+shape = SubResource("CircleShape2D_m37ox")
+
+[node name="level1" type="Label" parent="ScrollContainer/Control/Level1" unique_id=1093963976]
+offset_left = -120.62222
+offset_top = -27.155493
+offset_right = 107.37778
+offset_bottom = 62.844505
+theme = ExtResource("5_blli4")
+theme_type_variation = &"HeaderMedium"
+theme_override_font_sizes/font_size = 70
+text = "LEVEL1"
+
+[node name="Level2" type="Area2D" parent="ScrollContainer/Control" unique_id=819111188]
+position = Vector2(1355.63, 242.62)
+scale = Vector2(0.45, 0.45)
+script = ExtResource("2_1bx87")
+LevelPath = "res://Scenes/Level2.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/Control/Level2" unique_id=9424492]
+texture = ExtResource("2_m37ox")
+region_enabled = true
+region_rect = Rect2(672, 840, 714, 735)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/Control/Level2" unique_id=2069589281]
+scale = Vector2(36.15, 36.15)
+shape = SubResource("CircleShape2D_m37ox")
+
+[node name="level2" type="Label" parent="ScrollContainer/Control/Level2" unique_id=1884345948]
+offset_left = -130.28885
+offset_top = -43.59999
+offset_right = 109.71115
+offset_bottom = 46.40001
+theme = ExtResource("5_blli4")
+theme_type_variation = &"HeaderMedium"
+theme_override_font_sizes/font_size = 70
+text = "LEVEL2"
+
+[node name="Tutorial" type="Area2D" parent="ScrollContainer/Control" unique_id=2018818550]
+position = Vector2(1343.19, 1137.61)
+scale = Vector2(0.45, 0.45)
+script = ExtResource("2_1bx87")
+LevelPath = "res://Scenes/Tutorial.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/Control/Tutorial" unique_id=1508386508]
+texture = ExtResource("2_m37ox")
+region_enabled = true
+region_rect = Rect2(-20, -20, 735, 734)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/Control/Tutorial" unique_id=1700564618]
+scale = Vector2(36.15, 36.15)
+shape = SubResource("CircleShape2D_m37ox")
+
+[node name="tutorial" type="Label" parent="ScrollContainer/Control/Tutorial" unique_id=883083045]
+offset_left = -166.3
+offset_top = -36.911
+offset_right = 345.7
+offset_bottom = 53.089
+theme = ExtResource("5_blli4")
+theme_type_variation = &"HeaderMedium"
+theme_override_font_sizes/font_size = 70
+text = "MENUTUTORIAL"
+
+[node name="BackButton" type="Button" parent="." unique_id=999994584]
+layout_mode = 1
+offset_left = 49.35
+offset_top = 41.29
+offset_right = 348.49002
+offset_bottom = 182.92001
+theme = ExtResource("5_blli4")
+text = "BACK"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1530254638]
+stream = ExtResource("6_blli4")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]

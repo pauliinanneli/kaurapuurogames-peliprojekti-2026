@@ -1,0 +1,79 @@
+keys;fi;en
+MENUSTART;ALOITA;START
+MENULEVELS;TASOT;LEVELS
+MENUTUTORIAL;TUTORIAALI;TUTORIAL
+CREDITS;TEKIJÄT;CREDITS
+SETTINGS;ASETUKSET;SETTINGS
+MASTERVOLUME;ÄÄNENVOIMAKKUUS;MASTER VOLUME
+MUSIC;MUSIIKKI;MUSIC
+EFFECTS;ÄÄNITEHOSTEET;SOUND EFFECTS
+PAUSECONTINUE;JATKA PELIÄ;CONTINUE
+PAUSETOPIC;PELI ON TAUOLLA;GAME IS PAUSED
+PAUSERESTART;ALOITA UUDELLEEN;RESTART GAME
+PAUSEQUIT;POISTU PELISTÄ;QUIT GAME
+DIETOPIC;TÄHTIENERGIA LOPPUI;YOU RAN OUT OF STAR ENERGY
+DIERESTART;YRITÄ UUDELLEEN;TRY AGAIN
+DIEQUIT;POISTU PELISTÄ;QUIT GAME
+BACK;< TAKAISIN;< BACK
+LEVEL1;TASO 1;LEVEL 1
+LEVEL2;TASO 2;LEVEL 2
+PROGRAMMERS;OHJELMOIJAT;PROGRAMMERS
+ART;TAIDE;ART
+CONTACTPERSON;YHTEYSHENKILÖ;CONTACT PERSON
+TEACHERS;OPETTAJAT;TEACHERS
+COACHING;VALMENNUS;COACHING
+PROGRAMMING;OHJELMOINTI;PROGRAMMING
+GRAPHICS;GRAFIIKKA/ART;GRAPHICS/ART
+LANGUAGE;KIELI;LANGUAGE
+ETSIJÄ;ETSIJÄ;EXPLORER
+ETENIJÄ;ETENIJÄ;ADVANCER
+EDISTÄJÄ;EDISTÄJÄ;ACCELERATOR
+YOURPOINTS;PISTEESI:;YOUR POINTS:
+INSTRUCTIONCONNECT;Yhdistä tähdet.;Connect the stars.
+INSTRUCTIONTAP;Napauta näyttöä nähdäksesi tuloksesi;Tap the screen to see your results
+TUTOLINE_01;Kerää tähtipölyä jotta hohtosi ei sammu;Collect stardust to keep your star alive
+TUTOLINE_02;Väistele meteoriitteja;Dodge meteors
+TUTOLINE_03;Vastaa kysymyksiin valitsemalla portti vastauksesi mukaan;Answer to questions by choosing a gateway
+TUTOANS_01;Ok;Ok
+TUTOANS_02;Selvä;Roger
+TUTOANS_03;Olen valmis;I'm ready
+KYSYMYS_01;Missä koet olevasi urallasi juuri nyt?;Where do you feel your career is at right now?
+EDI_01;Paljon ideoita mielessä;I have lots of ideas in mind
+ETE_01;Suunta melko selkeä;My direction is fairly clear
+ETS_01;Pohdin mitä haluan;I’m reflecting on what I want
+KYSYMYS_02;Miten reagoit uuteen ideaan tai mahdollisuuteen?;How do you react to a new idea or opportunity?
+ETE_02;Mietin miten se sopii tavoitteisiin;I consider how it fits my goals
+ETS_02;Jään pohtimaan sitä;I keep thinking about it
+EDI_02;Innostun nopeasti;I get excited quickly
+KYSYMYS_03;Millainen tuki auttaisi sinua eniten?;What kind of support would help you the most right now?
+ETS_03;Tilaa pohtia asioita;Space to reflect
+EDI_03;Rohkaisua ja sparrausta;Encouragement and sparring
+ETE_03;Selkeä suunnitelma;A clear plan
+KYSYMYS_04;Mitä teet jos seuraava askel ei ole selvä?;What do you do if the next step isn’t clear?
+EDI_04;Juttelen jonkun kanssa;I talk with someone
+ETS_04;Mietin mikä tuntuu oikealta;I reflect on what feels right
+ETE_04;Jäsennän vaihtoehdot;I structure the options
+KYSYMYS_05;Mikä tuntuu nyt tärkeimmältä työelämässä?;What feels most important in your working life right now?
+ETS_05;Ymmärtää mikä sopii minulle;Understanding what suits me
+ETE_05;Päästä kohti tavoitetta;Moving toward my goal
+EDI_05;Laittaa ideat liikkeelle;Getting ideas moving
+KYSYMYS_06;Miten teet yleensä isomman päätöksen?;How do you usually make a bigger decision?
+EDI_06;Keskustelen muiden kanssa;I discuss it with others
+ETE_06;Punnitsen vaihtoehtoja;I think about the options
+ETS_06;Kuuntelen omaa tunnetta;I listen to my feelings
+KYSYMYS_07;Kun tunnet haluavasi muutosta, mitä teet ensin?;When you feel the need for change, what do you do first?
+ETE_07;Teen toimintasuunnitelman;I make an action plan
+ETS_07;Mietin mitä oikeasti haluan;I reflect on what I truly want
+EDI_07;Kerron ideoistani muille;I share my ideas with others
+KYSYMYS_08;Miten haluat kehittyä juuri nyt?;How do you want to develop right now?
+ETS_08;Parempaa itsetuntemusta;Better self-awareness
+EDI_08;Uusia käytännön työkaluja;New practical tools
+ETE_08;Lisää osaamista tavoitteisiin;More skills toward my goals
+KYSYMYS_09;Kun ajattelet vuoden päähän, mikä olisi hienoa?;When you think a year ahead, what would be great?
+EDI_09;Ideani ovat käytössä;My ideas are in use
+ETS_09;Tiedän paremmin mikä sopii minulle;I better understand what suits me
+ETE_09;Olen päässyt pitkälle;I’ve made significant progress
+KYSYMYS_10;Mikä kuvastaa sinua nyt parhaiten?;What best describes you right now?
+ETS_10;Mietin mikä tuntuu omalta;I’m reflecting on what feels right for me
+ETE_10;Tiedän mitä kohti menen;I know what I’m working toward
+EDI_10;Paljon ajatuksia ja ideoita;Lots of thoughts and ideas

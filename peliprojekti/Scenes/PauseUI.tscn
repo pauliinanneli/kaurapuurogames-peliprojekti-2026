@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://cmpbuj530sgae"]
+
+[ext_resource type="Script" uid="uid://cnn3twtwcujdj" path="res://Code/PauseUI.cs" id="1_iqps6"]
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="2_svktx"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="3_svktx"]
+[ext_resource type="PackedScene" uid="uid://b2v0x6sm3ohl8" path="res://Scenes/Settings.tscn" id="4_svktx"]
+
+[node name="PauseUI" type="CanvasLayer" unique_id=1141652004]
+process_mode = 3
+script = ExtResource("1_iqps6")
+metadata/_edit_vertical_guides_ = [585.0]
+
+[node name="PauseMenu" type="Control" parent="." unique_id=1620103599]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu" unique_id=1680768858]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = 3.0
+offset_right = 17.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="ContinueButton" type="Button" parent="PauseMenu" unique_id=1260311230]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35435677
+anchor_top = 0.29720372
+anchor_right = 0.64502335
+anchor_bottom = 0.4361204
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_svktx")
+theme_override_font_sizes/font_size = 40
+text = "PAUSECONTINUE"
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseText" type="Label" parent="PauseMenu" unique_id=2023662512]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3671875
+anchor_top = 0.1388889
+anchor_right = 0.6421875
+anchor_bottom = 0.24814814
+offset_left = 148.0
+offset_right = -148.0
+offset_bottom = -35.0
+grow_horizontal = 2
+theme = ExtResource("2_svktx")
+theme_override_fonts/font = ExtResource("3_svktx")
+theme_override_font_sizes/font_size = 92
+text = "PAUSETOPIC"
+metadata/_edit_use_anchors_ = true
+
+[node name="RestartButton" type="Button" parent="PauseMenu" unique_id=961048182]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35435677
+anchor_top = 0.4575
+anchor_right = 0.64502335
+anchor_bottom = 0.59641623
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_svktx")
+theme_override_font_sizes/font_size = 40
+text = "PAUSERESTART"
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitButton" type="Button" parent="PauseMenu" unique_id=1220960441]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35435677
+anchor_top = 0.7786019
+anchor_right = 0.64502335
+anchor_bottom = 0.91751856
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_svktx")
+theme_override_font_sizes/font_size = 40
+text = "PAUSEQUIT"
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsButton" type="Button" parent="PauseMenu" unique_id=454078466]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35435677
+anchor_top = 0.61644447
+anchor_right = 0.6450232
+anchor_bottom = 0.75536114
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_svktx")
+theme_override_font_sizes/font_size = 40
+text = "SETTINGS"
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseButton" type="Button" parent="." unique_id=1929380044]
+custom_minimum_size = Vector2(80, 0)
+offset_left = 48.0
+offset_top = 40.66
+offset_right = 348.0
+offset_bottom = 181.29999
+theme = ExtResource("2_svktx")
+theme_override_font_sizes/font_size = 61
+text = "||"
+
+[node name="Settings" parent="." unique_id=710396582 instance=ExtResource("4_svktx")]
+
+[connection signal="pressed" from="PauseMenu/ContinueButton" to="." method="OnContinuePressed"]
+[connection signal="pressed" from="PauseMenu/RestartButton" to="." method="OnRestartPressed"]
+[connection signal="pressed" from="PauseMenu/QuitButton" to="." method="OnQuitPressed"]
+[connection signal="pressed" from="PauseMenu/SettingsButton" to="." method="OnSettingsButtonPressed"]
+[connection signal="pressed" from="PauseButton" to="." method="OnPausePressed"]

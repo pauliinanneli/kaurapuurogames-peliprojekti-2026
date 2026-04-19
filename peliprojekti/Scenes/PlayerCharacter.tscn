@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://c1yxxdf2xeya3"]
+
+[ext_resource type="Script" uid="uid://be8fiy8ua71oj" path="res://Code/PlayerCharacter.cs" id="1_5gnj7"]
+[ext_resource type="Texture2D" uid="uid://dwclnl60cwvh1" path="res://Art/hohdot2.png" id="2_5gnj7"]
+[ext_resource type="Script" uid="uid://bqb88lwxrffe7" path="res://Code/Glow.cs" id="3_2getf"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5gnj7"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_q12u6"]
+offsets = PackedFloat32Array(0, 0.99462366, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5gnj7"]
+gradient = SubResource("Gradient_q12u6")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.3272727)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7sut"]
+radius = 35.0
+height = 78.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1958617562]
+collision_layer = 2
+collision_mask = 13
+motion_mode = 1
+script = ExtResource("1_5gnj7")
+_friction = 0.1
+_maxStretch = 0.2
+_stretchSmoothing = 0.2
+
+[node name="Glow" type="Sprite2D" parent="." unique_id=519461340 node_paths=PackedStringArray("_targetStar")]
+modulate = Color(1, 1, 1, 0.627451)
+top_level = true
+material = SubResource("CanvasItemMaterial_5gnj7")
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("2_5gnj7")
+region_enabled = true
+region_rect = Rect2(1610, 1254, 1505, 1188)
+script = ExtResource("3_2getf")
+_targetStar = NodePath("../Star")
+_followSpeed = 12.0
+
+[node name="Star" type="Sprite2D" parent="." unique_id=704000034]
+modulate = Color(1, 1, 1, 0.9529412)
+scale = Vector2(0.14, 0.14)
+texture = ExtResource("2_5gnj7")
+region_enabled = true
+region_rect = Rect2(420, 363, 1015, 759)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=2042126508]
+position = Vector2(5.722046e-06, -8.821487e-06)
+scale = Vector2(4.171875, 2.7187498)
+color = Color(1, 0.8352941, 0.5019608, 1)
+texture = SubResource("GradientTexture2D_5gnj7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2103013758]
+scale = Vector2(1.64, 1)
+shape = SubResource("CapsuleShape2D_v7sut")

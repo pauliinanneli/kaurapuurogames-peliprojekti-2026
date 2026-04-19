@@ -1,0 +1,13 @@
+using Godot;
+using System;
+
+public partial class Credits : Control
+{
+    [Export] public string BackScenePath = "res://Scenes/StartMenu.tscn";
+
+     public void OnBackButtonPressed()
+    {
+        GameManager.Instance.PlayClick();
+        GetTree().ChangeSceneToFile(BackScenePath);
+    }
+}

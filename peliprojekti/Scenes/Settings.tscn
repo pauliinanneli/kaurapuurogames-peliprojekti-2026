@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://b2v0x6sm3ohl8"]
+
+[ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="1_flfri"]
+[ext_resource type="Script" uid="uid://dht4osc8j0u03" path="res://Code/Settings.cs" id="1_w1nw0"]
+[ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="1_yrknh"]
+[ext_resource type="FontFile" uid="uid://hep6wqcm5gbv" path="res://Fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf" id="2_yrknh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1nw0"]
+atlas = ExtResource("1_yrknh")
+region = Rect2(0, 0, 2016, 2037)
+
+[node name="Settings" type="Control" unique_id=710396582 node_paths=PackedStringArray("_masterVolume", "_musicVolume", "_effectsVolume")]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w1nw0")
+_masterVolume = NodePath("ScrollContainer/Control/Stuff/Volume/MasterSlider")
+_musicVolume = NodePath("ScrollContainer/Control/Stuff/Volume/MusicSlider")
+_effectsVolume = NodePath("ScrollContainer/Control/Stuff/Volume/EffectsSlider")
+metadata/_edit_vertical_guides_ = [960.0]
+
+[node name="bg" type="TextureRect" parent="." unique_id=1704124110]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_w1nw0")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1390824909]
+modulate = Color(1, 1, 1, 0.49411765)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = 3.0
+offset_right = 17.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=704143239]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="VBoxContainer" parent="ScrollContainer" unique_id=1657701050]
+custom_minimum_size = Vector2(1910, 1350)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="ScrollContainer/Control" unique_id=375769130]
+custom_minimum_size = Vector2(0, 145)
+layout_mode = 2
+
+[node name="SettingsText" type="Label" parent="ScrollContainer/Control" unique_id=1643467985]
+layout_mode = 2
+theme = ExtResource("1_flfri")
+theme_override_fonts/font = ExtResource("2_yrknh")
+theme_override_font_sizes/font_size = 98
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="ScrollContainer/Control" unique_id=1260889224]
+custom_minimum_size = Vector2(0, 94.14)
+layout_mode = 2
+
+[node name="Stuff" type="VBoxContainer" parent="ScrollContainer/Control" unique_id=464128081]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 117
+alignment = 1
+
+[node name="LanguageControl" type="VBoxContainer" parent="ScrollContainer/Control/Stuff" unique_id=68274296]
+layout_mode = 2
+theme_override_constants/separation = 38
+alignment = 1
+
+[node name="Language" type="Label" parent="ScrollContainer/Control/Stuff/LanguageControl" unique_id=1661812415]
+layout_mode = 2
+theme = ExtResource("1_flfri")
+text = "LANGUAGE"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Control/Stuff/LanguageControl" unique_id=35240744]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="FiButton" type="Button" parent="ScrollContainer/Control/Stuff/LanguageControl/HBoxContainer" unique_id=1134608287]
+custom_minimum_size = Vector2(180.66, 135.5)
+layout_mode = 2
+theme = ExtResource("1_flfri")
+text = "FI"
+metadata/_edit_use_anchors_ = true
+
+[node name="EnButton" type="Button" parent="ScrollContainer/Control/Stuff/LanguageControl/HBoxContainer" unique_id=615641175]
+custom_minimum_size = Vector2(180.66, 135.5)
+layout_mode = 2
+theme = ExtResource("1_flfri")
+text = "EN"
+metadata/_edit_use_anchors_ = true
+
+[node name="Volume" type="VBoxContainer" parent="ScrollContainer/Control/Stuff" unique_id=1955287727]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 49
+alignment = 1
+
+[node name="Master" type="Label" parent="ScrollContainer/Control/Stuff/Volume" unique_id=972364501]
+layout_mode = 2
+theme = ExtResource("1_flfri")
+text = "MASTERVOLUME"
+horizontal_alignment = 1
+
+[node name="MasterSlider" type="HSlider" parent="ScrollContainer/Control/Stuff/Volume" unique_id=1862571488]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+
+[node name="Music" type="Label" parent="ScrollContainer/Control/Stuff/Volume" unique_id=1781268443]
+layout_mode = 2
+theme = ExtResource("1_flfri")
+text = "MUSIC"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="ScrollContainer/Control/Stuff/Volume" unique_id=327629205]
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+
+[node name="Effects" type="Label" parent="ScrollContainer/Control/Stuff/Volume" unique_id=1922086318]
+layout_mode = 2
+theme = ExtResource("1_flfri")
+text = "EFFECTS"
+horizontal_alignment = 1
+
+[node name="EffectsSlider" type="HSlider" parent="ScrollContainer/Control/Stuff/Volume" unique_id=1988091699]
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+
+[node name="BackButton" type="Button" parent="." unique_id=628529465]
+layout_mode = 0
+anchor_left = 0.025703125
+anchor_top = 0.03823148
+anchor_right = 0.18150522
+anchor_bottom = 0.16937038
+theme = ExtResource("1_flfri")
+text = "BACK"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="ScrollContainer/Control/Stuff/LanguageControl/HBoxContainer/FiButton" to="." method="OnFiPressed"]
+[connection signal="pressed" from="ScrollContainer/Control/Stuff/LanguageControl/HBoxContainer/EnButton" to="." method="OnEnPressed"]
+[connection signal="value_changed" from="ScrollContainer/Control/Stuff/Volume/MasterSlider" to="." method="OnMasterVolumeChanged"]
+[connection signal="value_changed" from="ScrollContainer/Control/Stuff/Volume/MusicSlider" to="." method="OnMusicVolumeChanged"]
+[connection signal="value_changed" from="ScrollContainer/Control/Stuff/Volume/EffectsSlider" to="." method="OnEffectsVolumeChanged"]
+[connection signal="pressed" from="BackButton" to="." method="OnBackButtonPressed"]
