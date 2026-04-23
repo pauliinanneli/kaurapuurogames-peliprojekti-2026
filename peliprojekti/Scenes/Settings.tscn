@@ -59,7 +59,8 @@ grow_vertical = 2
 [node name="Control" type="VBoxContainer" parent="ScrollContainer" unique_id=1657701050]
 custom_minimum_size = Vector2(1910, 1350)
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_constants/separation = 0
 
 [node name="Control" type="Control" parent="ScrollContainer/Control" unique_id=375769130]
@@ -80,11 +81,15 @@ layout_mode = 2
 
 [node name="Stuff" type="VBoxContainer" parent="ScrollContainer/Control" unique_id=464128081]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 117
+alignment = 1
 
 [node name="LanguageControl" type="VBoxContainer" parent="ScrollContainer/Control/Stuff" unique_id=68274296]
 layout_mode = 2
 theme_override_constants/separation = 38
+alignment = 1
 
 [node name="Language" type="Label" parent="ScrollContainer/Control/Stuff/LanguageControl" unique_id=1661812415]
 layout_mode = 2
@@ -117,6 +122,7 @@ custom_minimum_size = Vector2(600, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 49
+alignment = 1
 
 [node name="Master" type="Label" parent="ScrollContainer/Control/Stuff/Volume" unique_id=972364501]
 layout_mode = 2

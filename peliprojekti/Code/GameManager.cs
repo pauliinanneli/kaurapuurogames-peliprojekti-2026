@@ -307,12 +307,15 @@ public void ChangeGameSpeed(float targetSpeed, float duration)
 
 #region audio
 
+
     public void PlayClick()
     {
         if (_clickPlayer != null)
         {
             _clickPlayer.Play();
         }
+
+        Input.VibrateHandheld(50); // small haptic feedbackk
     }
 
     public void GateSound()

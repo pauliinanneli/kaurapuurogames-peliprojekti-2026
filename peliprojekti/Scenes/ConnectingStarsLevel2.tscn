@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dbhnnqshgh1vd" path="res://Code/ConnectingStars.cs" id="1_arv81"]
 [ext_resource type="Texture2D" uid="uid://kqfbo45ghus1" path="res://Art/Taustat.png" id="2_2mlle"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="3_pcom7"]
+[ext_resource type="Script" uid="uid://dtylw7pk4havt" path="res://Code/CenterConnectStars.cs" id="4_pcom7"]
 [ext_resource type="Script" uid="uid://btnqstlx2j8jt" path="res://Code/ConnectStar.cs" id="4_qs7ii"]
 [ext_resource type="Texture2D" uid="uid://vglk7vb43o02" path="res://Art/ConnectingStar.png" id="5_jre3h"]
 [ext_resource type="AudioStream" uid="uid://ut6fg0dqyvxi" path="res://Audio/CollectStardust.wav" id="6_2mlle"]
@@ -60,12 +61,18 @@ grow_vertical = 0
 theme = ExtResource("3_pcom7")
 text = "INSTRUCTIONCONNECT"
 
-[node name="Leijona" type="Node2D" parent="." unique_id=1855158800]
-position = Vector2(443.02, 67.37)
+[node name="Leijona" type="Control" parent="." unique_id=1125286401]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 443.02
+offset_top = 67.37
+offset_right = 443.02
+offset_bottom = 67.37
 scale = Vector2(1.17, 1.17)
+script = ExtResource("4_pcom7")
 
 [node name="Star0" type="Area2D" parent="Leijona" unique_id=770518429 node_paths=PackedStringArray("_light")]
-position = Vector2(-93.21, 110.5)
+position = Vector2(-571.81195, -298.232)
 script = ExtResource("4_qs7ii")
 _light = NodePath("PointLight2D")
 _starsNeededToFinish = 8
@@ -90,7 +97,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star1" type="Area2D" parent="Leijona" unique_id=687035369 node_paths=PackedStringArray("_light")]
-position = Vector2(104.38, 178.08)
+position = Vector2(-374.22195, -230.652)
 script = ExtResource("4_qs7ii")
 _starIndex = 1
 _light = NodePath("PointLight2D")
@@ -116,7 +123,7 @@ texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
 [node name="Star2" type="Area2D" parent="Leijona" unique_id=1892094634 node_paths=PackedStringArray("_light")]
-position = Vector2(364.71, 278.81)
+position = Vector2(-113.89196, -129.92198)
 script = ExtResource("4_qs7ii")
 _starIndex = 2
 _light = NodePath("PointLight2D")
@@ -142,7 +149,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star3" type="Area2D" parent="Leijona" unique_id=380798660 node_paths=PackedStringArray("_light")]
-position = Vector2(990.65, 81.92)
+position = Vector2(512.0481, -326.81198)
 script = ExtResource("4_qs7ii")
 _starIndex = 3
 _light = NodePath("PointLight2D")
@@ -168,7 +175,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star4" type="Area2D" parent="Leijona" unique_id=41562115 node_paths=PackedStringArray("_light")]
-position = Vector2(695.56, 541.05)
+position = Vector2(216.95805, 132.31801)
 script = ExtResource("4_qs7ii")
 _starIndex = 4
 _light = NodePath("PointLight2D")
@@ -194,7 +201,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star5" type="Area2D" parent="Leijona" unique_id=548209034 node_paths=PackedStringArray("_light")]
-position = Vector2(554.23, 706)
+position = Vector2(75.628044, 297.268)
 script = ExtResource("4_qs7ii")
 _starIndex = 5
 _light = NodePath("PointLight2D")
@@ -220,7 +227,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star6" type="Area2D" parent="Leijona" unique_id=1947319845 node_paths=PackedStringArray("_light")]
-position = Vector2(164.95, 558.51)
+position = Vector2(-313.65195, 149.77803)
 script = ExtResource("4_qs7ii")
 _starIndex = 6
 _light = NodePath("PointLight2D")
@@ -246,7 +253,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star7" type="Area2D" parent="Leijona" unique_id=1702381355 node_paths=PackedStringArray("_light")]
-position = Vector2(-32.78, 375.39)
+position = Vector2(-511.382, -33.341976)
 script = ExtResource("4_qs7ii")
 _starIndex = 7
 _light = NodePath("PointLight2D")

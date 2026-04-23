@@ -8,13 +8,11 @@ public partial class LevelMover : Node2D
 	[Export] private float _normalSpeed = 250.0f;
 	private float _currentSpeed;
 
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
     {
         _currentSpeed = _normalSpeed;
     }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _PhysicsProcess(double delta)
     {
 		// move the node and its children forward every frame

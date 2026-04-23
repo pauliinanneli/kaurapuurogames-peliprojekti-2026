@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dbhnnqshgh1vd" path="res://Code/ConnectingStars.cs" id="1_xiqrn"]
 [ext_resource type="Script" uid="uid://btnqstlx2j8jt" path="res://Code/ConnectStar.cs" id="2_j8oic"]
 [ext_resource type="Texture2D" uid="uid://vglk7vb43o02" path="res://Art/ConnectingStar.png" id="2_qnmmg"]
+[ext_resource type="Script" uid="uid://dtylw7pk4havt" path="res://Code/CenterConnectStars.cs" id="5_4ox4j"]
 [ext_resource type="Theme" uid="uid://mmn7omade3bb" path="res://Config/UiTheme.tres" id="5_xiqrn"]
 [ext_resource type="AudioStream" uid="uid://ut6fg0dqyvxi" path="res://Audio/CollectStardust.wav" id="6_ylv75"]
 
@@ -43,12 +44,41 @@ mouse_filter = 2
 texture = SubResource("AtlasTexture_14rk4")
 expand_mode = 1
 
-[node name="Otava" type="Node2D" parent="." unique_id=669780749]
-position = Vector2(443.02, 67.37)
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1256125377]
+
+[node name="InstructionLabel" type="Label" parent="CanvasLayer" unique_id=1303538926]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.5
+offset_top = -117.28998
+offset_right = 150.5
+offset_bottom = -65.289856
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_xiqrn")
+text = "Yhdistä tähdet."
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2142099165]
+stream = ExtResource("6_ylv75")
+bus = &"Effects"
+
+[node name="Otava" type="Control" parent="." unique_id=91027459]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 485.2
+offset_top = 114.33
+offset_right = 485.2
+offset_bottom = 114.33
 scale = Vector2(1.17, 1.17)
+pivot_offset = Vector2(400, 400)
+size_flags_horizontal = 4
+script = ExtResource("5_4ox4j")
 
 [node name="Star0" type="Area2D" parent="Otava" unique_id=982098321 node_paths=PackedStringArray("_light")]
-position = Vector2(-66, 128)
+position = Vector2(-628.3761, -331.69235)
 script = ExtResource("2_j8oic")
 _light = NodePath("PointLight2D")
 
@@ -71,7 +101,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star1" type="Area2D" parent="Otava" unique_id=1415172591 node_paths=PackedStringArray("_light")]
-position = Vector2(259, 103)
+position = Vector2(-303.37616, -356.69235)
 script = ExtResource("2_j8oic")
 _starIndex = 1
 _light = NodePath("PointLight2D")
@@ -95,7 +125,7 @@ texture = SubResource("GradientTexture2D_j8oic")
 texture_scale = 21.4
 
 [node name="Star2" type="Area2D" parent="Otava" unique_id=362694279 node_paths=PackedStringArray("_light")]
-position = Vector2(412, 277)
+position = Vector2(-150.37616, -182.69235)
 script = ExtResource("2_j8oic")
 _starIndex = 2
 _light = NodePath("PointLight2D")
@@ -119,7 +149,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star3" type="Area2D" parent="Otava" unique_id=683155177 node_paths=PackedStringArray("_light")]
-position = Vector2(647, 373)
+position = Vector2(84.623856, -86.69236)
 script = ExtResource("2_j8oic")
 _starIndex = 3
 _light = NodePath("PointLight2D")
@@ -143,7 +173,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star4" type="Area2D" parent="Otava" unique_id=951884122 node_paths=PackedStringArray("_light")]
-position = Vector2(1001, 431)
+position = Vector2(438.62384, -28.692368)
 script = ExtResource("2_j8oic")
 _starIndex = 4
 _light = NodePath("PointLight2D")
@@ -167,7 +197,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star5" type="Area2D" parent="Otava" unique_id=901951072 node_paths=PackedStringArray("_light")]
-position = Vector2(893, 706)
+position = Vector2(330.62384, 246.30765)
 script = ExtResource("2_j8oic")
 _starIndex = 5
 _light = NodePath("PointLight2D")
@@ -191,7 +221,7 @@ scale = Vector2(2.8, 2.8)
 shape = SubResource("CircleShape2D_xuaeq")
 
 [node name="Star6" type="Area2D" parent="Otava" unique_id=658742123 node_paths=PackedStringArray("_light")]
-position = Vector2(513, 615)
+position = Vector2(-49.376152, 155.30765)
 script = ExtResource("2_j8oic")
 _starIndex = 6
 _light = NodePath("PointLight2D")
@@ -224,27 +254,18 @@ joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1256125377]
-
-[node name="InstructionLabel" type="Label" parent="CanvasLayer" unique_id=1303538926]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -150.5
-offset_top = -117.28998
-offset_right = 150.5
-offset_bottom = -65.289856
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("5_xiqrn")
-text = "Yhdistä tähdet."
-
-[node name="Leijona" type="Node2D" parent="." unique_id=1855158800]
+[node name="Leijona" type="Control" parent="." unique_id=1517006560]
 visible = false
-position = Vector2(443.02, 67.37)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(1.17, 1.17)
+size_flags_horizontal = 4
 
 [node name="Star0" type="Area2D" parent="Leijona" unique_id=770518429 node_paths=PackedStringArray("_light")]
 position = Vector2(-93.21, 110.5)
@@ -460,7 +481,3 @@ default_color = Color(1, 0.9764706, 0.92941177, 1)
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2142099165]
-stream = ExtResource("6_ylv75")
-bus = &"Effects"

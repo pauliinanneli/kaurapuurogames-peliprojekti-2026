@@ -11,11 +11,10 @@
 offsets = PackedFloat32Array(0, 0.71748877, 1)
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_c08hu"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_f0y0n"]
 gradient = SubResource("Gradient_f0y0n")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dgtdq"]
-particle_flag_disable_z = true
 emission_shape_scale = Vector3(2.81, 2.81, 1)
 emission_shape = 1
 emission_sphere_radius = 128.0
@@ -30,8 +29,7 @@ radial_velocity_max = 69.25998
 gravity = Vector3(0, 0, 0)
 scale_min = 0.5
 scale_max = 2.5
-color_ramp = SubResource("GradientTexture1D_c08hu")
-collision_mode = 2
+color_ramp = SubResource("GradientTexture1D_f0y0n")
 
 [node name="Meteor" type="Area2D" unique_id=405699312 node_paths=PackedStringArray("_sprite", "_particleEffect", "_audioClip")]
 scale = Vector2(0.25, 0.25)
@@ -52,7 +50,7 @@ shape = SubResource("CircleShape2D_5wds4")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=511592254]
 emitting = false
-amount = 200
+amount = 100
 texture = ExtResource("3_ogeg7")
 one_shot = true
 preprocess = 1.0
@@ -60,4 +58,5 @@ process_material = SubResource("ParticleProcessMaterial_dgtdq")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=26858115]
 stream = ExtResource("4_f0y0n")
+volume_db = 5.613
 bus = &"Effects"

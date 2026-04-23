@@ -18,6 +18,7 @@ bus = &"Effects"
 
 [node name="Gate" type="AudioStreamPlayer" parent="." unique_id=551024538]
 stream = ExtResource("3_7cxpe")
+volume_db = -16.122
 bus = &"Effects"
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=1075881360]

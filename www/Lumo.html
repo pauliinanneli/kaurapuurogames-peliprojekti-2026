@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peli projekti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const texts = {
+            fin: {
+                navHome: "Etusivu",
+                navTrailer: "Traileri",
+                navTeam: "Tiimi",
+                navDownload: "Lataa",
+                navPortal: "Portaali",
+
+                homeTitle: "Etusivu",
+                homeText: "Tervetuloa peliin",
+
+                trailerTitle: "Traileri",
+                trailerText: "Video pelistä",
+
+                teamTitle: "Tiimi",
+                teamText: "Tiimin esittely",
+
+                downloadTitle: "Lataa",
+                downloadText: "Latauslinkki",
+
+                portalTitle: "Portaali",
+                portalText: "Linkki portaaliin"
+                },
+            en: {
+                navHome: "Home",
+                navTrailer: "Trailer",
+                navTeam: "Team",
+                navDownload: "Download",
+                navPortal: "Portal",
+
+                homeTitle: "Home",
+                homeText: "Welcome to the game",
+
+                trailerTitle: "Trailer",
+                trailerText: "Video from the game",
+
+                teamTitle: "Team",
+                teamText: "Meet the team",
+
+                downloadTitle: "Download",
+                downloadText: "Download link",
+
+                portalTitle: "Portal",
+                portalText: "Portal link"
+                }
+        };
+
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll("[data-key]");
+
+            elements.forEach(el => {
+                const key = el.getAttribute("data-key");
+                el.textContent = texts[lang][key];
+            });
+        }
+        window.onload = () => {
+            setLanguage('fin');
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="lang-switch">
+            <button onclick="setLanguage('fin')">FIN</button>
+            <button onclick="setLanguage('en')">ENG</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" data-key="navHome"></a></li>
+                <li><a href="#trailer" data-key="navTrailer"></a></li>
+                <li><a href="#team" data-key="navTeam"></a></li>
+                <li><a href="#download" data-key="navDownload"></a></li>
+                <li><a href="https://youtube.com" target="_blank" data-key="navPortal"></a></li> <!--TÄHÄN LINKKI PORTAALIIN-->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="content-box">
+            <h1 data-key="homeTitle"></h1>
+            <p data-key="homeText"></p>
+            </div>
+        </section>
+        <section id="trailer">
+            <div class="content-box">
+            <h1 data-key="trailerTitle"></h1>
+            <p data-key="trailerText"></p>
+            <div class="video-container">
+                <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/v=OrOmhWZ5kKY&list=RDOrOmhWZ5kKY&start_radio=1"
+                title="Trailer"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write";
+                allowfullscreen>
+            </iframe>
+            </div>
+            </div>
+        </section>
+        <section id="team">
+            <div class="content-box">
+                <h1 data-key="teamTitle"></h1>
+                <div class="team-container">
+                <div class="team-member">
+                    <img src="kuvat/teletapit.png" alt="Jäsen 1">
+                    <p data-key="member1"></p>
+                    </div>
+                    <div class="team-member">
+                        <img src="kuvat/hobitit.jpg" alt="Jäsen 2">
+                        <p data-key="member2"></p>
+                    </div>
+                    <div class="team-member">
+                        <img src="kuvat/jasen3.png" alt="Jäsen 3">
+                        <p data-key="member3"></p>
+                    </div>
+                    <div class="team-member">
+                    <img src="kuvat/jasen4.png" alt="Jäsen 4">
+                    <p data-key="member4"></p>
+                    </div>
+                    <div class="team-member">
+                    <img src="kuvat/jasen5.png" alt="Jäsen 5">
+                    <p data-key="member5"></p>
+                    </div>
+                    </div>
+            </div>
+        </section>
+        <section id="download">
+            <div class="content-box">
+            <h1 data-key="downloadTitle"></h1>
+            <p data-key="downloadText"></p>
+            </div>
+        </section>
+        <section id="portal">
+            <div class="content-box">
+            <h1 data-key="portalTitle"></h1>
+            <p data-key="portalText"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-images">
+            <img src="kuvat/MuusaIlmanTaustaa.png" alt="Muusa logo">
+            <img src="kuvat/Osarahoittama.png" alt="Euroopan unionin tunnus">
+        </div>
+    </footer>
+</body>
+</html>

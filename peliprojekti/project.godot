@@ -18,10 +18,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="peliprojekti"
+config/name="lumo-peliprojekti"
 run/main_scene="uid://cuscp5aotr6hs"
 config/features=PackedStringArray("4.6", "C#", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://b6oqtb331i7th"
 
 [audio]
 
